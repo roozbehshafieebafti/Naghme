@@ -89,8 +89,9 @@ class AuthoritiesController extends Controller
     	else{
     		return redirect()->route('Get_Authorities')->with('error','خطای سیستمی لطفا دوباره سعی کنید');		
     	}
-    }
-
+		}
+		
+		//deleteAuthorities
     public function deleteAuthorities($id){
     	$deletedRecord = Authorities::find($id);
     	Storage::delete($deletedRecord->authorities_picture);

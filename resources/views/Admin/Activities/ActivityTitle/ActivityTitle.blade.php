@@ -29,7 +29,7 @@
 						</span>
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<span>
-							<a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
+							<a href="{{ route('Delete_Activity',$val->id) }}" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
 						</span>
 					</td>
 					<td >

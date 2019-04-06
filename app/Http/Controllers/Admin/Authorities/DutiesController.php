@@ -21,7 +21,9 @@ class DutiesController extends Controller
     	return view('Admin.Authorities.Duties.DutiesList',compact('Duties','dutyTitle'));
     }
 
+    //doCreateDuties
     public function doCreateDuties(Request $request , $dutyTitle){
+        //store duties fields in an array
         $DutiesList=[];
         for($i=0;$i<10;$i++)
         {
@@ -31,12 +33,16 @@ class DutiesController extends Controller
             }
         }
 
+        //at list one duty should be fill
         if(count($DutiesList)>0){
+
+            //count how many duties are stored in database
             $DutyCount = Duties::where([
                 ['ad_authorities_title','=',$dutyTitle],
                 ['ad_authorities_city_id','=',0]
             ])->count();
-
+            
+            // delete the duties that are store in database 
             if($DutyCount>0){
                 Duties::where([
                     ['ad_authorities_title','=',$dutyTitle],
@@ -44,6 +50,7 @@ class DutiesController extends Controller
                     ])->delete();
             }
 
+            // Insert new fields in database
             foreach($DutiesList as $value){
                 Duties::insert([
                             'ad_authorities_title'=>$dutyTitle,
@@ -51,6 +58,7 @@ class DutiesController extends Controller
                             'ad_authorities_city_id'=>0
                         ]);
             }
+            
             return redirect()->route('Get_Duties')->with('success','وظایف با موفقیت ثبت شد');
         }else{
             return redirect()->route('Get_Duties')->with('error','حداقل یک رکورد باید ثبت شود');
