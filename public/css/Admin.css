@@ -1,0 +1,45 @@
+@font-face
+{
+	font-family:'Bnazanin';
+	src:url('../fonts/Bnazanin/BNazanin.eot'), 
+	url('../fonts/Bnazanin/BNazanin.woff'),
+	url('../fonts/Bnazanin/BNazanin.ttf ');
+}
+body{
+	font-family :Bnazanin;
+    font-size: 18px;
+}
+.Naghmeh-Menu-bar{
+    padding: 10px 0 0 0 ;
+    height: 60px;
+}
+
+.Naghmeh-dropdown {
+    position: relative;
+    /** Make it fit tightly around it's children */
+    display: inline-block;
+    height:51px;
+}
+
+.Naghmeh-dropdown .Naghmeh-dropdown-menu {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0;
+    list-style: none;
+    margin:0 ;
+    z-index: 1;
+    width:150px;
+    border-radius:3px; 
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    padding: 10px;
+}
+
+.Naghmeh-dropdown:hover .Naghmeh-dropdown-menu {
+    display: block;
+}
+
+.Naghmeh-dropdown-menu > li > a {
+    text-decoration: none;
+}
