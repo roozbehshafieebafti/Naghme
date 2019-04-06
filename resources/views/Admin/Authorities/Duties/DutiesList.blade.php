@@ -3,7 +3,7 @@
 
 @section('content')
 	<div class="container" style="direction: rtl;padding: 20px 0">
-		<h2>لیست وظایف    {{ $dutuTitle }}</h2>
+		<h2>لیست وظایف    {{ $dutyTitle }}</h2>
 		<div>
 			<div id="Alert" class="alert alert-danger" style="display: none;">
 				
@@ -22,7 +22,7 @@
 						$i=0;
 						foreach ($Duties as $value) {
 							?>
-							<input value="{{ $value->ad_authorities_duty }}" style="margin:5px" class="form-control" />
+							<input name="Duty_{{ $i }}" value="{{ $value->ad_authorities_duty }}" style="margin:5px" class="form-control" />
 							<?php
 						$i++;
 						}
@@ -30,7 +30,7 @@
 						for($j=$i;$j<10;$j++)
 						{
 							?>
-							<input style="margin:5px" class="form-control" />
+							<input name="Duty_{{ $j }}" style="margin:5px" class="form-control" />
 							<?php
 						}
 					?>
@@ -39,13 +39,14 @@
 						for($j=1;$j<=10;$j++)
 						{
 							?>
-							<input style="margin:5px" class="form-control" />
+							<input name="Duty_{{ $j }}" style="margin:5px" class="form-control" />
 							<?php
 						}
 					?>
 				@endif
 				
-			<button id="Authorities_Submit" class="btn btn-success">ویرایش مسئول</button>
+			<button style="margin:20px 30px" id="Authorities_Submit" class="btn btn-success">ویرایش وظایف</button>
+			<a href="{{ route('Get_Duties') }}" class="btn btn-danger text-light" style="margin-right: 20px;">&nbsp;بازگشت &nbsp;<i class="fas fa-arrow-circle-left"></i></a>
 			</form>
 		</div>
 	</div>	

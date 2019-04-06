@@ -105,7 +105,8 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			/* Duties */
 			Route::group(['prefix'=>'/duty'],function(){
 				Route::get('/','DutiesController@getDuties')->name('Get_Duties');
-				Route::get('/create/{dutuTitle}','DutiesController@createDuties')->name('Create_Duties');	
+				Route::get('/create/{dutyTitle}','DutiesController@createDuties')->name('Create_Duties');	
+				Route::post('/create/{dutyTitle}','DutiesController@doCreateDuties');	
 			});
 		});
 
