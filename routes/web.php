@@ -120,4 +120,9 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::post('/edit/{id}' , 'ActionTitleController@doEditActivity');
 		});
 
+		/* Forms */
+		Route::group(['prefix' => '/forms'] , function(){
+			Route::get('/' , 'FormController@getForms')->name('Get_Forms');
+		});
+
 });

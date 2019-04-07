@@ -28,6 +28,7 @@
         <ul class="bg-dark Naghmeh-dropdown-menu">
             <li><a class="text-light" href="{{ route('Get_History') }}">تاریخچه</a></li>
             <li><a class="text-light" href="{{ route('Get_Purpose') }}">اهداف</a></li>
+            <li><a class="text-light" href="{{ route('Get_Forms') }}">فرم‌ها</a></li>
             <li><a class="text-light" href="{{ route('Get_Plan') }}">برنامه ها</a></li>
             <li><a class="text-light" href="{{ route('Statements_Title') }}">بیانیه ها</a></li>
             <li><a class="text-light" href="{{ route('Get_Regulations') }}">آئین نامه ها</a></li>
