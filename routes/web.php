@@ -116,6 +116,8 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('/new','ActionTitleController@newActivityTitle')->name('New_Activity');
 			Route::post('/new','ActionTitleController@createActivityTitle');
 			Route::get('/delete/{id}' , 'ActionTitleController@deleteActivity')->name('Delete_Activity');
+			Route::get('/edit/{id}' , 'ActionTitleController@editActivity')->name('Edit_Activity');
+			Route::post('/edit/{id}' , 'ActionTitleController@doEditActivity');
 		});
 
 });

@@ -54,4 +54,36 @@ class ActionTitleController extends Controller
 			return back()->with('error','خطای سیستمی لطفا دوباره سعی کنید');
 		}
 	}
+
+	//editActivity renders a page for editing activity title
+	public function editActivity($id){
+		$EditableActivity = ActTitle::find($id);
+		return view('Admin.Activities.ActivityTitle.EditActivity',compact('EditableActivity'));
+	}
+
+	//doEditActivity
+	public function doEditActivity(Request $request , $id){
+		//validation
+		$this->validate($request,
+										['Activity_title' => 'required',
+										'Activity_description' => 'required'],
+										['Activity_title.required' => 'ورود عنوان فعالیت الزامی است',
+										'Activity_description.required' => 'ورود توضیحات الزامی است']
+										);
+		
+		//find the record										
+		$EditedActivity = ActTitle::find($id);
+
+		//edit 
+		$EditedActivity->at_title = $request->Activity_title;
+		$EditedActivity->at_description = $request->Activity_description  ;
+		
+		//save and check if Done
+		if($EditedActivity->save()){
+			return redirect()->route('Get_Activity')->with('success','فعالیت با موفقیت ویرایش شد');
+		}
+		else{
+			return redirect()->route('Get_Activity')->with('error','خطای سیستمی لطفا دوباره سعی کنید');
+		}
+	}
 }

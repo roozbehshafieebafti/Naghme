@@ -7,10 +7,12 @@
 		<h2>ویرایش آئین نامه</h2>
 		<div>
 			@if(count($errors)>0)
-				<div class="alert alert-danger" style="margin-top: 20px">
-					@foreach($errors->all() as $val)
-						{{ $val }}
-					@endforeach
+				<div  style="margin-top: 20px">
+					<ul class="alert alert-danger">
+						@foreach($errors->all() as $val)
+							<li>{{ $val }}</li>
+						@endforeach
+					</ul>
 				</div>
 			@endif
 			<form class="form" method="post" action="" style="padding: 20px 0">

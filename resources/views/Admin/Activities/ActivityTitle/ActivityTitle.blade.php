@@ -19,18 +19,22 @@
 		<table class="table table-hover border" style="margin-top: 30px">
 			    <thead class=" bg-success text-light">
 			    	<th scope="col" class="text-center">عملیات</th>
-				    <th scope="col" >مسئولین</th>
+					<th scope="col" >توضیحات</th>
+				    <th scope="col" >عنوان فعالیت</th>
 			    </thead>
 			@foreach($ActTitle as $val)
 				<tr >					
 					<td class="text-center">
 						<span>
-							<a href="" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
+							<a href="{{ route('Edit_Activity',$val->id) }}" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
 						</span>
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<span>
 							<a href="{{ route('Delete_Activity',$val->id) }}" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
 						</span>
+					</td>
+					<td>
+						{{ $val->at_description }}
 					</td>
 					<td >
 						<span>
