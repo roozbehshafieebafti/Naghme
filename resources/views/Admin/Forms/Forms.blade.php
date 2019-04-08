@@ -38,7 +38,7 @@
 					</td>
 					<td >
 						<span>
-							{{ $val->form_title_id }}
+							{{ $val->form_title }}
 						</span>
 					</td> 
 				</tr>
@@ -51,7 +51,7 @@
 		@endif
 		<div>
 			<br/>
-			<a href="" class="btn btn-primary" style="margin-right: 20px"><i class="fas fa-plus-circle"></i>&nbsp;فرم جدید</a>
+			<a href="{{ route('New_Form') }}" class="btn btn-primary" style="margin-right: 20px"><i class="fas fa-plus-circle"></i>&nbsp;فرم جدید</a>
 		</div>
     </div>
 @endsection

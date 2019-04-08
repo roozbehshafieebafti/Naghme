@@ -123,6 +123,8 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 		/* Forms */
 		Route::group(['prefix' => '/forms'] , function(){
 			Route::get('/' , 'FormController@getForms')->name('Get_Forms');
+			Route::get('/new' , 'FormController@newForm')->name('New_Form');
+			Route::post('/new' , 'FormController@createForm')->name('Create_Form');
 		});
 
 });

@@ -21,6 +21,7 @@
 		<script type="text/javascript" src="{{ config('app.url').'js/sweetalert.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Regulation.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Authorities.js' }}"></script>
+		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Form.js' }}"></script>
 		<script type="text/javascript">
 			$(function () {
 				  $('[data-toggle="tooltip"]').tooltip()

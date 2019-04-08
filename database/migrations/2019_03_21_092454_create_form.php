@@ -13,7 +13,7 @@ class CreateForm extends Migration
     {
         Schema::create('form', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('form_title_id');
+            $table->string('form_title',128);
             $table->text('form_description');
             $table->string('form_file1');
             $table->string('form_file2')->nullable();
