@@ -106,6 +106,7 @@ $(function()
     $('#FormOfForm').submit(function(e)
     {
         e.preventDefault();
+        $('#Submit').attr("disabled", true);
         $(pbar).width(0).addClass('active');
         $('#progressBarDiv').css({"display":"block"});
         uploadFile();

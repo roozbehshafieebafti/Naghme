@@ -25,13 +25,30 @@
 			@foreach($Forms as $val)
 				<tr >					
 					<td class="text-center">
+						
 						<span>
-							<a href="" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
+						<a href="{{ config('app.url').'/'.$val->form_file1 }}" data-toggle="tooltip" data-placement="top" title="pdf" ><i class="fas fa-file-pdf"></i></a>
 						</span>
-						&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;
+						<?php
+							if($val->form_file2 !=null)
+							{
+							?>
+								<span>
+									<a href="{{ config('app.url').'/'.$val->form_file2 }}" data-toggle="tooltip" data-placement="top" title="word" ><i class="fas fa-file-word"></i></a>
+								</span>
+							<?php
+							}
+						?>
+						&nbsp;&nbsp;&nbsp;
 						<span>
-							<a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
-						</span>
+								<a href="" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
+							</span>
+							&nbsp;&nbsp;&nbsp;
+							<span>
+							<a href="{{ route('Delete_Form' , $val->id ) }}" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
+							</span>
+						
 					</td>
 					<td>
 						{{ $val->form_description }}

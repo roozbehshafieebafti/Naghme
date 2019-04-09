@@ -18,13 +18,11 @@
 			  	<div class="form-group">
 			    	<label >فایل PDF:</label>
 			    	<input class="form-control" id="PDF_file" type="file" onchange="PdfFormCheck(this.id)" name="PDF_file" required="required">
-			    	<br>
 			    	<small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small>
                   </div>
                 <div class="form-group">
 			    	<label >فایل WORD:</label>
 			    	<input class="form-control" id="WORD_file" type="file" onchange="WordFormCheck(this.id)" name="WORD_file" >
-			    	<br>
 			    	<small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small>
 			  	</div>
 			  	<button disabled id="FormSubmit" type="submit" class="btn btn-primary" style="width:150px;">ارسال</button>

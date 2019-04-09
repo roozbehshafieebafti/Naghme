@@ -1,6 +1,11 @@
 <div class="Naghmeh-Menu-bar bg-dark">
   <div class="col-12">
     <div class="Naghmeh-dropdown">
+        <a href="{{ route('Get_News') }}" class="nav-link text-light" role="button">
+          <span>اخبار<span>
+        </a>
+    </div>
+    <div class="Naghmeh-dropdown">
         <a class="nav-link text-light" role="button">
           <i class="fas fa-sort-down"></i> 
           <span>فعالیت ها<span>

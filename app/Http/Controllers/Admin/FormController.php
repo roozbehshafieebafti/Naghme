@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Forms;
+use Illuminate\Support\Facades\Storage;
 
 class FormController extends Controller
 {
@@ -47,6 +48,21 @@ class FormController extends Controller
             return 1;
         }else{
             return 0;
+        }
+    }
+
+    //deleteForm
+    public function deleteForm($id){
+        $DeletedForms = Forms::find($id);
+        Storage::delete($DeletedForms->form_file1);
+        if($DeletedForms->form_file2){
+            Storage::delete($DeletedForms->form_file2);
+        }
+        
+        if($DeletedForms->delete()){
+            return back()->with('success','فرم با موفقیت حذف شد');    
+        }else{
+            return back()->with('error','خطای سیستمی لطفا دوباره سعی کنید');    
         }
     }
 }

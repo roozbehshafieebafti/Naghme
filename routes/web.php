@@ -125,6 +125,14 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('/' , 'FormController@getForms')->name('Get_Forms');
 			Route::get('/new' , 'FormController@newForm')->name('New_Form');
 			Route::post('/new' , 'FormController@createForm')->name('Create_Form');
+			Route::get('/delete/{id}' , 'FormController@deleteForm')->name('Delete_Form');
+		});
+
+		/* News */
+		Route::group(['prefix'=>'/news'] , function(){
+			Route::get('/' , 'NewsController@getNews')->name('Get_News');
+			Route::get('/create' , 'NewsController@createNews')->name('Create_News');
+			Route::post('/create' , 'NewsController@doCreateNews')->name('Do_Create_News');
 		});
 
 });
