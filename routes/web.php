@@ -133,6 +133,7 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('/' , 'NewsController@getNews')->name('Get_News');
 			Route::get('/create' , 'NewsController@createNews')->name('Create_News');
 			Route::post('/create' , 'NewsController@doCreateNews')->name('Do_Create_News');
+			Route::get('/delete/{id}','NewsController@deleteNews')->name('Delete_News');
 		});
 
 });

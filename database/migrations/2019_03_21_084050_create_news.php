@@ -14,9 +14,12 @@ class CreateNews extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
             $table->string('news_title',64);
-            $table->string('news_picture',32);
+            $table->string('news_picture',96);
+            $table->string('news_file',96);
             $table->text('news_description');
+            $table->string('news_link_name',32)->nullable();
             $table->string('news_link')->nullable();
+            $table->integer('news_date',10);
             $table->timestamps();
         });
     }

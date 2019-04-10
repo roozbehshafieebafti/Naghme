@@ -8,7 +8,7 @@
                 <form id="FormOfNews" onsubmit="FormOfNews(event)" method="post" action="" enctype="multipart/form-data">
                     <div class="form-group">
                         <label >عنوان :</label>
-                        <input class="form-control" name="News_title" placeholder="عنوان" required="required">
+                        <input class="form-control" maxlength="64" name="News_title" placeholder="عنوان" required="required">
                       </div>
                       <div class="form-group">
                         <label >توضیحات:</label>
@@ -23,8 +23,16 @@
                     <div class="form-group">
                         <label >فایل</label>
                         <input class="form-control" id="News_file" type="file" onchange="FileNewsCheck(this.id)" name="News_file" >
-                        <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small>
+                        <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small><br>
+                        <small class="">فرمت فایل حتما بایستی pdf یا docx یا doc باشد</small>
                       </div>
+                      <div class="form-group col-12">
+                        <label >نام لینک :</label>
+                        <input class="form-control col-6" name="NewsLinkName" />
+                        <label >آدرس لینک :</label>
+                        <input style="direction: ltr" class="form-control col-6" name="NewsLinkAddress" placeholder="http://www.google.com"/>
+                      </div>
+
                       <button disabled id="NewsSubmit" type="submit" class="btn btn-primary" style="width:150px;">ارسال</button>
                 </form>
                 <div id="progressBarDiv"  class="progress" style="height:30px;margin-top: 50px;display: none;">

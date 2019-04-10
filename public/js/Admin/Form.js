@@ -1,11 +1,11 @@
 function PdfFormCheck(id){
     var Size = $("#"+id)[0].files[0].size;
     var pdfPattern = /^([a-zA-Z0-9\s_\\.\-:])+(.pdf)$/;
-    
 
     if(Size<8388608){
         if(pdfPattern.test($("#"+id)[0].files[0].name))
         {
+            
             $('#FormSubmit').removeAttr("disabled");
             $('#Alert').css('display','none');
 
@@ -13,17 +13,17 @@ function PdfFormCheck(id){
         else{
             $('#Alert').css('display','block');
             $('#Alert').html('فرمت فایل باید حتما pdf باشد');
-            $('#Submit').attr("disabled", true);
+            $('#FormSubmit').attr("disabled", true);
         }
     }
     else{
         $('#Alert').css('display','block');
         $('#Alert').html('سایز فایل وارد شده بیش از 7mb است');
-        $('#Submit').attr("disabled", true);
+        $('#FormSubmit').attr("disabled", true);
     }
 }
 
-function WordFormCheck (id){
+function WordFormCheck(id){
     var Size = $("#"+id)[0].files[0].size;
     var docPatten = /^([a-zA-Z0-9\s_\\.\-:])+(.doc|.docx)$/;
     if(Size<8388608){
@@ -35,13 +35,13 @@ function WordFormCheck (id){
         else{
             $('#Alert').css('display','block');
             $('#Alert').html('فرمت فایل باید حتما doc یا docx باشد');
-            $('#Submit').attr("disabled", true);
+            $('#FormSubmit').attr("disabled", true);
         }
     }
     else{
         $('#Alert').css('display','block');
         $('#Alert').html('سایز فایل وارد شده بیش از 7mb است');
-        $('#Submit').attr("disabled", true);
+        $('#FormSubmit').attr("disabled", true);
     }
 }
 
@@ -106,7 +106,7 @@ $(function()
     $('#FormOfForm').submit(function(e)
     {
         e.preventDefault();
-        $('#Submit').attr("disabled", true);
+        $('#FormSubmit').attr("disabled", true);
         $(pbar).width(0).addClass('active');
         $('#progressBarDiv').css({"display":"block"});
         uploadFile();

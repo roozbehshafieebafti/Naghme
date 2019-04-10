@@ -32,7 +32,7 @@ $( function() {
 
 
 
-  function PictureNewsCheck(id){
+function PictureNewsCheck(id){
     var Size = $("#"+id)[0].files[0].size;
     var pdfPattern = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png|.svg)$/;
     
