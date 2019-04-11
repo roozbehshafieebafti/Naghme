@@ -41,11 +41,7 @@ class RegulationsController extends Controller
         $DeletedRecord->delete();
 
         if($DeletedRecord){
-            if($DeletedFile){
-                return back()->with('success','آئین نامه با موفقیت حذف شد');    
-            }else{
-                return back()->with('warning','آئین نامه با موفقیت حذف شد اما فایل آن به طور کامل پاک نشده است');    
-            }
+            return back()->with('success','آئین نامه با موفقیت حذف شد');    
         }
         else{
             return back()->with('error','خطای سیستمی لطفا دوباره سعی کنید');
