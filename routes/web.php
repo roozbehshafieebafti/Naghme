@@ -140,4 +140,10 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('/search/{item}' , 'NewsController@searchNews')->name('Search_news');
 		});
 
+
+		/* Charts */
+		Route::group(['prefix'=>'/chart'] , function(){
+			Route::get('/' , 'ChartController@getChart')->name('Get_Chart');
+			Route::post('/' , 'ChartController@updateChart');
+		});
 });

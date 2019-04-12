@@ -14,7 +14,7 @@ class CreateChart extends Migration
         Schema::create('chart', function (Blueprint $table) {
             $table->increments('id');
             $table->tinyInteger('chart_city_id');
-            $table->string('chart_picture',32);
+            $table->string('chart_picture',96);
             $table->text('chart_description')->nullable();
             $table->timestamps();
         });

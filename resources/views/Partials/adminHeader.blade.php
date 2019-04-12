@@ -38,7 +38,7 @@
             <li><a class="text-light" href="{{ route('Statements_Title') }}">بیانیه ها</a></li>
             <li><a class="text-light" href="{{ route('Get_Regulations') }}">آئین نامه ها</a></li>
             <li><a class="text-light" href="{{ route('Get_Ethics') }}">منشور اخلاقی</a></li>
-            <li><a class="text-light" href="#">نمودار سازمانی</a></li>
+            <li><a class="text-light" href="{{ route('Get_Chart') }}">نمودار سازمانی</a></li>
         </ul>
     </div>
   </div>
