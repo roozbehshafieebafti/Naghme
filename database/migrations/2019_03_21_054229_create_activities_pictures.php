@@ -14,7 +14,7 @@ class CreateActivitiesPictures extends Migration
         Schema::create('activities_pictures', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('apic_activities_posts_id');
-            $table->string('apic_picture_name',32);
+            $table->string('apic_picture_name',96);
             $table->timestamps();
         });
     }

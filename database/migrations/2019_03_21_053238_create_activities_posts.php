@@ -17,7 +17,7 @@ class CreateActivitiesPosts extends Migration
             $table->integer('apst_activities_title_id');
             $table->string('apst_title',64);
             $table->text('apst_description');
-            $table->string('apst_picture_of_title',32);
+            $table->string('apst_picture_of_title',96);
             $table->string('apst_video')->nullable();
             $table->timestamps();
         });

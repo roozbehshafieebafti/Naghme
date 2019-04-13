@@ -5,6 +5,11 @@
 	<div class="container" style="direction: rtl;padding: 20px 0">
 		<h2>فعالیت جدید</h2>
 		<div>
+			@if (session('error'))
+				<div class="alert alert-danger" style="margin-top: 30px">
+						{{ session('error') }}
+					</div>
+			@endif
 			@if(count($errors)>0)
 				<div  style="margin-top: 20px">
 					<ul class="alert alert-danger">

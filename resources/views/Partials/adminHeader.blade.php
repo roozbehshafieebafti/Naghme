@@ -1,6 +1,6 @@
 <div class="Naghmeh-Menu-bar bg-white">
   <div class="col-12">
-    <div class="Naghmeh-dropdown col-2 text-center">
+    <div class="Naghmeh-dropdown  text-center"  style="width:15%">
         <a class="nav-link text-muted " role="button">
           <i class="fas fa-sort-down"></i> 
           <span>نغمه ماندگار</span>
@@ -17,7 +17,7 @@
         </ul>
     </div>
     |
-    <div class="Naghmeh-dropdown col-2 text-center">
+    <div class="Naghmeh-dropdown text-center"  style="width:15%">
         <a class="nav-link text-muted " role="button">
           <i class="fas fa-sort-down"></i> 
           <span>مسئولین</span>
@@ -28,28 +28,34 @@
         </ul>
     </div>
     |
-    <div class="Naghmeh-dropdown col-2 text-center">
+    <div class="Naghmeh-dropdown text-center" style="width:15%">
         <a class="nav-link text-muted" role="button">
           <i class="fas fa-sort-down"></i> 
           <span>فعالیت ها<span>
         </a>
-        <ul class="bg-white Naghmeh-dropdown-menu text-left">
+        <ul class="bg-white Naghmeh-dropdown-menu text-left" \>
             <li><a class="text-muted" href="{{ route('Get_Activity') }}">عنوان فعالیت ها</a></li>
-            <li><a class="text-muted" href="">لیست فعالیت ها</a></li>
+          <li><a class="text-muted" href="{{ route('Get_Posts') }}">فعالیت های اجرایی</a></li>
         </ul>
     </div>
     |
-    <div class="Naghmeh-dropdown col-2 text-center">
+    <div class="Naghmeh-dropdown  text-center" style="width:15%">
         <a href="{{ route('Get_User') }}" class="nav-link text-muted" role="button">
           <span>اعضا<span>
         </a>
     </div>
     |
-    <div class="Naghmeh-dropdown col-2 text-center">
+    <div class="Naghmeh-dropdown text-center" style="width:15%">
         <a href="{{ route('Get_News') }}" class="nav-link text-muted" role="button">
           <span>اخبار<span>
         </a>
     </div>
+    |
+    <div class="Naghmeh-dropdown text-center" style="width:15%">
+      <a href="" class="nav-link text-muted" role="button">
+        <span>نمایندگی<span>
+      </a>
+  </div>
   </div>
 </div>
 

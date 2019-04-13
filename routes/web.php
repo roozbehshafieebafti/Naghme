@@ -120,6 +120,17 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::post('/edit/{id}' , 'ActionTitleController@doEditActivity');
 		});
 
+		Route::group(['prefix' => '/post' , 'namespace' => 'Activities'] , function(){
+			Route::get('/' , 'DoActionController@getPost')->name('Get_Posts');
+			Route::get('/new' , 'DoActionController@newPost')->name('New_Posts');
+			Route::post('/new' , 'DoActionController@createPost');
+			Route::get('/edit/{id}' , 'DoActionController@editPost')->name('Edit_Post');
+			Route::post('/edit/{id}' , 'DoActionController@doEditPost')->name('Do_Edit_Post');
+			Route::get('/gallery/{id}/{postName}' , 'DoActionController@getPostGallery')->name('Get_Post_Gallery');
+			Route::post('/gallery/{id}/{postName}' , 'DoActionController@insertPostGallery')->name('Insert_Post_Gallery');
+			Route::get('/gallery/action/delete/{id}' , 'DoActionController@deletePostPicture')->name('Delete_Post_Picture');
+		});
+
 		/* Forms */
 		Route::group(['prefix' => '/forms'] , function(){
 			Route::get('/' , 'FormController@getForms')->name('Get_Forms');

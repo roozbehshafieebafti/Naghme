@@ -29,7 +29,11 @@ class ActionTitleController extends Controller
     						'Activities_Text' => 'required'],
     						['New_Activities.required' => 'نام فعالیت نمی تواند خالی باشد',
 							'Activities_Text.required' => 'توضیحات نمی تواند خالی باشد']);
-							
+		//check this title is repititive or not
+			$findRepitive = ActTitle::where('at_title',$request->New_Activities)->get();
+			if(count($findRepitive)>0){
+				return back()->with('error','عنوان تکراری است');
+			}
 		//Create new Record
     	$actTitle->at_title = $request->New_Activities;
     	$actTitle->at_description = $request->Activities_Text;
