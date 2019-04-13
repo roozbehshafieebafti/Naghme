@@ -14,7 +14,7 @@
 			<form class="form" method="post" action="" style="padding: 20px 0">
 				{{ csrf_field() }}
 				 <div class="form-group">
-				    <label >:زیربیانیه</label>
+				    <label >زیربیانیه:</label>
 				    <input type="text" name="New_Statement_list" class="form-control text-left" placeholder="زیر بیانیه را اینجا وارد کنید">
 				    <small id="" class="form-text text-muted">بدون محدودیت کارکتری</small>
 				  </div>

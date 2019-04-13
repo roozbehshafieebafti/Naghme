@@ -15,8 +15,8 @@
 			@endif
 			<form class="form" method="post" action="" style="padding: 20px 0">
 				{{ csrf_field() }}
-				 <div class="form-group">
-				    <label >:بیانیه ها</label>
+				 <div class="form-group container">
+				    <label >بیانیه ها:</label>
 				    <input type="text" name="New_Statement" class="form-control text-left" value=" {{ $EditableStatements['attributes']['set_title'] }} ">
 				    <small id="" class="form-text text-muted">بدون محدودیت کارکتری</small>
 				  </div>

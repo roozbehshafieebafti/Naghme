@@ -18,12 +18,17 @@
 		@if(count($Authorities) > 0)
 		<table class="table table-hover border" style="margin-top: 30px">
 			    <thead class=" bg-success text-light">
-			    	<th scope="col" class="text-center">عملیات</th>
 				    <th scope="col" >مسئولین</th>
+			    	<th scope="col" class="text-center">عملیات</th>
 			    </thead>
 			@foreach($Authorities as $val)
-				<tr >					
-					<td class="text-center">
+				<tr >	
+						<td >
+								<span style="color:blue;cursor: pointer;" data-toggle="modal" data-target="#A{{ $val->id }}">
+								{{ $val->authorities_name.' '.$val->authorities_family }}
+								</span>
+							</td> 				
+						<td class="text-center">
 						<span>
 							<a href="{{ route('Edit_Authorities', $val->id ) }}" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
 						</span>
@@ -31,12 +36,7 @@
 						<span>
 							<a href="{{ route('Delete_Authorities' , $val->id) }}" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
 						</span>
-					</td>
-					<td >
-						<span style="color:blue;cursor: pointer;" data-toggle="modal" data-target="#A{{ $val->id }}">
-						{{ $val->authorities_name.' '.$val->authorities_family }}
-						</span>
-					</td> 
+					</td>					
 				</tr>
 				<div style="direction: rtl" class="modal fade" id="A{{ $val->id }}" tabindex="-1" role="dialog" aria-labelledby="Title" aria-hidden="true">
 				  <div class="modal-dialog modal-dialog-scrollable" role="document">

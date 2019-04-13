@@ -20,8 +20,8 @@
 				    <input type="text" name="New_Statement" class="form-control text-left" placeholder="بیانیه را اینجا وارد کنید">
 				    <small id="" class="form-text text-muted">بدون محدودیت کارکتری</small>
 				  </div>
+				  <button class="btn btn-success">ثبت بیانیه</button>
 				<a href="{{ route('Statements_Title') }}" class="btn btn-danger text-light" style="margin-right: 20px;">&nbsp;بازگشت &nbsp;<i class="fas fa-arrow-circle-left"></i></a>
-				<button class="btn btn-success">ثبت بیانیه</button>
 			</form>
 		</div>
 	</div>

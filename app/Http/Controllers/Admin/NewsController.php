@@ -121,7 +121,7 @@ class NewsController extends Controller
 
     //
     public function findNews($item){
-        $News = News::select('news_title')->where('news_title','like','%'.$item.'%')->get();
+        $News = News::select('news_title')->where('news_title','like','%'.$item.'%')->limit(10)->get();
         return $News;
     }
 

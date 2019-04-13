@@ -14,8 +14,8 @@
 			@endif
 			<form class="form" method="post" action="" style="padding: 20px 0">
 				{{ csrf_field() }}
-				 <div class="form-group">
-				    <label for="exampleInputEmail1">:برنامه</label>
+				 <div class="form-group container">
+				    <label for="exampleInputEmail1">برنامه:</label>
 				    <input type="text" name="New_Plan" class="form-control text-left" value="{{ $Plan->hpp_data }}" >
 				    <small id="emailHelp" class="form-text text-muted">گنجایش : حداکثر 128 کاراکتر</small>
 				  </div>

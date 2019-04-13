@@ -19,8 +19,8 @@
                     @endforeach
                 </div>
             @endif
-            <div class="text-center">
-                <img src="{{ config('app.url').'/'.$DataChart['attributes']['chart_picture'] }}" />
+            <div class="text-left">
+                <a title="کلیک کنید" target="_blank" href="{{ config('app.url').'/'.$DataChart['attributes']['chart_picture'] }}"><img style="height:70px" src="{{ config('app.url').'/'.$DataChart['attributes']['chart_picture'] }}" /></a>
             </div>
 
             <div style="margin-top:30px">

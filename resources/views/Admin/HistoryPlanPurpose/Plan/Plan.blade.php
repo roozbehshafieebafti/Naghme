@@ -18,11 +18,12 @@
 		@if(count($Plan) > 0)
 		<table class="table table-hover border" style="margin-top: 30px">
 			    <thead class=" bg-success text-light">
-			    	<th scope="col" class="text-center">عملیات</th>
 				    <th scope="col" >برنامه</th>
+			    	<th scope="col" class="text-center">عملیات</th>
 			    </thead>			 
 			@foreach($Plan as $val)
 				<tr >
+					<td >{{ $val->hpp_data }}</td>
 					<td class="text-center">
 						<span>
 							<a href="{{ route('Edit_Page_Plan',$val->id) }}" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
@@ -32,7 +33,6 @@
 							<a href="{{ route('Delete_Plan',$val->id) }}" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
 						</span>
 					</td>
-					<td >{{ $val->hpp_data }}</td>
 				</tr>
 			@endforeach
 		</table>

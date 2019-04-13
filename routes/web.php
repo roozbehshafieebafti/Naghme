@@ -140,10 +140,21 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('/search/{item}' , 'NewsController@searchNews')->name('Search_news');
 		});
 
-
 		/* Charts */
 		Route::group(['prefix'=>'/chart'] , function(){
 			Route::get('/' , 'ChartController@getChart')->name('Get_Chart');
 			Route::post('/' , 'ChartController@updateChart');
+		});
+
+		/* Users */
+		Route::group(['prefix'=>'users'] , function(){
+			Route::get('/' , 'UserController@getUsers')->name('Get_User');
+			Route::get('/create' , 'UserController@createUsers')->name('Create_User');
+			Route::post('/create' , 'UserController@doCreateUser');
+			Route::get('/edit/{id}' , 'UserController@editUser')->name('Edit_User');
+			Route::post('/edit/{id}' , 'UserController@doEditUser');
+			Route::get('/delete/{id}' , 'UserController@deleteUser')->name('Delete_User');
+			Route::get('/find/{item}' , 'UserController@findUser');
+			Route::get('/search/{item}' , 'UserController@searchUser');
 		});
 });

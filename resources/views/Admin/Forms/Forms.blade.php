@@ -18,16 +18,24 @@
         @if(count($Forms) > 0)
 		<table class="table table-hover border" style="margin-top: 30px">
 			    <thead class=" bg-success text-light">
-			    	<th scope="col" class="text-center">عملیات</th>
-					<th scope="col" >توضیحات</th>
 				    <th scope="col" >عنوان فعالیت</th>
+					<th scope="col" >توضیحات</th>
+			    	<th scope="col" class="text-center">عملیات</th>
 			    </thead>
 			@foreach($Forms as $val)
 				<tr >					
-					<td class="text-center">
-						
+					<td >
 						<span>
-						<a href="{{ config('app.url').'/'.$val->form_file1 }}" data-toggle="tooltip" data-placement="top" title="pdf" ><i class="fas fa-file-pdf"></i></a>
+							{{ $val->form_title }}
+						</span>
+					</td> 
+					<td>
+						{{ $val->form_description }}
+					</td>
+					
+					<td class="text-center">						
+						<span>
+							<a href="{{ config('app.url').'/'.$val->form_file1 }}" data-toggle="tooltip" data-placement="top" title="pdf" ><i class="fas fa-file-pdf"></i></a>
 						</span>
 						&nbsp;&nbsp;&nbsp;
 						<?php
@@ -42,22 +50,13 @@
 						?>
 						&nbsp;&nbsp;&nbsp;
 						<span>
-								<a href="" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
-							</span>
-							&nbsp;&nbsp;&nbsp;
-							<span>
-							<a href="{{ route('Delete_Form' , $val->id ) }}" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
-							</span>
-						
-					</td>
-					<td>
-						{{ $val->form_description }}
-					</td>
-					<td >
-						<span>
-							{{ $val->form_title }}
+							<a href="" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
 						</span>
-					</td> 
+						&nbsp;&nbsp;&nbsp;
+						<span>
+							<a href="{{ route('Delete_Form' , $val->id ) }}" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
+						</span>		
+					</td>
 				</tr>
 			@endforeach			 
 		</table>

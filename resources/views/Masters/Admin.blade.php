@@ -11,10 +11,20 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/Admin.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/all.min.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/jquery-ui.min.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/templatemo-style.css' }}">
 	</head>
-	<body>
-		@include('Partials.adminHeader')
-		@yield('content')
+	<body style="direction:rtl;background-color:rgb(239,239,239)">
+		<div >
+			<div>
+				@include('Partials.adminSideBar')
+			</div>
+			<div style="float:left;width:80%;" class="c0l-10" >
+				@include('Partials.adminHeader')
+				<div style="" class="container">
+					@yield('content')
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript" src="{{ config('app.url').'js/jquery.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/jquery-ui.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/popper.min.js' }}"></script>
@@ -25,10 +35,13 @@
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Authorities.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Form.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/News.js' }}"></script>
+		<script type="text/javascript" src="{{ config('app.url').'js/Admin/User.js' }}"></script>
 		<script type="text/javascript">
 			$(function () {
 				  $('[data-toggle="tooltip"]').tooltip()
-				})
+				});
+				var Height = $( document ).height() + 'px';
+				$('#SideBare').css('height',Height) ;
 		</script>
 	</body>
 </html>

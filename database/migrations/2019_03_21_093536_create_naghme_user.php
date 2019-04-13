@@ -19,7 +19,7 @@ class CreateNaghmeUser extends Migration
             $table->string('naghme_user_name',32);
             $table->string('naghme_user_family',32);
             $table->string('naghme_user_kind',16);
-            $table->string('naghme_user_level',16);
+            $table->tinyInteger('naghme_user_level');
             $table->string('naghme_user_activity',64);
             $table->boolean('naghme_user_status');
             $table->timestamps();

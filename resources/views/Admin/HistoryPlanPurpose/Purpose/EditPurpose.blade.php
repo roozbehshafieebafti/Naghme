@@ -15,8 +15,8 @@
 			@endif
 			<form class="form col-12" method="post" action="" style="padding: 20px 0">
 				{{ csrf_field() }}
-				 <div class="form-group">
-				    <label for="exampleInputEmail1">:هدف </label>
+				 <div class="form-group container">
+				    <label for="exampleInputEmail1">هدف: </label>
 				    <input type="text" name="New_Purpose" class="form-control text-left" value="{{ $editableRecord['attributes']['hpp_data'] }}">
 				    <small id="emailHelp" class="form-text text-muted">گنجایش : حداکثر 128 کاراکتر</small>
 				  </div>

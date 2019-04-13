@@ -18,21 +18,21 @@
 		@if(count($AuthoritiesTitle) > 0)
 		<table class="table table-hover border" style="margin-top: 30px">
 			    <thead class=" bg-success text-light">
-			    	<th scope="col" class="text-center">عملیات</th>
 				    <th scope="col" >عنوان مسئولیت</th>
+			    	<th scope="col" class="text-center">عملیات</th>
 			    </thead>
 			@foreach($AuthoritiesTitle as $val)
-				<tr >					
+				<tr >
+					<td >
+						<span >
+						{{ $val->authorities_title}}
+						</span>
+					</td> 					
 					<td class="text-center">
 						<span>
 							<a href="{{ route('Create_Duties',$val->authorities_title) }}" data-toggle="tooltip" data-placement="top" title="تعریف وظایف" ><i class="fas fa-clipboard"></i></a>
 						</span>
 					</td>
-					<td >
-						<span >
-						{{ $val->authorities_title}}
-						</span>
-					</td> 
 				</tr>
 			@endforeach			 
 		</table>

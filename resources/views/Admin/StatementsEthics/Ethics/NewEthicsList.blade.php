@@ -16,12 +16,12 @@
 			<form class="form" method="post" action="" style="padding: 20px 0">
 				{{ csrf_field() }}
 				 <div class="form-group">
-				    <label >:زیرمجموعه</label>
+				    <label >زیرمجموعه:</label>
 				    <input type="text" name="New_Ethics_List" class="form-control text-left" placeholder="زیر مجموعه برای منشور را اینجا وارد کنید">
 				    <small id="" class="form-text text-muted">بدون محدودیت کارکتری</small>
 				  </div>
+				  <button class="btn btn-success">تبت زیرمجموعه</button>
 				  <a href="{{ route('Get_Ethics_List',$id) }}" class="btn btn-danger text-light" style="margin-right: 20px;">&nbsp;بازگشت &nbsp;<i class="fas fa-arrow-circle-left"></i></a>
-				<button class="btn btn-success">تبت زیرمجموعه</button>
 
 			</form>
 		</div>

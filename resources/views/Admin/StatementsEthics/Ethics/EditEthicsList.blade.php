@@ -16,7 +16,7 @@
 			<form class="form" method="post" action="" style="padding: 20px 0">
 				{{ csrf_field() }}
 				 <div class="form-group">
-				    <label >:زیرمجموعه</label>
+				    <label >زیرمجموعه:</label>
 				    <input type="text" name="New_Ethics_List" class="form-control text-left" value=" {{$EthicsList['attributes']['sel_description']}} ">
 				    <small id="" class="form-text text-muted">بدون محدودیت کارکتری</small>
 				  </div>
