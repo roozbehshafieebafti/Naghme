@@ -60,9 +60,9 @@ $(function()
         }
     }
 
-    function uploadFile()
+    function uploadFile(id)
     {
-        var formdata = new FormData($('#FormOfForm')[0]);
+        var formdata = new FormData($('#'+ id)[0]);
         $.ajax(
         { headers:{
             'X-CSRF-TOKEN':$("meta[name='csrf-token']").attr('content')
@@ -109,6 +109,15 @@ $(function()
         $('#FormSubmit').attr("disabled", true);
         $(pbar).width(0).addClass('active');
         $('#progressBarDiv').css({"display":"block"});
-        uploadFile();
+        uploadFile('FormOfForm');
+    });
+
+    $('#EditFormOfForm').submit(function(e)
+    {
+        e.preventDefault();
+        $('#FormSubmit').attr("disabled", true);
+        $(pbar).width(0).addClass('active');
+        $('#progressBarDiv').css({"display":"block"});
+        uploadFile('EditFormOfForm');
     });
 })

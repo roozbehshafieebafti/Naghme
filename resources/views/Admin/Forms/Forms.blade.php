@@ -50,7 +50,7 @@
 						?>
 						&nbsp;&nbsp;&nbsp;
 						<span>
-							<a href="" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
+							<a href="{{ route('Edit_Form' , $val->id ) }}" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
 						</span>
 						&nbsp;&nbsp;&nbsp;
 						<span>

@@ -126,6 +126,8 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('/new' , 'FormController@newForm')->name('New_Form');
 			Route::post('/new' , 'FormController@createForm')->name('Create_Form');
 			Route::get('/delete/{id}' , 'FormController@deleteForm')->name('Delete_Form');
+			Route::get('/edit/{id}' , 'FormController@editForm')->name('Edit_Form');
+			Route::post('/edit/{id}' , 'FormController@doEditForm')->name('Do_Edit_Form');
 		});
 
 		/* News */
