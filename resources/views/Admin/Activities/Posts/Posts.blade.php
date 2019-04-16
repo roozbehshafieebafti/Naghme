@@ -22,13 +22,21 @@
             @if(count($Posts) > 0)
                 <table class="table table-hover border" style="margin-top: 30px">
                         <thead class=" bg-success text-light">
+                            <th scope="col" >تاریخ</th>
+                            <th scope="col" >ساعت</th>
                             <th scope="col" >عنوان فعالیت</th>
                             <th scope="col" >گالری</th>
                             <th scope="col" >ویدئو</th>
                             <th scope="col" class="text-center">عملیات</th>
                         </thead>
                     @foreach($Posts as $val)
-                        <tr >					
+                        <tr >
+                            <td>
+                                {{ \Morilog\Jalali\Jalalian::forge($val->created_at)->format('Y/m/d') }}
+                            </td>
+                            <td>
+                                {{ \Morilog\Jalali\Jalalian::forge($val->created_at)->format('H:i:s') }}
+                            </td>				
                             <td  >
                                 <span style="color:blue;cursor: pointer;" data-toggle="modal" data-target="#id{{ $val->id }}">
                                     {{ $val->apst_title }}
@@ -46,7 +54,7 @@
                                 </span>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <span>
-                                    <a href="{{ route('Delete_Activity',$val->id) }}" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="{{ route('Delete_Post',$val->id) }}" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fas fa-trash-alt"></i></a>
                                 </span>
                             </td>
                         </tr>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Authorities;
 use Illuminate\Support\Facades\Storage;
+use App\Model\Duties;
 
 class AuthoritiesController extends Controller
 {
@@ -23,15 +24,22 @@ class AuthoritiesController extends Controller
     //createAuthorities
     public function createAuthorities(Authorities $Authority , Request $request){
     	//validation
-    	$this->validate($request , 
-    					['Authorities_id' => 'integer'],
-    					['Authorities_id.integer' => 'شماره پرسنلی بایستی عدد صحیح باشد']);
+    	$this->validate($request, [
+					'Authorities_title' => 'required',
+					'Authorities_name' => 'required',
+					'Authorities_family' => 'required',
+					'Authorities_cv' => 'required',
+			],[
+				'Authorities_title.required'=>'ورود سمت الزامی است',
+				'Authorities_name.required'=>'ورود نام الزامی است',
+				'Authorities_family.required'=>'ورود فامیل الزامی است',
+				'Authorities_cv.required'=>'ورود رزومه الزامی است',
+				]);
     	// Create a record
 		$Authority->authorities_title = $request->Authorities_title;
 		$Authority->authorities_name = $request->Authorities_name;
 		$Authority->authorities_family = $request->Authorities_family;
 		$Authority->authorities_cv = $request->Authorities_cv;
-		$Authority->authorities_id = $request->Authorities_id;
 
 		//save the picture
 		$picturePaht = $request->file('Authorities_picture')->store('picture/authorities');
@@ -62,9 +70,17 @@ class AuthoritiesController extends Controller
     //doEditAuthorities 
     public function doEditAuthorities(Request $request , $id){
     	//validation
-    	$this->validate($request , 
-    					['Authorities_id' => 'integer'],
-    					['Authorities_id.integer' => 'شماره پرسنلی بایستی عدد صحیح باشد']);
+    	$this->validate($request, [
+				'Authorities_title' => 'required',
+				'Authorities_name' => 'required',
+				'Authorities_family' => 'required',
+				'Authorities_cv' => 'required',
+		],[
+			'Authorities_title.required'=>'ورود سمت الزامی است',
+			'Authorities_name.required'=>'ورود نام الزامی است',
+			'Authorities_family.required'=>'ورود فامیل الزامی است',
+			'Authorities_cv.required'=>'ورود رزومه الزامی است',
+			]);
     	//find Authority
     	$EditedAuthorities = Authorities::find($id);
 
@@ -77,7 +93,6 @@ class AuthoritiesController extends Controller
     		$EditedAuthorities->authorities_picture = $NewPicturePath;
     	}
     	//Edit the record
-    	$EditedAuthorities->authorities_id = $request->Authorities_id;
     	$EditedAuthorities->authorities_title = $request->Authorities_title;
     	$EditedAuthorities->authorities_name = $request->Authorities_name;
     	$EditedAuthorities->authorities_family = $request->Authorities_family;
@@ -94,7 +109,8 @@ class AuthoritiesController extends Controller
 		//deleteAuthorities
     public function deleteAuthorities($id){
     	$deletedRecord = Authorities::find($id);
-    	Storage::delete($deletedRecord->authorities_picture);
+			Storage::delete($deletedRecord->authorities_picture);
+			Duties::where('ad_authorities_title',$deletedRecord->authorities_title)->delete();
     	if($deletedRecord->delete()){
     		return back()->with('success','مسئول با موفقیت پاک شد');
     	}

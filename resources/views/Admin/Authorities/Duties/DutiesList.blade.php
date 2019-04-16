@@ -22,15 +22,15 @@
 						$i=0;
 						foreach ($Duties as $value) {
 							?>
-							<input name="Duty_{{ $i }}" value="{{ $value->ad_authorities_duty }}" style="margin:5px" class="form-control" />
+							<input name="Duty_{{ $i }}" value="{{ $value->ad_authorities_duty }}" style="margin:5px" class="form-control col-8" />
 							<?php
 						$i++;
 						}
 
-						for($j=$i;$j<10;$j++)
+						for($j=$i;$j<30;$j++)
 						{
 							?>
-							<input name="Duty_{{ $j }}" style="margin:5px" class="form-control" />
+							<input name="Duty_{{ $j }}" style="margin:5px" class="form-control col-8" />
 							<?php
 						}
 					?>

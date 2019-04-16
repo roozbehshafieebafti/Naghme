@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Activities;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\ActivityTitle as ActTitle ;
+use App\Model\SubActivityTitle;
 
 class ActionTitleController extends Controller
 {
@@ -88,6 +89,70 @@ class ActionTitleController extends Controller
 		}
 		else{
 			return redirect()->route('Get_Activity')->with('error','خطای سیستمی لطفا دوباره سعی کنید');
+		}
+	}
+
+	//subActivity 
+	public function subActivity($id,$title){
+			$subActivityTitle = SubActivityTitle::where('sat_parent_actitvity',$id)->get();
+			return view('Admin.Activities.ActivityTitle.SubActivityTitle.SubActivity',compact('subActivityTitle','title','id'));
+	}
+
+	public function newSubActivity($id){
+		return view('Admin.Activities.ActivityTitle.SubActivityTitle.NewSubActivity',compact('id'));
+	}
+
+	public function createNewSubActivity(Request $request ,SubActivityTitle $subActivity ){
+		//dd($request->all());
+		$this->validate($request,
+										['New_Activities' => 'required',
+										'Activities_Text' => 'required'],
+										['New_Activities.required' => 'ورود عنوان زیر فعالیت الزامی است',
+										'Activities_Text.required' => 'ورود توضیحات الزامی است']
+										);
+		$subActivity->sat_parent_actitvity = $request->Parent_id ;
+		$subActivity->sat_title = $request->New_Activities ;
+		$subActivity->sat_description = $request->Activities_Text ;
+
+		if($subActivity->save()){
+			return redirect()->route('Get_Activity')->with('success','زیر فعالیت با موفقیت وارد شد');
+		}
+		else{
+			return redirect()->route('Get_Activity')->with('error','خطای سیستمی لطفا دوباره سعی کنید');	
+		}
+	}
+
+	public function editSubActivity($id){
+		$subActivity = SubActivityTitle::find($id);
+		return view('Admin.Activities.ActivityTitle.SubActivityTitle.EditSubActivity',compact('subActivity'));
+	}
+
+	public function doEditSubActivity(Request $request){
+			//dd($request->all());
+			$this->validate($request,
+										['New_Activities' => 'required',
+										'Activities_Text' => 'required'],
+										['New_Activities.required' => 'ورود عنوان زیر فعالیت الزامی است',
+										'Activities_Text.required' => 'ورود توضیحات الزامی است']
+										);
+			$EditedSubActivity = SubActivityTitle :: find($request->id);
+			$EditedSubActivity->sat_title = $request->New_Activities;
+			$EditedSubActivity->sat_description = $request->Activities_Text;
+			if($EditedSubActivity->save()){
+				return redirect()->route('Get_Activity')->with('success','زیر فعالیت با موفقیت ویرایش شد');
+			}
+			else{
+				return redirect()->route('Get_Activity')->with('error','خطای سیستمی لطفا دوباره سعی کنید');	
+			}
+	}
+
+	public function deleteEditSubActivity($id){
+			$DeletedRecord = SubActivityTitle :: find($id);
+		if($DeletedRecord->delete()){
+			return back()->with('success','زیر فعالیت با موفقیت حذف شد');
+		}
+		else{
+			return back()->with('error','خطای سیستمی');
 		}
 	}
 }

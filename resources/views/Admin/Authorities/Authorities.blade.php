@@ -68,14 +68,6 @@
 				        		</li>
 				        		<li>
 				        			<span>
-				        				شماره پرسنلی :
-				        			</span>
-				        			<span>
-				        				{{ $val->authorities_id }}
-				        			</span>
-				        		</li>
-				        		<li>
-				        			<span>
 				        				رزومه :
 				        			</span>
 				        			<span>

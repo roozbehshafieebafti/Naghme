@@ -9,11 +9,11 @@
 				
 			</div>
 			@if(count($errors)>0)
-				<div class="alert alert-danger" style="margin-top: 20px">
+				<ul class="alert alert-danger" style="margin-top: 20px">
 					@foreach($errors->all() as $val)
-						{{ $val }}
+						<li>{{ $val }}</li>
 					@endforeach
-				</div>
+				</ul>
 			@endif
 			<form class="form" method="post" action="" style="padding: 20px 0" enctype="multipart/form-data">
 				{{ csrf_field() }}
@@ -25,11 +25,6 @@
 				    <label >نام خانوادگی:</label>
 				    <input required="required" type="text" name="Authorities_family" class="form-control text-left" placeholder="" >
 				    
-				  </div>
-				  <div class="form-group">
-				    <label >شماره پرسنلی:</label>
-				    <input required="required" type="text" name="Authorities_id" class="form-control text-left" placeholder="" >
-				    <small id="" class="form-text text-muted">فقط عدد وارد شود</small>
 				  </div>
 				  <div class="form-group">
 				    <label >سمت</label>

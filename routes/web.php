@@ -118,14 +118,23 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('/delete/{id}' , 'ActionTitleController@deleteActivity')->name('Delete_Activity');
 			Route::get('/edit/{id}' , 'ActionTitleController@editActivity')->name('Edit_Activity');
 			Route::post('/edit/{id}' , 'ActionTitleController@doEditActivity');
+
+			Route::get('/sub/{id}/{title}' , 'ActionTitleController@subActivity')->name('Sub_Activity');
+			Route::get('/sub/create/new/{id}' , 'ActionTitleController@newSubActivity')->name('New_Sub_Activity');
+			Route::post('/sub/create/new/{id}' , 'ActionTitleController@createNewSubActivity');
+			Route::get('/sub/edit/new/{id}' , 'ActionTitleController@editSubActivity')->name('Edit_Sub_Activity');
+			Route::post('/sub/edit/new/{id}' , 'ActionTitleController@doEditSubActivity');
+			Route::get('/sub/delete/new/{id}' , 'ActionTitleController@deleteEditSubActivity')->name('Delete_Sub_Activity');
 		});
 
+		/* Posts */
 		Route::group(['prefix' => '/post' , 'namespace' => 'Activities'] , function(){
 			Route::get('/' , 'DoActionController@getPost')->name('Get_Posts');
 			Route::get('/new' , 'DoActionController@newPost')->name('New_Posts');
 			Route::post('/new' , 'DoActionController@createPost');
 			Route::get('/edit/{id}' , 'DoActionController@editPost')->name('Edit_Post');
 			Route::post('/edit/{id}' , 'DoActionController@doEditPost')->name('Do_Edit_Post');
+			Route::get('/delete/{id}' , 'DoActionController@deletePost')->name('Delete_Post');
 			Route::get('/gallery/{id}/{postName}' , 'DoActionController@getPostGallery')->name('Get_Post_Gallery');
 			Route::post('/gallery/{id}/{postName}' , 'DoActionController@insertPostGallery')->name('Insert_Post_Gallery');
 			Route::get('/gallery/action/delete/{id}' , 'DoActionController@deletePostPicture')->name('Delete_Post_Picture');

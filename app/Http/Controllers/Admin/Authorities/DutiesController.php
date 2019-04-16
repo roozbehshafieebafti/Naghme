@@ -25,7 +25,7 @@ class DutiesController extends Controller
     public function doCreateDuties(Request $request , $dutyTitle){
         //store duties fields in an array
         $DutiesList=[];
-        for($i=0;$i<10;$i++)
+        for($i=0;$i<30;$i++)
         {
             $name='Duty_'.$i;
             if(trim($request->$name)!=null){

@@ -40,7 +40,7 @@
                                     <td>{{ $Value->naghme_user_id_card }}</td>
                                     <td>{{ $Value->naghme_user_name.' '.$Value->naghme_user_family }}</td>
                                     <td>{{ $Value->naghme_user_kind }}</td>
-                                    <td> <i style="color:{{ $Value->naghme_user_level }}" class="fas fa-medal"></i></td>
+                                    <td data-toggle="tooltip" data-placement="top" title="{{ $Value->naghme_user_level[1] }}"> <i style="color:{{ $Value->naghme_user_level[0] }}" class="fas fa-medal"></i></td>
                                     <td>{{ $Value->naghme_user_activity }}</td>
                                     <td data-toggle="tooltip" data-placement="top"
                                      title=<?php echo ($Value->naghme_user_status=='red' ? 'عدم‌تمدید' : 'تمدید'); ?>

@@ -15,6 +15,8 @@ class DoActionController extends Controller
     public function getPost(){
         $title = ActTitle::all();
         $Page = isset($_GET['page']) ? $_GET['page'] : 1;
+        $Count=null;
+        $Posts=null;
         if(count($title)){
             $Posts =DoActivity::orderBy('created_at','desc')->offset(($Page-1)*10)->limit(10)->get();
             $Count = DoActivity::count();
@@ -120,5 +122,21 @@ class DoActionController extends Controller
         else{
             return back()->with('error','خطای سیستمی');
         }
+    }
+
+    public function deletePost($id){
+        $DeletedRecord  = DoActivity::find($id);
+        $DeletePicture =  PostGallery::where('apic_activities_posts_id',$id)->get();
+        if(count($DeletePicture) > 0){
+            foreach($DeletePicture as $value){
+                Storage::delete($value->apic_picture_name);
+            }
+        }
+        Storage::delete($DeletedRecord->apst_picture_of_title);
+        PostGallery::where('apic_activities_posts_id',$id)->delete();
+        if($DeletedRecord->delete()){
+            return back()->with('success','پست با موفقیت حذف شد');
+        }
+        return back()->with('error','پست با موفقیت حذف شد');
     }
 }

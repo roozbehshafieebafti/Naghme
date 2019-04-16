@@ -27,11 +27,6 @@
 				    
 				  </div>
 				  <div class="form-group">
-				    <label >شماره پرسنلی:</label>
-				    <input required="required" type="text" name="Authorities_id" class="form-control text-left" value ="{{ $EditableAuthorities->authorities_id }}" >
-				    <small id="" class="form-text text-muted">فقط عدد وارد شود</small>
-				  </div>
-				  <div class="form-group">
 				    <label >سمت</label>
 				    <input required="required" type="text" name="Authorities_title" class="form-control text-left" value ="{{ $EditableAuthorities->authorities_title }}" >
 				    
