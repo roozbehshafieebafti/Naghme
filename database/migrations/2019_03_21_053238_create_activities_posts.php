@@ -15,6 +15,7 @@ class CreateActivitiesPosts extends Migration
         Schema::create('activities_posts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('apst_activities_title_id');
+            $table->integer('apst_sub_activities_title_id')->nullable();
             $table->string('apst_title',64);
             $table->text('apst_description');
             $table->string('apst_picture_of_title',96);

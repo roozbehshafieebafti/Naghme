@@ -131,6 +131,7 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 		Route::group(['prefix' => '/post' , 'namespace' => 'Activities'] , function(){
 			Route::get('/' , 'DoActionController@getPost')->name('Get_Posts');
 			Route::get('/new' , 'DoActionController@newPost')->name('New_Posts');
+			Route::get('/sub-activity/{id}' , 'DoActionController@getSubActivity')->name('Get_Sub_Activity');
 			Route::post('/new' , 'DoActionController@createPost');
 			Route::get('/edit/{id}' , 'DoActionController@editPost')->name('Edit_Post');
 			Route::post('/edit/{id}' , 'DoActionController@doEditPost')->name('Do_Edit_Post');

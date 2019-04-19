@@ -75,10 +75,18 @@
                                       </div>
                                       <div>
                                           <br />
-                                        <p style="text-align:justify">
-                                            <b><span>متن خبر:</span></b>
-                                            {{ $val->apst_description }}
-                                        </p>
+                                          <p>
+                                                <b><span>دسته‌بندی:</span></b>  
+                                                {{ $val->apst_activities_title_id }}
+                                          </p>
+                                          <p>
+                                                <b><span>زیر مجموعه:</span></b>
+                                                {{ $val->apst_sub_activities_title_id }}
+                                          </p>
+                                            <p style="text-align:justify">
+                                                <b><span>متن فعالیت:</span></b>
+                                                {{ $val->apst_description }}
+                                            </p>
                                       </div>
                                     </div>
                                   </div>

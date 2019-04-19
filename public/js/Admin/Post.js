@@ -23,6 +23,36 @@ function PostPictureCheck(id){
     }
 }
 
+async function GetSubTitle(id){
+    $('#Spining').css('display','block');
+    await $.ajax(
+        { headers:{
+            'X-CSRF-TOKEN':$("meta[name='csrf-token']").attr('content')
+        },
+        url:BaseUrl+'admin/post/sub-activity/'+id,
+        type:'get',
+        success:function(response){
+            
+            if(response.length > 0){
+                var str = '';
+                for(i=0;i<response.length;i++){
+                    str= str + '<option value="'+response[i].id+'">'+response[i].sat_title + '</option>';
+                }
+                $('#SubTitle').html(str);
+                $('#SubTitle').removeAttr('disabled');
+            }
+            else{
+                $('#SubTitle').html('');
+                $('#SubTitle').attr("disabled", true);
+            }
+        },
+        error:function(error){
+            console.log(error);
+        }
+    });
+    $('#Spining').css('display','none');
+}
+
 $(function()
 { 
     var pbar = $('#progressBar'), currentProgress = 0 ;

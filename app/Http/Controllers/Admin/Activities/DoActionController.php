@@ -8,6 +8,7 @@ use App\Model\ActivityTitle as ActTitle ;
 use App\Model\DoActivity ;
 use App\Model\PostGallery ;
 use Illuminate\Support\Facades\Storage;
+use App\Model\SubActivityTitle;
 
 class DoActionController extends Controller
 {
@@ -30,21 +31,27 @@ class DoActionController extends Controller
         return view('Admin.Activities.Posts.NewPost',compact('title'));
     }
 
+    public function getSubActivity($id){
+        return SubActivityTitle::select('id','sat_title')->where('sat_parent_actitvity',$id)->get();
+    }
+
     //
     public function createPost(Request $request,DoActivity $DoAct){
-        //dd($request->all());
         $this->validate($request,
                         ['Post_tite' => 'required',
                         'Post_First_Picture' => 'required',
                         'Post_Description' => 'required',
+                        'Catigory' => 'integer',
                         ],
                         ['Post_tite.required' => 'عنوان نبایستی خالی باشد',
                         'Post_First_Picture.required' => 'فایل تصویر بایستی انتخاب شود',
-                        'Post_Description.required' => 'توضیحات نباید خالی باشد'
+                        'Post_Description.required' => 'توضیحات نباید خالی باشد',
+                        'Catigory.integer' => 'لطفا یک دسته بندی را انتخاب کنید'
                         ]);
         $picture = $request->file('Post_First_Picture')->store('picture/post');
         if($picture){
             $DoAct->apst_activities_title_id = $request->Catigory;
+            $DoAct->apst_sub_activities_title_id = $request->Sub_Catigory;
             $DoAct->apst_title = $request->Post_tite;
             $DoAct->apst_description = $request->Post_Description;
             $DoAct->apst_picture_of_title = $picture;
@@ -64,7 +71,8 @@ class DoActionController extends Controller
     public function editPost($id){
         $Post = DoActivity::find($id);
         $title = ActTitle::all();
-        return view('Admin.Activities.Posts.EditPost',compact('Post','title'));
+        $SubTitle =SubActivityTitle::where('sat_parent_actitvity',$Post['attributes']['apst_activities_title_id'])->get() ;
+        return view('Admin.Activities.Posts.EditPost',compact('Post','title','SubTitle'));
     }
 
     public function doEditPost(Request $request , $id){
@@ -82,6 +90,7 @@ class DoActionController extends Controller
             $DoAct->apst_picture_of_title = $picture;
         }
         $DoAct->apst_activities_title_id = $request->Catigory;
+        $DoAct->apst_sub_activities_title_id = $request->Sub_Catigory;
         $DoAct->apst_title = $request->Post_tite;
         $DoAct->apst_description = $request->Post_Description;
         if($DoAct->save()) {
