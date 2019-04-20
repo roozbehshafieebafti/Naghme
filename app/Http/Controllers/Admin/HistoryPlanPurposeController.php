@@ -10,7 +10,7 @@ class HistoryPlanPurposeController extends Controller
 {
 	// getHistory sends history data from history_purpose_plan table to view
     public function getHistory(){
-    	$History = HPP::where('hpp_kind','history')->get();
+    	$History = HPP::where([['hpp_kind','=','history'],['hpp_city_id','=',1]])->get();
     	return view('Admin.HistoryPlanPurpose.History' , compact('History'));
     }
 

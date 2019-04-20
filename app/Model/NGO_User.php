@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use \App\Model\Representation;
 
 class NGO_User extends Model
 {
@@ -35,5 +36,36 @@ class NGO_User extends Model
                break;
         }
         return $color;
+    }
+
+    public function getNaghmeUserCityIdAttribute($value){
+        $getRepresentation = Representation::find($value);
+        return $getRepresentation['attributes']['representation_title'];
+    }
+
+    public function getNaghmeUserKindAttribute($value){
+        $Kind = '';
+        switch($value){
+            case 1:
+                $Kind ='پیوسته 1';
+                break;
+            case 2:
+                $Kind ='پیوسته 2';
+                break;
+            case 3:
+                $Kind ='پیوسته 3';
+                break;
+            case 4:
+                $Kind ='وابسته 1';
+                break;
+            case 5:
+                $Kind ='وابسته 2';
+                break;
+            case 6:
+                $Kind ='دوستدار هنر';
+                break;
+        }
+
+        return $Kind;
     }
 }

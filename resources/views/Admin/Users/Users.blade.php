@@ -1,7 +1,7 @@
 @extends('Masters.Admin')
 @section('title','اعضا')
 @section('content')
-    <div class="container" style="direction:rtl;padding: 20px 0">
+    <div class="container" style="direction:rtl;padding: 20px 0">        
         @if(session('success'))
             <div class="alert alert-success" style="margin-top: 30px">
                 {{ session('success') }}
@@ -19,17 +19,31 @@
                 <a href="{{ route('Create_User') }}" class="btn btn-info" style="margin-right: 200px">&nbsp;عضو جدید &nbsp;<i class="fas fa-plus-circle"></i></a>
             </form>
             <h2 style="margin-top:60px">اعضا</h2>
+            <div id="Spining" class="text-center" style="display:none">
+                <div  class="spinner-border text-warning" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
             <div style="margin-top:30px;min-height:300px">
                 @if(count($Users) > 0)
                     <table class="table border border-warning table-hover">
                         <thead class="rounded-top bg-danger text-light">
                             <tr class=" rounded-top text-center">
-                                <th scope="col">شماره</th>
+                                <th scope="col"> شماره عضویت</th>
                                 <th scope="col">نام و نام خانوادگی</th>
                                 <th scope="col">نوع عضویت</th>
                                 <th scope="col">سطح عضویت</th>
-                                <th scope="col">زمینه فعالیت</th>
-                                <th scope="col">وضعیت</th>
+                                <th scope="col">رشته مربوطه</th>
+                                <th scope="col">مرکز عضویت</th>
+                                <th scope="col">
+                                    <span style="direction: rtl"  class="bg-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        وضعیت
+                                    </span>
+                                    <div style="direction: rtl" class="dropdown-menu">
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_status','Mount'=>'1']) }}">تمدید</a>
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_status','Mount'=>'0']) }}">عدم تمدید </a>
+                                    </div>
+                                </th>
                                 <th scope="col">ویرایش</th>
                                 <th scope="col">حذف</th>
                             </tr>
@@ -42,9 +56,10 @@
                                     <td>{{ $Value->naghme_user_kind }}</td>
                                     <td data-toggle="tooltip" data-placement="top" title="{{ $Value->naghme_user_level[1] }}"> <i style="color:{{ $Value->naghme_user_level[0] }}" class="fas fa-medal"></i></td>
                                     <td>{{ $Value->naghme_user_activity }}</td>
-                                    <td data-toggle="tooltip" data-placement="top"
+                                    <td>{{ $Value->naghme_user_city_id }}</td>
+                                    <td id="TdStatus{{$Value->id}}" onclick="ChangeStatus('{{$Value->id}}','{{$Value->naghme_user_status}}')"  style="cursor:pointer"
                                      title=<?php echo ($Value->naghme_user_status=='red' ? 'عدم‌تمدید' : 'تمدید'); ?>
-                                     ><?php echo ($Value->naghme_user_status=='red' ? '<i style="color:'.$Value->naghme_user_status.'" class="fas fa-times-circle"></i>' : '<i style="color:'.$Value->naghme_user_status.'" class="fas fa-check-circle"></i>'); ?>
+                                     ><?php echo ($Value->naghme_user_status=='red' ? '<i id="Status'.$Value->id.'" style="color:'.$Value->naghme_user_status.'" class="fas fa-times-circle"></i>' : '<i id="Status'.$Value->id.'" style="color:'.$Value->naghme_user_status.'" class="fas fa-check-circle"></i>'); ?>
                                     </td>
                                     <td>
                                         <a href="{{ route('Edit_User',$Value->id ) }}" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>    

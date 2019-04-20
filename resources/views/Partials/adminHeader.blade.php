@@ -11,7 +11,7 @@
             <li><a class="text-muted" href="{{ route('Get_Forms') }}">فرم‌ها</a></li>
             <li><a class="text-muted" href="{{ route('Get_Plan') }}">برنامه ها</a></li>
             <li><a class="text-muted" href="{{ route('Statements_Title') }}">بیانیه ها</a></li>
-            <li><a class="text-muted" href="{{ route('Get_Regulations') }}">آئین نامه ها</a></li>
+            <li><a class="text-muted" href="{{ route('Get_Regulations') }}">آیین نامه ها</a></li>
             <li><a class="text-muted" href="{{ route('Get_Ethics') }}">منشور اخلاقی</a></li>
             <li><a class="text-muted" href="{{ route('Get_Chart') }}">نمودار سازمانی</a></li>
         </ul>
@@ -41,7 +41,7 @@
     |
     <div class="Naghmeh-dropdown  text-center" style="width:15%">
         <a href="{{ route('Get_User') }}" class="nav-link text-muted" role="button">
-          <span>اعضا<span>
+          <span>عضویت<span>
         </a>
     </div>
     |
@@ -52,7 +52,7 @@
     </div>
     |
     <div class="Naghmeh-dropdown text-center" style="width:15%">
-      <a href="" class="nav-link text-muted" role="button">
+      <a href="{{ route('Get_Representation') }}" class="nav-link text-muted" role="button">
         <span>نمایندگی<span>
       </a>
   </div>

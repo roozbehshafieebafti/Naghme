@@ -5,20 +5,29 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\NGO_User as User ;
+use \App\Model\Representation;
 
 class UserController extends Controller
 {
     //getUsers
     public function getUsers(){
         $Page = isset($_GET['page'])? $_GET['page'] : 1;
-        $Users = User::orderBy('created_at','desc')->offset(($Page-1)*10)->limit(10)->get();
-        $Count = User::count();
+        if(isset($_GET['filter'])){
+            $Users = User::where($_GET['filter'],$_GET['Mount'])-> orderBy('created_at','desc')->offset(($Page-1)*10)->limit(10)->get();    
+            $Count = User::where($_GET['filter'],$_GET['Mount'])->count();
+        }
+        else{
+            $Users = User::orderBy('created_at','desc')->offset(($Page-1)*10)->limit(10)->get();
+            $Count = User::count();
+        }
         return view('Admin.Users.Users',compact('Users','Count','Page'));
+        
     }
 
     //createUsers
     public function createUsers(){
-        return view('Admin.Users.NewUser');
+        $City = Representation::select('representation_title','id')->get();
+        return view('Admin.Users.NewUser',compact('City'));
     }
 
     //
@@ -44,6 +53,7 @@ class UserController extends Controller
                         'User_Activity.string' => 'زمینه فعالیت باید از نوع رشته باشد'
                         ]);
         $user->naghme_user_id_card = $request->User_id;
+        $user->naghme_user_city_id = $request->User_City;
         $user->naghme_user_name = $request->User_name;
         $user->naghme_user_family = $request->User_family;
         $user->naghme_user_kind = $request->User_kind;
@@ -59,7 +69,9 @@ class UserController extends Controller
     //
     public function editUser($id){
         $User = User::find($id);
-        return view('Admin.Users.EditUser',compact('User'));
+        $City = Representation::select('id','representation_title')->get();
+        //dd($City);
+        return view('Admin.Users.EditUser',compact('User','City'));
     }
 
     //
@@ -86,6 +98,7 @@ class UserController extends Controller
                         'User_Activity.string' => 'زمینه فعالیت باید از نوع رشته باشد'
                         ]);
         $user->naghme_user_id_card = $request->User_id;
+        $user->naghme_user_city_id = $request->User_City;
         $user->naghme_user_name = $request->User_name;
         $user->naghme_user_family = $request->User_family;
         $user->naghme_user_kind = $request->User_kind;
@@ -130,5 +143,16 @@ class UserController extends Controller
         
         $search = 1;
         return view('Admin.Users.Users',compact('Users','search'));
+    }
+
+    public function changeStatus($id,$value){
+        $user = User::find($id);
+        $user->naghme_user_status = $value;
+        if($user->save()){
+            return 1;
+        }
+        else{
+            return 0;
+        }
     }
 }

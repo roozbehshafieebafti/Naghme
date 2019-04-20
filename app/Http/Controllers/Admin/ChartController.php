@@ -11,8 +11,7 @@ class ChartController extends Controller
 {
     //
     public function getChart(){
-        $DataChart = Chart::where('chart_city_id',0)->first();
-        // dd($DataChart);
+        $DataChart = Chart::where('chart_city_id',1)->first();
         return view('Admin.Chart.Chart',compact('DataChart'));
     }
 

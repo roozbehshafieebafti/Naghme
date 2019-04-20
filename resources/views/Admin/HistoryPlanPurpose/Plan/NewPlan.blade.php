@@ -15,7 +15,7 @@
 			<form class="form" method="post" action="" style="padding: 20px 0">
 				{{ csrf_field() }}
 				 <div class="form-group">
-				    <label for="exampleInputEmail1">:برنامه</label>
+				    <label for="exampleInputEmail1">برنامه:</label>
 				    <input type="text" name="New_Plan" class="form-control text-left" placeholder="برنامه را اینجا وارد کنید" >
 				    <small id="" class="form-text text-muted">گنجایش : حداکثر 128 کاراکتر</small>
 				  </div>

@@ -16,6 +16,7 @@ class CreateNaghmeUser extends Migration
         Schema::create('naghme_user', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('naghme_user_id_card');
+            $table->tinyInteger('naghme_user_city_id')->default(0);
             $table->string('naghme_user_name',32);
             $table->string('naghme_user_family',32);
             $table->string('naghme_user_kind',16);

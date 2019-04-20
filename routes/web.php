@@ -170,7 +170,7 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 		});
 
 		/* Users */
-		Route::group(['prefix'=>'users'] , function(){
+		Route::group(['prefix'=>'/users'] , function(){
 			Route::get('/' , 'UserController@getUsers')->name('Get_User');
 			Route::get('/create' , 'UserController@createUsers')->name('Create_User');
 			Route::post('/create' , 'UserController@doCreateUser');
@@ -179,5 +179,17 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('/delete/{id}' , 'UserController@deleteUser')->name('Delete_User');
 			Route::get('/find/{item}' , 'UserController@findUser');
 			Route::get('/search/{item}' , 'UserController@searchUser');
+			Route::get('change/status/{id}/{value}' , 'UserController@changeStatus');
+		});
+
+		/* Representation */
+		Route::group(['prefix'=>'/representation', 'namespace'=>'Representation'] , function (){
+			Route::get('/' , 'RepresentationController@getRepresentation')->name('Get_Representation');
+			Route::get('/create' , 'RepresentationController@createRepresentation')->name('Create_Representation');
+			Route::post('/create' , 'RepresentationController@doCreateRepresentation');
+			Route::get('/history/{id}' , 'RepresentationController@getHistory')->name('Get_Representation_History');
+			Route::post('/history/{id}' , 'RepresentationController@createHistory');
+			Route::get('/chart/{id}' , 'RepresentationController@getChart')->name('Get_Representation_Chart');
+			Route::post('/chart/{id}' , 'RepresentationController@updateChart')->name('Update_Representation_Chart');
 		});
 });
