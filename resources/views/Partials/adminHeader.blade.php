@@ -40,9 +40,14 @@
     </div>
     |
     <div class="Naghmeh-dropdown  text-center" style="width:15%">
-        <a href="{{ route('Get_User') }}" class="nav-link text-muted" role="button">
+        <a  class="nav-link text-muted" role="button">
+          <i class="fas fa-sort-down"></i> 
           <span>عضویت<span>
         </a>
+        <ul class="bg-white Naghmeh-dropdown-menu text-left" \>
+          <li><a class="text-muted" href="{{ route('Get_User') }}">اعضا</a></li>
+        <li><a class="text-muted"  href="" > مزایا و امتیازات</a></li>
+      </ul>
     </div>
     |
     <div class="Naghmeh-dropdown text-center" style="width:15%">

@@ -65,7 +65,7 @@
                             </div>
                     </div>
                     <div class="form-group">
-                            <label >زمینه فعالیت</label>
+                            <label >رشته مربوطه</label>
                             <input type="text" value="{{ $User['attributes']['naghme_user_activity'] }}" class="form-control" maxlength="15" name="User_Activity" />
                         </div>
                     <button type="submit" style="width:150px" class="btn btn-primary">ثبت</button>

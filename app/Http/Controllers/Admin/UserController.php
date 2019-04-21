@@ -12,15 +12,22 @@ class UserController extends Controller
     //getUsers
     public function getUsers(){
         $Page = isset($_GET['page'])? $_GET['page'] : 1;
-        if(isset($_GET['filter'])){
+        if(isset($_GET['filter']) && $_GET['filter']!=null){
             $Users = User::where($_GET['filter'],$_GET['Mount'])-> orderBy('created_at','desc')->offset(($Page-1)*10)->limit(10)->get();    
             $Count = User::where($_GET['filter'],$_GET['Mount'])->count();
+            $filter = $_GET['filter'];
+            $Mount = $_GET['Mount'] ;
         }
         else{
             $Users = User::orderBy('created_at','desc')->offset(($Page-1)*10)->limit(10)->get();
             $Count = User::count();
+            $filter = null;
+            $Mount = null ;
         }
-        return view('Admin.Users.Users',compact('Users','Count','Page'));
+        $Actions = User::select('naghme_user_activity')->distinct()->get();
+        $Center = Representation::select('representation_title','id')->distinct()->get();
+
+        return view('Admin.Users.Users',compact('Users','Count','Page','Actions','Center','filter','Mount'));
         
     }
 

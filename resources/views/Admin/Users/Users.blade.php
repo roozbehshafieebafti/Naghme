@@ -19,6 +19,99 @@
                 <a href="{{ route('Create_User') }}" class="btn btn-info" style="margin-right: 200px">&nbsp;عضو جدید &nbsp;<i class="fas fa-plus-circle"></i></a>
             </form>
             <h2 style="margin-top:60px">اعضا</h2>
+            <?php
+            switch($filter){
+                case 'naghme_user_kind':
+                        switch($Mount){
+                            case 1:
+                                echo '<span  class="badge badge-primary" >
+                                        <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                        <span>پیوسته 1</span>
+                                    </span>';
+                                break;
+                            case 2:
+                                echo '<span  class="badge badge-primary" >
+                                    <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                    <span>پیوسته 2</span>
+                                </span>';
+                                break;
+                            case 3:
+                                echo '<span  class="badge badge-primary" >
+                                    <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                    <span>پیوسته 3</span>
+                                </span>';
+                                break;
+                            case 4:
+                                echo '<span  class="badge badge-primary" >
+                                    <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                    <span>وابسته 1 </span>
+                                </span>';
+                                break;
+                            case 5:
+                                echo '<span  class="badge badge-primary" >
+                                    <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                    <span>وابسته 2 </span>
+                                </span>';
+                                 break;
+                            case 6:
+                                echo '<span  class="badge badge-primary" >
+                                    <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                    <span>دوستدار هنر </span>
+                                </span>';
+                                break;
+                        }
+                case 'naghme_user_level':
+                        switch ($Mount) {
+                            case '1':
+                            echo '<span  class="badge badge-primary" >
+                                    <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                    <span> طلایی </span>
+                                </span>';
+                                break;
+                            case '2':
+                            echo '<span  class="badge badge-primary" >
+                                    <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                    <span> نقره‌ای </span>
+                                </span>';
+                                break;
+                            case '3':
+                            echo '<span  class="badge badge-primary" >
+                                    <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                    <span> برنزی </span>
+                                </span>';
+                                break;
+                        }
+                case 'naghme_user_status':
+                        switch ($Mount) {
+                            case '1':
+                            echo '<span  class="badge badge-primary" >
+                                    <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                    <span> تمدید </span>
+                                </span>';
+                                break;
+                            case '0':
+                            echo '<span  class="badge badge-primary" >
+                                    <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                                    <span> عدم تمدید </span>
+                                </span>';
+                                break;
+                        }
+            }
+            if($filter == 'naghme_user_activity'){
+                echo '<span  class="badge badge-primary" >
+                        <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                        <span> '.$Mount.' </span>
+                    </span>';
+            }
+            if($filter == 'naghme_user_city_id'){
+                $City =  \App\Model\Representation :: find($Mount);
+                
+                echo '<span  class="badge badge-primary" >
+                        <a class="text-light" href="'.route('Get_User').'"> &times; </a>
+                        <span> '.$City['attributes']['representation_title'].' </span>
+                    </span>';
+            }
+            ?>
             <div id="Spining" class="text-center" style="display:none">
                 <div  class="spinner-border text-warning" role="status">
                     <span class="sr-only">Loading...</span>
@@ -31,10 +124,49 @@
                             <tr class=" rounded-top text-center">
                                 <th scope="col"> شماره عضویت</th>
                                 <th scope="col">نام و نام خانوادگی</th>
-                                <th scope="col">نوع عضویت</th>
-                                <th scope="col">سطح عضویت</th>
-                                <th scope="col">رشته مربوطه</th>
-                                <th scope="col">مرکز عضویت</th>
+                                <th scope="col">
+                                    <span style="direction: rtl"  class="bg-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        نوع عضویت
+                                    </span>
+                                    <div style="direction: rtl" class="dropdown-menu">
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_kind','Mount'=>'1']) }}">پیوسته 1</a>
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_kind','Mount'=>'2']) }}">پیوسته 2</a>
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_kind','Mount'=>'3']) }}">پیوسته 3</a>
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_kind','Mount'=>'4']) }}">وابسته 1</a>
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_kind','Mount'=>'5']) }}">وابسته 2</a>
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_kind','Mount'=>'6']) }}">دوستدار هنر</a>
+                                    </div>                                    
+                                </th>
+                                <th scope="col">
+                                    <span style="direction: rtl"  class="bg-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        سطح عضویت
+                                    </span>
+                                    <div style="direction: rtl" class="dropdown-menu">
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_level','Mount'=>'1']) }}">طلایی</a>
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_level','Mount'=>'2']) }}">نقره‌ای</a>
+                                        <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_level','Mount'=>'3']) }}">برنزی</a>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <span style="direction: rtl"  class="bg-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        رشته مربوطه
+                                    </span>
+                                    <div style="direction: rtl" class="dropdown-menu">
+                                        @foreach ($Actions as $item)
+                                            <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_activity','Mount'=>$item->naghme_user_activity]) }}"> {{$item->naghme_user_activity}} </a>
+                                        @endforeach
+                                    </div>
+                                </th>
+                                <th scope="col">                                    
+                                    <span style="direction: rtl"  class="bg-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        مرکز عضویت
+                                    </span>
+                                    <div style="direction: rtl" class="dropdown-menu">
+                                        @foreach ($Center as $item)
+                                            <a class="dropdown-item" href="{{ route('Get_User',['filter'=>'naghme_user_city_id','Mount'=>$item->id]) }}"> {{$item->representation_title}} </a>
+                                        @endforeach
+                                    </div>
+                                </th>
                                 <th scope="col">
                                     <span style="direction: rtl"  class="bg-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         وضعیت
@@ -93,7 +225,7 @@
                                     if($Page >1)
                                     {
                                     ?>
-                                        <a class="page-link" href="{{ route('Get_User','page='.($Page-1) ) }}" tabindex="-1" > << </a>
+                                        <a class="page-link" href="{{ route('Get_User',['page='.($Page-1) , 'filter='.$filter , 'Mount='.$Mount  ]) }}" tabindex="-1" > << </a>
                                     <?php
                                     }
                                  ?>
@@ -112,14 +244,14 @@
                                         echo 'class="page-item"';
                                     }
                                 ?>
-                                 ><a class="page-link" href="{{ route('Get_User','page='.$i ) }}">{{$i}}</a></li>
+                                 ><a class="page-link" href="{{ route('Get_User',['page='.$i , 'filter='.$filter , 'Mount='.$Mount ]) }}">{{$i}}</a></li>
                             @endfor
                             <li class="page-item">
                                     <?php
                                     if($Page+1 <= $CPage)
                                     {
                                     ?>
-                                        <a class="page-link" href="{{ route('Get_User','page='.($Page+1) ) }}"> >> </a>
+                                        <a class="page-link" href="{{ route('Get_User',['page='.($Page+1) , 'filter='.$filter , 'Mount='.$Mount  ]) }}"> >> </a>
                                     <?php
                                     }
                                  ?>      
