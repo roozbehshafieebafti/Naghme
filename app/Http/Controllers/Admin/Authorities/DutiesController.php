@@ -11,13 +11,13 @@ class DutiesController extends Controller
 {
 	//getDuties collect the titles from Authorities table and sends them to view
     public function getDuties(){
-    	$AuthoritiesTitle = Authorities::select('authorities_title')->distinct()->get();
+    	$AuthoritiesTitle = Authorities::select('id','authorities_title')->where('authorities_city_id',1)->distinct()->get();
     	return view('Admin.Authorities.Duties.Duties',compact('AuthoritiesTitle'));
     }
 
     //createDuties Renders a Page for create new Duties
     public function createDuties($dutyTitle){
-    	$Duties = Duties::where('ad_authorities_title',$dutyTitle)->get();
+    	$Duties = Duties::where([['ad_authorities_title',$dutyTitle],['ad_authorities_city_id',1]])->get();
     	return view('Admin.Authorities.Duties.DutiesList',compact('Duties','dutyTitle'));
     }
 
@@ -39,14 +39,14 @@ class DutiesController extends Controller
             //count how many duties are stored in database
             $DutyCount = Duties::where([
                 ['ad_authorities_title','=',$dutyTitle],
-                ['ad_authorities_city_id','=',0]
+                ['ad_authorities_city_id','=',1]
             ])->count();
             
             // delete the duties that are store in database 
             if($DutyCount>0){
                 Duties::where([
                     ['ad_authorities_title','=',$dutyTitle],
-                    ['ad_authorities_city_id','=',0]
+                    ['ad_authorities_city_id','=',1]
                     ])->delete();
             }
 
@@ -55,7 +55,7 @@ class DutiesController extends Controller
                 Duties::insert([
                             'ad_authorities_title'=>$dutyTitle,
                             'ad_authorities_duty'=>$value,
-                            'ad_authorities_city_id'=>0
+                            'ad_authorities_city_id'=>1
                         ]);
             }
             

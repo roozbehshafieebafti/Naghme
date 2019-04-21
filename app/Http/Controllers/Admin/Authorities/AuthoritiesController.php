@@ -12,7 +12,7 @@ class AuthoritiesController extends Controller
 {
 	// getAuthorities sends all Authorities to view
     public function getAuthorities(){
-    	$Authorities = Authorities::where('authorities_city_id',0)->get();
+    	$Authorities = Authorities::where('authorities_city_id',1)->get();
     	return view('Admin.Authorities.Authorities',compact('Authorities'));
     }
 

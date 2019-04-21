@@ -15,7 +15,7 @@ class CreateAuthoritiesDuty extends Migration
             $table->increments('id');
             $table->string('ad_authorities_title',32);
             $table->text('ad_authorities_duty');
-            $table->tinyInteger('ad_authorities_city_id')->default(0);
+            $table->tinyInteger('ad_authorities_city_id')->default(1);
             $table->timestamps();
         });
     }

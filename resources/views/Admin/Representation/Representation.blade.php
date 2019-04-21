@@ -36,15 +36,15 @@
                                             <a href="{{ route('Get_Representation_Chart',['id'=>$value->id]) }}"><i class="fas fa-chart-line"></i></a>
                                         </td>
                                         <td>
-                                            <a href=""><i class="fas fa-users"></i></a>
+                                            <a href="{{ route('Get_Representation_Authorities',['id'=>$value->id]) }}"><i class="fas fa-users"></i></a>
                                         </td>
                                         <td class="text-center">
                                             <span>
-                                                <a href="{{ route('Edit_Regulation',$value->id ) }}" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
+                                                <a href="{{ route('Edit_Representation',$value->id ) }}" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
                                             </span>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                             <span>
-                                                <a href="{{ route('Delete_Regulation',$value->id) }}" data-toggle="tooltip" data-placement="top" title="حذف" ><i class="fas fa-trash-alt"></i></a>
+                                                <a  data-toggle="tooltip" data-placement="top" title="غیرفعال" ><i class="fas fa-trash-alt"></i></a>
                                             </span>
                                         </td>
                                     </tr>

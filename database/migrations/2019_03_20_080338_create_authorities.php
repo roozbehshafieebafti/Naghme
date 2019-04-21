@@ -18,7 +18,7 @@ class CreateAuthorities extends Migration
             $table->string('authorities_family',32);
             $table->string('authorities_picture',96);
             $table->text('authorities_cv');
-            $table->tinyInteger('authorities_city_id')->default(0);
+            $table->tinyInteger('authorities_city_id')->default(1);
             $table->timestamps();
         });
     }

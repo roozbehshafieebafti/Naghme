@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin\Representation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use \App\Model\Representation;
-use App\Model\HistoryPlanePurpose as HPP ;
+use App\Model\HistoryPlanePurpose as HPP;
 use App\Model\Chart;
+use App\Model\Authorities;
+use App\Model\Duties;
 use Illuminate\Support\Facades\Storage;
 
 class RepresentationController extends Controller
@@ -27,6 +29,25 @@ class RepresentationController extends Controller
         $representation->representation_title = $request->New_Representation;
         if($representation->save()){
             return redirect()->route('Get_Representation')->with('success','نمایندگی با موفقیت اضافه شد');
+        }
+        else{
+            return redirect()->route('Get_Representation')->with('error','خطای سیستمی لطفا دوباره سعی کنید');
+        }
+    }
+
+    public function editRepresentation($id){
+        $Representation = Representation::find($id);
+        return view('Admin.Representation.EditRepresentation',compact('Representation'));
+    }
+
+    public function doEditRepresentation(Request $request,$id){
+        $this->validate($request,
+        ['New_Representation' => 'required'],
+        ['New_Representation.required' => 'ورود نام نمایندگی الزامی است']);
+        $Representation = Representation::find($id);
+        $Representation->representation_title = $request->New_Representation;
+        if($Representation->save()){
+            return redirect()->route('Get_Representation')->with('success','نمایندگی با موفقیت ویرایش  شد');
         }
         else{
             return redirect()->route('Get_Representation')->with('error','خطای سیستمی لطفا دوباره سعی کنید');
@@ -106,4 +127,158 @@ class RepresentationController extends Controller
 
         
     }
+
+    public function getAuthorities($id){
+        $Authorities = Authorities::where('authorities_city_id',$id)->get();
+        return view('Admin.Representation.AuthoritiesRepresentation',compact('Authorities','id'));
+    }
+
+    public function createAuthorities($id){
+        return view('Admin.Representation.NewAuthorities',compact('id'));
+    }
+
+    public function doCreateAuthorities(Authorities $Authority , Request $request){
+        //validation
+        $this->validate($request, [
+                    'Authorities_title' => 'required',
+                    'Authorities_name' => 'required',
+                    'Authorities_family' => 'required',
+                    'Authorities_cv' => 'required',
+            ],[
+                'Authorities_title.required'=>'ورود سمت الزامی است',
+                'Authorities_name.required'=>'ورود نام الزامی است',
+                'Authorities_family.required'=>'ورود فامیل الزامی است',
+                'Authorities_cv.required'=>'ورود رزومه الزامی است',
+                ]);
+        // Create a record
+        $Authority->authorities_title = $request->Authorities_title;
+        $Authority->authorities_name = $request->Authorities_name;
+        $Authority->authorities_family = $request->Authorities_family;
+        $Authority->authorities_cv = $request->Authorities_cv;
+        $Authority->authorities_city_id = $request->CityId;
+
+        //save the picture
+        $picturePaht = $request->file('Authorities_picture')->store('picture/authorities');
+
+        //check if saved
+        if($picturePaht){
+
+            $Authority->authorities_picture = $picturePaht;
+            // Insert in database and check
+            if($Authority->save()){
+                return redirect()->route('Get_Representation_Authorities',$request->CityId)->with('success','مسئول جدید با موفقیت وارد شد');	
+            }
+            else{
+                return redirect()->route('Get_Representation_Authorities',$request->CityId)->with('error','خطای سیستمی لطفا دوباره سعی کنید');	
+            }
+        }
+        else{
+            return redirect()->route('Get_Representation_Authorities',$request->CityId)->with('error','خطای سیستمی لطفا دوباره سعی کنید');	
+        }
+    }
+
+    public function editAuthorities($id){
+        $EditableAuthorities = Authorities::find($id);
+    	return view('Admin.Representation.EditAuthorities' ,compact('EditableAuthorities','id'));
+    }
+
+    public function doEditAuthorities(Request $request , $id){
+    	//validation
+    	$this->validate($request, [
+				'Authorities_title' => 'required',
+				'Authorities_name' => 'required',
+				'Authorities_family' => 'required',
+				'Authorities_cv' => 'required',
+		],[
+			'Authorities_title.required'=>'ورود سمت الزامی است',
+			'Authorities_name.required'=>'ورود نام الزامی است',
+			'Authorities_family.required'=>'ورود فامیل الزامی است',
+			'Authorities_cv.required'=>'ورود رزومه الزامی است',
+			]);
+    	//find Authority
+    	$EditedAuthorities = Authorities::find($id);
+
+    	//check if new picture is uploaded
+    	if(is_uploaded_file($request->Authorities_picture)){
+    		//delete the picture
+    		Storage::delete($EditedAuthorities->authorities_picture);
+    		//save the new picture
+    		$NewPicturePath = $request->file('Authorities_picture')->store('picture/authorities');
+    		$EditedAuthorities->authorities_picture = $NewPicturePath;
+    	}
+    	//Edit the record
+    	$EditedAuthorities->authorities_title = $request->Authorities_title;
+    	$EditedAuthorities->authorities_name = $request->Authorities_name;
+    	$EditedAuthorities->authorities_family = $request->Authorities_family;
+    	$EditedAuthorities->authorities_cv = $request->Authorities_cv;
+    	//save and check if done
+    	if($EditedAuthorities->save()){
+    		return redirect()->route('Get_Representation')->with('success','مسئول با موفقیت ویرایش شد');
+    	}
+    	else{
+    		return redirect()->route('Get_Representation')->with('error','خطای سیستمی لطفا دوباره سعی کنید');		
+    	}
+    }
+
+    public function deleteAuthorities($cityId ,$id){
+        $deletedRecord = Authorities::find($id);
+		Storage::delete($deletedRecord->authorities_picture);
+		Duties::where([['ad_authorities_title',$deletedRecord->authorities_title],['ad_authorities_city_id',$cityId]])->delete();
+    	if($deletedRecord->delete()){
+    		return back()->with('success','مسئول با موفقیت پاک شد');
+    	}
+    	else{
+    		return back()->with('success','خطای سیستمی لطفا دوباره سعی کنید');	
+    	}
+    }
+    
+    public function getDuties($cityId,$dutyTitle){
+        $Duties = Duties::where([['ad_authorities_title',$dutyTitle],['ad_authorities_city_id',$cityId]])->get();
+        return view('Admin.Representation.AuthoritiesDuties', compact('cityId','dutyTitle','Duties'));
+    }
+    
+    public function doCreateDuties(Request $request , $cityId, $dutyTitle){
+        //store duties fields in an array
+        $DutiesList=[];
+        for($i=0;$i<30;$i++)
+        {
+            $name='Duty_'.$i;
+            if(trim($request->$name)!=null){
+                $DutiesList[]=trim($request->$name);
+            }
+        }
+
+        //at list one duty should be fill
+        if(count($DutiesList)>0){
+
+            //count how many duties are stored in database
+            $DutyCount = Duties::where([
+                ['ad_authorities_title','=',$dutyTitle],
+                ['ad_authorities_city_id','=',$cityId]
+            ])->count();
+            
+            // delete the duties that are store in database 
+            if($DutyCount>0){
+                Duties::where([
+                    ['ad_authorities_title','=',$dutyTitle],
+                    ['ad_authorities_city_id','=',$cityId]
+                    ])->delete();
+            }
+
+            // Insert new fields in database
+            foreach($DutiesList as $value){
+                Duties::insert([
+                            'ad_authorities_title'=>$dutyTitle,
+                            'ad_authorities_duty'=>$value,
+                            'ad_authorities_city_id'=>$cityId
+                        ]);
+            }
+            
+            return redirect()->route('Get_Representation')->with('success','وظایف با موفقیت ثبت شد');
+        }else{
+            return redirect()->route('Get_Representation')->with('error','حداقل یک رکورد باید ثبت شود');
+        }
+    }
+
+
 }

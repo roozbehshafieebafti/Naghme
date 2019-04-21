@@ -46,7 +46,7 @@
 				@endif
 				
 			<button style="margin:20px 30px" id="Authorities_Submit" class="btn btn-success">ویرایش وظایف</button>
-			<a href="{{ route('Get_Duties') }}" class="btn btn-danger text-light" style="margin-right: 20px;">&nbsp;بازگشت &nbsp;<i class="fas fa-arrow-circle-left"></i></a>
+			<a href="{{ route('Get_Representation') }}" class="btn btn-danger text-light" style="margin-right: 20px;">&nbsp;بازگشت &nbsp;<i class="fas fa-arrow-circle-left"></i></a>
 			</form>
 		</div>
 	</div>	
