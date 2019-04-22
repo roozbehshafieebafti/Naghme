@@ -4,11 +4,6 @@
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| 
-| 
-| 
-|
 */
 
 
@@ -180,6 +175,16 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('/find/{item}' , 'UserController@findUser');
 			Route::get('/search/{item}' , 'UserController@searchUser');
 			Route::get('change/status/{id}/{value}' , 'UserController@changeStatus');
+		});
+
+		/* Users */
+		Route::group(['prefix' => '/score'] , function(){
+			Route::get('/' , 'UserScoreController@getUserScore')->name('Get_Score');
+			Route::get('/new' , 'UserScoreController@newScore')->name('New_Score');
+			Route::post('/new' , 'UserScoreController@createScore');
+			Route::get('/edit/{id}' , 'UserScoreController@editScore')->name('Edit_Score');
+			Route::post('/edit/{id}' , 'UserScoreController@doEditScore');
+			Route::get('/delete/{id}' , 'UserScoreController@deleteScore')->name('Delete_Score');
 		});
 
 		/* Representation */

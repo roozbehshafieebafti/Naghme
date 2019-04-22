@@ -60,6 +60,7 @@
                                 </span>';
                                 break;
                         }
+                        break;
                 case 'naghme_user_level':
                         switch ($Mount) {
                             case '1':
@@ -81,6 +82,7 @@
                                 </span>';
                                 break;
                         }
+                        break;
                 case 'naghme_user_status':
                         switch ($Mount) {
                             case '1':
@@ -96,6 +98,7 @@
                                 </span>';
                                 break;
                         }
+                        break;
             }
             if($filter == 'naghme_user_activity'){
                 echo '<span  class="badge badge-primary" >

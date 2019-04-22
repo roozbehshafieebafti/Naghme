@@ -26,11 +26,35 @@
                         <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small><br>
                         <small class="">فرمت فایل حتما بایستی pdf یا docx یا doc باشد</small>
                       </div>
-                      <div class="form-group col-12">
-                        <label >نام لینک :</label>
-                        <input class="form-control col-6" name="NewsLinkName" />
-                        <label >آدرس لینک :</label>
-                        <input style="direction: ltr" class="form-control col-6" name="NewsLinkAddress" placeholder="http://www.google.com"/>
+                      <div class="form-row">
+                          <div class="form-group col-4">
+                              <label >نام لینک :</label>
+                              <input class="form-control " name="NewsLinkName" />
+                          </div>
+                          <div class="form-group col-4">
+                              <label >آدرس لینک :</label>
+                              <input style="direction: ltr" class="form-control " name="NewsLinkAddress" placeholder="http://www.google.com"/>
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <div class="form-group col-4">
+                              <label >نام لینک :</label>
+                              <input class="form-control " name="NewsLinkName2" />
+                          </div>
+                          <div class="form-group col-4">
+                              <label >آدرس لینک :</label>
+                              <input style="direction: ltr" class="form-control " name="NewsLinkAddress2" placeholder="http://www.google.com"/>
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <div class="form-group col-4">
+                              <label >نام لینک :</label>
+                              <input class="form-control " name="NewsLinkName3" />
+                          </div>
+                          <div class="form-group col-4">
+                              <label >آدرس لینک :</label>
+                              <input style="direction: ltr" class="form-control " name="NewsLinkAddress3" placeholder="http://www.google.com"/>
+                          </div>
                       </div>
 
                       <button disabled id="NewsSubmit" type="submit" class="btn btn-primary" style="width:150px;">ارسال</button>

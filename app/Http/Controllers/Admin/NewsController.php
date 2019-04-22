@@ -48,6 +48,10 @@ class NewsController extends Controller
              'news_file' => $File ,
              'news_link_name' => $request->NewsLinkName,
              'news_link' => $request->NewsLinkAddress,
+             'news_link_name2' => $request->NewsLinkName2,
+             'news_link2' => $request->NewsLinkAddress2,
+             'news_link_name3' => $request->NewsLinkName3,
+             'news_link3' => $request->NewsLinkAddress3,
              'news_date' => time()
          ]);
         
@@ -111,6 +115,10 @@ class NewsController extends Controller
         $editedRecord->news_description =$request->News_text;
         $editedRecord->news_link_name =$request->NewsLinkName;
         $editedRecord->news_link =$request->NewsLinkAddress;
+        $editedRecord->news_link_name2 = $request->NewsLinkName2;
+        $editedRecord->news_link2 = $request->NewsLinkAddress2;
+        $editedRecord->news_link_name3 = $request->NewsLinkName3;
+        $editedRecord->news_link3 = $request->NewsLinkAddress3;
 
         if($editedRecord->save())
         {

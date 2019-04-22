@@ -37,9 +37,9 @@ $(function()
     }
   }
 
-  function uploadFile()
+  function uploadFile(id)
   {
-    var formdata = new FormData($('#RegulationForm')[0]);
+    var formdata = new FormData($('#'+id)[0]);
     $.ajax(
     { headers:{
         'X-CSRF-TOKEN':$("meta[name='csrf-token']").attr('content')
@@ -71,7 +71,10 @@ $(function()
           $('#Alert').html('خطای سیستمی لطفا دوباره سعی کنید');
          }
         },
-      error:function(error){console.log(error); alert(error.responseJSON.ufile) },
+      error:function(error){
+        $('#Alert').css('display','block');
+        $('#Alert').html('خطای سیستمی لطفا دوباره سعی کنید'); 
+      },
 
       // Tell jQuery "Hey! don't worry about content-type and don't process the data"
       // These two settings are essential for the application
@@ -87,12 +90,22 @@ $(function()
     if(valid){
       $(pbar).width(0).addClass('active');
       $('#progressBarDiv').css({"display":"block"});
-      uploadFile();
+      uploadFile('RegulationForm');
     }
     else{
       $('#Alert').css('display','block');
       $('#Alert').html('فایل نا معتبر است');
     }
+
+  });
+
+  $('#EditRegulationForm').submit(function(e)
+  {
+    e.preventDefault();
+    $(pbar).width(0).addClass('active');
+    $('#progressBarDiv').css({"display":"block"});
+    uploadFile('EditRegulationForm');
+
 
   });
 })

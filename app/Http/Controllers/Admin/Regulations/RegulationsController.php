@@ -19,7 +19,11 @@ class RegulationsController extends Controller
     }
 
     public function createRegulation(Request $request ,Regulations $regulation){
-        
+        $this->validate($request,
+                        ['Regulation_text'=>'required',
+                        'Regulation_title' => 'required'],
+                        ['Regulation_text.required' => 'توضیحات نباید خالی باشد',
+                        'Regulation_title.required' => 'عنوان نمی تواند خالی باشد'] );
         //Insert in database
         $regulation->regulations_title = $request->Regulation_title ;
         $regulation->regulations_description = $request->Regulation_text ;
@@ -55,20 +59,24 @@ class RegulationsController extends Controller
 
     public function doEditRegulation(Request $request, $id){
         $this->validate($request,
-                        ['Regulation_Description'=>'required',
-                        'Regulation_Title' => 'required'],
-                        ['Regulation_Description.required' => 'توضیحات نباید خالی باشد',
-                        'Regulation_Title.required' => 'عنوان نمی تواند خالی باشد'] );
+                        ['Regulation_text'=>'required',
+                        'Regulation_title' => 'required'],
+                        ['Regulation_text.required' => 'توضیحات نباید خالی باشد',
+                        'Regulation_title.required' => 'عنوان نمی تواند خالی باشد'] );
         $EditedRecord = Regulations::find($id);
+        if(isset($request->Regulation_File)){
+            Storage::delete($EditedRecord->regulations_file_name);
+            $path = $request->file('Regulation_File')->store('files/regule');
+            $EditedRecord->regulations_file_name = $path ;
 
-        $EditedRecord->regulations_title = $request->Regulation_Title;
-        $EditedRecord->regulations_description = $request->Regulation_Description;
+        }
+        $EditedRecord->regulations_title = $request->Regulation_title;
+        $EditedRecord->regulations_description = $request->Regulation_text;
 
         if($EditedRecord->save()){
-            return redirect()->route('Get_Regulations')->with('success','ویرایش با موفقیت انجام شد');
+            return 1;
         }
-        else{
-            return redirect()->route('Get_Regulations')->with('error','خطای سیستمی لطفا دوباره سعی کنید');
-        }
+        
+        return 0;
     }
 }

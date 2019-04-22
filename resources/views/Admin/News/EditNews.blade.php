@@ -31,13 +31,36 @@
                     <input  type="checkbox" name="Delete_News_file" ><br>
                     <small class="">درصورتی که میخواهید فایل موجو حذف شود تیک را بزنید</small>
                   </div>
-                  <div class="form-group col-12">
-                    <label >نام لینک :</label>
-                    <input class="form-control col-6" name="NewsLinkName" value="{{ $editabledRecord['attributes']['news_link_name']}}" />
-                    <label >آدرس لینک :</label>
-                    <input style="direction: ltr" class="form-control col-6" name="NewsLinkAddress" placeholder="http://www.google.com" value="{{ $editabledRecord['attributes']['news_link']}}"/>
+                  <div class="form-row">
+                      <div class="form-group col-4">
+                          <label >نام لینک :</label>
+                          <input class="form-control " name="NewsLinkName" value="{{ $editabledRecord['attributes']['news_link_name']}}"/>
+                      </div>
+                      <div class="form-group col-4">
+                          <label >آدرس لینک :</label>
+                          <input style="direction: ltr" class="form-control " value="{{ $editabledRecord['attributes']['news_link']}}" name="NewsLinkAddress" placeholder="http://www.google.com"/>
+                      </div>
                   </div>
-
+                  <div class="form-row">
+                      <div class="form-group col-4">
+                          <label >نام لینک :</label>
+                          <input class="form-control " name="NewsLinkName2" value="{{ $editabledRecord['attributes']['news_link_name2']}}"/>
+                      </div>
+                      <div class="form-group col-4">
+                          <label >آدرس لینک :</label>
+                          <input style="direction: ltr" class="form-control " value="{{ $editabledRecord['attributes']['news_link2']}}" name="NewsLinkAddress2" placeholder="http://www.google.com"/>
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-4">
+                          <label >نام لینک :</label>
+                          <input class="form-control " name="NewsLinkName3" value="{{ $editabledRecord['attributes']['news_link_name3']}}"/>
+                      </div>
+                      <div class="form-group col-4">
+                          <label >آدرس لینک :</label>
+                          <input style="direction: ltr" class="form-control " value="{{ $editabledRecord['attributes']['news_link3']}}" name="NewsLinkAddress3" placeholder="http://www.google.com"/>
+                      </div>
+                  </div>
                   <button id="NewsSubmit" type="submit" class="btn btn-primary" style="width:150px;">ارسال</button>
             </form>
             <div id="progressBarDiv"  class="progress" style="height:30px;margin-top: 50px;display: none;">

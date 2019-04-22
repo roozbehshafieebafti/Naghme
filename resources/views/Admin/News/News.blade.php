@@ -67,8 +67,12 @@
                                             {{ $Value->news_description }}
                                         </p>
                                         <p>
-                                            <b><span>لینک خبر:</span></b>
-                                            <a href="{{ $Value->news_link }}" target="_blank">{{ $Value->news_link_name }}</a>
+                                            <b><span>لینک خبر1:</span></b>
+                                            <a href="{{ $Value->news_link }}" target="_blank">{{ $Value->news_link_name }}</a><br />
+                                            <b><span>لینک خبر2:</span></b>
+                                            <a href="{{ $Value->news_link2 }}" target="_blank">{{ $Value->news_link_name2 }}</a><br />
+                                            <b><span>لینک خبر3:</span></b>
+                                            <a href="{{ $Value->news_link3 }}" target="_blank">{{ $Value->news_link_name3 }}</a><br />
                                         </p>
                                       </div>
                                     </div>
