@@ -148,4 +148,16 @@ class DoActionController extends Controller
         }
         return back()->with('error','پست با موفقیت حذف شد');
     }
+
+    public function findPosts($item){
+        $Post = DoActivity::select('apst_title')->where('apst_title','like','%'.$item.'%')->limit(10)->get();
+        return $Post;
+    }
+
+    public function searchPosts($item){
+        $Posts = DoActivity::where('apst_title','like','%'.$item.'%')->get();
+        $search = 1;
+        $title=[1,2];
+        return view('Admin.Activities.Posts.Posts',compact('Posts','search','title'));
+    }
 }

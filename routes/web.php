@@ -134,6 +134,8 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('/gallery/{id}/{postName}' , 'DoActionController@getPostGallery')->name('Get_Post_Gallery');
 			Route::post('/gallery/{id}/{postName}' , 'DoActionController@insertPostGallery')->name('Insert_Post_Gallery');
 			Route::get('/gallery/action/delete/{id}' , 'DoActionController@deletePostPicture')->name('Delete_Post_Picture');
+			Route::get('/find/{item}' , 'DoActionController@findPosts');
+			Route::get('/search/{item}' , 'DoActionController@searchPosts')->name('Search_Posts');
 		});
 
 		/* Forms */

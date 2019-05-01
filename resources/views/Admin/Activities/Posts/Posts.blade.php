@@ -15,9 +15,13 @@
 			</div>
 		@endif
         @if (count($title) > 0)
-            <div>
+            <div class="row"> 
+                <form onsubmit="Search(event)" class="form-inline my-2 my-lg-0 col-10" >
+                    <input onkeyup="FindPots()" id="PostsSearch" class="form-control mr-sm-2 col-5"  type="search" placeholder="جست‌وجو  فعالیت" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0"  type="submit"><i class="fas fa-search"></i> </button>
+                </form>
+                <a href="{{ route('New_Posts') }}" class="btn btn-primary col-2" style=""><i class="fas fa-plus-circle"></i>&nbsp;فعالیت جدید</a>
                 <br/>
-                <a href="{{ route('New_Posts') }}" class="btn btn-primary" style="margin-right: 20px"><i class="fas fa-plus-circle"></i>&nbsp;فعالیت جدید</a>
             </div>
             @if(count($Posts) > 0)
                 <table class="table table-hover border" style="margin-top: 30px">
@@ -149,6 +153,6 @@
                 </nav>
             </div>
         @endif
-		
+		<script>const URL = "{{ config('app.url') }}";</script>
 	</div>
 @endsection

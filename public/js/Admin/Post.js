@@ -1,3 +1,24 @@
+function FindPots(){
+    var item= $('#PostsSearch').val();
+    
+    if(item.trim() !=''){
+        var url = URL+'admin/post/find/'+item.trim();
+        $.get(url,function(data){
+            var Result = [];
+            data.map((value)=>{
+                Result.push(value.apst_title);
+            });
+            $( "#PostsSearch" ).autocomplete({
+                source: Result
+              });
+        });
+    }
+}
+function Search(event){
+    event.preventDefault();
+    var item= $('#PostsSearch').val();
+    window.location = URL+'admin/post/search/'+item.trim();
+}
 function PostPictureCheck(id){
     var Size = $("#"+id)[0].files[0].size;
     var pdfPattern = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;

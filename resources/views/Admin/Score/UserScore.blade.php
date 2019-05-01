@@ -17,7 +17,7 @@
 		@if(count($UserScore) > 0)
 		<table class="table table-hover border" style="margin-top: 30px">
 			    <thead class=" bg-success text-light">
-				    <th scope="col" >هدف</th>
+				    <th scope="col" >مزایا</th>
 			    	<th scope="col" class="text-center">عملیات</th>
 			    </thead>			 
 			@foreach($UserScore as $val)
