@@ -13,6 +13,10 @@
                 <span><i class="fa fa-home fa-fw text-white"></i></span>
                 <a  class="Naghme-Dashboard-List" href="{{ route('Admin_Dashboard') }}">&nbsp;داشبورد</a>
             </li>
+            <li class="Naghme-Dashboard-List">
+                <span><i class="fas fa-door-open"></i></i></span>
+                <a  class="Naghme-Dashboard-List" href="{{ route('Exit') }}">&nbsp;خروج</a>
+            </li>
         </ul>  
     </div>
 </div>

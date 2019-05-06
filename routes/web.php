@@ -9,7 +9,7 @@
 
 
 // this Routes belongs to admin panle
-Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
+Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminAuth']] , function(){
 
 		/*Dashboard*/
 		Route::get('/','DashboardController@Index')->name('Admin_Dashboard');
@@ -209,4 +209,10 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin'] , function(){
 			Route::get('authorities/duty/{cityId}/{dutyTitle}' , 'RepresentationController@getDuties')->name('Get_Representation_Duty');
 			Route::post('authorities/duty/{cityId}/{dutyTitle}' , 'RepresentationController@doCreateDuties');
 		});
+});
+
+Route::group(['namespace'=>'Main'],function(){
+	Route::get('/login','LoginController@loginPage')->name('Login');
+	Route::post('/login','LoginController@doLogin');
+	Route::get('/exit','LoginController@logOut')->name('Exit');
 });
