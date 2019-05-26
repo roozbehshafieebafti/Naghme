@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class LoginController extends Controller
 {
     public function loginPage(){
-        return view('Main.login.login');
+        return view('Main.login.Login');
     }
 
     public function doLogin(Request $request){        
