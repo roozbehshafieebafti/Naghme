@@ -179,7 +179,7 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::get('change/status/{id}/{value}' , 'UserController@changeStatus');
 		});
 
-		/* Users */
+		/* Scores */
 		Route::group(['prefix' => '/score'] , function(){
 			Route::get('/' , 'UserScoreController@getUserScore')->name('Get_Score');
 			Route::get('/new' , 'UserScoreController@newScore')->name('New_Score');
@@ -208,6 +208,11 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::get('/authorities/delete/{cityId}/{id}' , 'RepresentationController@deleteAuthorities')->name('Delete_Representation_Authorities');
 			Route::get('authorities/duty/{cityId}/{dutyTitle}' , 'RepresentationController@getDuties')->name('Get_Representation_Duty');
 			Route::post('authorities/duty/{cityId}/{dutyTitle}' , 'RepresentationController@doCreateDuties');
+		});
+
+		/* Slider */
+		Route::group(['prefix'=>'/slider'],function(){
+			Route::get('/','SliderController@getSlides')->name('Get_Slides');
 		});
 });
 

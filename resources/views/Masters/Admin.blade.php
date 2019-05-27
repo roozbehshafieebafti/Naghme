@@ -37,6 +37,7 @@
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/News.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/User.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Post.js' }}"></script>
+		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Slider.js' }}"></script>
 		<script type="text/javascript">
 			$(function () {
 				  $('[data-toggle="tooltip"]').tooltip()

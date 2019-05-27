@@ -9,11 +9,15 @@
     </div>      
     <div style="margin-top:20px ">          
         <ul style="list-style-type: none">
-            <li class="Naghme-Dashboard-List">
+            <li class="Naghme-Dashboard-List mt-3">
                 <span><i class="fa fa-home fa-fw text-white"></i></span>
                 <a  class="Naghme-Dashboard-List" href="{{ route('Admin_Dashboard') }}">&nbsp;داشبورد</a>
             </li>
-            <li class="Naghme-Dashboard-List">
+            <li class="Naghme-Dashboard-List mt-3">
+                <span><i class="fas fa-images"></i></span>
+                <a  class="Naghme-Dashboard-List" href="{{ route('Get_Slides') }}">&nbsp;اسلایدر</a>
+            </li>
+            <li class="Naghme-Dashboard-List mt-3">
                 <span><i class="fas fa-door-open"></i></i></span>
                 <a  class="Naghme-Dashboard-List" href="{{ route('Exit') }}">&nbsp;خروج</a>
             </li>

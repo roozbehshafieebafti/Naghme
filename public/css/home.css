@@ -1,3 +1,72 @@
+/* header */
+
+@media only screen and (max-width:975px){
+  .Header-without-toggle{
+    display: none;
+  }
+  .toggle-button{
+    display: block;
+    padding: 10px 20px 0 20px;
+  }
+
+  .menu-content{
+    width:0px;
+    position: absolute;
+    top:0px;
+    right: 15px;
+    z-index: 20;
+    background-color: aliceblue;
+    height: 400px;
+    display: none;
+  }
+
+  .not-menu-content{
+    position: fixed;
+    top: 0px;
+    right:0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: gray;
+    z-index: 5;
+    opacity: 0.5;
+    display: none;
+  }
+
+  .toggle-button-key{
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width:976px){
+  .Header-with-toggle{
+    display: none;
+  }
+  .Header-without-toggle{
+    padding: 20px;
+    height:70px;
+    direction: rtl;
+  }
+  .header-sub-menu{
+    height:55px;
+    float: right;
+    width:100px;
+    padding-right: 30px;
+  }
+  .header-ul-list{
+    list-style:outside none none;
+    position: absolute;
+    top:50px;
+    display: none;
+    z-index: 12;
+    width:150px;
+  }
+
+  .header-sub-menu:hover .header-ul-list{
+    display: block;
+  }
+}
+
+
 .flip-card {
     background-color: transparent;
     display: inline-block;
