@@ -2,11 +2,11 @@ function selectPictureSlider(id){
     $('#'+id).trigger('click'); 
 }
 
-function sliderPictureValidation(id1,id2){
-    PictureCheck(id1,id2)
+function sliderPictureValidation(id1,id2,btn){
+    PictureCheck(id1,id2,btn)
 }
 
-function PictureCheck(id,id2){
+function PictureCheck(id,id2,btn){
     var Size = $("#"+id)[0].files[0].size;
     var pdfPattern = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.svg)$/;
 
@@ -16,15 +16,17 @@ function PictureCheck(id,id2){
             $('#'+id2).css('backgroundColor','#36e51b');
             $('#'+id2).html('تصویر انتخاب شد');
             $('#Alert').css('display','none');
-
+            $('#'+btn).attr("disabled", false);
         }
         else{
             $('#Alert').css('display','block');
             $('#Alert').html('نام فایل باید انگلیسی یا عدد باشد و فرمت آن jpg یا jpeg یا svg');
+            $('#'+btn).attr("disabled", true);
         }
     }
     else{
         $('#Alert').css('display','block');
         $('#Alert').html('سایز فایل وارد شده بیش از 1mb است');
+        $('#'+btn).attr("disabled", true);
     }
 }

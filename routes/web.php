@@ -213,6 +213,7 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 		/* Slider */
 		Route::group(['prefix'=>'/slider'],function(){
 			Route::get('/','SliderController@getSlides')->name('Get_Slides');
+			Route::post('/','SliderController@updateSlides');
 		});
 });
 
