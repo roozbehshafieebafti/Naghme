@@ -28,7 +28,7 @@ class HistoryPlanPurposeController extends Controller
     	);
 
     	// update table
-    	$Result = $hpp->where('hpp_kind','history')->update(['hpp_data'=>$request->History_data]);
+    	$Result = $hpp->where([['hpp_kind','history'],['hpp_city_id',1]])->update(['hpp_data'=>$request->History_data]);
 
     	//check for update
     	if($Result)

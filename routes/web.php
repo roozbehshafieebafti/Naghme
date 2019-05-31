@@ -219,9 +219,19 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 
 // this Routes belongs to Main Panel
 Route::group(['namespace'=>'Main'],function(){
-
+	
+	//Home Page
 	Route::get('/','IndexController@loadHomePage')->name('Home');
 
+	// Mandegar Menu
+	Route::group(['namespace' => 'Mandegar'],function(){
+		Route::get('/history','MandegarController@getHistoryPlanPurposeStatements')->name('Menu_History');
+		Route::get('/plane','MandegarController@getHistoryPlanPurposeStatements')->name('Menu_Plane');
+		Route::get('/purpose','MandegarController@getHistoryPlanPurposeStatements')->name('Menu_Purpose');
+		Route::get('/Statement','MandegarController@getHistoryPlanPurposeStatements')->name('Menu_Statement');
+	});
+
+	//Login
 	Route::get('/login','LoginController@loginPage')->name('Login');
 	Route::post('/login','LoginController@doLogin');
 	Route::get('/exit','LoginController@logOut')->name('Exit');

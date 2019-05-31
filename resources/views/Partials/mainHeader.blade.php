@@ -21,11 +21,11 @@
                             <span>نغمه ماندگار</span>
                         </a>
                         <ul class="header-ul-list bg-white  col-12">
-                            <li><a class="text-muted" href="">تاریخچه</a></li>
-                            <li><a class="text-muted" href="">اهداف</a></li>
+                            <li><a class="text-muted" href="{{ route('Menu_History').'#history' }}">تاریخچه</a></li>
+                            <li><a class="text-muted" href="{{ route('Menu_Purpose').'#purpose' }}">اهداف</a></li>
                             <li><a class="text-muted" href="">فرم‌ها</a></li>
-                            <li><a class="text-muted" href="">برنامه ها</a></li>
-                            <li><a class="text-muted" href="">بیانیه ها</a></li>
+                            <li><a class="text-muted" href="{{ route('Menu_Plane').'#plane' }}">برنامه ها</a></li>
+                            <li><a class="text-muted" href="{{ route('Menu_Statement').'#statement' }}">بیانیه ها</a></li>
                             <li><a class="text-muted" href="">آیین نامه ها</a></li>
                             <li><a class="text-muted" href="">منشور اخلاقی</a></li>
                             <li><a class="text-muted" href="">نمودار سازمانی</a></li>
