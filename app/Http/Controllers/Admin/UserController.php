@@ -147,9 +147,11 @@ class UserController extends Controller
                     ->orWhere('naghme_user_family','like','%'.$Arry[0].'%')
                     ->get();
         }
-        
+        $filter = null;
         $search = 1;
-        return view('Admin.Users.Users',compact('Users','search'));
+        $Actions = User::select('naghme_user_activity')->distinct()->get();
+        $Center = Representation::select('representation_title','id')->distinct()->get();
+        return view('Admin.Users.Users',compact('Users','search','filter','Actions','Center'));
     }
 
     public function changeStatus($id,$value){
