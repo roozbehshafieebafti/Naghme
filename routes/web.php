@@ -228,7 +228,8 @@ Route::group(['namespace'=>'Main'],function(){
 		Route::get('/history','MandegarController@getHistoryPlanPurposeStatements')->name('Menu_History');
 		Route::get('/plane','MandegarController@getHistoryPlanPurposeStatements')->name('Menu_Plane');
 		Route::get('/purpose','MandegarController@getHistoryPlanPurposeStatements')->name('Menu_Purpose');
-		Route::get('/Statement','MandegarController@getHistoryPlanPurposeStatements')->name('Menu_Statement');
+		Route::get('/statement','MandegarController@getHistoryPlanPurposeStatements')->name('Menu_Statement');
+		Route::get('/form','FormController@getForms')->name('Menu_Form');
 	});
 
 	//Login
