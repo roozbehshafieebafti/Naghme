@@ -25,10 +25,10 @@
 					</thead>
 					<tbody>
 						@foreach($Regule as $value)
-							<tr>
-								<td>{{ $value->regulations_title }}</td>
-								<td>{{ $value->regulations_description }}</td>
-								<td class="text-center">
+							<tr >
+								<td style="max-width:150px;display: flex;align-items: center;height: 100%;">{{ $value->regulations_title }}</td>
+								<td style="max-width:400px;">{{ $value->regulations_description }}</td>
+								<td class="text-center" >
 									<span>
 										<a href="{{ route('Edit_Regulation',$value->id ) }}" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
 									</span>

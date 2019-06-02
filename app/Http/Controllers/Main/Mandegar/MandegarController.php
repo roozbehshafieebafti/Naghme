@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Main\Mandegar;
-
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\HistoryPlanePurpose;
 use Illuminate\Support\Facades\DB;
