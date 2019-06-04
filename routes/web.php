@@ -232,6 +232,7 @@ Route::group(['namespace'=>'Main'],function(){
 		Route::get('/form','FormController@getForms')->name('Menu_Form');
 		Route::get('/regulations','RegulationController@getRegulations')->name('Menu_Regulations');
 		Route::get('/ethics','EthicsController@getEthics')->name('Menu_Ethics');
+		Route::get('/chart/{cityName}','ChartController@getChart')->name('Menu_Chart');
 	});
 
 	//Login

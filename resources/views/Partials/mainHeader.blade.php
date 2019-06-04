@@ -27,8 +27,8 @@
                             <li><a class="text-muted" href="{{ route('Menu_Plane').'#plane' }}">برنامه ها</a></li>
                             <li><a class="text-muted" href="{{ route('Menu_Statement').'#statement' }}">بیانیه ها</a></li>
                             <li><a class="text-muted" href="{{ route('Menu_Regulations') }}">آیین نامه ها</a></li>
-                            <li><a class="text-muted" href="">منشور اخلاقی</a></li>
-                            <li><a class="text-muted" href="">نمودار سازمانی</a></li>
+                            <li><a class="text-muted" href="{{ route('Menu_Ethics') }}">منشور اخلاقی</a></li>
+                            <li><a class="text-muted" href="{{ route('Menu_Chart','کرمان') }}">نمودار سازمانی</a></li>
                         </ul>
                     </div>
 

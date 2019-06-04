@@ -5,9 +5,9 @@
 @section('content')
     <div style="direction: rtl" class="container-fluid">
         <div class="Statemants container mt-3">
-            <h3 id="statement">بیانیه‌ها</h3>
+            <h3 id="statement">منشور اخلاقی</h3>
             <div class="">
-                <ul class="alert alert-danger">
+                <ul class="alert alert-info">
                     @foreach ($Ethics as $key => $item)
                         <li class="mt-2">
                             {{ $key }}
