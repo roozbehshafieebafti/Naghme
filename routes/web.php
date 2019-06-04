@@ -231,6 +231,7 @@ Route::group(['namespace'=>'Main'],function(){
 		Route::get('/statement','MandegarController@getHistoryPlanPurposeStatements')->name('Menu_Statement');
 		Route::get('/form','FormController@getForms')->name('Menu_Form');
 		Route::get('/regulations','RegulationController@getRegulations')->name('Menu_Regulations');
+		Route::get('/ethics','EthicsController@getEthics')->name('Menu_Ethics');
 	});
 
 	//Login
