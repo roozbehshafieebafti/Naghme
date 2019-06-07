@@ -30,3 +30,11 @@ function PictureCheck(id,id2,btn){
         $('#'+btn).attr("disabled", true);
     }
 }
+
+function deleteSlide(e,id){
+    e.preventDefault();
+    let conf = confirm('آیا از حذف اسلاید مطمئن هستید ؟');
+    if(conf){
+        window.location = Url+'admin/slider/delete/'+id;
+    }
+}

@@ -50,9 +50,9 @@
                     <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture" name="Post_First_Picture" class="form-control text-left" required="required" >
                 </div>
 				<div class="form-group">
-				    <label >توضیحات</label>
-				    <textarea style="resize:none;height:300px" type="text" name="Post_Description" class="form-control" required="required"></textarea>
-				  </div>
+                    <label >توضیحات</label>
+				    <textarea id="PostTextArea" style="resize:none;height:300px" type="text" name="Post_Description" class="form-control"></textarea>
+                </div>
 				<button id="PostSubmit" class="btn btn-success">پست فعالیت</button>
 				<a href="{{ route('Get_Posts') }}" class="btn btn-danger text-light" style="margin-right: 20px;">&nbsp;بازگشت &nbsp;<i class="fas fa-arrow-circle-left"></i></a>
             </form>

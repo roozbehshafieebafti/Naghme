@@ -87,6 +87,8 @@
   }
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
   }
   
   .flip-card-front, .flip-card-back {
@@ -100,13 +102,16 @@
     background-color: rgb(138, 37, 104);
     color: rgb(255, 254, 254);
     padding-top: 100px;
-    z-index: 2;
+    z-index: 1;
   }
   .flip-card-back {
     background-color: #8f3bb1;
     color: white;
     padding-top: 100px;
     transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
     z-index: 1;
   }      
 

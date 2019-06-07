@@ -34,17 +34,12 @@
 
                     <div class="header-sub-menu ">
                         <a class="text-white " role="button">
-                            <span>نغمه ماندگار</span>
+                            <span>مسئولین</span>
                         </a>
                         <ul class="header-ul-list bg-white  col-12">
-                            <li><a class="text-muted" href="">تاریخچه</a></li>
-                            <li><a class="text-muted" href="">اهداف</a></li>
-                            <li><a class="text-muted" href="">فرم‌ها</a></li>
-                            <li><a class="text-muted" href="">برنامه ها</a></li>
-                            <li><a class="text-muted" href="">بیانیه ها</a></li>
-                            <li><a class="text-muted" href="">آیین نامه ها</a></li>
-                            <li><a class="text-muted" href="">منشور اخلاقی</a></li>
-                            <li><a class="text-muted" href="">نمودار سازمانی</a></li>
+                            @foreach ($_SESSION['Authorities'] as $item)
+                                <li><a class="text-muted" href=" {{config('app.url').'authorities/'.$item->authorities_title}} ">{{ $item->authorities_title }}</a></li>                                
+                            @endforeach
                         </ul>
                     </div>
 

@@ -140,4 +140,8 @@ $(function()
         $('#progressBarDiv').css({"display":"block"});
         uploadFile('PostGalleryForm');
     });
-})
+});
+
+tinymce.init({
+    selector: '#PostTextArea',plugins: "link",
+  });

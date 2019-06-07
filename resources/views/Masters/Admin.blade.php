@@ -31,6 +31,7 @@
 		<script type="text/javascript" src="{{ config('app.url').'js/bootstrap.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/all.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/sweetalert.min.js' }}"></script>
+		<script type="text/javascript" src="{{ config('app.url').'js/tinymce.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Regulation.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Authorities.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Form.js' }}"></script>
@@ -39,11 +40,7 @@
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Post.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Admin/Slider.js' }}"></script>
 		<script type="text/javascript">
-			$(function () {
-				  $('[data-toggle="tooltip"]').tooltip()
-				});
-				var Height = $( document ).height() + 'px';
-				$('#SideBare').css('height',Height) ;
+			$(function () {$('[data-toggle="tooltip"]').tooltip()});var Height = $( document ).height() + 'px';$('#SideBare').css('height',Height) ;
 		</script>
 	</body>
 </html>

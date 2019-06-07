@@ -86,11 +86,7 @@
                                           <p>
                                                 <b><span>زیر مجموعه:</span></b>
                                                 {{ $val->apst_sub_activities_title_id }}
-                                          </p>
-                                            <p style="text-align:justify">
-                                                <b><span>متن فعالیت:</span></b>
-                                                {{ $val->apst_description }}
-                                            </p>
+                                          </p>                                            
                                       </div>
                                     </div>
                                   </div>

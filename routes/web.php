@@ -214,11 +214,13 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 		Route::group(['prefix'=>'/slider'],function(){
 			Route::get('/','SliderController@getSlides')->name('Get_Slides');
 			Route::post('/','SliderController@updateSlides');
+			Route::post('/create','SliderController@createSlide')->name('Create_Slide');
+			Route::get('/delete/{id}','SliderController@deleteSlide')->name('Delete_Slide');
 		});
 });
 
 // this Routes belongs to Main Panel
-Route::group(['namespace'=>'Main'],function(){
+Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 	
 	//Home Page
 	Route::get('/','IndexController@loadHomePage')->name('Home');
@@ -233,6 +235,10 @@ Route::group(['namespace'=>'Main'],function(){
 		Route::get('/regulations','RegulationController@getRegulations')->name('Menu_Regulations');
 		Route::get('/ethics','EthicsController@getEthics')->name('Menu_Ethics');
 		Route::get('/chart/{cityName}','ChartController@getChart')->name('Menu_Chart');
+	});
+
+	Route::group(['namespace'=>'Authorities'], function () {
+		Route::get('/authorities/{title}','AuthoritiesController@getAuthorities')->name('Menu_Authorities');
 	});
 
 	//Login

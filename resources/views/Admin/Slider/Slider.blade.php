@@ -45,12 +45,17 @@
                                 <label class="col-sm-4 col-form-label"></label>
                                 <div class="col-sm-8">
                                     <input name="picture" style="visibility: hidden" type="file" id="<?php echo 'staticPicture'.$i; ?>" onchange="sliderPictureValidation(this.id,'<?php echo 'choose'.$i; ?>','<?php echo 'BTN'.$i; ?>')" >
-                                    <input name="id" style="display:none" type="text" value="<?php echo ($i+1); ?>">
+                                    <input name="id" style="display:none" type="text" value="{{ $Value->id }}">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12 text-center">
                                     <button id="<?php echo 'BTN'.$i; ?>" type="submit" class="btn btn-primary">ثبت</button>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12 text-left" >
+                                    <a href="#" class="text-secondary" style="font-size:12px" onclick="deleteSlide(event,'{{ $Value->id }}')">حذف اسلاید</a>
                                 </div>
                             </div>
                         </form> 
@@ -60,5 +65,41 @@
             </div>
             @endforeach
         </div>
+        <div class="mt-33 p-3">
+            <h3 class="mt-3">اسلاید جدید</h3>
+            <form class="" action=" {{route('Create_Slide')}} " method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <div class="row bg-white p-3">
+                    <div class="col-8">
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">تصویر:</label>
+                            <div class="col-sm-8">
+                                <input name="picture" type="file" required >
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">عنوان:</label>
+                            <div class="col-sm-8">
+                                <input name="title" type="text" class="form-control"  placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">لینک:</label>
+                            <div class="col-sm-8">
+                                <input style="direction:ltr" name="link" type="text" class="form-control"  placeholder="http://example.com" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4" style="display:flex;align-items:center;justify-content:center">
+                        <div class="form-group row">
+                            <div class="col-sm-12 text-center">
+                                <button type="submit" class="btn btn-success" style="width:120px;">ثبت</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+    <script type="text/javascript"> const Url = "{{ config('app.url') }}" ;</script>
 @endsection

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 class SliderController extends Controller
 {
     public function getSlides(Slider $Slide){
-        $Slides = $Slide->all();
+        $Slides = $Slide->orderBy('created_at','desc')->limit(3)->get();
         return view('Admin.Slider.Slider',compact('Slides'));
     }
 
@@ -41,5 +41,40 @@ class SliderController extends Controller
             return back()->with('success','تغییرات با موفقیت اعمال شد');
         }
         return back()->with('error','شما تغییراتی ایجاد نکردید');
+    }
+
+    public function createSlide(Request $request,Slider $Slide){
+        $this->validate($request ,
+        [
+            'picture' => 'required',
+            'title' => 'required',
+            'link' => 'required'
+        ],
+        [
+            'picture.required' => 'مقادیر کامل نیستند',
+            'title.required' => 'مقادیر کامل نیستند',
+            'link.required' => 'مقادیر کامل نیستند',
+        ]);
+
+        $Picture = $request->file('picture')->store('picture/slider');
+        $Slide->title =  $request->title;
+        $Slide->picture =  $Picture;
+        $Slide->link =  $request->link;
+
+        if($Slide->save()){
+            return back()->with('success','تغییرات با موفقیت اعمال شد');
+        }
+
+        return back()->with('error','خطای سیستمی');
+    }
+
+    public function deleteSlide($id){
+        $Slid = new Slider();
+        $deletedRecored = $Slid->find($id); 
+        Storage::delete($deletedRecored->picture);
+        if($deletedRecored->delete()){
+            return back()->with('success','اسلاید حذف شد');
+        }
+        return back()->with('error','خطای سیستمی');
     }
 }
