@@ -27,7 +27,7 @@ class NewsController extends Controller
 
     //doCreateNews
     public function doCreateNews(Request $request){
-
+        
         $File=null;
         //validation
         $this->validate($request ,

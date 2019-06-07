@@ -88,6 +88,9 @@
                                                 {{ $val->apst_sub_activities_title_id }}
                                           </p>                                            
                                       </div>
+                                      <div>
+                                            <b><span>توضیحات:</span></b>{!!html_entity_decode( $val->apst_description)!!}
+                                      </div>
                                     </div>
                                   </div>
                                 </div>

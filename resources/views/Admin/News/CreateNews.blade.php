@@ -12,7 +12,7 @@
                       </div>
                       <div class="form-group">
                         <label >توضیحات:</label>
-                        <textarea class="form-control" name="News_text" style="resize: none;" required="required"></textarea>
+                        <textarea id="News_text" class="form-control" type="text" name="News_text" style="resize: none;" ></textarea>
                       </div>
                       <div class="form-group">
                         <label >تصویر:</label>
@@ -26,7 +26,7 @@
                         <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small><br>
                         <small class="">فرمت فایل حتما بایستی pdf یا docx یا doc باشد</small>
                       </div>
-                      <div class="form-row">
+                      {{-- <div class="form-row">
                           <div class="form-group col-4">
                               <label >نام لینک :</label>
                               <input class="form-control " name="NewsLinkName" />
@@ -55,7 +55,7 @@
                               <label >آدرس لینک :</label>
                               <input style="direction: ltr" class="form-control " name="NewsLinkAddress3" placeholder="http://www.google.com"/>
                           </div>
-                      </div>
+                      </div> --}}
 
                       <button disabled id="NewsSubmit" type="submit" class="btn btn-primary" style="width:150px;">ارسال</button>
                 </form>

@@ -83,14 +83,16 @@ function trackUploadProgress(e)
 
 function uploadFile(id)
 {
+    
     var formdata = new FormData($(id)[0]);
+    formdata.append('News_text' , tinymce.get('News_text').getContent());
     $.ajax(
     { headers:{
         'X-CSRF-TOKEN':$("meta[name='csrf-token']").attr('content')
     },
     url:NewsUrl,
     type:'post',
-    data:formdata,
+    data:formdata ,
     xhr: function()
     {
         // Custom XMLHttpRequest
@@ -140,3 +142,7 @@ function EditFormOfNews(event){
     var id= '#EditFormOfNews';
     uploadFile(id);
 }
+
+tinymce.init({
+    selector: '#News_text',plugins: "link",
+  });

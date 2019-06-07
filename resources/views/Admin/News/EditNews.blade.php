@@ -12,7 +12,7 @@
                   </div>
                   <div class="form-group">
                     <label >توضیحات:</label>
-                    <textarea class="form-control" name="News_text" style="resize: none;" required="required">{{ $editabledRecord['attributes']['news_description']}}</textarea>
+                    <textarea id="News_text" class="form-control" name="News_text" style="resize: none;" required="required">{{ $editabledRecord['attributes']['news_description']}}</textarea>
                   </div>
                   <div class="form-group">
                     <label >تصویر:</label>
@@ -31,7 +31,7 @@
                     <input  type="checkbox" name="Delete_News_file" ><br>
                     <small class="">درصورتی که میخواهید فایل موجو حذف شود تیک را بزنید</small>
                   </div>
-                  <div class="form-row">
+                  {{-- <div class="form-row">
                       <div class="form-group col-4">
                           <label >نام لینک :</label>
                           <input class="form-control " name="NewsLinkName" value="{{ $editabledRecord['attributes']['news_link_name']}}"/>
@@ -60,7 +60,7 @@
                           <label >آدرس لینک :</label>
                           <input style="direction: ltr" class="form-control " value="{{ $editabledRecord['attributes']['news_link3']}}" name="NewsLinkAddress3" placeholder="http://www.google.com"/>
                       </div>
-                  </div>
+                  </div> --}}
                   <button id="NewsSubmit" type="submit" class="btn btn-primary" style="width:150px;">ارسال</button>
             </form>
             <div id="progressBarDiv"  class="progress" style="height:30px;margin-top: 50px;display: none;">
