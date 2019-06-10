@@ -45,34 +45,38 @@
 
                     <div class="header-sub-menu ">
                         <a class="text-white " role="button">
-                            <span>نغمه ماندگار</span>
+                            <span>فعالیت‌ها</span>
                         </a>
-                        <ul class="header-ul-list bg-white  col-12">
-                            <li><a class="text-muted" href="">تاریخچه</a></li>
-                            <li><a class="text-muted" href="">اهداف</a></li>
-                            <li><a class="text-muted" href="">فرم‌ها</a></li>
-                            <li><a class="text-muted" href="">برنامه ها</a></li>
-                            <li><a class="text-muted" href="">بیانیه ها</a></li>
-                            <li><a class="text-muted" href="">آیین نامه ها</a></li>
-                            <li><a class="text-muted" href="">منشور اخلاقی</a></li>
-                            <li><a class="text-muted" href="">نمودار سازمانی</a></li>
+                        <ul class="accordion header-ul-list bg-white  col-12">
+                            <?php $i=0 ?>
+                            @foreach ($_SESSION['Activities'] as $key => $item)
+                                @if(is_array($item))  
+                                    <li>
+                                        <span style="cursor:pointer" class="text-muted collapsed"  data-target="{{'#collapseExample'.$i}}" data-toggle="collapse" aria-expanded="false" aria-controls="{{'collapseExample'.$i}}">
+                                            {{ $key }}
+                                        </span>
+                                    </li>  
+                                    <ul class="collapse bg-dark" id="{{'collapseExample'.$i}}" aria-labelledby="headingTwo">
+                                        @foreach ($item as $val)
+                                            <li class="text-light">{{ $val }}</li>    
+                                        @endforeach
+                                    </ul>
+                                    <?php $i++; ?>                                    
+                                @else
+                                    <li>
+                                        <a style="cursor:pointer" class="text-muted "  href="#">
+                                            {{ $key }}
+                                        </a>
+                                    </li> 
+                                @endif
+                            @endforeach
                         </ul>
                     </div>
 
                     <div class="header-sub-menu ">
-                        <a class="text-white " role="button">
-                            <span>نغمه ماندگار</span>
+                        <a class="text-white" href="#">
+                            <span>اخبار</span>
                         </a>
-                        <ul class="header-ul-list bg-white  col-12">
-                            <li><a class="text-muted" href="">تاریخچه</a></li>
-                            <li><a class="text-muted" href="">اهداف</a></li>
-                            <li><a class="text-muted" href="">فرم‌ها</a></li>
-                            <li><a class="text-muted" href="">برنامه ها</a></li>
-                            <li><a class="text-muted" href="">بیانیه ها</a></li>
-                            <li><a class="text-muted" href="">آیین نامه ها</a></li>
-                            <li><a class="text-muted" href="">منشور اخلاقی</a></li>
-                            <li><a class="text-muted" href="">نمودار سازمانی</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
