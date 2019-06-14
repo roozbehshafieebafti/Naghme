@@ -13,7 +13,7 @@
             </div>
         @endif
         <div class="col-12">
-            <form onsubmit="Search(event)" class="form-inline my-2 my-lg-0" >
+            <form onsubmit="SearchNews(event)" class="form-inline my-2 my-lg-0" >
                 <input onkeyup="FindNews()" id="NewsSearch" class="form-control mr-sm-2 col-5"  type="search" placeholder="جست‌وجو  خبر" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0"  type="submit"><i class="fas fa-search"></i> </button>
                 <a href="{{ route('Create_News') }}" class="btn btn-info" style="margin-right: 200px">&nbsp;خبر جدید &nbsp;<i class="fas fa-plus-circle"></i></a>

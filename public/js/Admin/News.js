@@ -14,7 +14,7 @@ function FindNews(){
         });
     }
 }
-function Search(event){
+function SearchNews(event){
     event.preventDefault();
     var item= $('#NewsSearch').val();
     window.location = URL+'admin/news/search/'+item.trim();
