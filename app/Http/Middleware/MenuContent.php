@@ -17,7 +17,10 @@ class MenuContent
     public function handle($request, Closure $next)
     {
         if(!isset($_SESSION['Authorities'])){
-            $AuthoritiesTitle = Authorities::select('id','authorities_title')->where('authorities_city_id',1)->distinct()->get();
+            $AuthoritiesTitle = DB::select('SELECT authorities_title 
+            from authorities 
+            WHERE authorities_city_id = 1 
+            group by authorities_title');
             $_SESSION['Authorities'] = $AuthoritiesTitle;
         }
         if(!isset($_SESSION['Activities'])){

@@ -110,7 +110,8 @@ class AuthoritiesController extends Controller
     public function deleteAuthorities($id){
     	$deletedRecord = Authorities::find($id);
 			Storage::delete($deletedRecord->authorities_picture);
-			Duties::where('ad_authorities_title',$deletedRecord->authorities_title)->delete();
+			// this Code should be comented
+			// Duties::where('ad_authorities_title',$deletedRecord->authorities_title)->delete();
     	if($deletedRecord->delete()){
     		return back()->with('success','مسئول با موفقیت پاک شد');
     	}

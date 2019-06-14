@@ -234,11 +234,26 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 		Route::get('/form','FormController@getForms')->name('Menu_Form');
 		Route::get('/regulations','RegulationController@getRegulations')->name('Menu_Regulations');
 		Route::get('/ethics','EthicsController@getEthics')->name('Menu_Ethics');
+		//نیاز به ریدایرکت 404 دارد
 		Route::get('/chart/{cityName}','ChartController@getChart')->name('Menu_Chart');
 	});
 
+	//Authorities
 	Route::group(['namespace'=>'Authorities'], function () {
+		//نیاز به ریدایرکت 404 دارد
 		Route::get('/authorities/{title}','AuthoritiesController@getAuthorities')->name('Menu_Authorities');
+	});
+
+	//Activities 
+	Route::group(['namespace'=>'Activities'],function(){
+		//نیاز به ریدایرکت 404 دارد
+		Route::get('/activities/{name}','ActivitiesController@getAcitivities');
+	});
+
+	//News
+	Route::group(['namespace'=>'News'], function () {
+		Route::get('/news/{id?}','MainNewsController@getallNews')->name('Get_All_News');
+		Route::get('/news-continue-reding/{id}','MainNewsController@continueReading')->name('News_Load_More');
 	});
 
 	//Login

@@ -35,7 +35,7 @@
     
         <div class="">
             <div class="row">
-                <div class="flip-card col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mt-2">
+                <div class="flip-card col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mt-2 ">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <h2>salam</h2>                     

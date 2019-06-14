@@ -17,7 +17,7 @@
     right: 15px;
     z-index: 20;
     background-color: aliceblue;
-    height: 400px;
+    /* height: 400px; */
     display: none;
   }
 
@@ -35,6 +35,10 @@
 
   .toggle-button-key{
     cursor: pointer;
+  }
+
+  .header-ul-list{
+    list-style:outside none none;
   }
 }
 
@@ -70,14 +74,14 @@
   /* Sweing Card */
 .flip-card {
     background-color: transparent;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     height: 200px;
     perspective: 1000px;
     border-radius: 30px;
   }
   .flip-card-inner {
-    position: relative;
-    width: 100%;
+    width: 280px;
     height: 100%;
     text-align: center;
     transition: transform 0.6s;
@@ -99,13 +103,13 @@
     border-radius: 30px;
   }
   .flip-card-front {
-    background-color: rgb(138, 37, 104);
+    background-color:#dc3545;
     color: rgb(255, 254, 254);
     padding-top: 100px;
     z-index: 1;
   }
   .flip-card-back {
-    background-color: #8f3bb1;
+    background-color: #fd7e14;
     color: white;
     padding-top: 100px;
     transform: rotateY(180deg);

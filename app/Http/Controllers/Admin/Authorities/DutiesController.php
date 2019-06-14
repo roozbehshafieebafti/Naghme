@@ -4,14 +4,17 @@ namespace App\Http\Controllers\Admin\Authorities;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Model\Authorities;
+use Illuminate\Support\Facades\DB;
 use App\Model\Duties;
 
 class DutiesController extends Controller
 {
 	//getDuties collect the titles from Authorities table and sends them to view
     public function getDuties(){
-    	$AuthoritiesTitle = Authorities::select('id','authorities_title')->where('authorities_city_id',1)->distinct()->get();
+        $AuthoritiesTitle = DB::select('SELECT authorities_title 
+        from authorities 
+        WHERE authorities_city_id = 1 
+        group by authorities_title');
     	return view('Admin.Authorities.Duties.Duties',compact('AuthoritiesTitle'));
     }
 
