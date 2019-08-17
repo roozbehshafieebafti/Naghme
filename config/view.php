@@ -30,4 +30,9 @@ return [
 
     'compiled' => realpath(storage_path('framework/views')),
 
+    // ALTs
+    'alt' => 'انجمن نغمه ماندگار',
+
+    // TITLEs
+    'title' => 'انجمن نغمه ماندگار'
 ];

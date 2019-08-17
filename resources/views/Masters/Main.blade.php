@@ -18,7 +18,7 @@
 	</head>
 	<body>
 		@include('Partials.mainHeader')
-    @yield('content')
+    	@yield('content')
 		@include('Partials.mainFooter')
 		<script type="text/javascript" src="{{ config('app.url').'js/jquery.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/jquery-ui.min.js' }}"></script>

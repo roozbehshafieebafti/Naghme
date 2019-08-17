@@ -50,6 +50,12 @@
     padding: 20px;
     height:70px;
     direction: rtl;
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index: 20;
+    background-color: initial;
   }
   .header-sub-menu{
     height:55px;

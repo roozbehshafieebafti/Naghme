@@ -1,8 +1,8 @@
 @extends('Masters.Main')
 @section('title','صفحه اصلی')
 @section('content')
-    <div class="container-fluid">
-        <div class="SlideShow mt-2">
+    {{-- <div class="container-fluid"> --}}
+        <div class="SlideShow mt-0">
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -80,5 +80,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    {{-- </div> --}}
 @endsection
