@@ -1,19 +1,26 @@
+/* nastaligh font */
+@font-face {
+  font-family: "IranNastaliq";
+  src: url("../fonts/Nast/IranNastaliq.eot?#") format("eot"),
+    url("../fonts/Nast/IranNastaliq.ttf") format("truetype"),
+    url("../fonts/Nast/IranNastaliq.woff") format("woff");
+}
 
 /* header */
 
-@media only screen and (max-width:975px){
-  .Header-without-toggle{
+@media only screen and (max-width: 975px) {
+  .Header-without-toggle {
     display: none;
   }
-  .toggle-button{
+  .toggle-button {
     display: block;
     padding: 10px 20px 0 20px;
   }
 
-  .menu-content{
-    width:0px;
+  .menu-content {
+    width: 0px;
     position: absolute;
-    top:0px;
+    top: 0px;
     right: 15px;
     z-index: 20;
     background-color: aliceblue;
@@ -21,10 +28,10 @@
     display: none;
   }
 
-  .not-menu-content{
+  .not-menu-content {
     position: fixed;
     top: 0px;
-    right:0px;
+    right: 0px;
     left: 0px;
     bottom: 0px;
     background-color: gray;
@@ -33,179 +40,201 @@
     display: none;
   }
 
-  .toggle-button-key{
+  .toggle-button-key {
     cursor: pointer;
   }
 
-  .header-ul-list{
-    list-style:outside none none;
+  .header-ul-list {
+    list-style: outside none none;
   }
 }
 
-@media only screen and (min-width:976px){
-  .Header-with-toggle{
+@media only screen and (min-width: 976px) {
+  .Header-with-toggle {
     display: none;
   }
-  .Header-without-toggle{
+  .Header-without-toggle {
     padding: 20px;
-    height:70px;
+    height: 70px;
     direction: rtl;
     position: fixed;
-    top:0;
-    right:0;
-    left:0;
+    top: 0;
+    right: 0;
+    left: 0;
     z-index: 20;
     background-color: initial;
   }
-  .header-sub-menu{
-    height:55px;
+  .header-sub-menu {
+    height: 55px;
     float: right;
-    width:100px;
+    width: 100px;
     padding-right: 30px;
   }
-  .header-ul-list{
-    list-style:outside none none;
+  .header-ul-list {
+    list-style: outside none none;
     position: absolute;
-    top:50px;
+    top: 50px;
     display: none;
     z-index: 12;
-    width:150px;
+    width: 150px;
   }
 
-  .header-sub-menu:hover .header-ul-list{
+  .header-sub-menu:hover .header-ul-list {
     display: block;
   }
 }
 
-
 /* Slider Links */
-#sliderLink{
+#sliderLink {
   width: 250px;
   background-color: #414548;
   position: absolute;
-  left:50px;
+  left: 50px;
   text-decoration: none;
-  padding-top:7px;
-  border-radius: 30px
+  padding-top: 7px;
+  border-radius: 30px;
 }
 
-
 /* Between part */
-.main-part{
+.main-part {
   height: 656px;
 }
 
-.rotate-background{
+.rotate-background {
   background-image: url("../picture/assets/back.svg");
   background-size: cover;
   background-position: center;
-  background-size: 1500px 1500px ;
+  background-size: 1500px 1500px;
   background-repeat: no-repeat;
   position: absolute;
   left: -150px;
-  width:600px;
+  width: 600px;
   height: 500px;
-  transform: rotate(40deg);
+  transform: rotate(45deg);
   z-index: -12;
 }
 
 /* Sweing Card */
 
-.sweing-container{
+.sweing-container {
   float: left;
-  width:800px;
+  width: 60%;
   height: 600px;
   overflow: hidden;
-  padding-top: 25px;
+  padding-top: 55px;
 }
 
-
 .flip-card {
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    height: 100px;
-    perspective: 1000px;
-    border-radius: 30px;
-    /* position: absolute; */
-  }
-  .flip-card-inner {
-    width: 100px;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
-  }
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  .flip-card-front {
-    color: #790000;
-    z-index: 1;
-  }
-  .flip-card-back {
-    
-    color: white;
-    transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    z-index: 1;
-  } 
-  .front-label{
-    background-color:white;
-    transform: rotate(45deg);
-    width:100px;
-    height:100px;
-    padding-top: 37px;
-    border: solid black 3px;
-  }
-  .back-label{
-    background-color: #790000;
-    transform: rotate(45deg);
-    width:100px;
-    height:100px;
-    padding-top: 37px;
-    border: solid black 3px;
-  }
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  perspective: 1000px;
+  border-radius: 30px;
+  /* position: absolute; */
+}
+.flip-card-inner {
+  width: 100px;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
 
-  .label-text1{
-    transform: rotate(-45deg);
-  }
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  z-index: 1;
+}
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  z-index: 1;
+}
+.front-label {
+  background-color: white;
+  transform: rotate(45deg);
+  width: 100px;
+  height: 100px;
+  padding-top: 37px;
+  border: solid black 3px;
+}
+.back-label {
+  background-color: #790000;
+  transform: rotate(45deg);
+  width: 100px;
+  height: 100px;
+  padding-top: 37px;
+  border: solid black 3px;
+}
 
-  .sweing-news{
-    position: relative;
-    left: 200px;
-    top: 100px;
-  }
-  .sweing-register{
-    position: relative;
-    left: 275px;
-    top: 66px;
-  }
-  .sweing-activity{
-    position: relative;
-    left: 110px;
-    bottom: 50px;
-  }
-  .sweing-representation{
-    position: relative;
-    left: 185px;
-    bottom: 82px;
-  }
+.label-text1 {
+  transform: rotate(-45deg);
+  font-family: "IranNastaliq";
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.sweing-news {
+  position: relative;
+  left: 200px;
+  top: 100px;
+}
+.sweing-register {
+  position: relative;
+  left: 275px;
+  top: 66px;
+}
+.sweing-activity {
+  position: relative;
+  left: 110px;
+  bottom: 50px;
+}
+.sweing-representation {
+  position: relative;
+  left: 185px;
+  bottom: 82px;
+}
+
+.motto-container{
+  float: right;
+  width: 40%;
+  padding-top: 170px;
+  padding-right: 50px;
+}
+
+.main-motto-border{
+  border: 3px solid black;
+  height: 195px;
+  padding:5px;
+}
+
+.motto-content{
+  float: right;
+  height:180px;
+  border: 3px solid #f6a619;
+  margin-top: 20px;
+  margin-right: 5px;
+  width: 90%;
+  padding: 40px 20px 0px 20px;
+}
 
 /* History Menu */
 
-  .History-Main{
-    direction: rtl;
-  }
+.History-Main {
+  direction: rtl;
+}

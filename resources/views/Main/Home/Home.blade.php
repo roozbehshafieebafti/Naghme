@@ -36,20 +36,24 @@
     
         <div class="rotate-background"></div>
         <div class="main-part">
-            <div class="sweing-container">
+            <div class="sweing-container ">
                 <div class="sweing-news flip-card col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mt-2 ">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="front-label">
                                 <div class="label-text1">
-                                    خبر
+                                    <a href="#" style="text-decoration: none;color: #790000;">
+                                        خبر
+                                    </a>
                                 </div>
                             </div>                     
                         </div>
                         <div class="flip-card-back">
                             <div class="back-label">
                                 <div class="label-text1">
-                                    خبر
+                                    <a href="#" style="text-decoration: none;color: white;">
+                                        خبر
+                                    </a>
                                 </div>
                             </div> 
                         </div>
@@ -61,14 +65,18 @@
                         <div class="flip-card-front">
                             <div class="front-label">
                                 <div class="label-text1">
-                                    عضویت
+                                    <a href="#" style="text-decoration: none;color: #790000;">
+                                        عضویت   
+                                    </a>
                                 </div>
                             </div>                     
                         </div>
                         <div class="flip-card-back">
                             <div class="back-label">
                                 <div class="label-text1">
-                                    عضویت
+                                    <a href="#" style="text-decoration: none;color: white;">
+                                        عضویت
+                                    </a>
                                 </div>
                             </div> 
                         </div>
@@ -80,14 +88,18 @@
                         <div class="flip-card-front">
                             <div class="front-label">
                                 <div class="label-text1">
-                                    فعالیت‌ها
+                                    <a href="#" style="text-decoration: none;color: #790000;">
+                                        فعالیت‌ها
+                                    </a>
                                 </div>
                             </div>                     
                         </div>
                         <div class="flip-card-back">
                             <div class="back-label">
                                 <div class="label-text1">
+                                    <a href="#" style="text-decoration: none;color: white;">
                                         فعالیت‌ها
+                                    </a>
                                 </div>
                             </div> 
                         </div>
@@ -99,17 +111,33 @@
                         <div class="flip-card-front">
                             <div class="front-label">
                                 <div class="label-text1">
-                                    نمایندگی‌ها
+                                    <a href="#" style="text-decoration: none;color: #790000;">
+                                        نمایندگی‌ها
+                                    </a>
                                 </div>
                             </div>                     
                         </div>
                         <div class="flip-card-back">
                             <div class="back-label">
                                 <div class="label-text1">
-                                    نمایندگی‌ها
+                                    <a href="#" style="text-decoration: none;color: white;">
+                                        نمایندگی‌ها
+                                    </a>
                                 </div>
                             </div> 
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="motto-container">
+                <div class="main-motto-border">
+                    <div class="motto-content">
+                            <div class="h3" >تورا به سرزمینی خواهم برد؛</div>
+                            <div class="h3 text-right">از جنس عشق، شور، یگانگی</div>                            
+                    </div>
+                    <div style="float:left">
+                        <img src="{{ config('app.url')."picture/assets/patte.svg" }}" alt="نغمه ماندگار">
                     </div>
                 </div>
             </div>
