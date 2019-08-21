@@ -1,5 +1,6 @@
-<div class="Footer container-fluid mt-2">
-    <div class="bg-dark text-white">
-        <h1>footer</h1>
+<div class="Footer">
+    <div style="background-color: #790000; height:20px;"></div>
+    <div class="main-footer">
+
     </div>
 </div>
