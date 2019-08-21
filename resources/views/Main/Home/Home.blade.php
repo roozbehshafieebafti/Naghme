@@ -140,6 +140,15 @@
                         <img src="{{ config('app.url')."picture/assets/patte.svg" }}" alt="نغمه ماندگار">
                     </div>
                 </div>
+
+
+                <div class="News-teller-container">
+                    <h3 style="margin-right: 35px; color:#790000"><b>عضویت در خبرنامه</b></h3>
+                    <div class="red-border" style="height: 70px; border:solid 3px #790000;margin-right: 35px"> </div>
+                    <div class="News-black-border" >
+                        <img class="News-corner-img" src="{{ config('app.url')."picture/assets/corner.svg" }}" />
+                    </div>
+                </div>
             </div>
         </div>
 

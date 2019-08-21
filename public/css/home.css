@@ -210,9 +210,13 @@
   bottom: 82px;
 }
 
+
+/* motto */
+
 .motto-container{
   float: right;
   width: 40%;
+  height: 100%;
   padding-top: 170px;
   padding-right: 50px;
 }
@@ -231,6 +235,29 @@
   margin-right: 5px;
   width: 90%;
   padding: 40px 20px 0px 20px;
+}
+
+/* News-teller */
+.News-teller-container{
+  float: right;
+  margin-top: 100px;
+  width: 700px;
+}
+
+.News-black-border{
+  background-color: black;
+  height: 70px;
+  position: relative;
+  bottom: 45px;
+  left:40px;
+  width: 660px;
+}
+.News-corner-img{
+  transform: rotate(180deg); 
+  height: 50px;
+  float: left;
+  margin-top: 18px;
+  margin-left: 2px;
 }
 
 /* History Menu */
