@@ -17,9 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/home.css' }}">
 	</head>
 	<body>
-		@include('Partials.mainHeader')
     	@yield('content')
-		@include('Partials.mainFooter')
 		<script type="text/javascript" src="{{ config('app.url').'js/jquery.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/jquery-ui.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/popper.min.js' }}"></script>

@@ -1,6 +1,7 @@
 @extends('Masters.Main')
 @section('title','صفحه اصلی')
 @section('content')
+    @include('Partials.mainHeader')
     {{-- Slide Show --}}
         <div class="SlideShow mt-0">
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -151,5 +152,5 @@
                 </div>
             </div>
         </div>
-
+        @include('Partials.mainFooter')
 @endsection

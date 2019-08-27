@@ -1,4 +1,3 @@
-
 {{-- Mobile --}}
 <div class="Header-with-toggle bg-dark text-white ">
     <div class="toggle-button">
@@ -105,11 +104,11 @@
 </div>
 
 {{-- Desktop --}}
-<div class="Header-without-toggle text-white">
+<div class="general-Header-without-toggle text-white bg-dark">
     <div class="row d-flex justify-content-between">
-        <div class="col-1 text-white">
+        <div class="col-1 text-white ">
             <a href="{{ config("app.url") }}">
-                <img class="logo-img" src="{{ config('app.url')."picture/assets/logo.png"}}" alt="{{ config('view.alt') }}" title="{{ config('view.title') }}" />
+                <img class="logo-img " src="{{ config('app.url')."picture/assets/logo.png"}}" alt="{{ config('view.alt') }}" title="{{ config('view.title') }}" />
             </a>
         </div>
         <div class="col-6">
@@ -177,6 +176,20 @@
                     </a>
                 </div>
             </div>
-        </div>            
+        </div>  
     </div>
+    <div class="general-white-border"><span class="span-dark-background bg-dark"></span></div>   
+    <div class="general-header-title">
+        <p class="general-header-title-text">
+            <div class="general-header-title-text-final">
+                <?php 
+                    switch (true) {
+                        case isset($History):
+                            echo "تاریخچه";
+                            break;
+                    }    
+                ?>
+            </div>
+        </p>    
+    </div>       
 </div>

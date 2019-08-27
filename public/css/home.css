@@ -57,12 +57,18 @@
     padding: 20px;
     height: 70px;
     direction: rtl;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
     z-index: 20;
     background-color: initial;
+  }
+  .logo-img {
+    position: relative;
+    bottom: 20px;
+    height: 140px;
+    z-index: 2;
   }
   .header-sub-menu {
     height: 55px;
@@ -81,6 +87,51 @@
 
   .header-sub-menu:hover .header-ul-list {
     display: block;
+  }
+
+  .general-Header-without-toggle {
+    padding: 20px;
+    height: 160px;
+    direction: rtl;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+  }
+  .general-white-border {
+    height: 70px;
+    border: solid 3px white;
+    position: relative;
+    bottom: 100px;
+  }
+  .span-dark-background {
+    display: inline-block;
+    height: 40px;
+    width: 220px;
+    margin-right: 10px;
+    position: relative;
+    bottom: 10px;
+  }
+  .general-header-title {
+    position: absolute;
+    top: 87px;
+    left: 60px;
+    transform: rotate(45deg);
+  }
+  .general-header-title-text {
+    width: 120px;
+    height: 120px;
+    box-shadow: 8px 8px 6px gray;
+    background-color: #790000;
+  }
+  .general-header-title-text-final {
+    transform: rotate(-45deg);
+    font-family: "IranNastaliq";
+    position: relative;
+    bottom:75px;
+    left:-15px;
+    font-size: 40px;
   }
 }
 
@@ -188,7 +239,7 @@
   font-size: 35px;
   font-weight: bold;
   text-align: center;
-  padding-left:15px;
+  padding-left: 15px;
 }
 
 .sweing-news {
@@ -274,14 +325,14 @@
 
 .right-yellow-div {
   position: relative;
-  right:-250px;
+  right: -250px;
   background-color: #f6a619;
   height: 320px;
   width: 250px;
   z-index: 1;
   transform: rotate(45deg);
 }
-.right-yellow-border{
+.right-yellow-border {
   position: relative;
   bottom: 270px;
   left: 200px !important;
@@ -291,7 +342,7 @@
   z-index: 2;
   transform: rotate(25deg);
 }
-.right-gray-border{
+.right-gray-border {
   position: relative;
   bottom: 590px;
   left: 240px;
@@ -300,40 +351,40 @@
   width: 250px;
   z-index: 0;
 }
-.right-paragraph{
+.right-paragraph {
   position: relative;
   bottom: 725px;
   z-index: 10;
   font-size: 30px;
   font-weight: bold;
-  right:40px
+  right: 40px;
 }
 
-.footer-middle-container{
+.footer-middle-container {
   float: right;
   /* width: 500px */
 }
-.footer-middle-ul-list{
+.footer-middle-ul-list {
   list-style-type: none;
 }
 
-.footer-left-container{
+.footer-left-container {
   float: left;
   width: 20%;
 }
-.search-input{
+.search-input {
   text-align: right;
   background-color: inherit;
   border: none;
 }
-.search-input:focus{
+.search-input:focus {
   outline: none;
 }
-.social-icons{
+.social-icons {
   -webkit-transition: transform 2s; /* Safari prior 6.1 */
   transition: transform 0.5s;
 }
-.social-icons:hover{
+.social-icons:hover {
   transform: rotate(360deg);
 }
 /* History Menu */

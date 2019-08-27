@@ -3,6 +3,7 @@
 @section('title','نغمه ماندگار کیست')
 
 @section('content')
+    @include('Partials.GeneralHeader')
     <div class="History-Main container-fluid">
         <div class="history container mt-3">
             <h3 id="history">تاریخچه</h3>
