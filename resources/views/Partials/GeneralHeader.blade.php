@@ -104,7 +104,7 @@
 </div>
 
 {{-- Desktop --}}
-<div class="general-Header-without-toggle text-white bg-dark">
+<div class="general-Header-without-toggle text-white" style="background:#000">
     <div class="row d-flex justify-content-between">
         <div class="col-1 text-white ">
             <a href="{{ config("app.url") }}">
@@ -178,7 +178,7 @@
             </div>
         </div>  
     </div>
-    <div class="general-white-border"><span class="span-dark-background bg-dark"></span></div>   
+    <div class="general-white-border"><span class="span-dark-background" style="background:#000"></span></div>   
     <div class="general-header-title">
         <p class="general-header-title-text">
             <div class="general-header-title-text-final">
