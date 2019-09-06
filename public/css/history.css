@@ -1,11 +1,62 @@
-.History-Main{
-    margin-top: 250px;
+.History-Main {
+  margin-top: 250px;
 }
-.HPP-content{
-    height: 500px;
+.HPP-content {
+  padding-right: 40px;
+  padding-left: 40px;
 }
-.HPP-content-container{
-    display: flex;
+.HPP-content-container {
+  display: flex;
   align-items: center;
   height: 100%;
+}
+
+.head-image {
+  width: 1000px;
+}
+
+.purpose-titel {
+  position: relative;
+  bottom: 30px;
+}
+.seprator-image {
+  position: relative;
+  bottom: 15px;
+  width: 100px;
+}
+.HPP-li {
+  list-style: none;
+  margin-top: 20px;
+}
+.HPP-li:before {
+  content: "\25c8";
+  color: #f6a619;
+}
+
+.plane-image-seprator{
+    width: 50px;
+}
+
+
+.statement-image{
+    position: absolute;
+    top: 950px;
+    left: 0px;
+}
+.statement-title{
+    position: absolute;
+    top: 1330px;
+    left: 205px;
+}
+.statemants-accordion{
+    margin-top: 170px;
+}
+.statemants-accordion-content{
+    border-bottom: #f6a619 solid 3px;
+    width: 600px;
+    margin-right: 40px;
+    cursor: pointer; 
+}
+.statemants-accordion-key{
+    margin-right:20px   
 }
