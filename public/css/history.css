@@ -1,0 +1,11 @@
+.History-Main{
+    margin-top: 250px;
+}
+.HPP-content{
+    height: 500px;
+}
+.HPP-content-container{
+    display: flex;
+  align-items: center;
+  height: 100%;
+}

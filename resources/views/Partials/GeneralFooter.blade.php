@@ -1,7 +1,5 @@
 <div class="General_News_teller_container" style="overflow:hidden">
-    <div class="col-4"  style="float: left;">
-        sdfasdfasdfsdfa
-    </div>
+    <img class="General-footer-picture" src="{{ config('app.url').'picture/assets/footer.svg'}}" alt="">
     <div class="General_News-teller" style="float: right;width:850px">
         <h3 style="margin-right: 100px; color:#790000"><b>عضویت در خبرنامه</b></h3>
         <div class="red-border" style="height: 70px; border:solid 3px #790000;margin-right: 100px"> </div>

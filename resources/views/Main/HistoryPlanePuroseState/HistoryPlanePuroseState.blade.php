@@ -5,21 +5,21 @@
 @section('content')
     @include('Partials.GeneralHeader')
     <div class="History-Main container-fluid">
-        <div class="history container mt-3">
-            <h3 id="history">تاریخچه</h3>
-            <div class="">
+        <div class="HPP-content history mt-3 ">
+            <h3 id="history" style="text-align:center">تاریخچه</h3>
+            <div class="HPP-content-container history-content">
                 @foreach ($History as $item)
-                    <div class="alert alert-success">
+                    <div>
                         {{ $item->hpp_data }}
                     </div>
                 @endforeach
             </div>
         </div>
 
-        <div class="plane container mt-3">
-            <h3 id="plane">برنامه‌ها</h3>
+        <div class="HPP-content plane mt-3">
+            <h3 id="plane" style="text-align:center">برنامه‌ها</h3>
             <div class="" >
-                <ol class="alert alert-warning">
+                <ol class="">
                     @foreach ($Plane as $item)
                         <li class="">
                             {{ $item->hpp_data }}
@@ -29,10 +29,10 @@
             </div>
         </div>
 
-        <div class="purpose container mt-3">
-            <h3 id="purpose">اهداف</h3>
+        <div class="HPP-content purpose mt-3">
+            <h3 id="purpose"  style="text-align:center">اهداف</h3>
             <div class="">
-                <ol class="alert alert-primary">
+                <ol class="">
                     @foreach ($Purpose as $item)
                         <li class="">
                             {{ $item->hpp_data }}
@@ -42,10 +42,10 @@
             </div>
         </div>
 
-        <div class="Statemants container mt-3">
-            <h3 id="statement">بیانیه‌ها</h3>
+        <div class="HPP-content Statemants mt-3">
+            <h3 id="statement" style="text-align:center">بیانیه‌ها</h3>
             <div class="">
-                <ul class="alert alert-danger">
+                <ul class="">
                     @foreach ($Statement as $key => $item)
                         <li class="mt-2">
                             {{ $key }}
