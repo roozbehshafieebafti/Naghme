@@ -180,16 +180,18 @@
     </div>
     <div class="general-white-border"><span class="span-dark-background" style="background:#000"></span></div>   
     <div class="general-header-title">
-        <p class="general-header-title-text">
-            <div class="general-header-title-text-final">
-                <?php 
-                    switch (true) {
-                        case isset($History):
-                            echo "تاریخچه";
-                            break;
-                    }    
-                ?>
-            </div>
-        </p>    
-    </div>       
+        <p class="general-header-title-text"></p>    
+    </div>
+    <div class="general-header-title-text-final">
+        <?php 
+            switch (true) {
+                case isset($History):
+                    echo "تاریخچه";
+                    break;
+                case isset($chart):
+                    echo "ساختار سازمانی";
+                    break;
+            }    
+        ?>
+    </div>
 </div>

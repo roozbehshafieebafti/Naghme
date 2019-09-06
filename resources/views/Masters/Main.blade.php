@@ -16,6 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/templatemo-style.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/home.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/history.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/chart.css' }}">
 	</head>
 	<body>
     	@yield('content')

@@ -126,11 +126,12 @@
     background-color: #790000;
   }
   .general-header-title-text-final {
-    transform: rotate(-45deg);
+    position: absolute;
+    top: 130px;
+    left: 63px;
+    width: 130px;
+    text-align: center;
     font-family: "IranNastaliq";
-    position: relative;
-    bottom:75px;
-    left:-15px;
     font-size: 40px;
   }
 }

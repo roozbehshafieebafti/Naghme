@@ -1,0 +1,23 @@
+.chart-title{
+    border: #790000 solid 3px;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    margin-top: 60px;
+    z-index: 10;
+    background-color: white;
+    position: relative;
+    left: 10px;
+}
+.chart-sub-border{
+    border: #000 solid 3px;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    position: relative;
+    bottom: 50px;
+    z-index: -10;
+    right: 10px;
+}
