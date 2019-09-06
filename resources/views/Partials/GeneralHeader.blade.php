@@ -191,6 +191,9 @@
                 case isset($chart):
                     echo "ساختار سازمانی";
                     break;
+                case isset($Ethics):
+                    echo "منشور اخلاقی";
+                    break;
             }    
         ?>
     </div>

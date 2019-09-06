@@ -3,20 +3,20 @@
 @section('title','منشور اخلاقی')
 
 @section('content')
+    @include('Partials.GeneralHeader')
     <div style="direction: rtl" class="container-fluid">
-        <div class="Statemants container mt-3">
-            <h3 id="statement">منشور اخلاقی</h3>
+        <div class="Statemants container" style="margin-top:250px;">
             <div class="">
-                <ul class="alert alert-info">
+                <ul class="">
                     @foreach ($Ethics as $key => $item)
-                        <li class="mt-2">
+                        <li class="mt-2 ethics-li">
                             {{ $key }}
                         </li>
-                        <ol class="">
-                            @foreach ($item as $Colection)
+                        <ol class="" style="list-style-type: none; margin-top: 20px;margin-bottom: 40px;">
+                            @foreach ($item as $Colection)                                    
                                     <?php 
                                         if($Colection == '') continue;
-                                        echo '<li>'.$Colection.'</li>';
+                                        echo '<li><span style="color:#f6a619;font-size:20px;">&#9670;</span> '.$Colection.'</li>';
                                     ?>
                             @endforeach
                         </ol>
@@ -25,4 +25,5 @@
             </div>
         </div>
     </div>
+    @include('Partials.GeneralFooter')
 @endsection

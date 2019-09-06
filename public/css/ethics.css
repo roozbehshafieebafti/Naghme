@@ -1,0 +1,10 @@
+.ethics-li {
+    list-style: none;
+    font-size: 25px;
+    font-weight: bold;
+    color:#790000
+  }
+  .ethics-li:before {
+    content: "\25c8";
+    color: #f6a619;
+  }
