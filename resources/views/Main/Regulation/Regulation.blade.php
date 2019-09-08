@@ -2,32 +2,35 @@
 @section('title','آئین‌نامه‌ها')
     
 @section('content')
-    <div class="container-fluid">
-        <div class="container  mt-3">
-            <h3>
-                آیین‌نامه‌ها
-            </h3>
-        </div>
+    @include('Partials.GeneralHeader')
+    <div class="container" style="margin-top:280px">
         <div class="m-3">
             <div class="accordion" id="accordionExample">
                 @if (count($Regulation )>0)
                     @foreach ($Regulation as $key=>$item)
-                        <div class="card">
-                            <div class="card-header" id="heading{{$key}} ">
-                                <h2 class="mb-0">
-                                    <button style="direction: rtl" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{$key}}" aria-expanded="true" aria-controls="collapseOne">
-                                        {{$item->regulations_title}}
-                                    </button>
-                                </h2>
+                        <div class="">
+                            <div class="reulation-title-container d-flex align-items-center justify-content-between" id="heading"   data-toggle="collapse" data-target="#collapse{{$key}}" aria-expanded="true" aria-controls="collapseOne">
+                                <span>
+                                    <img src="{{config('app.url').'picture/assets/moreicon.svg'}}" alt="" style="width:20px;">    
+                                </span>
+                                <span style="direction: rtl" class="">
+                                    <span style="color:#f6a619;font-size:25px; margin-left:30px">&#9672;</span>
+                                    <b style="font-size:22px">{{$item->regulations_title}}</b>
+                                </span>
                             </div>
                         
-                            <div id="collapse{{$key}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div>
-                                        {{$item->regulations_description}}
+                            <div id="collapse{{$key}}" class="reulation-content-container collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="mt-3 text-white  d-flex justify-content-start ">
+                                        <a href=" {{ config('app.url').'/'.$item->regulations_file_name}}" class="text-white" style="text-decoration: none;font-size: 24px;">
+                                            <img src="{{config('app.url').'picture/assets/pdfIcon.svg'}}" alt="" style="width:40px;">
+                                            <span style="margin-left:40px">دانلود</span>
+                                            <div class="regulation-black-border"></div>
+                                            <div class="regulation-yello-border"></div>
+                                        </a>
                                     </div>
-                                    <div class="mt-3">
-                                        <a class="btn btn-info" href=" {{ config('app.url').'/'.$item->regulations_file_name}} ">فایل pdf</a>
+                                    <div class="text-white" style="width:70%">
+                                        {{$item->regulations_description}}
                                     </div>
                                 </div>
                             </div>
@@ -41,4 +44,5 @@
             </div>
         </div>
     </div>
+    @include('Partials.GeneralFooter')
 @endsection

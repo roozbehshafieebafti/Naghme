@@ -194,6 +194,9 @@
                 case isset($Ethics):
                     echo "منشور اخلاقی";
                     break;
+                case isset($Regulation):
+                    echo "آیین‌نامه‌ها";
+                    break;
             }    
         ?>
     </div>

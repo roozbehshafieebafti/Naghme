@@ -18,6 +18,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/history.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/chart.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/ethics.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/regulation.css' }}">
 	</head>
 	<body>
     	@yield('content')

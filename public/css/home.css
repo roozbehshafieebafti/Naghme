@@ -115,7 +115,7 @@
   }
   .general-header-title {
     position: absolute;
-    top: 87px;
+    top: 98px;
     left: 60px;
     transform: rotate(45deg);
   }
@@ -127,7 +127,7 @@
   }
   .general-header-title-text-final {
     position: absolute;
-    top: 130px;
+    top: 140px;
     left: 63px;
     width: 130px;
     text-align: center;
