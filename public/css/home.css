@@ -220,16 +220,16 @@
 .front-label {
   background-color: white;
   transform: rotate(45deg);
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   padding-top: 37px;
   border: solid black 3px;
 }
 .back-label {
   background-color: #790000;
   transform: rotate(45deg);
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   padding-top: 37px;
   border: solid black 3px;
 }
@@ -237,31 +237,32 @@
 .label-text1 {
   transform: rotate(-45deg);
   font-family: "IranNastaliq";
-  font-size: 35px;
+  font-size: 45px;
   font-weight: bold;
   text-align: center;
   padding-left: 15px;
+  padding-top: 5px;
 }
 
 .sweing-news {
   position: relative;
-  left: 200px;
-  top: 100px;
+  left: 160px;
+  top: 60px;
 }
 .sweing-register {
   position: relative;
-  left: 275px;
-  top: 66px;
+  left: 257px;
+  top: 49px;
 }
 .sweing-activity {
   position: relative;
-  left: 110px;
-  bottom: 50px;
+  left: 30px;
+  bottom: 90px;
 }
 .sweing-representation {
   position: relative;
-  left: 185px;
-  bottom: 82px;
+  left: 125px;
+  bottom:100px;
 }
 
 /* motto */
