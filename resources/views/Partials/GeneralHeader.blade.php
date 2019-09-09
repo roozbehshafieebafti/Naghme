@@ -197,6 +197,12 @@
                 case isset($Regulation):
                     echo "آیین‌نامه‌ها";
                     break;
+                case isset($news):
+                    echo "اخبار";
+                    break;
+                case isset($selected_news):
+                    echo "خبر";
+                    break;
             }    
         ?>
     </div>

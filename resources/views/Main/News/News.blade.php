@@ -3,10 +3,10 @@
 @section('title','اخبار')
 
 @section('content')
-    <div class="container-fluid" style="direction:rtl">
+    @include('Partials.GeneralHeader')
+    <div class="container-fluid" style="direction:rtl;margin-top:220px;">
         <div class="col-12">
-            <h2 style="margin-top:60px">اخبار</h2>
-            <div style="margin-top:30px;min-height:300px">
+            <div style="min-height:300px">
                 @if(count($news) > 0)
                     @foreach ($news as $Value)
                         <div class="row">
@@ -56,7 +56,7 @@
                                     if($Page >1)
                                     {
                                     ?>
-                                        <a class="page-link" href="{{ route('Get_News','page='.($Page-1) ) }}" tabindex="-1" > << </a>
+                                        <a class="page-link" href="{{ route('Get_All_News','page='.($Page-1) ) }}" tabindex="-1" > << </a>
                                     <?php
                                     }
                                  ?>
@@ -75,14 +75,14 @@
                                         echo 'class="page-item"';
                                     }
                                 ?>
-                                 ><a class="page-link" href="{{ route('Get_News','page='.$i ) }}">{{$i}}</a></li>
+                                 ><a class="page-link" href="{{ route('Get_All_News','page='.$i ) }}">{{$i}}</a></li>
                             @endfor
                             <li class="page-item">
                                     <?php
                                     if($Page+1 <= $CPage)
                                     {
                                     ?>
-                                        <a class="page-link" href="{{ route('Get_News','page='.($Page+1) ) }}"> >> </a>
+                                        <a class="page-link" href="{{ route('Get_All_News','page='.($Page+1) ) }}"> >> </a>
                                     <?php
                                     }
                                  ?>      
@@ -93,4 +93,5 @@
             @endif
         </div>
     </div>
+    @include('Partials.GeneralFooter')
 @endsection

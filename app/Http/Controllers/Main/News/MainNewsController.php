@@ -24,7 +24,9 @@ class MainNewsController extends Controller
             return view('errors.404');
         }
 
-        $news =News::find($id);
-        return view('Main.News.LoadMore',compact('news'));
+        $selected_news =News::find($id);
+        if($selected_news) return view('Main.News.LoadMore',compact('selected_news'));
+
+        return view('errors.404');
     }
 }
