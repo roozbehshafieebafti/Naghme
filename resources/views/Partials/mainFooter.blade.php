@@ -1,4 +1,4 @@
-<div class="Footer" style="overflow-x: hidden;overflow-y: hidden;">
+<div class="Footer" style="overflow-x: hidden;overflow-y: hidden">
     <div style="background-color: #790000; height:20px;"></div>
     <div class="main-footer" >
         <div class="footer-right-container" style="overflow-x: hidden;overflow-y: hidden;">

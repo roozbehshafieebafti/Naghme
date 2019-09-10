@@ -176,6 +176,12 @@
                         <span>اخبار</span>
                     </a>
                 </div>
+                
+                <div class="header-sub-menu ">
+                    <a class="text-white" href="{{ route('Login') }}">
+                        <span>ورود</span>
+                    </a>
+                </div>
             </div>
         </div>            
     </div>

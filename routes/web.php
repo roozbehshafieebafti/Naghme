@@ -260,4 +260,9 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 	Route::get('/login','LoginController@loginPage')->name('Login');
 	Route::post('/login','LoginController@doLogin');
 	Route::get('/exit','LoginController@logOut')->name('Exit');
+	Route::get('/refreshcaptcha', 'LoginController@refreshCaptcha');
+
+	// Register
+	Route::get('/register','RegisterController@registerPage')->name('Register');
+	Route::post('/register','RegisterController@doRegister');
 });

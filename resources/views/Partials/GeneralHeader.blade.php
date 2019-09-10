@@ -111,7 +111,7 @@
                 <img class="logo-img " src="{{ config('app.url')."picture/assets/logo.png"}}" alt="{{ config('view.alt') }}" title="{{ config('view.title') }}" />
             </a>
         </div>
-        <div class="col-6">
+        <div class="col-6 ">
             <div class="row">
                 <div class="header-sub-menu ">
                     <a class="text-white " role="button">
@@ -175,6 +175,12 @@
                         <span>اخبار</span>
                     </a>
                 </div>
+
+                <div class="header-sub-menu ">
+                    <a class="text-white" href="{{ route('Login') }}">
+                        <span>ورود</span>
+                    </a>
+                </div>
             </div>
         </div>  
     </div>
@@ -202,6 +208,12 @@
                     break;
                 case isset($selected_news):
                     echo "خبر";
+                    break;
+                case isset($login):
+                    echo "ورود";
+                    break;
+                case isset($register):
+                    echo "ثبت‌نام";
                     break;
             }    
         ?>

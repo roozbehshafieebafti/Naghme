@@ -11,7 +11,12 @@ class AthuMiddelware
     public function handle($request, Closure $next)
     {
         if(Auth::check()){
-            return $next($request);
+            // get user Information
+            $User = Auth::user();
+            // admin 
+            if($User->role == 1){
+                return $next($request);
+            }            
         }
         return redirect()->route('Login');
     }

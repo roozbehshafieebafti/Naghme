@@ -29,6 +29,7 @@
 		<script type="text/javascript" src="{{ config('app.url').'js/all.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/sweetalert.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Main/home.js' }}"></script>
+		<script type="text/javascript" src="{{ config('app.url').'js/Main/register.js' }}"></script>
 		<script type="text/javascript">
 			$(function () {
 				  $('[data-toggle="tooltip"]').tooltip()

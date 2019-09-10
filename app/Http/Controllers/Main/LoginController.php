@@ -9,10 +9,18 @@ use App\Http\Controllers\Controller;
 class LoginController extends Controller
 {
     public function loginPage(){
-        return view('Main.login.Login');
+        $login = "";
+        return view('Main.login.Login',compact("login"));
     }
 
-    public function doLogin(Request $request){        
+    // validation for login
+    public function doLogin(Request $request){   
+        $this->validate($request,[
+            'email_ng' => 'required|email',
+            'password_ng' => 'required',
+            'captcha_ng' => 'required|captcha'
+        ]);
+
         $auth = Auth::attempt(
             [
                 'email'=>$request->email_ng,
@@ -21,15 +29,22 @@ class LoginController extends Controller
         );
         
         if($auth){
-            // In this Part you can add Data to session
-            //dd(Auth::user());
-            return redirect()->route('Admin_Dashboard');
+            // get user Information
+            $User = Auth::user();
+            // admin 
+            if($User->role == 1){
+                return redirect()->route('Admin_Dashboard');
+            }
+            // general user
+            return redirect()->route('Home');
         }
         else{
-            return(redirect()->back());
+            // not Auth
+            return(redirect()->back()->with('danger','نام کاربری یا گذرواژه اشتباه است'));
         } 
     }
 
+    // log out function
     public function logOut(){
         if(Auth::check()){
             Auth::logout();
@@ -37,4 +52,11 @@ class LoginController extends Controller
         }
         return redirect('/');
     }
+
+    // refresh capcthca
+    public function refreshCaptcha(){
+        return response()->json(['captcha'=> captcha_img()]);
+    }
+
+
 }
