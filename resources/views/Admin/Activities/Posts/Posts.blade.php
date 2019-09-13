@@ -27,19 +27,22 @@
                 <table class="table table-hover border" style="margin-top: 30px">
                         <thead class=" bg-success text-light">
                             <th scope="col" >تاریخ</th>
-                            <th scope="col" >ساعت</th>
                             <th scope="col" >عنوان فعالیت</th>
                             <th scope="col" >گالری</th>
                             <th scope="col" >ویدئو</th>
                             <th scope="col" class="text-center">عملیات</th>
                         </thead>
                     @foreach($Posts as $val)
+                        <?php 
+                            $year = $val->apst_accure_date[0].$val->apst_accure_date[1].$val->apst_accure_date[2].$val->apst_accure_date[3];
+                            $month = $val->apst_accure_date[5].$val->apst_accure_date[6];
+                            $day = $val->apst_accure_date[8].$val->apst_accure_date[9];
+                            
+                            $executeDate = \Morilog\Jalali\CalendarUtils::toJalali((int)$year, (int)$month,(int)$day);
+                        ?>
                         <tr >
                             <td>
-                                {{ \Morilog\Jalali\Jalalian::forge($val->created_at)->format('Y/m/d') }}
-                            </td>
-                            <td>
-                                {{ \Morilog\Jalali\Jalalian::forge($val->created_at)->format('H:i:s') }}
+                                {{ $executeDate[0]."/".$executeDate[1]."/".$executeDate[2] }}
                             </td>				
                             <td  >
                                 <span style="color:blue;cursor: pointer;" data-toggle="modal" data-target="#id{{ $val->id }}">
@@ -75,7 +78,13 @@
                                     </div>
                                     <div class="modal-body">
                                       <div>
+                                          <p>تصویر سر برگ :</p>
                                           <img style="width:100%" src="{{ config('app.url').'/'.$val->apst_picture_of_title }}" />
+                                      </div>
+                                      <br />
+                                      <div>
+                                          <p>تصویر کاور :</p>
+                                          <img style="width:100px;" src="{{ config('app.url').'/'.$val->apst_picture_of_cover }}" />
                                       </div>
                                       <div>
                                           <br />

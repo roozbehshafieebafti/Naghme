@@ -58,14 +58,33 @@
                             </select>
                         </div>
                 </div>
-                <div class="form-group">
-                    <label >تصویر سر برگ :</label>
-                    <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture" name="Post_First_Picture" class="form-control text-left" >
+                <div class="row mt-3">
+                    <?php 
+                        $date = $Post['attributes']['apst_accure_date'];
+                        $year = $date[0].$date[1].$date[2].$date[3];
+                        $month = $date[5].$date[6];
+                        $day = $date[8].$date[9];
+                        
+                        $executeDate = \Morilog\Jalali\CalendarUtils::toJalali((int)$year, (int)$month,(int)$day);
+                    ?>
+                    <div class="form-group col-md-4">
+                        <label >تاریخ :</label>
+                        <input type="text" name="Post_Date" id="Date_Input" class="form-control text-left"  value="{{ $executeDate[0]."/".$executeDate[1]."/".$executeDate[2] }}" required="required" onchange="DateValidation(event)">
+                    </div>
+                    <div class="form-group col-4">
+                        <label >تصویر سر برگ :</label>
+                        <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture" name="Post_First_Picture" class="form-control text-left" >
+                    </div>
+                    <div class="form-group col-4">
+                        <label >تصویر کاور :</label>
+                        <input type="file" onchange="PostPictureCheck(this.id)" id="Post_Cover_Picture" name="Post_Cover_Picture" class="form-control text-left" required="required" >
+                    </div>
                 </div>
 				<div class="form-group">
 				    <label >متن پست :</label>
 				    <textarea id="PostTextArea" style="resize:none;height:300px" type="text" name="Post_Description" class="form-control" required="required">{{ $Post['attributes']['apst_description'] }}</textarea>
-				  </div>
+                </div>
+                
 				<button id="PostSubmit" class="btn btn-success">پست فعالیت</button>
 				<a href="{{ route('Get_Posts') }}" class="btn btn-danger text-light" style="margin-right: 20px;">&nbsp;بازگشت &nbsp;<i class="fas fa-arrow-circle-left"></i></a>
             </form>

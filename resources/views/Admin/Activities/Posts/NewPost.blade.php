@@ -19,6 +19,11 @@
 					</ul>
 				</div>
 			@endif
+			@if(session("danger"))
+				<div class="alert alert-danger" style="margin-top: 20px" >					
+					{{session("danger")}}
+				</div>
+			@endif
 			<form class="form" method="post" action="" style="padding: 20px 0" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div style="display:none" id="Alert" class="alert alert-danger"></div>
@@ -45,11 +50,21 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label >تصویر سر برگ :</label>
-                    <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture" name="Post_First_Picture" class="form-control text-left" required="required" >
+                <div class="row mt-3">
+                    <div class="form-group col-md-4">
+                        <label >تاریخ :</label>
+                        <input type="text" name="Post_Date" id="Date_Input" class="form-control text-left" placeholder="1300/01/02" required="required" onchange="DateValidation(event)">
+                    </div>
+                    <div class="form-group col-4">
+                        <label >تصویر سر برگ :</label>
+                        <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture" name="Post_First_Picture" class="form-control text-left" required="required" >
+                    </div>
+                    <div class="form-group col-4">
+                        <label >تصویر کاور :</label>
+                        <input type="file" onchange="PostPictureCheck(this.id)" id="Post_Cover_Picture" name="Post_Cover_Picture" class="form-control text-left" required="required" >
+                    </div>
                 </div>
-				<div class="form-group">
+				<div class="form-group mt-5">
                     <label >توضیحات</label>
 				    <textarea id="PostTextArea" style="resize:none;height:300px" type="text" name="Post_Description" class="form-control"></textarea>
                 </div>

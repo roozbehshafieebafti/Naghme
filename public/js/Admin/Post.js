@@ -145,3 +145,15 @@ $(function()
 tinymce.init({
     selector: '#PostTextArea',plugins: "link",
   });
+
+
+  function DateValidation(event){
+    let value = event.target.value;
+    if(value.length != 10){
+        $("#Date_Input").css("borderColor","red");
+        $("#PostSubmit").attr("disabled",true);
+        return;
+    }
+    $("#Date_Input").css("borderColor","gray");
+    $("#PostSubmit").attr("disabled",false);
+  }
