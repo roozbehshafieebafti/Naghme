@@ -139,11 +139,15 @@ class DoActionController extends Controller
     public function insertPostGallery(Request $request,$id){
         for($i=1;$i<=5;$i++){
             $Name = 'picture'.$i ;
+            $Title = "Post_Picture_Title".$i;
             if(isset($request->$Name)){
                 $Picture = $request->file($Name)->store('picture/gallery');
-                PostGallery::insert([
+                $result = PostGallery::insert([
                     'apic_activities_posts_id' => $id ,
-                    'apic_picture_name' => $Picture
+                    'apic_picture_name' => $Picture,
+                    "apic_picture_title" => $request->$Title,
+                    "created_at" => date("Y-m-d H:i:s"),
+                    "updated_at" => date("Y-m-d H:i:s"),
                 ]);
             }
         }

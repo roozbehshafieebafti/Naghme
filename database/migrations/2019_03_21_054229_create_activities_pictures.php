@@ -15,6 +15,7 @@ class CreateActivitiesPictures extends Migration
             $table->increments('id');
             $table->integer('apic_activities_posts_id');
             $table->string('apic_picture_name',96);
+            $table->string('apic_picture_title',128)->nullable();
             $table->timestamps();
         });
     }

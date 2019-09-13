@@ -19,7 +19,7 @@
 }
 .profile-photo-container { position: relative; }
 .profile-photo-overlay {
-	background-color: rgba(4, 152, 114, 0.35);
+	/* background-color: rgba(4, 152, 114, 0.35); */
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -27,7 +27,7 @@
 	height: 100%;
 	transition: all 0.3s ease;
 }
-.profile-photo-overlay:hover { background-color: rgba(4, 152, 114, 0); }
+/* .profile-photo-overlay:hover { background-color: rgba(4, 152, 114, 0); } */
 
 
 .Naghme-Dashboard-List{

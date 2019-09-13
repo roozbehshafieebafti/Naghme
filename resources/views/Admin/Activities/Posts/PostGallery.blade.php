@@ -23,6 +23,7 @@
                         <div class="middle">
                             <a href="{{ route('Delete_Post_Picture',$value->id) }}" class="btn text-white text" class="">حذف</a>
                         </div>
+                        <p>{{$value->apic_picture_title}}</p>
                     </div>
                 @endforeach
             </div>            
@@ -34,25 +35,30 @@
     </div>
     <div>
         <form id="PostGalleryForm" action="" enctype="multipart/form-data">
-            <div>
+            <div class="row pl-4 pr-4">
                 <label >تصویر 1 :</label>
-                <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture1" name="picture1" class=" text-left col-6" required="required" >
+                <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture1" name="picture1" class=" text-left col-4" required="required" >
+                <input type="text" onchange="" id="" name="Post_Picture_Title1" class="col-4" placeholder="عنوان عکس" maxlength="120">
             </div>
-            <div >
+            <div class="row pl-4 pr-4 mt-3">
                 <label >تصویر 2 :</label>
-                <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture2" name="picture2" class="text-left col-6" >
+                <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture2" name="picture2" class="text-left col-4" >
+                <input type="text" onchange="" id="" name="Post_Picture_Title2" class="col-4" placeholder="عنوان عکس" maxlength="120">
             </div>
-            <div >
+            <div class="row pl-4 pr-4 mt-3">
                 <label >تصویر 3 :</label>
-                <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture3" name="picture3" class=" text-left col-6">
+                <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture3" name="picture3" class=" text-left col-4">
+                <input type="text" onchange="" id="" name="Post_Picture_Title3" class="col-4" placeholder="عنوان عکس" maxlength="120">
             </div>
-            <div>
+            <div class="row pl-4 pr-4 mt-3">
                 <label >تصویر 4 :</label>
-                <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture4" name="picture4" class="text-left col-6">
+                <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture4" name="picture4" class="text-left col-4">
+                <input type="text" onchange="" id="" name="Post_Picture_Title4" class="col-4" placeholder="عنوان عکس" maxlength="120">
             </div>
-            <div >
+            <div class="row pl-4 pr-4 mt-3">
                 <label >تصویر 5 :</label>
-                <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture5" name="picture5" class="text-left col-6">
+                <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture5" name="picture5" class="text-left col-4">
+                <input type="text" onchange="" id="" name="Post_Picture_Title5" class="col-4" placeholder="عنوان عکس" maxlength="120">
             </div>
             <div style="padding:20px">
                 <button  id="PostSubmit" class="btn btn-success">پست تصاویر</button>
