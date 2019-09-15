@@ -9,7 +9,7 @@
             <div class="HPP-content-container history-content">
                 @foreach ($History as $item)
                     <div class="mt-3" style="text-align:justify">
-                        {{ $item->hpp_data }}
+                        {!!html_entity_decode( $item->hpp_data)!!}
                     </div>
                 @endforeach
             </div>

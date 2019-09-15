@@ -19,3 +19,7 @@ function AuthoritiesPicture(){
 	    }  
   	}
 }
+// ادیتور تازیخچه اینجا اضافه شده است
+tinymce.init({
+	selector: '#History_data',plugins: "link",
+});
