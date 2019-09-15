@@ -23,3 +23,7 @@ function AuthoritiesPicture(){
 tinymce.init({
 	selector: '#History_data',plugins: "link",
 });
+
+tinymce.init({
+	selector: '#Representation_History',plugins: "link",
+});

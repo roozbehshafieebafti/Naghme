@@ -16,7 +16,7 @@
             <div style="margin-top: 40px;">
                 <form class="container" action="" method="POST">
                     {{csrf_field()}}
-                    <textarea style="resize:none" name="HistoryData" placeholder="تاکنون مقداری ثبت نشده است" class="form-control">{{ count($history)>0 ? $history[0]['attributes']['hpp_data'] : ''}}</textarea>
+                    <textarea style="resize:none;height:450px;" id="Representation_History" name="HistoryData" placeholder="تاکنون مقداری ثبت نشده است" class="form-control">{{ count($history)>0 ? $history[0]['attributes']['hpp_data'] : ''}}</textarea>
                     <button style="margin-top:20px" class="btn btn-success">ثبت تاریخچه</button>
                     <a href="{{ route('Get_Representation') }}" class="btn btn-danger text-light" style="margin-right: 20px;margin-top:20px">&nbsp;بازگشت &nbsp;<i class="fas fa-arrow-circle-left"></i></a>
                 </form>

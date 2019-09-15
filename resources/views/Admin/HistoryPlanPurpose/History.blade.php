@@ -23,7 +23,7 @@
 		<form id="HistoryForm" class="col-12" action="" method="post">
 			{{ csrf_field() }}
 			<div class="bg-success text-light col-12 rounded-top" style="font-size:20px;height:50px;padding-top: 7px">تاریخچه</div>
-			<textarea id="History_data" name="History_data" class="col-12 card" style="height:150px;text-align: right;resize: none;">{{ $History[0]['attributes']['hpp_data'] }}</textarea>
+			<textarea id="History_data" name="History_data" class="col-12 card" style="height:450px;text-align: right;resize: none;">{{ $History[0]['attributes']['hpp_data'] }}</textarea>
 			<div style="margin-top: 20px">
 				<button name="send_data" class="btn btn-info">به روز رسانی</button>
 			</div>
