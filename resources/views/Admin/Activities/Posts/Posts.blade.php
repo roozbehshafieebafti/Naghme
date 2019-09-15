@@ -28,8 +28,9 @@
                         <thead class=" bg-success text-light">
                             <th scope="col" >تاریخ</th>
                             <th scope="col" >عنوان فعالیت</th>
-                            <th scope="col" >گالری</th>
-                            <th scope="col" >ویدئو</th>
+                            <th scope="col" class="text-center">گالری</th>
+                            <th scope="col" class="text-center">ویدئو</th>
+                            <th scope="col" class="text-center">نگاه رسانه</th>
                             <th scope="col" class="text-center">عملیات</th>
                         </thead>
                     @foreach($Posts as $val)
@@ -49,11 +50,14 @@
                                     {{ $val->apst_title }}
                                 </span>
                             </td> 
-                            <td>
+                            <td class="text-center">
                                 <a href="{{ route('Get_Post_Gallery',['id' =>$val->id , 'postName'=>$val->apst_title]) }}" ><i class="fas fa-camera-retro"></i></a>
                             </td>
-                            <td>
+                            <td class="text-center">
                                 <a href=""  ><i class="fas fa-video"></i></a>
+                            </td>
+                            <td class="text-center">
+                                <a href="{{route('Get_News_Post_Gallery',['id' =>$val->id , 'postName'=>$val->apst_title])}}"  ><i class="fas fa-newspaper"></i></i></a>
                             </td>
                             <td class="text-center">
                                 <span>

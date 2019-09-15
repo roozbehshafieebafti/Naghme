@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Model\ActivityTitle as ActTitle ;
 use App\Model\DoActivity ;
 use App\Model\PostGallery ;
+use App\Model\ActivityNewsPicture ;
 use Illuminate\Support\Facades\Storage;
 use App\Model\SubActivityTitle;
 use \Morilog\Jalali\Jalalian;
@@ -204,5 +205,39 @@ class DoActionController extends Controller
         if((!is_integer($day) AND $day>31)) return ["status"=>false];
         
         return ["status"=>true, 'year'=> $year , "month" =>  $month , "day" => $day];
+    }
+
+    public function getPostNewsGallery($id,$postName){
+        $Gallery = ActivityNewsPicture::where('activities_posts_id', $id)->get();
+        return view('Admin.Activities.Posts.NewsGallery', compact('Gallery','postName','id'));
+    }
+
+    public function insertPostNewsGallery(Request $request,$id){
+        for($i=1;$i<=5;$i++){
+            $Name = 'picture'.$i ;
+            $Title = "Post_Picture_Title".$i;
+            if(isset($request->$Name)){
+                $Picture = $request->file($Name)->store('picture/gallery');
+                $result = ActivityNewsPicture::insert([
+                    'activities_posts_id' => $id ,
+                    'picture_name' => $Picture,
+                    "picture_title" => $request->$Title,
+                    "created_at" => date("Y-m-d H:i:s"),
+                    "updated_at" => date("Y-m-d H:i:s"),
+                ]);
+            }
+        }
+        return 1;
+    }
+
+    public function deletePostNewsPicture($id){
+        $Gallery = ActivityNewsPicture::find($id);
+        if(Storage::delete($Gallery->picture_name)){
+            $Gallery->delete();
+            return back()->with('success','تصویر با موفقیت حذف شد');
+        }
+        else{
+            return back()->with('error','خطای سیستمی');
+        }
     }
 }

@@ -134,6 +134,11 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::get('/gallery/{id}/{postName}' , 'DoActionController@getPostGallery')->name('Get_Post_Gallery');
 			Route::post('/gallery/{id}/{postName}' , 'DoActionController@insertPostGallery')->name('Insert_Post_Gallery');
 			Route::get('/gallery/action/delete/{id}' , 'DoActionController@deletePostPicture')->name('Delete_Post_Picture');
+			// 
+			Route::get('/news-gallery/{id}/{postName}' , 'DoActionController@getPostNewsGallery')->name('Get_News_Post_Gallery');
+			Route::post('/news-gallery/{id}/{postName}' , 'DoActionController@insertPostNewsGallery')->name('Insert_News_Post_Gallery');
+			Route::get('/news-gallery/action/delete/{id}' , 'DoActionController@deletePostNewsPicture')->name('Delete_News_Post_Picture');
+			// 
 			Route::get('/find/{item}' , 'DoActionController@findPosts');
 			Route::get('/search/{item}' , 'DoActionController@searchPosts')->name('Search_Posts');
 		});
