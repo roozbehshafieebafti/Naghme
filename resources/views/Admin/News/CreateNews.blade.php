@@ -6,57 +6,41 @@
         <div style="margin-top:20px">
                 <div style="display:none" id="Alert" class="alert alert-danger"></div>
                 <form id="FormOfNews" onsubmit="FormOfNews(event)" method="post" action="" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label >عنوان :</label>
-                        <input class="form-control" maxlength="64" name="News_title" placeholder="عنوان" required="required">
-                      </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label >عنوان :</label>
+                            <input class="form-control" maxlength="64" name="News_title" placeholder="عنوان" required="required">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label >تاریخ :</label>
+                            <input type="text" name="News_Date" id="Date_Input" class="form-control text-left" placeholder="1300/01/02" required="required" onchange="DateValidation(event)">
+                            <small class="">تاریخ حتما باید 10 کاراکتری باشد</small><br>
+                        </div>
+                    </div>
                       <div class="form-group">
                         <label >توضیحات:</label>
-                        <textarea id="News_text" class="form-control" type="text" name="News_text" style="resize: none;" ></textarea>
+                        <textarea id="News_text" class="form-control" type="text" name="News_text" style="height:350px" ></textarea>
                       </div>
-                      <div class="form-group">
-                        <label >تصویر:</label>
-                        <input class="form-control" id="Picture_file" type="file" onchange="PictureNewsCheck(this.id)" name="Picture_file" required="required">
-                        <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small><br>
-                        <small class="">حداکثر سایز تصویر 300kb</small>
-                      </div>
+                    <div class="row mt-5">
+                        <div class="form-group col-md-6">
+                            <label >تصویر سربرگ :</label>
+                            <input class="form-control" id="Picture_file" type="file" onchange="PictureNewsCheck(this.id)" name="Picture_file" required="required">
+                            <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small><br>
+                            <small class="">حداکثر سایز تصویر 300kb</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label >تصویر کاور :</label>
+                            <input class="form-control" id="Cover_Picture_file" type="file" onchange="PictureNewsCheck(this.id)" name="Cover_Picture_file" required="required">
+                            <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small><br>
+                            <small class="">حداکثر سایز تصویر 300kb</small>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label >فایل</label>
                         <input class="form-control" id="News_file" type="file" onchange="FileNewsCheck(this.id)" name="News_file" >
                         <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small><br>
                         <small class="">فرمت فایل حتما بایستی pdf یا docx یا doc باشد</small>
                       </div>
-                      {{-- <div class="form-row">
-                          <div class="form-group col-4">
-                              <label >نام لینک :</label>
-                              <input class="form-control " name="NewsLinkName" />
-                          </div>
-                          <div class="form-group col-4">
-                              <label >آدرس لینک :</label>
-                              <input style="direction: ltr" class="form-control " name="NewsLinkAddress" placeholder="http://www.google.com"/>
-                          </div>
-                      </div>
-                      <div class="form-row">
-                          <div class="form-group col-4">
-                              <label >نام لینک :</label>
-                              <input class="form-control " name="NewsLinkName2" />
-                          </div>
-                          <div class="form-group col-4">
-                              <label >آدرس لینک :</label>
-                              <input style="direction: ltr" class="form-control " name="NewsLinkAddress2" placeholder="http://www.google.com"/>
-                          </div>
-                      </div>
-                      <div class="form-row">
-                          <div class="form-group col-4">
-                              <label >نام لینک :</label>
-                              <input class="form-control " name="NewsLinkName3" />
-                          </div>
-                          <div class="form-group col-4">
-                              <label >آدرس لینک :</label>
-                              <input style="direction: ltr" class="form-control " name="NewsLinkAddress3" placeholder="http://www.google.com"/>
-                          </div>
-                      </div> --}}
-
                       <button disabled id="NewsSubmit" type="submit" class="btn btn-primary" style="width:150px;">ارسال</button>
                 </form>
                 <div id="progressBarDiv"  class="progress" style="height:30px;margin-top: 50px;display: none;">

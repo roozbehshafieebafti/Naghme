@@ -60,8 +60,11 @@
                                       <div>
                                           <img style="width:100%" src="{{ config('app.url').'/'.$Value->news_picture }}" />
                                       </div>
-                                      <div>
-                                          <br />
+                                      <div class="mt-5">
+                                        <div>
+                                            <img style="width:30%" src="{{ config('app.url').'/'.$Value->news_cover_picture }}" />
+                                        </div>
+                                        <br />
                                         <p style="text-align:justify">
                                             <b><span>متن خبر:</span></b>
                                             {!!html_entity_decode( $Value->news_description)!!}

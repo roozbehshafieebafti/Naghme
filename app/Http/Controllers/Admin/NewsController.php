@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\News;
 use Illuminate\Support\Facades\Storage;
+use \Morilog\Jalali\Jalalian;
 
 class NewsController extends Controller
 {
@@ -34,8 +35,16 @@ class NewsController extends Controller
                                 ['News_title' => 'required',
                                 'News_text' => 'required']);
 
+        // date validation
+        $dateValidationResult =$this->dateValidation($request->News_Date);
+        if(!$dateValidationResult["status"]){
+            return -1;
+        }
+        $date = (new Jalalian((int)$dateValidationResult["year"], (int)$dateValidationResult["month"], (int)$dateValidationResult["day"], 0, 0, 0))->toCarbon()->toDateTimeString() ;
+    
         //Store Picture and file in Public folder
         $Picture = $request->file('Picture_file')->store('files/news/pictures');
+        $CoverPicture = $request->file('Cover_Picture_file')->store('files/news/pictures');
         if(isset($request->News_file)){
             $File = $request->file('News_file')->store('files/news/files');
         }
@@ -43,16 +52,13 @@ class NewsController extends Controller
         //Insert in database
         $InsertNews=News::insert([
              'news_title' => $request->News_title,
-             'news_description' =>  $request->News_text ,
-             'news_picture' => $Picture ,
-             'news_file' => $File ,
-             'news_link_name' => $request->NewsLinkName,
-             'news_link' => $request->NewsLinkAddress,
-             'news_link_name2' => $request->NewsLinkName2,
-             'news_link2' => $request->NewsLinkAddress2,
-             'news_link_name3' => $request->NewsLinkName3,
-             'news_link3' => $request->NewsLinkAddress3,
-             'news_date' => time()
+             'news_description' =>  $request->News_text,
+             'news_picture' => $Picture,
+             'news_cover_picture' => $CoverPicture,
+             'news_file' => $File,
+             'news_date' => $date,
+             "created_at" => date("Y-m-d H:i:s"),
+             "updated_at" => date("Y-m-d H:i:s"),
          ]);
         
          //Check if inserted 
@@ -70,6 +76,7 @@ class NewsController extends Controller
         
         //delete from folder
         Storage::delete($deletedRecord->news_picture);
+        Storage::delete($deletedRecord->news_cover_picture);
         if($deletedRecord->news_file!='')
         {
             Storage::delete($deletedRecord->news_file);
@@ -138,5 +145,17 @@ class NewsController extends Controller
         $News = News::where('news_title','like','%'.$item.'%')->get();
         $search = 1;
         return view('Admin.News.News',compact('News','search'));
+    }
+
+    private function dateValidation ($date){
+        $year = $date[0].$date[1].$date[2].$date[3];
+        $month = $date[5].$date[6];
+        $day = $date[8].$date[9];
+
+        if((!is_integer($year) AND $year<1380)) return ["status"=>false];
+        if((!is_integer($month) AND $month>12)) return ["status"=>false];
+        if((!is_integer($day) AND $day>31)) return ["status"=>false];
+        
+        return ["status"=>true, 'year'=> $year , "month" =>  $month , "day" => $day];
     }
 }

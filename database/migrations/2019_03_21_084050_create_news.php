@@ -15,14 +15,9 @@ class CreateNews extends Migration
             $table->increments('id');
             $table->string('news_title',64);
             $table->string('news_picture',96);
+            $table->string('news_cover_picture',96);
             $table->string('news_file',96)->nullable();
             $table->text('news_description');
-            $table->string('news_link_name',32)->nullable();
-            $table->string('news_link')->nullable();
-            $table->string('news_link_name2',32)->nullable();
-            $table->string('news_link2')->nullable();
-            $table->string('news_link_name3',32)->nullable();
-            $table->string('news_link3')->nullable();
             $table->integer('news_date',10);
             $table->timestamps();
         });
