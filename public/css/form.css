@@ -1,20 +1,20 @@
-.reulation-title-container{
+.form-title-container{
     border: #790000 solid 3px;
     height: 60px;
     margin-top: 30px;
     padding: 0px 30px 0px 30px;
 }
-.reulation-content-container{
+.form-content-container{
     /* background-color: #790000;  */
     background-image: url('../picture/assets/bachground.svg')
 }
-.regulation-yello-border{
+.form-yello-border{
     border: #f6a619 solid 1px;
     width:100px;
     position: relative;
     top: 2px;
 }
-.regulation-black-border{
+.form-black-border{
     border: #000 solid 1px;
     width:120px;
     position: relative;

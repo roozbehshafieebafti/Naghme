@@ -3,34 +3,37 @@
 @section('title','فرم ها')
 
 @section('content')
-    <div class="container-fluid">
-        <div class="container mt-3">
-            <h3>فرم‌ها</h3>
-        </div>
+    @include('Partials.GeneralHeader')
+    <div class="container" style="margin-top:280px">
         <div class="m-3">
             <div class="accordion" id="accordionExample">
                 @if (count($Form)>0)
                     @foreach ($Form as $key=>$item)
-                    <div class="card">
-                            <div class="card-header" id="heading{{$key}} ">
-                                <h2 class="mb-0">
-                                    <button style="direction: rtl" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{$key}}" aria-expanded="true" aria-controls="collapseOne">
-                                        {{$item->form_title}}
-                                    </button>
-                                </h2>
+                    <div class="">
+                            <div class="form-title-container d-flex align-items-center justify-content-between" id="heading"   data-toggle="collapse" data-target="#collapse{{$key}}" aria-expanded="true" aria-controls="collapseOne">
+                                <span>
+                                    <img src="{{config('app.url').'picture/assets/moreicon.svg'}}" alt="" style="width:20px;">    
+                                </span>
+                                <span style="direction: rtl" class="">                                    
+                                    <span style="color:#f6a619;font-size:25px; margin-left:30px">&#9672;</span>
+                                    <b style="font-size:22px"> {{$item->form_title}}</b>
+                                </span>
                             </div>
                         
-                            <div id="collapse{{$key}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div>
+                            <div id="collapse{{$key}}" class="form-content-container collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="mt-3 text-white  d-flex justify-content-start ">
+                                        <a href=" {{ config('app.url').'/'.$item->form_file1}}" class="text-white" style="text-decoration: none;font-size: 24px;">
+                                            <img src="{{config('app.url').'picture/assets/pdfIcon.svg'}}" alt="" style="width:40px;">
+                                            <span style="margin-left:40px">دانلود</span>
+                                            <div class="form-black-border"></div>
+                                            <div class="form-yello-border"></div>
+                                        </a>
+                                    </div>
+                                    <div  class="text-white" style="width:70%">
                                         {{$item->form_description}}
                                     </div>
-                                    <div class="mt-3">
-                                        <a class="btn btn-info" href=" {{ config('app.url').'/'.$item->form_file1}} ">فایل pdf</a>
-                                        <?php
-                                        echo  $item->form_file2 == null ?  '' :  '<a class="btn btn-info" href="'.config('app.url').'/'.$item->form_file2.'">فایل word</a>';
-                                        ?>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -43,4 +46,5 @@
             </div>
         </div>
     </div>
+    @include('Partials.GeneralFooter')
 @endsection

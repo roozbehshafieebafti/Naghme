@@ -203,6 +203,9 @@
                 case isset($Regulation):
                     echo "آیین‌نامه‌ها";
                     break;
+                case isset($Form):
+                    echo "فرم‌ها";
+                    break;
                 case isset($news):
                     echo "اخبار";
                     break;
