@@ -93,7 +93,7 @@ class NewsController extends Controller
     //editNews renders a page for edit news
     public function editNews($id){
         $editabledRecord = News::find($id);
-        //dd($editabledRecord);
+        // dd($editabledRecord);
         return view('Admin.News.EditNews',compact('editabledRecord','id'));
     }
 
@@ -102,9 +102,15 @@ class NewsController extends Controller
         $this->validate($request ,
                                 ['News_title' => 'required',
                                 'News_text' => 'required']);
-
+        // date validation
+        $dateValidationResult =$this->dateValidation($request->News_Date);
+        if(!$dateValidationResult["status"]){
+            return -1;
+        }
+        $date = (new Jalalian((int)$dateValidationResult["year"], (int)$dateValidationResult["month"], (int)$dateValidationResult["day"], 0, 0, 0))->toCarbon()->toDateTimeString() ;
+        
         $editedRecord = News::find($id);
-        if(isset($request->Delete_News_file)){
+        if(isset($request->Delete_News_file) &&  ($editedRecord->news_file !== null)){
             Storage::delete($editedRecord->news_file);
             $editedRecord->news_file = null;
         }
@@ -113,6 +119,11 @@ class NewsController extends Controller
             Storage::delete($editedRecord->news_picture);
             $editedRecord->news_picture = $Picture;
         }
+        if(isset($request->Cover_Picture_file)){
+            $CoverPicture = $request->file('Cover_Picture_file')->store('files/news/pictures');
+            Storage::delete($editedRecord->news_cover_picture);
+            $editedRecord->news_cover_picture = $CoverPicture;
+        }
         if(isset($request->News_file)){
             Storage::delete($editedRecord->news_file);
             $File = $request->file('News_file')->store('files/news/files');
@@ -120,12 +131,8 @@ class NewsController extends Controller
         }
         $editedRecord->news_title =$request->News_title;
         $editedRecord->news_description =$request->News_text;
-        $editedRecord->news_link_name =$request->NewsLinkName;
-        $editedRecord->news_link =$request->NewsLinkAddress;
-        $editedRecord->news_link_name2 = $request->NewsLinkName2;
-        $editedRecord->news_link2 = $request->NewsLinkAddress2;
-        $editedRecord->news_link_name3 = $request->NewsLinkName3;
-        $editedRecord->news_link3 = $request->NewsLinkAddress3;
+        $editedRecord->news_date =$date;
+
 
         if($editedRecord->save())
         {

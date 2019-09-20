@@ -6,20 +6,38 @@
         <div style="margin-top:20px">
             <div style="display:none" id="Alert" class="alert alert-danger"></div>
             <form id="EditFormOfNews" onsubmit="EditFormOfNews(event)" method="post" action="" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label >عنوان :</label>
-                <input class="form-control" maxlength="64" name="News_title" required="required" value="{{ $editabledRecord['attributes']['news_title']}}">
-                  </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label >عنوان :</label>
+                        <input class="form-control" maxlength="64" name="News_title" required="required" value="{{ $editabledRecord['attributes']['news_title']}}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <?php
+                            $_date = new \App\Model\News();
+                        ?>
+                        <label >تاریخ :</label>
+                        <input type="text" name="News_Date" id="Date_Input" class="form-control text-left" value="<?php echo $_date->getNewsDateAttribute($editabledRecord['attributes']['news_date']) ?>" placeholder="1300/01/02" required="required" onchange="DateValidation(event)">
+                        <small class="">تاریخ حتما باید 10 کاراکتری باشد</small><br>
+                    </div>
+                </div>
                   <div class="form-group">
                     <label >توضیحات:</label>
-                    <textarea id="News_text" class="form-control" name="News_text" style="resize: none;" required="required">{{ $editabledRecord['attributes']['news_description']}}</textarea>
+                    <textarea id="News_text" class="form-control" name="News_text" style="height:350px;" required="required">{{ $editabledRecord['attributes']['news_description']}}</textarea>
                   </div>
-                  <div class="form-group">
-                    <label >تصویر:</label>
-                    <input class="form-control" id="Picture_file" type="file" onchange="PictureNewsCheck(this.id)" name="Picture_file">
-                    <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small><br>
-                    <small class="">حداکثر سایز تصویر 300kb</small>
-                  </div>
+                <div class="row mt-5">
+                    <div class="form-group col-md-6">
+                        <label >تصویر سربرگ :</label>
+                        <input class="form-control" id="Picture_file" type="file" onchange="PictureNewsCheck(this.id)" name="Picture_file">
+                        <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small><br>
+                        <small class="">حداکثر سایز تصویر 300kb</small>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label >تصویر کاور :</label>
+                        <input class="form-control" id="Cover_Picture_file" type="file" onchange="PictureNewsCheck(this.id)" name="Cover_Picture_file">
+                        <small class="">نام فایل حتما باید شامل حروف انگلیسی یا اعداد باشد</small><br>
+                        <small class="">حداکثر سایز تصویر 300kb</small>
+                    </div>
+                </div>
                 <div class="form-group">
                     <label >فایل</label>
                     <input class="form-control" id="News_file" type="file" onchange="FileNewsCheck(this.id)" name="News_file" >
@@ -31,36 +49,6 @@
                     <input  type="checkbox" name="Delete_News_file" ><br>
                     <small class="">درصورتی که میخواهید فایل موجو حذف شود تیک را بزنید</small>
                   </div>
-                  {{-- <div class="form-row">
-                      <div class="form-group col-4">
-                          <label >نام لینک :</label>
-                          <input class="form-control " name="NewsLinkName" value="{{ $editabledRecord['attributes']['news_link_name']}}"/>
-                      </div>
-                      <div class="form-group col-4">
-                          <label >آدرس لینک :</label>
-                          <input style="direction: ltr" class="form-control " value="{{ $editabledRecord['attributes']['news_link']}}" name="NewsLinkAddress" placeholder="http://www.google.com"/>
-                      </div>
-                  </div>
-                  <div class="form-row">
-                      <div class="form-group col-4">
-                          <label >نام لینک :</label>
-                          <input class="form-control " name="NewsLinkName2" value="{{ $editabledRecord['attributes']['news_link_name2']}}"/>
-                      </div>
-                      <div class="form-group col-4">
-                          <label >آدرس لینک :</label>
-                          <input style="direction: ltr" class="form-control " value="{{ $editabledRecord['attributes']['news_link2']}}" name="NewsLinkAddress2" placeholder="http://www.google.com"/>
-                      </div>
-                  </div>
-                  <div class="form-row">
-                      <div class="form-group col-4">
-                          <label >نام لینک :</label>
-                          <input class="form-control " name="NewsLinkName3" value="{{ $editabledRecord['attributes']['news_link_name3']}}"/>
-                      </div>
-                      <div class="form-group col-4">
-                          <label >آدرس لینک :</label>
-                          <input style="direction: ltr" class="form-control " value="{{ $editabledRecord['attributes']['news_link3']}}" name="NewsLinkAddress3" placeholder="http://www.google.com"/>
-                      </div>
-                  </div> --}}
                   <button id="NewsSubmit" type="submit" class="btn btn-primary" style="width:150px;">ارسال</button>
             </form>
             <div id="progressBarDiv"  class="progress" style="height:30px;margin-top: 50px;display: none;">
