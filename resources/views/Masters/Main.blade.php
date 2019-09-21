@@ -20,6 +20,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/ethics.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/regulation.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/form.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/authorities.css' }}">
 	</head>
 	<body>
     	@yield('content')
