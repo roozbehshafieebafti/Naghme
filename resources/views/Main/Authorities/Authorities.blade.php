@@ -16,20 +16,35 @@
 
             <div class="">
                 @if(count($Authority)>0)
-                    @foreach ($Authority as $item)
-                        <div class="row d-flex justify-content-center mb-5">
-                            <div class="authorities-image-container">
-                                <img class="authorities-image" src="{{config('app.url').$item->authorities_picture}}" alt="{{ $item->authorities_name.' '.$item->authorities_family }} ">
+                    @foreach ($Authority as $key=>$item)
+                        <div class="authorities-row-container row d-flex justify-content-center mb-5">
+                            <div class="col-2">
+                                <div class="authorities-image-container">
+                                    <img class="authorities-image" src="{{config('app.url').$item->authorities_picture}}" alt="{{ $item->authorities_name.' '.$item->authorities_family }} ">
+                                </div>
                             </div>
                             <div class="col-8">
                                 <div>
                                     <span style="color:#790000;font-size:20px;"><b>نام و نام‌خانوادگی:</b></span>
-                                    <span> {{ $item->authorities_name }} </span>
-                                    <span> {{ $item->authorities_family }} </span>
+                                    <b><span> {{ $item->authorities_name }} </span>
+                                    <span> {{ $item->authorities_family }} </span></b>
                                 </div>
-                                <p>
-                                    {{ $item->authorities_cv }}
-                                </p>
+                                <div>
+                                    <div class="authorities-CV-container d-flex align-items-center justify-content-between" id="headingOne"  data-toggle="collapse" data-target="#collapseCV{{$key}}" aria-expanded="true" aria-controls="collapseCV{{$key}}">
+                                        <span class="authorities-CVTitle">رزومه:</span>
+                                        <span>
+                                            <img src="{{config('app.url').'picture/assets/moreicon.svg'}}" alt="" style="width:20px;">    
+                                        </span>
+                                    </div>
+                                
+                                    <div id="collapseCV{{$key}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="authorities-CV-Text">
+                                            <p>
+                                                {{ $item->authorities_cv }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>                                 
                             </div>
                         </div>
                     @endforeach

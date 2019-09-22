@@ -33,7 +33,7 @@
 				  </div>
 				  <div class="form-group">
 				    <label >رزومه:</label>
-				    <textarea style="resize: none" required="required" name="Authorities_cv" class="form-control text-left" ></textarea>
+				    <textarea style="resize: none" id="Authorities_cv" required="required" name="Authorities_cv" class="form-control text-left" ></textarea>
 				  </div>
 				  <div class="form-group">
 				    <label >عکس:</label>

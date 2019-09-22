@@ -27,3 +27,7 @@ tinymce.init({
 tinymce.init({
 	selector: '#Representation_History',plugins: "link",
 });
+
+tinymce.init({
+	selector: '#Authorities_cv',plugins: "link",
+});

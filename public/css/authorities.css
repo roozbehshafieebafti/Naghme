@@ -1,7 +1,9 @@
 .authorities-container{
     margin-top:190px;
 }
-
+.authorities-row-container{
+    min-height: 250px;
+}
 .authorities-title{
     color: #790000;
     font-weight: bold;
@@ -32,7 +34,7 @@
 .authorities-image-container{
     display: inline-block;
     border: #790000 solid 2px;
-    padding: 0px 10px 10px 10px;
+    padding: 0px 10px 0px 10px;
 }
 
 .authorities-image{
@@ -40,4 +42,19 @@
     width:150px;
     position: relative;
     bottom:10px;
+}
+.authorities-CVTitle{
+    color: #790000;
+    font-weight: bold;
+    font-size: 22px;
+}
+.authorities-CV-container{
+    border-bottom: #f6a619 solid 2px;
+}
+
+.authorities-CV-Text{
+    border: #f6a619 solid 2px;
+    position: relative;
+    bottom: 2px;
+    padding: 15px 30px 10px 30px;
 }
