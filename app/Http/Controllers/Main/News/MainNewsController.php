@@ -8,10 +8,10 @@ class MainNewsController extends Controller
     //
     public function getallNews($id=0){
         if(is_numeric($id) && $id>1){
-            $news =News::orderBy('news_date','desc')->offset($id-1)->limit(20)->get();
+            $news =News::select("id","news_title","news_cover_picture","news_description","news_date")->orderBy('news_date','desc')->offset($id-1)->limit(20)->get();
         }
         else{
-            $news =News::orderBy('news_date','desc')->offset(0)->limit(20)->get();
+            $news =News::select("id","news_title","news_cover_picture","news_description","news_date")->orderBy('news_date','desc')->offset(0)->limit(20)->get();
         }
         $Count = News::count();
         $Page = is_numeric($id) && $id>1 ? $id : 1;

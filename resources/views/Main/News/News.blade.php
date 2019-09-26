@@ -4,36 +4,41 @@
 
 @section('content')
     @include('Partials.GeneralHeader')
-    <div class="container-fluid" style="direction:rtl;margin-top:220px;">
+    <div class="container" style="direction:rtl;margin-top:220px;">
         <div class="col-12">
             <div style="min-height:300px">
                 @if(count($news) > 0)
+                <div class="row">
                     @foreach ($news as $Value)
-                        <div class="row">
-                                {{-- <div class="col-2">{{ $Value->news_date }}</div> --}}
-                                <div class="col-2">
-                                    <div>
-                                        <img style="width:100%" src="{{ config('app.url').'/'.$Value->news_picture }}" />
-                                    </div>
+                        <div class="col-xl-6 col-lg-6 mb-5 col-container">
+                            <div class="col-12 " style="overflow:hidden">
+                                <img class="news-cover-image" src="{{ config('app.url').'/'.$Value->news_cover_picture }}" />
+                                <div class="news-angel">!</div>
+                            </div>
+                            <div class="news-title-container col-12">
+                                <div class="news-title-text-container" >
+                                    <b>{{ $Value->news_title }}</b>
                                 </div>
-                                <div class="col-10">
-                                    <span class="col-12" >
-                                        {{ $Value->news_title }}
-                                    </span>
-                                    {{-- style="max-height:50px;overflow:hidden" --}}
-                                    <div class="col-12" >
-                                        <div style="max-height:50px;overflow:hidden;">
-                                            {!!html_entity_decode( $Value->news_description)!!}
-                                        </div>
-                                        <div>...</div>
-                                        <div>
-                                            <a href=" {{ route('News_Load_More', $Value->id) }} ">ادامه مطلب</a>
-                                        </div>
+                                <div class="news-title-text-angel">!</div>
+                            </div>                           
+                            <div class="news-text-container" >
+                                <img class="news-text-background-container" src="{{ config('app.url')."/picture/assets/newsBackground.svg"}}" />
+                                <div class="news-text-sumery">
+                                    {!!html_entity_decode( $Value->news_description)!!}
+                                </div>
+                                <div class="news-read-more-container">
+                                    <a class="news-read-more-text" href="{{ route('News_Load_More', $Value->id) }}">بیشتر بخوانید</a>
+                                </div>
+                            </div>
+                            <div class="news-date-container">
+                                <div class="news-date-text" >
+                                        {{ $Value->news_date }}
                                     </div>
-                                </div>                           
-                            <hr class="col-12"  style="margin-right:0px"/>
-                        </div>
+                                <div class="news-date-angel">!</div>
+                            </div>
+                        </div>    
                     @endforeach
+                </div>
                 @else
                     @if(isset($search))
                         <div class="alert alert-warning">
