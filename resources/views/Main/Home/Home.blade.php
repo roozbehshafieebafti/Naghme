@@ -144,13 +144,23 @@
 
 
                 <div class="News-teller-container">
-                    <h3 style="margin-right: 35px; color:#790000"><b>عضویت در خبرنامه</b></h3>
+                    <h3 style="margin-right: 35px; color:#790000">
+                        <b>عضویت در خبرنامه</b>                    
+                        <span class="News_Letter_alert"></span>
+                    </h3>
                     <div class="red-border" style="height: 70px; border:solid 3px #790000;margin-right: 35px"> </div>
                     <div class="News-black-border" >
+                        <form autocomplete="off" id="News_Letter_form" method="POST" onsubmit="newsLetterSubmit(event)">
+                            <button class="News_Letter_btn">ثبت</button>
+                            <input required  type="email" name="email_text" class="News_Letter_input col-8" placeholder="لطفا ایمیل خود را وارد نمایید"/>
+                        </form>
                         <img class="News-corner-img" src="{{ config('app.url')."picture/assets/corner.svg" }}" />
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            const newsLetterUrl = "{{ route('News_Letter') }}";
+        </script>
         @include('Partials.mainFooter')
 @endsection

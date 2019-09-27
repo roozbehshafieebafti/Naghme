@@ -229,6 +229,7 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 	
 	//Home Page
 	Route::get('/','IndexController@loadHomePage')->name('Home');
+	Route::post('/news-letter-email','IndexController@saveNewsLetterEmails')->name('News_Letter');
 
 	// Mandegar Menu
 	Route::group(['namespace' => 'Mandegar'],function(){

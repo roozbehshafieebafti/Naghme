@@ -398,7 +398,35 @@
   height: 200px;
   margin-bottom: 30px;
 }
+.News-corner-img{
+  position: relative;
+  bottom:70px;
+}
+.News_Letter_input{
+  height: 70px;
+  background-color: inherit;
+  border-style: none;
+  color: white;
+  direction: rtl;
 
+}
+.News_Letter_input:focus {
+  outline: none;
+}
+.News_Letter_btn:focus{
+  outline: none;
+}
+.News_Letter_btn{
+  float: left;
+  margin-left: 50px;
+  margin-top: 20px;
+  border-color: #790000;
+  background-color: #ce8a11;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  width: 100px;
+}
 /* History Menu */
 
 .History-Main {
