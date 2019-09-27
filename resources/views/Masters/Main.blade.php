@@ -22,6 +22,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/form.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/authorities.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/news.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/pagination.css' }}">
 	</head>
 	<body>
     	@yield('content')
@@ -33,6 +34,7 @@
 		<script type="text/javascript" src="{{ config('app.url').'js/sweetalert.min.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Main/home.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Main/register.js' }}"></script>
+		<script type="text/javascript" src="{{ config('app.url').'js/Main/pagination.js' }}"></script>
 		<script type="text/javascript">
 			$(function () {
 				  $('[data-toggle="tooltip"]').tooltip()

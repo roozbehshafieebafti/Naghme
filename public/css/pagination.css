@@ -1,0 +1,8 @@
+.pagination-number-container{
+    position: relative;
+    top:10px;
+    width:250px;
+}
+.pagination-link-container{
+    margin: 0px 10px 0px 10px;
+}

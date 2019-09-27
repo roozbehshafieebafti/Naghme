@@ -53,50 +53,21 @@
                 @endif
             </div>
             @if(isset($Count))
-                <div style="margin-top:20px">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item" >
-                                <?php
-                                    if($Page >1)
-                                    {
-                                    ?>
-                                        <a class="page-link" href="{{ route('Get_All_News','page='.($Page-1) ) }}" tabindex="-1" > << </a>
-                                    <?php
-                                    }
-                                 ?>
-                            </li>
-                            <?php 
-                                $CPage = ( $Count % 10 ) == 0 ? ( $Count / 10 ) : ( $Count / 10 )+1 ;
-                            ?>
-                            @for ($i = 1; $i <= $CPage ; $i++)
-                                <li
-                                <?php
-                                    if($Page == $i)
-                                    {
-                                        echo 'class="page-item active"';
-                                    }
-                                    else{
-                                        echo 'class="page-item"';
-                                    }
-                                ?>
-                                 ><a class="page-link" href="{{ route('Get_All_News','page='.$i ) }}">{{$i}}</a></li>
-                            @endfor
-                            <li class="page-item">
-                                    <?php
-                                    if($Page+1 <= $CPage)
-                                    {
-                                    ?>
-                                        <a class="page-link" href="{{ route('Get_All_News','page='.($Page+1) ) }}"> >> </a>
-                                    <?php
-                                    }
-                                 ?>      
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="pagination-container text-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="pagination-number-container d-flex justify-content-center" ></div>
+                    </div>
+                    <img src="{{config('app.url').'/picture/assets/pageNumberLine.svg'}}" />
                 </div>
             @endif
         </div>
+        <script>
+            const paginationCount = "<?php echo $Count; ?>",
+                paginationPage = "<?php echo $Page; ?>", 
+                paginationRoute = "<?php echo config('app.url').'news/' ?>",
+                paginationLimit = "<?php echo $Limit; ?>";
+            // const paginationCount = 40, paginationPage =1 , paginationRoute= "<?php echo config('app.url').'news/' ?>";
+        </script>
     </div>
     @include('Partials.GeneralFooter')
 @endsection
