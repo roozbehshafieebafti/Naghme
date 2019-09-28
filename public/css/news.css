@@ -128,3 +128,26 @@
     bottom: 2px;
     color: white;
 }
+.read-more-news-container{
+    overflow: hidden;
+    height: 400px;;
+}
+.read-more-news-picture{
+    width: 50%;
+    height: 300px;
+}
+.read-more-news-angel{
+    border: #f6a619 4px solid;
+    display: inline-block;
+    height: 300px;
+    width: 50%;
+    position: relative;
+    bottom: 250px;
+    z-index: -1;
+    left: 50px;
+    opacity: 0.3;
+}
+.read-more-news-right-shape{
+    position: absolute;
+    top:400px;
+}

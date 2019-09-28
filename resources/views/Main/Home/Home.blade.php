@@ -43,7 +43,7 @@
                         <div class="flip-card-front">
                             <div class="front-label">
                                 <div class="label-text1">
-                                    <a href="#" style="text-decoration: none;color: #790000;">
+                                    <a href="{{ route('Get_All_News') }}" style="text-decoration: none;color: #790000;">
                                         خبر
                                     </a>
                                 </div>
@@ -52,7 +52,7 @@
                         <div class="flip-card-back">
                             <div class="back-label">
                                 <div class="label-text1">
-                                    <a href="#" style="text-decoration: none;color: white;">
+                                    <a href="{{ route('Get_All_News') }}" style="text-decoration: none;color: white;">
                                         خبر
                                     </a>
                                 </div>

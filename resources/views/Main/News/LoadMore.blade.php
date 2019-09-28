@@ -1,9 +1,11 @@
 @extends('Masters.Main')
 @section('title') {{$selected_news->news_title}} @endsection    
-{{-- این قسمت نیاز دارد به نشان دادن محتوایی وجود ندارد --}}
 @section('content')
     @include('Partials.GeneralHeader')
-    <div class="container-fluid" style="direction:rtl;margin-top:160px;">
+    <div style="direction:rtl;margin-top:160px;">
+        <div>
+            <img class="read-more-news-right-shape" src="{{config('app.url').'picture/assets/shape1.svg'}}" />
+        </div>
         <div class="container" >
             @if ($selected_news)
                 <div class="more-news-title-container">
@@ -12,11 +14,12 @@
                     </div>
                     <div class="purpose-titel text-center mt-4">
                         <h2 id="purpose" style="text-align:center"> <b>{{$selected_news->news_title}}</b></h2>
-                        <img class="seprator-image" src="{{config('app.url').'picture/assets/seprator.svg'}}" alt="">
+                        <img class="seprator-image" src="{{config('app.url').'picture/assets/seprator.svg'}}" alt="{{$selected_news->news_title}}" title="{{$selected_news->news_title}}">
                     </div>
                 </div>
-                <div class="mt-3 d-flex justify-content-center">
-                    <img src=" {{ config('app.url').'/'.$selected_news->news_picture }} " alt="">
+                <div class="read-more-news-container mt-3 text-center ">
+                    <img class="read-more-news-picture" src=" {{ config('app.url').'/'.$selected_news->news_picture }} " alt="نغمه ماندگار">
+                    <span class="read-more-news-angel">asd</span>
                 </div>
                 <p class="mt-3" style="text-align: justify">
                     {!!html_entity_decode( $selected_news->news_description)!!}
