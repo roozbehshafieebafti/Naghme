@@ -4,7 +4,7 @@
     <div class="toggle-button">
         <span onclick="openMenu()" class=""><i class="fas fa-bars h4 toggle-button-key"></i></span>
     </div>
-    <div class="menu-content text-dark" id="menuContent">
+    <div class="menu-content " id="menuContent">
         <div class="accordion" id="accordionExample">
             <div class="card">
                 <div class="card-header" id="headingOne">
@@ -18,14 +18,14 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                     <ul class="header-ul-list bg-white  col-12">
-                        <li><a class="text-muted" href="{{ route('Menu_History').'#history' }}">تاریخچه</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Purpose').'#purpose' }}">اهداف</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Form') }}">فرم‌ها</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Plane').'#plane' }}">برنامه ها</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Statement').'#statement' }}">بیانیه ها</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Regulations') }}">آیین نامه ها</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Ethics') }}">منشور اخلاقی</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Chart','کرمان') }}">نمودار سازمانی</a></li>
+                        <li><a class="" href="{{ route('Menu_History').'#history' }}">تاریخچه</a></li>
+                        <li><a class="" href="{{ route('Menu_Purpose').'#purpose' }}">اهداف</a></li>
+                        <li><a class="" href="{{ route('Menu_Form') }}">فرم‌ها</a></li>
+                        <li><a class="" href="{{ route('Menu_Plane').'#plane' }}">برنامه ها</a></li>
+                        <li><a class="" href="{{ route('Menu_Statement').'#statement' }}">بیانیه ها</a></li>
+                        <li><a class="" href="{{ route('Menu_Regulations') }}">آیین نامه ها</a></li>
+                        <li><a class="" href="{{ route('Menu_Ethics') }}">منشور اخلاقی</a></li>
+                        <li><a class="" href="{{ route('Menu_Chart','کرمان') }}">نمودار سازمانی</a></li>
                     </ul>
                 </div>
                 </div>
@@ -42,7 +42,7 @@
                 <div class="card-body">
                     <ul class="header-ul-list bg-white  col-12">
                         @foreach ($_SESSION['Authorities'] as $item)
-                            <li><a class="text-muted" href=" {{config('app.url').'authorities/'.$item->authorities_title}} ">{{ $item->authorities_title }}</a></li>                                
+                            <li><a class="" href=" {{config('app.url').'authorities/'.$item->authorities_title}} ">{{ $item->authorities_title }}</a></li>                                
                         @endforeach
                     </ul>
                 </div>
@@ -63,7 +63,7 @@
                         @foreach ($_SESSION['Activities'] as $key => $item)
                             @if(is_array($item))  
                                 <li>
-                                    <span style="cursor:pointer" class="text-muted collapsed"  data-target="{{'#MobileCollapseExample'.$i}}" data-toggle="collapse" aria-expanded="false" aria-controls="{{'MobileCollapseExample'.$i}}">
+                                    <span style="cursor:pointer" class=" collapsed"  data-target="{{'#MobileCollapseExample'.$i}}" data-toggle="collapse" aria-expanded="false" aria-controls="{{'MobileCollapseExample'.$i}}">
                                         {{ $key }}
                                     </span>
                                 </li>  
@@ -75,7 +75,7 @@
                                 <?php $i++; ?>                                    
                             @else
                                 <li>
-                                    <a style="cursor:pointer" class="text-muted "  href="{{ config('app.url').'activities/'.$key }}">
+                                    <a style="cursor:pointer" class=" "  href="{{ config('app.url').'activities/'.$key }}">
                                         {{ $key }}
                                     </a>
                                 </li> 
@@ -115,71 +115,52 @@
         <div class="col-6">
             <div class="row">
                 <div class="header-sub-menu ">
-                    <a class="text-white " role="button">
-                        <span>نغمه ماندگار</span>
+                    <a class="header-link-title text-white" role="button">
+                        <span><b>نغمه ماندگار</b></span>
                     </a>
-                    <ul class="header-ul-list bg-white  col-12">
-                        <li><a class="text-muted" href="{{ route('Menu_History').'#history' }}">تاریخچه</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Purpose').'#purpose' }}">اهداف</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Form') }}">فرم‌ها</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Plane').'#plane' }}">برنامه ها</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Statement').'#statement' }}">بیانیه ها</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Regulations') }}">آیین نامه ها</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Ethics') }}">منشور اخلاقی</a></li>
-                        <li><a class="text-muted" href="{{ route('Menu_Chart','کرمان') }}">نمودار سازمانی</a></li>
+                    <ul class="header-ul-list col-12">
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_History').'#history' }}">تاریخچه</a></li>
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Purpose').'#purpose' }}">اهداف</a></li>
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Form') }}">فرم‌ها</a></li>
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Plane').'#plane' }}">برنامه ها</a></li>
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Statement').'#statement' }}">بیانیه ها</a></li>
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Regulations') }}">آیین نامه ها</a></li>
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Ethics') }}">منشور اخلاقی</a></li>
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Chart','کرمان') }}">نمودار سازمانی</a></li>
                     </ul>
                 </div>
 
                 <div class="header-sub-menu ">
-                    <a class="text-white " role="button">
-                        <span>مسئولین</span>
+                    <a class="header-link-title text-white " role="button">
+                        <span><b>مسئولین</b></span>
                     </a>
-                    <ul class="header-ul-list bg-white  col-12">
+                    <ul class="header-ul-list  col-12">
                         @foreach ($_SESSION['Authorities'] as $item)
-                            <li><a class="text-muted" href=" {{config('app.url').'authorities/'.$item->authorities_title}} ">{{ $item->authorities_title }}</a></li>                                
+                            <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href=" {{config('app.url').'authorities/'.$item->authorities_title}} ">{{ $item->authorities_title }}</a></li>                                
                         @endforeach
                     </ul>
                 </div>
 
                 <div class="header-sub-menu ">
-                    <a class="text-white " role="button">
-                        <span>فعالیت‌ها</span>
+                    <a class="header-link-title text-white " role="button">
+                        <span><b>فعالیت‌ها</b></span>
                     </a>
-                    <ul class="accordion header-ul-list bg-white  col-12">
-                        <?php $i=0 ?>
+                    <ul class="accordion header-ul-list   col-12">
                         @foreach ($_SESSION['Activities'] as $key => $item)
-                            @if(is_array($item))  
-                                <li>
-                                    <span style="cursor:pointer" class="text-muted collapsed"  data-target="{{'#collapseExample'.$i}}" data-toggle="collapse" aria-expanded="false" aria-controls="{{'collapseExample'.$i}}">
-                                        {{ $key }}
-                                    </span>
-                                </li>  
-                                <ul class="collapse bg-dark" id="{{'collapseExample'.$i}}" aria-labelledby="headingTwo">
-                                    @foreach ($item as $val)
-                                        <li class="text-light"><a href="{{ config('app.url').'activities/'.$val }}">{{ $val }}</a></li>    
-                                    @endforeach
-                                </ul>
-                                <?php $i++; ?>                                    
-                            @else
-                                <li>
-                                    <a style="cursor:pointer" class="text-muted "  href="{{ config('app.url').'activities/'.$key }}">
-                                        {{ $key }}
-                                    </a>
-                                </li> 
-                            @endif
+                            <li><span class="header-text-dimond-shape">&#9670;</span><a style="cursor:pointer" class="header-text-link"  href="#">{{ $key }}</a></li> 
                         @endforeach
                     </ul>
                 </div>
 
-                <div class="header-sub-menu ">
-                    <a class="text-white" href="{{ route('Get_All_News') }}">
-                        <span>اخبار</span>
+                <div class="header-sub-menu" >
+                    <a class="header-link-title text-white" href="{{ route('Get_All_News') }}">
+                        <span><b>اخبار</b></span>
                     </a>
                 </div>
                 
-                <div class="header-sub-menu ">
-                    <a class="text-white" href="{{ route('Login') }}">
-                        <span>ورود</span>
+                <div class="header-sub-menu">
+                    <a class="header-link-title text-white" href="{{ route('Login') }}">
+                        <span><b>ورود</b></span>
                     </a>
                 </div>
             </div>

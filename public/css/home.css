@@ -74,20 +74,30 @@
     height: 55px;
     float: right;
     width: 100px;
+    /* background-color: aliceblue; */
     padding-right: 30px;
   }
   .header-ul-list {
     list-style: outside none none;
     position: absolute;
-    top: 50px;
+    top: 35px;
     display: none;
     z-index: 12;
-    width: 150px;
+    width: 180px;
+    background-color:#f6a619;
   }
-
-  .header-sub-menu:hover .header-ul-list {
-    display: block;
+  .header-text-link{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 20px;
+    color: black;
   }
+  .header-link-title:hover{text-decoration: none;}
+  .header-link-title{cursor: pointer;}
+  .header-text-link:hover{text-decoration: none;color: black;}
+  .header-text-dimond-shape{color:#790000;font-size:20px;position: relative; top: 3px;}
+  .header-sub-menu:hover .header-ul-list {display: block;}
 
   .general-Header-without-toggle {
     padding: 20px;
