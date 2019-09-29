@@ -24,13 +24,14 @@ class RegisterController extends Controller
           "regiser_email"  => "required|email",
           "regiser_password"  => "required",
           'regiser_captcha' => 'required|captcha'
-        ]);
+        ],
+        ["regiser_captcha.captcha"=>"کد امنیتی صحیح نمی‌باشد"]);
 
         //  check if email exists or not
         $userExist = User::where("email",$request->regiser_email)->exists();
 
         if($userExist){
-            return(redirect()->back()->with('danger','این نام کاربری قبلا در سیستم ثبت شده است.'));
+            return(redirect()->back()->with('danger','این نام کاربری قبلا در سیستم ثبت شده است'));
         }
         
         $user = new User();

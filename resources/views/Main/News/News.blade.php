@@ -12,7 +12,7 @@
                     @foreach ($news as $Value)
                         <div class="col-xl-6 col-lg-6 mb-5 col-container">
                             <div class="col-12 " style="overflow:hidden">
-                                <img class="news-cover-image" src="{{ config('app.url').'/'.$Value->news_cover_picture }}" />
+                                <img class="news-cover-image" src="{{ config('app.url').'/'.$Value->news_cover_picture }}" alt="{{ $Value->news_title }}" title="{{ $Value->news_title }}" />
                                 <div class="news-angel">!</div>
                             </div>
                             <div class="news-title-container col-12">

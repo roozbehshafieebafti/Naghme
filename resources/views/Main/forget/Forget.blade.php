@@ -26,15 +26,7 @@
                     <div class="text-left col-2 pt-3">
                         <span >:ایمیل</span>
                         <span style="color:#f6a619">&#9672;</span>
-                    </div>
-                    <small id="emailHelp" class="form-text text-muted text-left  col-10">آدرس ایمیل شما پیش ما محفوظ است و تحت هیچ شرایطی منتشر نمی‌شود</small>
-                </div>
-                <div class="row text-right mt-4">
-                    <input type="password" name="password_ng" class="form-control mt-2 col-10"  placeholder="Password">
-                    <div class="text-left col-2 pt-3">
-                        <span >:گذرواژه</span>
-                        <span style="color:#f6a619">&#9672;</span>
-                    </div>
+                    </div>    
                 </div>
                 <div class="row text-right mt-5">
                     <div class="text-center col-9">
@@ -49,12 +41,12 @@
                 <div class="row text-right mt-2">
                     <input type="text" name="captcha_ng" class="form-control mt-2 col-10 text-left"  placeholder="لطفا کد امنیتی فوق را اینجا وارد کنید">
                 </div>
-                <button type="submit" class="btn btn-success mt-5 pr-5 pl-5" style="position:relative;z-index: 10;">ورود</button>
-                <span style="display:inline-block;border:solid 1px black; width:120px;position:relative;right:135px;top:30px; z-index: 2; border-radius:3px;height:35px;">!</span>
+                <button disabled type="submit" class="btn btn-success mt-5 pr-5 pl-5" style="position:relative;z-index: 10;">ارسال رمز</button>
+                <span style="display:inline-block;border:solid 1px black; width:140px;position:relative;right:160px;top:30px; z-index: 2; border-radius:3px;height:35px;">!</span>
             </form>            
         </div>
         <div class="d-flex justify-content-center align-items-center mt-5">
-            <a class="text-dark" href="{{route("Forget")}}">فراموشی رمز عبور</a>
+            <a class="text-dark" href="{{route("Login")}}">ورود به نغمه ماندگار</a>
             <span style="margin-right:10px;margin-left:10px">/</span>
             <a class="text-dark" href="{{route("Register")}}">ثبت‌نام در نغمه ماندگار</a>
         </div>

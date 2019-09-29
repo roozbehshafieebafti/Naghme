@@ -14,12 +14,12 @@
                     </div>
                     <div class="purpose-titel text-center mt-4">
                         <h2 id="purpose" style="text-align:center"> <b>{{$selected_news->news_title}}</b></h2>
-                        <img class="seprator-image" src="{{config('app.url').'picture/assets/seprator.svg'}}" alt="{{$selected_news->news_title}}" title="{{$selected_news->news_title}}">
+                        <img class="seprator-image" src="{{config('app.url').'picture/assets/seprator.svg'}}"/>
                     </div>
                 </div>
                 <div class="read-more-news-container mt-3 text-center ">
-                    <img class="read-more-news-picture" src=" {{ config('app.url').'/'.$selected_news->news_picture }} " alt="نغمه ماندگار">
-                    <span class="read-more-news-angel">asd</span>
+                    <img class="read-more-news-picture" src=" {{ config('app.url').'/'.$selected_news->news_picture }} "alt="{{$selected_news->news_title}}" title="{{$selected_news->news_title}}" />
+                    <span class="read-more-news-angel">!</span>
                 </div>
                 <p class="mt-3" style="text-align: justify">
                     {!!html_entity_decode( $selected_news->news_description)!!}

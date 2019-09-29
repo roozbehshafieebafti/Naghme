@@ -271,4 +271,7 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 	// Register
 	Route::get('/register','RegisterController@registerPage')->name('Register');
 	Route::post('/register','RegisterController@doRegister');
+
+	// Forget
+	Route::get('/forget','ForgetController@forgetPage')->name('Forget');
 });

@@ -202,6 +202,9 @@
                 case isset($register):
                     echo "ثبت‌نام";
                     break;
+                case isset($forget):
+                    echo "فراموشی رمز";
+                    break;
             }    
         ?>
     </div>
