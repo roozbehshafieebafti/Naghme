@@ -14,6 +14,10 @@ class CreateRepresentation extends Migration
         Schema::create('representation', function (Blueprint $table) {
             $table->increments('id');
             $table->string('representation_title',32);
+            $table->string('representation_leader',128);
+            $table->string('representation_leader',128);
+            $table->text('representation_address');
+            $table->string('representation_telephone',128);
             $table->timestamps();
         });
     }

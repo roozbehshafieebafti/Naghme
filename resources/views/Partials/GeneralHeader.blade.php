@@ -193,6 +193,9 @@
                 case isset($news):
                     echo "اخبار";
                     break;
+                case isset($Representaions):
+                    echo "نمایندگی‌ها";
+                    break;
                 case isset($selected_news):
                     echo "خبر";
                     break;

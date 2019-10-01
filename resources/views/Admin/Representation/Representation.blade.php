@@ -22,6 +22,7 @@
                                     <th>تاریخچه‌</th>
                                     <th>نمودار سازمانی</th>
                                     <th>مسئولین</th>
+                                    <th>اطلاعات</th>
                                     <th class="text-center ">عملیات</th>
                                 </tr>
                             </thead>
@@ -37,6 +38,9 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('Get_Representation_Authorities',['id'=>$value->id]) }}"><i class="fas fa-users"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('Get_Representation_Info',['id'=>$value->id]) }}"><i class="fas fa-info-circle"></i></a>
                                         </td>
                                         <td class="text-center">
                                             <span>

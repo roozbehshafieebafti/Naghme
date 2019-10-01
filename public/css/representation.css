@@ -1,0 +1,32 @@
+.Representaion-container{
+    margin-top:250px;
+    margin-bottom:100px;
+    direction:rtl;
+}
+.Representaion-border{
+    border-right: solid 5px #f6a619;
+    border-bottom: solid 5px #f6a619;
+}
+.Representaion-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    width:200px;
+    margin: 3px;
+    background-color: rgb(251,162,46);
+    border: solid 3px #790000;
+}
+.Representaion-title{
+    font-family: "IranNastaliq";
+    font-size: 60px;
+}
+.Representaion-read-more{
+    position: absolute;
+    bottom: 3px;
+
+}
+.Representaion-info-container{
+    position: absolute;
+    bottom: 40px;
+}

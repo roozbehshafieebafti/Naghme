@@ -10,6 +10,6 @@ class ForgetController extends Controller
     //
     public function forgetPage () {
         $forget = "";
-        return view("Main/forget/Forget",compact("forget"));
+        return view("Main/Forget/Forget",compact("forget"));
     }
 }

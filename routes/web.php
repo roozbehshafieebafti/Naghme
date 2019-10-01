@@ -203,6 +203,8 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::post('/edit/{id}' , 'RepresentationController@doEditRepresentation');
 			Route::get('/history/{id}' , 'RepresentationController@getHistory')->name('Get_Representation_History');
 			Route::post('/history/{id}' , 'RepresentationController@createHistory');
+			Route::get('/information/{id}' , 'RepresentationController@getInfo')->name('Get_Representation_Info');
+			Route::post('/information/{id}' , 'RepresentationController@updateInfo');
 			Route::get('/chart/{id}' , 'RepresentationController@getChart')->name('Get_Representation_Chart');
 			Route::post('/chart/{id}' , 'RepresentationController@updateChart')->name('Update_Representation_Chart');
 			Route::get('/authorities/{id}' , 'RepresentationController@getAuthorities')->name('Get_Representation_Authorities');
@@ -212,7 +214,7 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::post('/authorities/edit/{id}' , 'RepresentationController@doEditAuthorities');
 			Route::get('/authorities/delete/{cityId}/{id}' , 'RepresentationController@deleteAuthorities')->name('Delete_Representation_Authorities');
 			Route::get('authorities/duty/{cityId}/{dutyTitle}' , 'RepresentationController@getDuties')->name('Get_Representation_Duty');
-			Route::post('authorities/duty/{cityId}/{dutyTitle}' , 'RepresentationController@doCreateDuties');
+			Route::post('authorities/duty/{cityId}/{dutyTitle}' , 'RepresentationController@doCreateDuties');			
 		});
 
 		/* Slider */
@@ -274,4 +276,7 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 
 	// Forget
 	Route::get('/forget','ForgetController@forgetPage')->name('Forget');
+
+	// Representaion
+	Route::get('/representaion', 'RepresentaionController@getRepresentation')->name('Representaion');
 });

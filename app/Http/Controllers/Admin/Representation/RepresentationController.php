@@ -280,5 +280,24 @@ class RepresentationController extends Controller
         }
     }
 
+    public function getInfo($cityId){
+        $information = Representation::
+                select("representation_leader","representation_address","representation_telephone")
+                ->where("id",$cityId)
+                ->get();
+        return view('Admin.Representation.InformationRepresentaion',compact('information'));
+    }
 
+    public function updateInfo(Request $request,Representation $represent,$cityId){
+        $representationSelect = $represent->find($cityId);
+
+        $representationSelect->representation_telephone = $request->representation_telephone;
+        $representationSelect->representation_leader = $request->representation_leader;
+        $representationSelect->representation_address = $request->representation_address;
+
+        if($representationSelect->save()){
+            return redirect()->route('Get_Representation')->with('success','اطلاعات با موفقیت ثبت شد');
+        }
+        return redirect()->route('Get_Representation')->with('error','خطای سیستمی لطفا دوباره سعی کنید');
+    }
 }

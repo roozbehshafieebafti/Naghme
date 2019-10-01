@@ -22,7 +22,7 @@
             <form class="col-6 text-center" method="POST">
                 {{ csrf_field() }}
                 <div class="row text-right" >
-                    <input type="email" name="email_ng" class="form-control mt-2 col-10" placeholder="Enter email">
+                    <input type="email" name="email_ng" class="form-control mt-2 col-10 text-left" placeholder="ایمیل خود را وارد کنید">
                     <div class="text-left col-2 pt-3">
                         <span >:ایمیل</span>
                         <span style="color:#f6a619">&#9672;</span>

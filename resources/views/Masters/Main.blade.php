@@ -23,6 +23,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/authorities.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/news.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/pagination.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/representation.css' }}">
 	</head>
 	<body>
     	@yield('content')
