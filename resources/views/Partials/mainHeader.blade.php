@@ -112,11 +112,16 @@
                 <img class="logo-img" src="{{ config('app.url')."picture/assets/logo.png"}}" alt="{{ config('view.alt') }}" title="{{ config('view.title') }}" />
             </a>
         </div>
-        <div class="col-6">
+        <div class="col-7">
             <div class="row">
+                <div class="header-sub-menu  text-center ">
+                    <a class="header-link-title text-white" href="{{ route('Home') }}">
+                        <span><b>صفحه اصلی</b></span>
+                    </a>
+                </div>
                 <div class="header-sub-menu ">
-                    <a class="header-link-title text-white" role="button">
-                        <span><b>نغمه ماندگار</b></span>
+                    <a style="" class="header-link-title text-white text-center" role="button">
+                        نغمه ماندگار
                     </a>
                     <ul class="header-ul-list col-12">
                         <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_History').'#history' }}">تاریخچه</a></li>
@@ -130,8 +135,8 @@
                     </ul>
                 </div>
 
-                <div class="header-sub-menu ">
-                    <a class="header-link-title text-white " role="button">
+                <div class="header-sub-menu">
+                    <a class="header-link-title text-white text-center" role="button">
                         <span><b>مسئولین</b></span>
                     </a>
                     <ul class="header-ul-list  col-12">
@@ -141,8 +146,8 @@
                     </ul>
                 </div>
 
-                <div class="header-sub-menu ">
-                    <a class="header-link-title text-white " role="button">
+                <div class="header-sub-menu text-center ">
+                    <a class="header-link-title text-white text-center" role="button">
                         <span><b>فعالیت‌ها</b></span>
                     </a>
                     <ul class="accordion header-ul-list   col-12">
@@ -152,13 +157,19 @@
                     </ul>
                 </div>
 
-                <div class="header-sub-menu" >
+                <div class="header-sub-menu  text-center" >
                     <a class="header-link-title text-white" href="{{ route('Get_All_News') }}">
                         <span><b>اخبار</b></span>
                     </a>
                 </div>
+
+                {{-- <div class="header-sub-menu  text-center" >
+                    <a class="header-link-title text-white" href="{{ route("Representaion") }}">
+                        <span><b>نمایندگی‌ها</b></span>
+                    </a>
+                </div> --}}
                 
-                <div class="header-sub-menu">
+                <div class="header-sub-menu  text-center">
                     <a class="header-link-title text-white" href="{{ route('Login') }}">
                         <span><b>ورود</b></span>
                     </a>

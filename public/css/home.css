@@ -74,8 +74,8 @@
     height: 55px;
     float: right;
     width: 100px;
-    /* background-color: aliceblue; */
-    padding-right: 30px;
+    /* background-color: red; */
+    margin-left:2px;
   }
   .header-ul-list {
     list-style: outside none none;
@@ -94,7 +94,7 @@
     color: black;
   }
   .header-link-title:hover{text-decoration: none;}
-  .header-link-title{cursor: pointer;}
+  .header-link-title{cursor: pointer;display:inline-block;width:100%; font-weight:bold}
   .header-text-link:hover{text-decoration: none;color: black;}
   .header-text-dimond-shape{color:#790000;font-size:20px;position: relative; top: 3px;}
   .header-sub-menu:hover .header-ul-list {display: block;}
