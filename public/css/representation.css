@@ -30,3 +30,22 @@
     position: absolute;
     bottom: 40px;
 }
+.Representaion-read-more-container{
+    margin-top:180px;
+    margin-bottom:100px;
+    direction:rtl;
+}
+
+.Representaion-authorities-image{
+    position: absolute;
+    top: 1500px;
+    left: 0px;
+    opacity: 0.8;
+    height: 450px;
+}
+.Representaion-authorities-title{
+    position: absolute;
+    top: 1775px;
+    left: 140px;
+    z-index: 11;
+}

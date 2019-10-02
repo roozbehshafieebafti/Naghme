@@ -29,7 +29,7 @@
                                     </div>
                                 </div>
                                 <div class="Representaion-read-more ">
-                                    <a class="text-dark" href="">ادامه مطلب</a>
+                                    <a class="text-dark" href="{{ route("Representaion_Read_More",$item->representation_title) }}">ادامه مطلب</a>
                                     <i class="fas fa-long-arrow-alt-left pt-1"></i>
                                 </div>
                             </div>

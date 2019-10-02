@@ -279,4 +279,5 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 
 	// Representaion
 	Route::get('/representaion', 'RepresentaionController@getRepresentation')->name('Representaion');
+	Route::get('/representaion-continue-reding/{name}', 'RepresentaionController@representationReadMore')->name('Representaion_Read_More');
 });

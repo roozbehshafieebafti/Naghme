@@ -201,6 +201,9 @@
                 case isset($Representaions):
                     echo "نمایندگی‌ها";
                     break;
+                case isset($represent):
+                    echo "نمایندگی‌";
+                    break;
                 case isset($selected_news):
                     echo "خبر";
                     break;
