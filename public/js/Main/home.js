@@ -48,3 +48,8 @@ function newsLetterSubmit(event){
     processData: false 
     })
 }
+
+function searchAction (event){
+  event.preventDefault();
+  window.location = appBaseUrl + "search/"+$('#searchInput').val();
+}

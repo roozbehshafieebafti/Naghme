@@ -210,6 +210,9 @@
                 case isset($represent):
                     echo "نمایندگی‌";
                     break;
+                case isset($search):
+                    echo "جست‌وجو ";
+                    break;
                 case isset($login):
                     echo "ورود";
                     break;

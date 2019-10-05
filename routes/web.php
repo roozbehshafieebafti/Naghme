@@ -283,4 +283,7 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 
 	// Membership
 	Route::get('/membership','MembershipController@getMembers')->name('Get_Membership');
+
+	// Search
+	Route::get('/search/{name}','SearchController@getSearch')->name('Get_Search');
 });

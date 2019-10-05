@@ -44,10 +44,12 @@
 
         <div class="footer-left-container mt-5">
             <div class="pr-2 pl-2 mt-3"  style="border-bottom:solid 1px #f6a619">
-                <div class="row">
-                    <span class="col-2"><i class="fas fa-search" style="color:#f6a619"></i></span>
-                    <input class="search-input col-10 text-white" type="text" placeholder="کلمه کلیدی خود را وارد نمایید"/>
-                </div>
+                <form autocomplete="off" action="" method="GET" onsubmit="searchAction(event)">            
+                    <div class="row">
+                        <button type="submit" style="border:none;background-color:inherit;cursor:pointer" class="col-2"><i class="fas fa-search" style="color:#f6a619"></i></button>
+                        <input id="searchInput" class="search-input col-10 text-white" type="text" placeholder="کلمه کلیدی خود را وارد نمایید"/>
+                    </div>
+                </form>
             </div>
             <div class="mt-5">
                 <p class="text-white" style="border-bottom:solid 3px #f6a619">مارا در شبکه‌های اجتماعی دنبال کنید</p>
@@ -69,5 +71,6 @@
     </div>
     <script>
         const newsLetterUrl = "{{ route('News_Letter') }}";
+        const appBaseUrl = "{{config('app.url')}}";
     </script>
 </div>
