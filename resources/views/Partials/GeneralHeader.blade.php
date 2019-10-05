@@ -198,14 +198,17 @@
                 case isset($news):
                     echo "اخبار";
                     break;
+                case isset($selected_news):
+                    echo "خبر";
+                    break;
+                case isset($Memebership):
+                    echo "عضویت";
+                    break;
                 case isset($Representaions):
                     echo "نمایندگی‌ها";
                     break;
                 case isset($represent):
                     echo "نمایندگی‌";
-                    break;
-                case isset($selected_news):
-                    echo "خبر";
                     break;
                 case isset($login):
                     echo "ورود";

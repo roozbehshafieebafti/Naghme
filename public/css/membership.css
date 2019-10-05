@@ -1,0 +1,24 @@
+.Membership-left-div{
+    float: left;
+    width: 50%;
+    border: solid 2px black;
+    border-radius: 5px;
+
+}
+.Membership-right-div{
+    float: left;
+    width: 50%;
+}
+.Membership-header-text{
+    color: #790000;
+}
+.Membership-table-rows{
+    border: solid 2px #f6a619;
+    border-radius: 5px !important;
+    margin-top: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.Membership-table-cell{
+    width: 140px;
+}

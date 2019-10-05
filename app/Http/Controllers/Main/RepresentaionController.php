@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
-use App\Model\Represeentaion;
+use App\Model\Representation;
 use Illuminate\Support\Facades\DB;
 
 class RepresentaionController extends Controller
 {
     //
-    public function getRepresentation(Represeentaion $represent){
+    public function getRepresentation(Representation $represent){
         $Representaions= "Representaion";
         $Represent = $represent->where('id','>',1)->get();
         

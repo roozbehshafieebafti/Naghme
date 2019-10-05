@@ -146,7 +146,7 @@
                     </ul>
                 </div>
 
-                <div class="header-sub-menu text-center ">
+                <div class="header-sub-menu ">
                     <a class="header-link-title text-white text-center" role="button">
                         <span><b>فعالیت‌ها</b></span>
                     </a>
