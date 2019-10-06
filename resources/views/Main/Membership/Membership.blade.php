@@ -16,7 +16,15 @@
             </div>
             <div class="row mb-5 mt-5">
                 <div class="Membership-right-div">
-                    asdasdd
+                    <div class="Membership-red-boarder d-flex justify-content-end">
+                        <h4 class="Membership-eftekhari-title  bg-white"> 
+                            <div class="authorities-title">
+                                اعضای افتخاری
+                            </div>
+                            <div style="z-index:1" class="authorities-title-border-yellow"></div>
+                            <div class="authorities-title-border-black bg-white"></div>
+                        </h4>
+                    </div>
                 </div>
                 <div class="Membership-left-div p-3">
                     <div class="Membership-header-text d-flex justify-content-between">

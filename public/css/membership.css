@@ -22,3 +22,18 @@
 .Membership-table-cell{
     width: 140px;
 }
+
+.Membership-red-boarder{
+    border: solid #790000 2px;
+    border-left: none;
+    position: relative;
+    top:150px;
+    height: 130px;
+    /* overflow: hidden; */
+}
+.Membership-eftekhari-title{
+    height: 50px;    
+    position: relative;
+    bottom: 20px;
+    width:80%;
+}
