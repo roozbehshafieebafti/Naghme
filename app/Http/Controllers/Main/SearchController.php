@@ -23,7 +23,7 @@ class SearchController extends Controller
                 ->where('apst_title','like','%'.$name.'%')
                 ->limit(10)
                 ->get();
-        $authorities= Authorities::select('id','authorities_title','authorities_name')
+        $authorities= Authorities::select('id','authorities_title','authorities_name','authorities_family')
                 ->where('authorities_name','like','%'.$name.'%')
                 ->orWhere('authorities_family','like','%'.$name.'%')
                 ->orWhere('authorities_title','like','%'.$name.'%')
@@ -40,7 +40,7 @@ class SearchController extends Controller
         foreach($authorities as $item){
             $search[]= $item;
         }
-        
+        // dd( $search);
         return view('Main/Search/Search',compact('search','name'));
     }
 }

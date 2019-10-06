@@ -25,6 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/pagination.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/representation.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/membership.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/search.css' }}">
 	</head>
 	<body>
     	@yield('content')
