@@ -170,9 +170,15 @@
                 </div> --}}
                 
                 <div class="header-sub-menu  text-center">
-                    <a class="header-link-title text-white" href="{{ route('Login') }}">
-                        <span><b>ورود</b></span>
-                    </a>
+                    <?php 
+                        if(!Illuminate\Support\Facades\Auth::check()){
+                            echo '<a class="header-link-title text-white" href="'.route('Login').'"><span><b>ورود</b></span></a>';
+                        }
+                        else{
+                            $User = Auth::user();
+                            echo '<a class="header-link-title text-white" href=""><span><b>'.$User->name.' خوش آمدید'.'</b></span></a>';
+                        }
+                    ?>                    
                 </div>
             </div>
         </div>            
