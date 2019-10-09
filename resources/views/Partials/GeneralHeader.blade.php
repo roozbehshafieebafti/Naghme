@@ -187,7 +187,7 @@
                     echo "تاریخچه";
                     break;
                 case isset($chart):
-                    echo "ساختار سازمانی";
+                    echo "نمودارسازمانی";
                     break;
                 case isset($Ethics):
                     echo "منشور اخلاقی";

@@ -15,22 +15,28 @@
 					@endforeach
 				</div>
 			@endif
-			<form class="form" method="post" action="" style="padding: 20px 0" enctype="multipart/form-data">
+			<form class="form" method="post" action="" style="padding: 20px 0" enctype="multipart/form-data" novalidate>
 				{{ csrf_field() }}
-				  <div class="form-group">
+				<div class="row">
+				  <div class="form-group col-6">
 				    <label >نام:</label>
 				    <input required="required" type="text" name="Authorities_name" class="form-control text-left" value ="{{ $EditableAuthorities->authorities_name }}" >
 				  </div>
-				  <div class="form-group">
+				  <div class="form-group col-6">
 				    <label >نام خانوادگی:</label>
 				    <input required="required" type="text" name="Authorities_family" class="form-control text-left" value ="{{ $EditableAuthorities->authorities_family }}" >
-				    
+				  </div>    
+				</div>
+				<div class="row">
+				  <div class="form-group col-6">
+				    <label >نام واحد</label>
+				    <input required="required" type="text" name="Authorities_unit_title" class="form-control text-left" value ="{{ $EditableAuthorities->authorities_unit_title }}" >				    
 				  </div>
-				  <div class="form-group">
+				  <div class="form-group col-6">
 				    <label >سمت</label>
-				    <input required="required" type="text" name="Authorities_title" class="form-control text-left" value ="{{ $EditableAuthorities->authorities_title }}" >
-				    
+				    <input required="required" type="text" name="Authorities_title" class="form-control text-left" value ="{{ $EditableAuthorities->authorities_title }}" >				    
 				  </div>
+				</div>
 				  <div class="form-group">
 				    <label >رزومه:</label>
 				    <textarea style="resize: none" required="required" id="Authorities_cv" name="Authorities_cv" class="form-control text-left" >{{ $EditableAuthorities->authorities_cv }}</textarea>

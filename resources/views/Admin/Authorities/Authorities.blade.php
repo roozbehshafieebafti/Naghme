@@ -60,18 +60,26 @@
 				        		</li>
 				        		<li style="margin-top:20px;">
 				        			<span>
+				        				واحد  :
+				        			</span>
+				        			<span>
+				        				{{ $val->authorities_unit_title }}
+				        			</span>
+				        		</li>
+				        		<li>
+				        			<span>
 				        				سمت  :
 				        			</span>
 				        			<span>
 				        				{{ $val->authorities_title }}
 				        			</span>
 				        		</li>
-				        		<li>
+				        		<li style="margin-top:20px;">
 				        			<span>
 				        				رزومه :
 				        			</span>
 				        			<span>
-				        				{{ $val->authorities_cv }}
+										{!!html_entity_decode($val->authorities_cv )!!}
 				        			</span>
 				        		</li>
 				        	</ul>

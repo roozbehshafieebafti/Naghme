@@ -15,21 +15,27 @@
 					@endforeach
 				</ul>
 			@endif
-			<form class="form" method="post" action="" style="padding: 20px 0" enctype="multipart/form-data">
+			<form class="form" method="post" action="" style="padding: 20px 0" enctype="multipart/form-data" novalidate>
 				{{ csrf_field() }}
-				  <div class="form-group">
+				<div class="row">
+				  <div class="form-group col-6">
 				    <label >نام:</label>
 				    <input required="required" type="text" name="Authorities_name" class="form-control text-left" placeholder="" >
 				  </div>
-				  <div class="form-group">
+				  <div class="form-group col-6">
 				    <label >نام خانوادگی:</label>
-				    <input required="required" type="text" name="Authorities_family" class="form-control text-left" placeholder="" >
-				    
+				    <input required="required" type="text" name="Authorities_family" class="form-control text-left" placeholder="" >				    
 				  </div>
-				  <div class="form-group">
-				    <label >سمت</label>
-				    <input required="required" type="text" name="Authorities_title" class="form-control text-left" placeholder="" >
-				    
+				</div>
+				  <div class="row">
+					<div class="form-group col-6">
+						<label >نام واحد</label>
+						<input required="required" type="text" name="Authorities_unit_title" class="form-control text-left" placeholder="" >				    
+					</div>
+					<div class="form-group col-6">
+						<label >سمت</label>
+						<input required="required" type="text" name="Authorities_title" class="form-control text-left" placeholder="" >				    
+					</div>					
 				  </div>
 				  <div class="form-group">
 				    <label >رزومه:</label>

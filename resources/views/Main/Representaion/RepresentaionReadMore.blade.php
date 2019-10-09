@@ -23,7 +23,7 @@
             </div>
             <div class="col-8 text-center offset-2 pr-5 pl-5">
                 <div class="d-flex justify-content-center mt-3 mb-3 ">
-                    <img src="{{ config('app.url').$representation[0]->chart_picture }}" alt="ساختار سازمانی" title="ساختار سازمانی" />
+                    <img src="{{ config('app.url').$representation[0]->chart_picture }}" alt="نمودار سازمانی" title="ساختار سازمانی" />
                 </div>
                 <div class="text-center mt-3">
                     <p class="chart-title d-flex align-items-center justify-content-center">
