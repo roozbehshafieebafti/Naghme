@@ -17,6 +17,7 @@ class CreateSlider extends Migration
             $table->increments('id');
             $table->string('title',140);
             $table->string('picture',96);
+            $table->string('mobile_picture',96);
             $table->string('link',255);
             $table->timestamps();
         });

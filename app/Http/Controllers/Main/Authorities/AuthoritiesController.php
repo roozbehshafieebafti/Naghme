@@ -61,7 +61,8 @@ class AuthoritiesController extends Controller
             }
 
         }
+        $authority=true;
 
-        return view('Main.Authorities.Authorities',compact('Authorities','title'));
+        return view('Main.Authorities.Authorities',compact('authority','Authorities','title'));
     }
 }

@@ -198,7 +198,7 @@
                 case isset($Form):
                     echo "فرم‌ها";
                     break;
-                case isset($Authorities):
+                case isset($authority):
                     echo "مسئولین";
                     break;
                 case isset($news):
