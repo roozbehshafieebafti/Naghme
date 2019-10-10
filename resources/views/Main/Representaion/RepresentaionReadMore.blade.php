@@ -38,19 +38,23 @@
             <h2 class="Representaion-authorities-title" style="text-align:center"><b>همکاران</b></h2>
             <div>
                 <div style="margin-top:150px;">
-                    @if(count($authorities)>0)
-                        @foreach ($authorities as $key=>$item)
+                    @if(count($Authorities)>0)
+                        @foreach ($Authorities as $key=>$item)
                             <div class="authorities-row-container row mb-5">
                                 <div class="col-2 mr-3">
                                     <div class="authorities-image-container">
-                                        <img class="authorities-image" src="{{config('app.url').$item->authorities_picture}}" alt="{{ $item->authorities_name.' '.$item->authorities_family }} ">
+                                        <img class="authorities-image" src="{{config('app.url').$item['authorities_picture']}}" alt="{{ $item['authorities_name'].' '.$item['authorities_family'] }} ">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div>
+                                        <span style="color:#790000;font-size:22px;"><b>سمت:</b></span>
+                                        <b><span> {{ $item['authorities_title']}} </span>                                    
+                                    </div>
+                                    <div>
                                         <span style="color:#790000;font-size:20px;"><b>نام و نام‌خانوادگی:</b></span>
-                                        <b><span> {{ $item->authorities_name }} </span>
-                                        <span> {{ $item->authorities_family }} </span></b>
+                                        <b><span> {{ $item['authorities_name'] }} </span>
+                                        <span> {{ $item['authorities_family'] }} </span></b>
                                     </div>
                                     <div>
                                         <div class="authorities-CV-container d-flex align-items-center justify-content-between" id="headingOne"  data-toggle="collapse" data-target="#collapseCV{{$key}}" aria-expanded="true" aria-controls="collapseCV{{$key}}">
@@ -63,9 +67,27 @@
                                         <div id="collapseCV{{$key}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                             <div class="authorities-CV-Text">
                                                 <p>
-                                                    {{ $item->authorities_cv }}
+                                                    {{ $item['authorities_cv'] }}
                                                 </p>
                                             </div>
+                                        </div>
+                                    </div>                                 
+                                    <div>
+                                        <div class="authorities-CV-container d-flex align-items-center justify-content-between" id="headingOne"  data-toggle="collapse" data-target="#collapseDuty{{$key}}" aria-expanded="true" aria-controls="collapseDuty{{$key}}">
+                                            <span class="authorities-CVTitle">شرح سمت:</span>
+                                            <span>
+                                                <img src="{{config('app.url').'picture/assets/moreicon.svg'}}" alt="" style="width:20px;">    
+                                            </span>
+                                        </div>
+                                    
+                                        <div id="collapseDuty{{$key}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <ol class="authorities-CV-Text">
+                                                @foreach ($item['ad_authorities_duty'] as $value)
+                                                    <li>
+                                                        {{ $value }}                                                        
+                                                    </li>
+                                                @endforeach
+                                                </ol>
                                         </div>
                                     </div>                                 
                                 </div>

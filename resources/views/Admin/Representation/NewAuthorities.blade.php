@@ -17,21 +17,27 @@
 			@endif
 			<form class="form" method="POST" action=" {{ route('Do_Create_Representation_Authorities') }} " style="padding: 20px 0" enctype="multipart/form-data">
                 {{ csrf_field() }}
-                <input type="hidden" name="CityId" value ="{{$id}}">
-				  <div class="form-group">
+				<input type="hidden" name="CityId" value ="{{$id}}">
+				<div class="row">
+				  <div class="form-group col-6">
 				    <label >نام:</label>
 				    <input required="required" type="text" name="Authorities_name" class="form-control text-left" placeholder="" >
 				  </div>
-				  <div class="form-group">
+				  <div class="form-group col-6">
 				    <label >نام خانوادگی:</label>
 				    <input required="required" type="text" name="Authorities_family" class="form-control text-left" placeholder="" >
-				    
+				  </div>   
+				</div>
+				<div class="row">
+				  <div class="form-group col-6">
+				    <label >واحد</label>
+				    <input required="required" type="text" name="Authorities_unit_title" class="form-control text-left" placeholder="" >				    
 				  </div>
-				  <div class="form-group">
+				  <div class="form-group col-6">
 				    <label >سمت</label>
-				    <input required="required" type="text" name="Authorities_title" class="form-control text-left" placeholder="" >
-				    
+				    <input required="required" type="text" name="Authorities_title" class="form-control text-left" placeholder="" >				    
 				  </div>
+				</div>
 				  <div class="form-group">
 				    <label >رزومه:</label>
 				    <textarea style="resize: none" required="required" name="Authorities_cv" class="form-control text-left" ></textarea>

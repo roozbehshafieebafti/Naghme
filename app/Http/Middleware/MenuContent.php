@@ -17,10 +17,10 @@ class MenuContent
     public function handle($request, Closure $next)
     {
         if(!isset($_SESSION['Authorities'])){
-            $AuthoritiesTitle = DB::select('SELECT authorities_title 
+            $AuthoritiesTitle = DB::select('SELECT authorities_unit_title 
             from authorities 
             WHERE authorities_city_id = 1 
-            group by authorities_title');
+            group by authorities_unit_title');
             $_SESSION['Authorities'] = $AuthoritiesTitle;
         }
         if(!isset($_SESSION['Activities'])){

@@ -141,17 +141,20 @@ class RepresentationController extends Controller
         //validation
         $this->validate($request, [
                     'Authorities_title' => 'required',
+                    'Authorities_unit_title' => 'required',
                     'Authorities_name' => 'required',
                     'Authorities_family' => 'required',
                     'Authorities_cv' => 'required',
             ],[
                 'Authorities_title.required'=>'ورود سمت الزامی است',
+                'Authorities_unit_title.required'=>'ورود واحد الزامی است',
                 'Authorities_name.required'=>'ورود نام الزامی است',
                 'Authorities_family.required'=>'ورود فامیل الزامی است',
                 'Authorities_cv.required'=>'ورود رزومه الزامی است',
                 ]);
         // Create a record
         $Authority->authorities_title = $request->Authorities_title;
+        $Authority->authorities_unit_title = $request->Authorities_unit_title;
         $Authority->authorities_name = $request->Authorities_name;
         $Authority->authorities_family = $request->Authorities_family;
         $Authority->authorities_cv = $request->Authorities_cv;
@@ -185,12 +188,14 @@ class RepresentationController extends Controller
     public function doEditAuthorities(Request $request , $id){
     	//validation
     	$this->validate($request, [
-				'Authorities_title' => 'required',
+                'Authorities_title' => 'required',
+                'Authorities_unit_title' => 'required',
 				'Authorities_name' => 'required',
 				'Authorities_family' => 'required',
 				'Authorities_cv' => 'required',
 		],[
-			'Authorities_title.required'=>'ورود سمت الزامی است',
+            'Authorities_title.required'=>'ورود سمت الزامی است',
+            'Authorities_unit_title.required'=>'ورود واحد الزامی است',
 			'Authorities_name.required'=>'ورود نام الزامی است',
 			'Authorities_family.required'=>'ورود فامیل الزامی است',
 			'Authorities_cv.required'=>'ورود رزومه الزامی است',
@@ -208,6 +213,7 @@ class RepresentationController extends Controller
     	}
     	//Edit the record
     	$EditedAuthorities->authorities_title = $request->Authorities_title;
+    	$EditedAuthorities->authorities_unit_title = $request->Authorities_unit_title;
     	$EditedAuthorities->authorities_name = $request->Authorities_name;
     	$EditedAuthorities->authorities_family = $request->Authorities_family;
     	$EditedAuthorities->authorities_cv = $request->Authorities_cv;

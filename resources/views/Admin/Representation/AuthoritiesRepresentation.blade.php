@@ -66,6 +66,14 @@
 				        		</li>
 				        		<li style="margin-top:20px;">
 				        			<span>
+				        				واحد  :
+				        			</span>
+				        			<span>
+				        				{{ $val->authorities_unit_title }}
+				        			</span>
+				        		</li>
+				        		<li>
+				        			<span>
 				        				سمت  :
 				        			</span>
 				        			<span>

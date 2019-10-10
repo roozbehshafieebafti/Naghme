@@ -50,6 +50,7 @@
 }
 .authorities-CV-container{
     border-bottom: #f6a619 solid 2px;
+    cursor: pointer;
 }
 
 .authorities-CV-Text{

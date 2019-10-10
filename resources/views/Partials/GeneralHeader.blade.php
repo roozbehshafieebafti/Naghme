@@ -41,7 +41,7 @@
                 <div class="card-body">
                     <ul class="header-ul-list bg-white  col-12">
                         @foreach ($_SESSION['Authorities'] as $item)
-                            <li><a class="text-muted" href=" {{config('app.url').'authorities/'.$item->authorities_title}} ">{{ $item->authorities_title }}</a></li>                                
+                            <li><a class="text-muted" href=" {{config('app.url').'authorities/'.$item->authorities_unit_title}} ">{{ $item->authorities_unit_title }}</a></li>                                
                         @endforeach
                     </ul>
                 </div>
@@ -140,7 +140,7 @@
                     </a>
                     <ul class="header-ul-list col-12">
                         @foreach ($_SESSION['Authorities'] as $item)
-                            <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href=" {{config('app.url').'authorities/'.$item->authorities_title}} ">{{ $item->authorities_title }}</a></li>
+                            <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href=" {{config('app.url').'authorities/'.$item->authorities_unit_title}} ">{{ $item->authorities_unit_title }}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -198,7 +198,7 @@
                 case isset($Form):
                     echo "فرم‌ها";
                     break;
-                case isset($Authority):
+                case isset($Authorities):
                     echo "مسئولین";
                     break;
                 case isset($news):
