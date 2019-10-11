@@ -56,12 +56,24 @@
                         <input type="text" name="Post_Date" id="Date_Input" class="form-control text-left" placeholder="1300/01/02" required="required" onchange="DateValidation(event)">
                     </div>
                     <div class="form-group col-4">
-                        <label >تصویر سر برگ :</label>
+                        <label >تصویر سر برگ دسکتاپ:</label>
                         <input type="file" onchange="PostPictureCheck(this.id)" id="Post_First_Picture" name="Post_First_Picture" class="form-control text-left" required="required" >
                     </div>
                     <div class="form-group col-4">
-                        <label >تصویر کاور :</label>
+                        <label >تصویر سربرگ موبایل :</label>
+                        <input type="file" onchange="PostPictureCheck(this.id)" id="Post_Mobile_Picture" name="Post_Mobile_Picture" class="form-control text-left" required="required" >
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <span >تصویر کاور :</span>
                         <input type="file" onchange="PostPictureCheck(this.id)" id="Post_Cover_Picture" name="Post_Cover_Picture" class="form-control text-left" required="required" >
+                    </div>
+                    <div class="pt-4 pr-3" style="margin-top:5px;">
+                        <span style="display:inline-block;margin-right:20px;">تصویر کاور افقی است؟</span>
+                        <span style="display:inline-block;margin-right:20px;">
+                            <input type="checkbox" name="isLandescape" id="isLandescape" style="transform: scale(1.3)"/>
+                        </span>
                     </div>
                 </div>
 				<div class="form-group mt-5">

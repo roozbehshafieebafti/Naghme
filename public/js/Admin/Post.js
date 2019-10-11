@@ -23,7 +23,7 @@ function PostPictureCheck(id){
     var Size = $("#"+id)[0].files[0].size;
     var pdfPattern = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
 
-    if(Size<350000){
+    if(Size<1200000){
         if(pdfPattern.test($("#"+id)[0].files[0].name))
         {
             

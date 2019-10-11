@@ -43,13 +43,15 @@ class DoActionController extends Controller
                         ['Post_tite' => 'required',
                         'Post_Date' => 'required',
                         'Post_First_Picture' => 'required',
+                        'Post_Mobile_Picture' => 'required',
                         'Post_Cover_Picture' => 'required',
                         'Post_Description' => 'required',
                         'Catigory' => 'integer',
                         ],
                         ['Post_tite.required' => 'عنوان نبایستی خالی باشد',
                         'Post_Date.required' => 'تاریخ وارد نشده است',
-                        'Post_First_Picture.required' => 'فایل تصویر سربرگ بایستی انتخاب شود',
+                        'Post_First_Picture.required' => 'فایل تصویر سربرگ دسکتاپ بایستی انتخاب شود',
+                        'Post_Mobile_Picture.required' => 'فایل تصویر سربرگ موبایل بایستی انتخاب شود',
                         'Post_Cover_Picture.required' => 'فایل تصویر کاور بایستی انتخاب شود',
                         'Post_Description.required' => 'توضیحات نباید خالی باشد',
                         'Catigory.integer' => 'لطفا یک دسته بندی را انتخاب کنید'
@@ -62,6 +64,7 @@ class DoActionController extends Controller
         $date = (new Jalalian((int)$dateValidationResut["year"], (int)$dateValidationResut["month"], (int)$dateValidationResut["day"], 0, 0, 0))->toCarbon()->toDateTimeString() ;
 
         $titlePicture = $request->file('Post_First_Picture')->store('picture/post');
+        $mobilePicture = $request->file('Post_Mobile_Picture')->store('picture/post');
         $coverPicture = $request->file('Post_Cover_Picture')->store('picture/post');
         if($titlePicture){
             $DoAct->apst_activities_title_id = $request->Catigory;
@@ -69,8 +72,10 @@ class DoActionController extends Controller
             $DoAct->apst_title = $request->Post_tite;
             $DoAct->apst_description = $request->Post_Description;
             $DoAct->apst_picture_of_title = $titlePicture;
+            $DoAct->apst_picture_of_title_mobile = $mobilePicture;
             $DoAct->apst_picture_of_cover = $coverPicture;
             $DoAct->apst_accure_date = $date;
+            $DoAct->apst_is_cover_picture_landscape = isset($request->isLandescape) ? 1 : 0;
 
            if($DoAct->save()) {
                 return redirect()->route('Get_Posts')->with('success','پست با موفقیت ثبت شد');
@@ -112,6 +117,11 @@ class DoActionController extends Controller
             $titlePicture = $request->file('Post_First_Picture')->store('picture/post');
             $DoAct->apst_picture_of_title = $titlePicture;
         }
+        if(isset($request->Post_Mobile_Picture)){
+            Storage::delete($DoAct->apst_picture_of_title_mobile);
+            $mobilePicture = $request->file('Post_Mobile_Picture')->store('picture/post');
+            $DoAct->apst_picture_of_title_mobile = $mobilePicture;
+        }
         if(isset($request->Post_Cover_Picture)){
             Storage::delete($DoAct->apst_picture_of_cover);
             $coverPicture = $request->file('Post_Cover_Picture')->store('picture/post');
@@ -122,6 +132,7 @@ class DoActionController extends Controller
         $DoAct->apst_title = $request->Post_tite;
         $DoAct->apst_description = $request->Post_Description;
         $DoAct->apst_accure_date = $date;
+        $DoAct->apst_is_cover_picture_landscape = isset($request->isLandescape) ? 1 : 0;
         if($DoAct->save()) {
             return redirect()->route('Get_Posts')->with('success','پست با موفقیت ثبت شد');
        }
@@ -175,6 +186,7 @@ class DoActionController extends Controller
             }
         }
         Storage::delete($DeletedRecord->apst_picture_of_title);
+        Storage::delete($DeletedRecord->apst_picture_of_title_mobile);
         Storage::delete($DeletedRecord->apst_picture_of_cover);
         PostGallery::where('apic_activities_posts_id',$id)->delete();
         if($DeletedRecord->delete()){
