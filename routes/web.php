@@ -12,7 +12,7 @@
 Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminAuth']] , function(){
 
 		/*Dashboard*/
-		Route::get('/','DashboardController@Index')->name('Admin_Dashboard');
+		Route::get('/{id?}','DashboardController@Index')->name('Admin_Dashboard');
 
 		//History
 			Route::get('/history','HistoryPlanPurposeController@getHistory')->name('Get_History');

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -43,6 +44,27 @@ class RegisterController extends Controller
         $user->password = $request->regiser_password;
         $user->remember_token = Crypt::encryptString($request->regiser_password);
 
-        dd($user->save());
+        if($user->save()){
+            $auth = Auth::attempt(
+                [
+                    'email'=>$request->regiser_email,
+                    'password'=>$request->regiser_password,
+                ]
+            );
+            
+            if($auth){
+                // get user Information
+                $User = Auth::user();
+                // general user
+                return redirect()->route('Home');
+            }
+            else{
+                // not Auth
+                return(redirect()->route('Login')->with('danger','نام کاربری یا گذرواژه اشتباه است'));
+            }
+        }
+        else{
+            return(redirect()->back()->with('danger','خطای سیستمی لطفا با مدیر سیستم تماس برقرار نمایید'));
+        }
     }
 }
