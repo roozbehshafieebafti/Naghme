@@ -1,0 +1,73 @@
+.activities_col{
+    border: #f6a619 solid 2px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    width:19%;
+}
+.activities-landescape-picture{    
+    height:150px;
+    width:220px;
+    position: relative;
+    top:50px;
+    z-index: 2;
+    left: 10px;
+    /* transition: opacity 0.2s,0.2s; */
+}
+.activities-landescape-picture:hover {
+    filter: grayscale(50%)
+}
+.activities-landescape-picture:hover + .activities-title{
+    z-index: 3;
+}
+.activities-title{
+    position: relative;
+    bottom: 40px;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    width: 80%;
+    margin-right: 10px;
+    padding: 5px;
+
+}
+.activities-title:hover{
+    z-index: 3;
+}
+
+.activities-portrait-picture{
+    display: inline-block;
+    height:250px;
+    width:95%;
+    position: relative;
+    right: 5px;
+    bottom: 10px;
+    z-index: 2;
+    /* transition: filter 0.1s,0.1s; */
+}
+.activities-portrait-picture:hover{
+    /* opacity: 0.8; */
+    filter: grayscale(50%)
+}
+.activities-portrait-picture:hover + .activities-portrait-title{
+    z-index: 3;
+}
+
+.activities-portrait-title{
+    position: relative;
+    bottom: 140px;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    width: 80%;
+    margin-right: 10px;
+    padding: 5px;
+}
+.activities-portrait-title:hover{
+    z-index: 3;
+}

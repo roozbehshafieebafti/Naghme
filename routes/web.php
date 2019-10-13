@@ -12,7 +12,7 @@
 Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminAuth']] , function(){
 
 		/*Dashboard*/
-		Route::get('/{id?}','DashboardController@Index')->name('Admin_Dashboard');
+		Route::get('/dashboard/{id?}','DashboardController@Index')->name('Admin_Dashboard');
 
 		//History
 			Route::get('/history','HistoryPlanPurposeController@getHistory')->name('Get_History');
@@ -255,7 +255,7 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 	//Activities 
 	Route::group(['namespace'=>'Activities'],function(){
 		//نیاز به ریدایرکت 404 دارد
-		Route::get('/activities/{name}','ActivitiesController@getAcitivities');
+		Route::get('/activities/{name}/{id?}','ActivitiesController@getAcitivities')->name('Get_Activities');
 	});
 
 	//News

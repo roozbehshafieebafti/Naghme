@@ -151,7 +151,10 @@
                     </a>
                     <ul class="accordion header-ul-list col-12">
                         @foreach ($_SESSION['Activities'] as $key => $item)
-                            <li><span class="header-text-dimond-shape">&#9670;</span><a style="cursor:pointer" class="header-text-link"  href="#">{{ $key }}</a></li> 
+                            <li>
+                                <span class="header-text-dimond-shape">&#9670;</span>
+                                <a style="cursor:pointer" class="header-text-link"  href="{{route('Get_Activities',["name"=>$key , "id"=>1])}}" >{{ $key }}</a>
+                            </li> 
                         @endforeach
                     </ul>
                 </div>
@@ -200,6 +203,9 @@
                     break;
                 case isset($authority):
                     echo "مسئولین";
+                    break;
+                case isset($Posts):
+                    echo "فعالیت‌ها";
                     break;
                 case isset($news):
                     echo "اخبار";

@@ -14,7 +14,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $item)
+                    @foreach ($registerdUser as $item)
                         <tr style="font-size:14px;">
                             <td>{{ $item['attributes']['name'] }}</td>
                             <td>{{ $item['attributes']['family'] }}</td>
