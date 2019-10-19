@@ -27,6 +27,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/membership.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/search.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/activities.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/activity.css' }}">
 	</head>
 	<body>
     	@yield('content')
@@ -39,6 +40,7 @@
 		<script type="text/javascript" src="{{ config('app.url').'js/Main/home.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Main/register.js' }}"></script>
 		<script type="text/javascript" src="{{ config('app.url').'js/Main/pagination.js' }}"></script>
+		<script type="text/javascript" src="{{ config('app.url').'js/Main/activity.js' }}"></script>
 		<script type="text/javascript">
 			$(function () {
 				  $('[data-toggle="tooltip"]').tooltip()

@@ -207,6 +207,9 @@
                 case isset($Posts):
                     echo "فعالیت‌ها";
                     break;
+                case isset($activity):
+                    echo "فعالیت‌";
+                    break;
                 case isset($news):
                     echo "اخبار";
                     break;

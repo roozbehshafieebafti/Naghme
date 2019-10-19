@@ -12,6 +12,7 @@ class ActivitiesController extends Controller
     public function getAcitivities($name,$id=1){
         $Posts = DB::select('
             SELECT activities_title.at_title,
+                    activities_posts.id,
                     activities_posts.apst_picture_of_cover,
                     activities_posts.apst_title,
                     activities_posts.apst_is_cover_picture_landscape

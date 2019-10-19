@@ -9,9 +9,10 @@
                     <div class="col-xl-6 col-lg-6 col-12 ">
                         <div class="Representaion-border row">
                             <div class="Representaion-content-container">
+                                <img class="representaion-element " src="{{ config('app.url').'picture/assets/representation.svg'}}" alt="">
                                 <p class="Representaion-title">{{ $item->representation_title }}</p>
                             </div>
-                            <div class="col-7">
+                            <div class="col-7" style="position:relative;bottom: 10px;">
                                 <div class="Representaion-info-container bg-dark text-white pl-3 pr-3">
                                     <p>
                                         <span style="color:#f6a619">سرپرست نمایندگی:</span>

@@ -18,7 +18,7 @@
                     <div class="row pl-5" >
                         @foreach ($Posts as $Value)
                             <div class="activities_col  mr-4 ml-4">
-                                <a  href="#" style="text-decoration:none;height:250px;">
+                                <a  href=" {{route('Get_Read_Activity',$Value->id)}} " style="text-decoration:none;height:250px;">
                                     @if ($Value->apst_is_cover_picture_landscape > 0)
                                         <img class="activities-landescape-picture" src={{ config('app.url').$Value->apst_picture_of_cover }} />                                        
                                         <div class="activities-title">{{$Value->apst_title}}</div>

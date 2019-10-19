@@ -25,7 +25,7 @@
             </ul>
         </div>
 
-        <div class="footer-left-container mt-5">
+        <div class="footer-left-container mt-5 mr-3">
             <div class="pr-2 pl-2 mt-3"  style="border-bottom:solid 1px #f6a619">
                 <form autocomplete="off" action="" method="GET" onsubmit="searchAction(event)">            
                     <div class="row">
@@ -34,7 +34,7 @@
                     </div>
                 </form>
             </div>
-            <div class="mt-5">
+            <div class="mt-5 ">
                 <p class="text-white" style="border-bottom:solid 3px #f6a619">مارا در شبکه‌های اجتماعی دنبال کنید</p>
                 <div class="d-flex justify-content-center">
                     <a href="https://www.instagram.com" target="_blank">
