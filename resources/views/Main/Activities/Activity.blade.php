@@ -103,22 +103,25 @@
                                         <i style="color: #790000">{{$item->name." ".$item->family}}</i>
                                         <i class="fas fa-comment-dots" style="font-size:14px"></i>
                                     </span>
-                                    <br/>
-                                    <span>
+                                    <div style="direction: rtl">
                                         {{$item->comment}}
-                                    </span>
+                                    </div>
                                 </div>
                                 @if ($item->answer != null)
                                     <div class="comment-answer-container">
                                         <span >:</span>
                                         <b>پاسخ</b>
-                                        <br/>
-                                        <span>
+                                        <div style="direction: rtl">
                                             {{$item->answer}}
-                                        </span>
+                                        </div>
                                     </div>
                                 @endif
                             @endforeach
+                            @if (count($comments)==0)
+                                <div class="text-center mt-4">
+                                    <h5>تاکنون دیدگاهی برای این پست ثبت نشده است</h5>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -151,7 +154,7 @@
                             }                         
                             ?></textarea>
                         <input name="comment_id" value="{{$activity["id"]}}" style="display:none"/>
-                        <button disabled={{$check? false : true}} class="activity-comment-submit-btn" type="submit" >
+                        <button {{(!$check ? "disabled" : "")}} class="activity-comment-submit-btn" type="submit" >
                             ثبت
                         </button>
                     </form>

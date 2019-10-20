@@ -13,6 +13,8 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 
 		/*Dashboard*/
 		Route::get('/dashboard/{id?}','DashboardController@Index')->name('Admin_Dashboard');
+		Route::post('/check-comment','DashboardController@checkComment')->name('Check_Comment');
+		Route::get('/delete-comment/{id}','DashboardController@deleteComment')->name('Delete_Comment');		
 
 		//History
 			Route::get('/history','HistoryPlanPurposeController@getHistory')->name('Get_History');
