@@ -8,7 +8,15 @@
 
 /* header */
 
-@media only screen and (max-width: 975px) {
+@media only screen and (min-width:300px ) and (max-width: 480px) {
+
+  .Header-with-toggle{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    z-index: 2;
+  }
+  /* menu drop */
   .Header-without-toggle {
     display: none;
   }
@@ -21,7 +29,7 @@
     width: 0px;
     position: absolute;
     top: 0px;
-    right: 15px;
+    right: 0px;
     z-index: 20;
     background-color: aliceblue;
     /* height: 400px; */
@@ -47,6 +55,23 @@
   .header-ul-list {
     list-style: outside none none;
   }
+
+  /* slider */
+  .SlideShow{
+    display: none;
+  }
+  #sliderLink {
+    display: inline-block;
+    width: 80%;
+    background-color: #414548;
+    text-decoration: none;
+    padding-top: 7px;
+    border-radius: 30px;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+
 }
 
 @media only screen and (min-width: 976px) {
@@ -144,18 +169,24 @@
     font-family: "IranNastaliq";
     font-size: 37px;
   }
+   /* slider */
+  .SlideShowMobile{
+    display: none;
+  }
+
+  /* Slider Links */
+  #sliderLink {
+    width: 250px;
+    background-color: #414548;
+    position: absolute;
+    left: 50px;
+    text-decoration: none;
+    padding-top: 7px;
+    border-radius: 30px;
+  }
 }
 
-/* Slider Links */
-#sliderLink {
-  width: 250px;
-  background-color: #414548;
-  position: absolute;
-  left: 50px;
-  text-decoration: none;
-  padding-top: 7px;
-  border-radius: 30px;
-}
+
 
 /* Between part */
 .main-part {

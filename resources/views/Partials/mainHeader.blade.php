@@ -1,6 +1,6 @@
 
 {{-- Mobile --}}
-<div class="Header-with-toggle bg-dark text-white ">
+<div class="Header-with-toggle text-white mt-1">
     <div class="toggle-button">
         <span onclick="openMenu()" class=""><i class="fas fa-bars h4 toggle-button-key"></i></span>
     </div>

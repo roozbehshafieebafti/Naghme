@@ -2,6 +2,41 @@
 @section('title','صفحه اصلی')
 @section('content')
     @include('Partials.mainHeader')
+    {{-- Slide Show Mobile --}}
+
+    <div class="SlideShowMobile mt-0">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <?php $i=1; ?>
+            @foreach ($Slides as $item)                    
+            <div class="carousel-item <?php echo $i==1 ? 'active' : '' ?>">
+                <img src="{{ config('app.url').$item->mobile_picture }}" class="d-block w-100" style="z-index:">
+                <div class="carousel-caption text-center" style="height: 100px">
+                    <a class="text-white pb-2 pt-2" id="sliderLink" href="{{$item->link}}">
+                        <span class="ml-3 font-weight-bold">ادامه مطلب</span><i style="font-size:15" class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <?php $i++; ?>
+            @endforeach
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"  data-slide="prev" >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        </div>
+    </div>
+
+
     {{-- Slide Show --}}
         <div class="SlideShow mt-0">
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
