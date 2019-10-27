@@ -4,102 +4,122 @@
     <div class="toggle-button">
         <span onclick="openMenu()" class=""><i class="fas fa-bars h4 toggle-button-key"></i></span>
     </div>
-    <div class="menu-content " id="menuContent">
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    نغمه ماندگار
-                    </button>
-                </h2>
+    <div class="menu-content bg-white pt-2" id="menuContent">
+        <div class="" id="accordionExample">
+            <div class="">
+                <div class="" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="mobile-header-title" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            نغمه ماندگار
+                            <span class="mobile-fill-diamond">&#9670;</span>
+                        </button>
+                    </h2>
                 </div>
             
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <ul class="header-ul-list bg-white  col-12">
-                        <li><a class="" href="{{ route('Menu_History').'#history' }}">تاریخچه</a></li>
-                        <li><a class="" href="{{ route('Menu_Purpose').'#purpose' }}">اهداف</a></li>
-                        <li><a class="" href="{{ route('Menu_Form') }}">فرم‌ها</a></li>
-                        <li><a class="" href="{{ route('Menu_Plane').'#plane' }}">برنامه ها</a></li>
-                        <li><a class="" href="{{ route('Menu_Statement').'#statement' }}">بیانیه ها</a></li>
-                        <li><a class="" href="{{ route('Menu_Regulations') }}">آیین نامه ها</a></li>
-                        <li><a class="" href="{{ route('Menu_Ethics') }}">منشور اخلاقی</a></li>
-                        <li><a class="" href="{{ route('Menu_Chart','کرمان') }}">نمودار سازمانی</a></li>
-                    </ul>
-                </div>
+                    <div class="">
+                        <ul class="header-ul-list bg-white  col-12">
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_History').'#history' }}">تاریخچه<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Purpose').'#purpose' }}">اهداف<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Form') }}">فرم‌ها<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Plane').'#plane' }}">برنامه ها<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Statement').'#statement' }}">بیانیه ها<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Regulations') }}">آیین نامه ها<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Ethics') }}">منشور اخلاقی<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Chart','کرمان') }}">نمودار سازمانی<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    مسئولین
-                    </button>
-                </h2>
+            <div class="">
+                <div class="" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="mobile-header-title collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            مسئولین
+                            <span class="mobile-fill-diamond">&#9670;</span>
+                        </button>
+                    </h2>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    <ul class="header-ul-list bg-white  col-12">
-                        @foreach ($_SESSION['Authorities'] as $item)
-                            <li><a class="" href=" {{config('app.url').'authorities/'.$item->authorities_unit_title}} ">{{ $item->authorities_unit_title }}</a></li>                                
-                        @endforeach
-                    </ul>
-                </div>
+                    <div class="">
+                        <ul class="header-ul-list bg-white  col-12">
+                            @foreach ($_SESSION['Authorities'] as $item)
+                                <li><a class="mobile-header-sub-title" href=" {{config('app.url').'authorities/'.$item->authorities_unit_title}} ">{{ $item->authorities_unit_title }}<span class="mobile-empty-diamond">&#9671;</span></a></li>                                
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
+            <div class="">
+                <div class="" id="headingThree">
                 <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    فعالیت‌ها
+                    <button class="mobile-header-title collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        فعالیت‌ها
+                        <span class="mobile-fill-diamond">&#9670;</span>
                     </button>
                 </h2>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
+                <div class="">
                     <ul class="accordion header-ul-list bg-white  col-12">
-                        <?php $i=0 ?>
                         @foreach ($_SESSION['Activities'] as $key => $item)
-                            @if(is_array($item))  
-                                <li>
-                                    <span style="cursor:pointer" class=" collapsed"  data-target="{{'#MobileCollapseExample'.$i}}" data-toggle="collapse" aria-expanded="false" aria-controls="{{'MobileCollapseExample'.$i}}">
-                                        {{ $key }}
-                                    </span>
-                                </li>  
-                                <ul class="collapse bg-dark" id="{{'MobileCollapseExample'.$i}}" aria-labelledby="headingTwo">
-                                    @foreach ($item as $val)
-                                        <li class="text-light"><a href="{{ config('app.url').'activities/'.$val }}">{{ $val }}</a></li>    
-                                    @endforeach
-                                </ul>
-                                <?php $i++; ?>                                    
-                            @else
-                                <li>
-                                    <a style="cursor:pointer" class=" "  href="{{ config('app.url').'activities/'.$key }}">
-                                        {{ $key }}
-                                    </a>
-                                </li> 
-                            @endif
+                            <li>
+                                <a style="cursor:pointer" class="mobile-header-sub-title"  href="{{route('Get_Activities',["name"=>$key , "id"=>1])}}">{{ $key }}<span class="mobile-empty-diamond">&#9671;</span></a>
+                            </li> 
                         @endforeach
                     </ul>
                 </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
+            <div class="">
+                <div class="" id="headingThree">
                     <h2 class="mb-0">
-                    <a href="{{ route('Get_All_News') }}" class="btn btn-link collapsed" >
-                        اخبار
-                    </a>
+                        <a href="{{ route('Get_All_News') }}" class="mobile-header-title collapsed" >
+                            اخبار
+                            <span class="mobile-fill-diamond">&#9670;</span>
+                        </a>
                     </h2>
                 </div>
-                {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                </div> --}}
+            </div>
+            <div class="">
+                <div class="" id="headingThree">
+                    <h2 class="mb-0">
+                        <a href="{{ route("Representaion") }}" class="mobile-header-title collapsed" >
+                            نمایندگی
+                            <span class="mobile-fill-diamond">&#9670;</span>
+                        </a>
+                    </h2>
                 </div>
             </div>
+            <div class="">
+                <div class="" id="headingThree">
+                    <h2 class="mb-0">
+                        <a href="{{ route("Get_Membership") }}" class="mobile-header-title collapsed" >
+                            عضویت
+                            <span class="mobile-fill-diamond">&#9670;</span>
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="" style="float: right">
+                <div class="" id="headingThree">
+                    <h2 class="mb-0">
+                        <?php 
+                            if(!Illuminate\Support\Facades\Auth::check()){
+                                echo '<a class=" mobile-header-title" href="'.route('Login').'"><span>ورود</span><span class="mobile-fill-diamond">&#9670;</span></a>';
+                            }
+                            else{
+                                $User = Auth::user();
+                                echo '<a class="mobile-header-title" href=""><span>'.$User->name.' خوش آمدید'.'</span><span class="mobile-fill-diamond">&#9670;</span></a>';
+                            }
+                        ?>                        
+                    </h2>
+                </div>
+            </div> 
+            <div class="mobile-img-container">
+                <img class="mobile-corner-img" src="{{ config('app.url')."picture/assets/corner.svg" }}" />
+            </div>           
+        </div>
     </div>
     <div class="not-menu-content" onclick="closeMenu()"></div>
 </div>
@@ -172,7 +192,7 @@
                     </a>
                 </div> --}}
                 
-                <div class="header-sub-menu  text-center">
+                <div class="header-sub-menu  text-center" >
                     <?php 
                         if(!Illuminate\Support\Facades\Auth::check()){
                             echo '<a class="header-link-title text-white" href="'.route('Login').'"><span><b>ورود</b></span></a>';
