@@ -39,19 +39,19 @@
 
     {{-- Slide Show --}}
         <div class="SlideShow mt-0">
-            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleCaptions2" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                <li data-target="#carouselExampleCaptions2" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions2" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions2" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
                 <?php $i=1; ?>
                 @foreach ($Slides as $item)                    
                 <div class="carousel-item <?php echo $i==1 ? 'active' : '' ?>">
                     <img src="{{ config('app.url').$item->picture }}" class="d-block w-100" style="z-index:">
-                    <div class="carousel-caption d-none d-md-block" style="height: 100px">
-                        <a class="text-white pb-2 pt-2" id="sliderLink" href="{{$item->link}}">
+                    <div class="carousel-caption" style="height: 100px">
+                        <a class="text-white" id="sliderLink" href="{{$item->link}}">
                             <span class="ml-3 font-weight-bold">ادامه مطلب</span><i style="font-size:15" class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -59,11 +59,11 @@
                 <?php $i++; ?>
                 @endforeach
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <a class="carousel-control-prev" href="#carouselExampleCaptions2" role="button" data-slide="next">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"  data-slide="prev" >
+            <a class="carousel-control-next" href="#carouselExampleCaptions2" role="button"  data-slide="prev" >
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -167,23 +167,25 @@
             </div>
 
             <div class="motto-container">
-                <div class="main-motto-border">
-                    <div class="motto-content">
-                            <div class="h3" >تورا به سرزمینی خواهم برد؛</div>
-                            <div class="h3 text-right">از جنس عشق، شور، یگانگی</div>                            
-                    </div>
-                    <div style="float:left">
-                        <img src="{{ config('app.url')."picture/assets/patte.svg" }}" alt="نغمه ماندگار">
+                <div class="motto-heighr-container">
+                    <div class="main-motto-border">
+                        <div class="motto-content">
+                                <div class="" >تورا به سرزمینی خواهم برد؛</div>
+                                <div class=" text-right">از جنس عشق، نور، یگانگی</div>                            
+                        </div>
+                        <div  style="float:left">
+                            <img class="motto-picture" src="{{ config('app.url')."picture/assets/patte.svg" }}" alt="نغمه ماندگار">
+                        </div>
                     </div>
                 </div>
 
 
                 <div class="News-teller-container">
-                    <h3 style="margin-right: 35px; color:#790000">
+                    <h3 class="News-teller-title"  style="color:#790000">
                         <b>عضویت در خبرنامه</b>                    
                         <span class="News_Letter_alert"></span>
                     </h3>
-                    <div class="red-border" style="height: 70px; border:solid 3px #790000;margin-right: 35px"> </div>
+                    <div class="News-teller-red-border" style=" height: 70px;border:solid 3px #790000;"> </div>
                     <div class="News-black-border" >
                         <form autocomplete="off" id="News_Letter_form" method="POST" onsubmit="newsLetterSubmit(event)">
                             <button class="News_Letter_btn">ثبت</button>

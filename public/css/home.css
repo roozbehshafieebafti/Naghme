@@ -5,57 +5,7 @@
     url("../fonts/Nast/IranNastaliq.ttf") format("truetype"),
     url("../fonts/Nast/IranNastaliq.woff") format("woff");
 }
-
-/* header */
-
-@media only screen and (min-width:300px ) and (max-width: 480px) {
-
-  .Header-with-toggle{
-    position: absolute;
-    top:0px;
-    right: 0px;
-    z-index: 2;
-  }
-  /* menu drop */
-  .Header-without-toggle {
-    display: none;
-  }
-  .toggle-button {
-    display: block;
-    padding: 10px 20px 0 20px;
-  }
-
-  .menu-content {
-    width: 0px;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: 20;
-    background-color: aliceblue;
-    /* height: 400px; */
-    display: none;
-  }
-
-  .not-menu-content {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
-    background-color: gray;
-    z-index: 5;
-    opacity: 0.5;
-    display: none;
-  }
-
-  .toggle-button-key {
-    cursor: pointer;
-  }
-
-  .header-ul-list {
-    list-style: outside none none;
-  }
-
+@media only screen and (min-width:320px ) and (max-width: 350px) {
   /* slider */
   .SlideShow{
     display: none;
@@ -70,110 +20,667 @@
     font-size: 14px;
     opacity: 0.8;
   }
-
-
-}
-
-@media only screen and (min-width: 976px) {
-  .Header-with-toggle {
-    display: none;
-  }
-  .Header-without-toggle {
-    padding: 20px;
-    height: 70px;
-    direction: rtl;
+  .rotate-background {
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 20;
-    background-color: initial;
+    left: -300px;
+    width: 180%;
+    height: 45%;
+    transform: rotate(45deg);
+    z-index: -1;
   }
-  .logo-img {
+   /* Sweing Card */
+  .sweing-container {
     position: relative;
-    bottom: 20px;
-    height: 140px;
-    z-index: 2;
+    top: 10px;
+    width: 300px;
+    overflow: hidden;
   }
-  .header-sub-menu {
-    height: 55px;
-    float: right;
+  .front-label {
+    width: 95px;
+    height: 95px;
+  }
+  .back-label {
     width: 100px;
-    /* background-color: red; */
-    margin-left:2px;
+    height: 100px;
   }
-  .header-ul-list {
-    list-style: outside none none;
-    position: absolute;
-    top: 35px;
-    display: none;
-    z-index: 12;
-    width: 180px;
-    background-color:#f6a619;
-  }
-  .header-text-link{
-    display: inline-block;
-    font-weight: bold;
-    font-size: 18px;
-    margin-right: 20px;
-    color: black;
-  }
-  .header-link-title:hover{text-decoration: none;}
-  .header-link-title{cursor: pointer;display:inline-block;width:100%; font-weight:bold}
-  .header-text-link:hover{text-decoration: none;color: black;}
-  .header-text-dimond-shape{color:#790000;font-size:20px;position: relative; top: 3px;}
-  .header-sub-menu:hover .header-ul-list {display: block;}
-
-  .general-Header-without-toggle {
-    padding: 20px;
-    height: 160px;
-    direction: rtl;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 20;
-  }
-  .general-white-border {
-    height: 70px;
-    border: solid 3px white;
+  .sweing-activity {
     position: relative;
-    bottom: 100px;
+    right:27%;
+    bottom: 17%;
   }
-  .span-dark-background {
+  .sweing-news {
+    position: relative;
+    left: 4px;
+    top: 62px;
+  }
+  .sweing-register {
+    position: relative;
+    left: 77px;
+    top:27px;
+  }
+  .sweing-representation {
+    position: relative;
+    right: 7px;
+    bottom:128px;
+  }
+  .label-text1 {
+    transform: rotate(-45deg);
+    font-family: "IranNastaliq";
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 18px;
+    padding-top: 0px;
+  }
+
+  /* motto */
+  .motto-heighr-container{
+    margin-top: 60px;
+    padding-right: 10px;
+    position: relative;
+    bottom: 30px;
+  }
+  .main-motto-border{
+    width: 100%;
+  }
+  .main-motto-border {
+    float: right;
+    width:90%;
+    padding: 5px;
+    height: 100px;
+  }
+  .motto-content {
+    padding: 5px;
+    height: 95px;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 90%;
+  }
+  .motto-picture{
+    height:85px;
+  }
+  /* news teller */
+  .News-teller-container {
+    margin-top: 40px;
+  }
+  .News-black-border {
+    height: 70px;
+    position: relative;
+    bottom: 45px;
+    margin:0px 10px;
+    left: 5px;
+  }
+  .News-teller-title{
+    margin-right: 20px;
+  }
+  .News-teller-red-border{
+    margin-right:20px;
+    margin-left: 5px;
+  }
+}
+@media only screen and (min-width:350px ) and (max-width: 400px) {
+  /* slider */
+  .SlideShow{
+    display: none;
+  }
+  #sliderLink {
     display: inline-block;
-    height: 40px;
-    width: 220px;
-    margin-right: 10px;
+    width: 80%;
+    background-color: #414548;
+    text-decoration: none;
+    padding-top: 7px;
+    border-radius: 30px;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .rotate-background {
+    position: absolute;
+    left: -300px;
+    width: 163%;
+    height: 50%;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+   /* Sweing Card */
+   .sweing-container {
+    position: relative;
+    top:3%;
+    width: 300px;
+    overflow: hidden;
+  }
+  .front-label {
+    width: 95px;
+    height: 95px;
+  }
+  .back-label {
+    width: 100px;
+    height: 100px;
+  }
+  .sweing-activity {
+    position: relative;
+    right:27%;
+    bottom: 17%;
+  }
+  .sweing-news {
+    position: relative;
+    left: 4px;
+    top: 62px;
+  }
+  .sweing-register {
+    position: relative;
+    left: 77px;
+    top:27px;
+  }
+  .sweing-representation {
+    position: relative;
+    right: 7px;
+    bottom:128px;
+  }
+  .label-text1 {
+    transform: rotate(-45deg);
+    font-family: "IranNastaliq";
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 18px;
+    padding-top: 0px;
+  }
+  /* motto */
+  .motto-heighr-container{
+    padding-right: 10px;
     position: relative;
     bottom: 10px;
   }
-  .general-header-title {
+  .main-motto-border {
+    float: right;
+    width:79%;
+    padding: 5px;
+    height: 100px;
+  }
+  .motto-content {
+    height: 95px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 90%;
+  }
+  .motto-picture{
+    height:85px;
+  }
+   /* news teller */
+   .News-teller-container {
+      width: 100%;
+      margin-top: 50px;
+    }
+   .News-black-border {
+    height: 70px;
+    position: relative;
+    bottom: 45px;
+    margin:0px 10px;
+    left: 5px;
+  }
+  .News-teller-title{
+    margin-right: 20px;
+  }
+  .News-teller-red-border{
+    margin-right:20px;
+    margin-left: 5px;
+  }
+
+}
+@media only screen and (min-width:400px ) and (max-width: 480px) {
+  /* slider */
+  .SlideShow{
+    display: none;
+  }
+  #sliderLink {
+    display: inline-block;
+    width: 80%;
+    background-color: #414548;
+    text-decoration: none;
+    padding-top: 7px;
+    border-radius: 30px;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .rotate-background {
     position: absolute;
-    top: 98px;
-    left: 60px;
+    left: -350px;
+    width: 650px;
+    height: 400px;
     transform: rotate(45deg);
+    z-index: -1;
   }
-  .general-header-title-text {
-    width: 120px;
-    height: 120px;
-    box-shadow: 8px 8px 6px gray;
-    background-color: #790000;
+
+   /* Sweing Card */
+   .sweing-container {
+    position: relative;
+    top:45px;
+    width: 300px;
+    overflow: hidden;
   }
-  .general-header-title-text-final {
-    position: absolute;
-    top: 140px;
-    left: 55px;
-    width: 130px;
-    text-align: center;
+
+  .front-label {
+    width: 95px;
+    height: 95px;
+  }
+  .back-label {
+    width: 100px;
+    height: 100px;
+  }
+  .sweing-activity {
+    position: relative;
+    right:27%;
+    bottom: 17%;
+  }
+  .sweing-news {
+    position: relative;
+    left: 4px;
+    top: 62px;
+  }
+  .sweing-register {
+    position: relative;
+    left: 77px;
+    top:27px;
+  }
+  .sweing-representation {
+    position: relative;
+    right: 7px;
+    bottom:128px;
+  }
+  .label-text1 {
+    transform: rotate(-45deg);
     font-family: "IranNastaliq";
-    font-size: 37px;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 18px;
+    padding-top: 0px;
   }
-   /* slider */
+
+  /* motto */
+  .motto-heighr-container{
+    padding-right: 10px;
+    position: relative;
+    bottom: 10px;
+  }
+  .main-motto-border{
+    width: 100%;
+  }
+  .main-motto-border {
+    float: right;
+    width:70%;
+    padding: 5px;
+    height: 100px;
+  }
+  .motto-content {
+    height: 95px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 90%;
+  }
+  .motto-picture{
+    height:85px;
+  }
+  /* news teller */
+  .News-teller-container {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .News-black-border {
+    height: 70px;
+    position: relative;
+    bottom: 45px;
+    margin:0px 10px;
+    left: 5px;
+  }
+  .News-teller-title{
+    margin-right: 20px;
+  }
+  .News-teller-red-border{
+    margin-right:20px;
+    margin-left: 5px;
+  }
+
+}
+@media only screen and (min-width:480px ) and (max-width: 565px){
+    /* slider */
+    .SlideShowMobile{
+      display: none;
+    }
+    /* Slider Links */
+    #sliderLink {
+      position: absolute;
+      top: 70px;
+      left: 0px;
+      width:120px;
+      background-color: #414548;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    .rotate-background {
+      position: absolute;
+      left: -150px;
+      width: 500px;
+      height: 500px;
+      transform: rotate(45deg);
+      z-index: -12;
+    }
+     /* Sweing Card */
+   .sweing-container {
+      position: relative;
+      top:10px;
+      left:90px;
+      width: 300px;
+    }
+    .front-label {
+      width: 95px;
+      height: 95px;
+    }
+    .back-label {
+      width: 100px;
+      height: 100px;
+    }
+    .sweing-activity {
+      position: relative;
+      right:27%;
+      bottom: 17%;
+    }
+    .sweing-news {
+      position: relative;
+      left: 4px;
+      top: 62px;
+    }
+    .sweing-register {
+      position: relative;
+      left: 77px;
+      top:27px;
+    }
+    .sweing-representation {
+      position: relative;
+      right: 7px;
+      bottom:128px;
+    }
+    .label-text1 {
+      transform: rotate(-45deg);
+      font-family: "IranNastaliq";
+      font-size: 35px;
+      font-weight: bold;
+      text-align: center;
+      padding-left: 18px;
+      padding-top: 0px;
+    }
+    /* motto */
+    .motto-heighr-container{
+      padding-right: 10px;
+      position: relative;
+      top:10px;
+    }
+    .main-motto-border {
+      float: right;
+      width:70%;
+      padding: 5px;
+      height: 100px;
+    }
+    .motto-content {
+      padding: 5px;
+      height: 95px;
+      margin-top: 5px;
+      margin-right: 5px;
+      width: 90%;
+    }
+    .motto-picture{
+      height:85px;
+    }
+    /* news teller */
+    .News-teller-container {
+      margin-top:40px;
+      width: 100%;
+    }
+    .News-black-border {
+      height: 70px;
+      position: relative;
+      bottom: 45px;
+      margin:0px 10px;
+      left: 5px;
+    }
+    .News-teller-title{
+      margin-right: 20px;
+    }
+    .News-teller-red-border{
+      margin-right:20px;
+      margin-left: 5px;
+    }
+}
+@media only screen and (min-width:565px ) and (max-width: 800px){
+  /* slider */
   .SlideShowMobile{
     display: none;
   }
+  /* Slider Links */
+  #sliderLink {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width:120px;
+    background-color: #414548;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  .rotate-background {
+    position: absolute;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    transform: rotate(45deg);
+    z-index: -12;
+  }
+   /* Sweing Card */
+ .sweing-container {
+    position: relative;
+    top:10px;
+    left:130px;
+    width: 300px;
+  }
 
+  .front-label {
+    width: 95px;
+    height: 95px;
+  }
+  .back-label {
+    width: 100px;
+    height: 100px;
+  }
+  .sweing-activity {
+    position: relative;
+    right:27%;
+    bottom: 17%;
+  }
+  .sweing-news {
+    position: relative;
+    left: 4px;
+    top: 62px;
+  }
+  .sweing-register {
+    position: relative;
+    left: 77px;
+    top:27px;
+  }
+  .sweing-representation {
+    position: relative;
+    right: 7px;
+    bottom:128px;
+  }
+  .label-text1 {
+    transform: rotate(-45deg);
+    font-family: "IranNastaliq";
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 18px;
+    padding-top: 0px;
+  }
+   /* motto */
+   .motto-heighr-container{
+    padding-right: 10px;
+    position: relative;
+    top:10px;
+  }
+  .main-motto-border {
+    float: right;
+    width:60%;
+    padding: 5px;
+    height: 130px;
+  }
+  .motto-content {
+    padding: 5px;
+    height: 125px;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 90%;
+  }
+  .motto-picture{
+    height:115px;
+  }
+   /* news teller */
+   .News-teller-container {
+    margin-top:40px;
+    width: 80%;
+  }
+  .News-black-border {
+    height: 70px;
+    position: relative;
+    bottom: 45px;
+    margin:0px 10px;
+    left: 5px;
+  }
+  .News-teller-title{
+    margin-right: 20px;
+  }
+  .News-teller-red-border{
+    margin-right:20px;
+    margin-left: 5px;
+  }
+}
+@media only screen and (min-width:800px ) and (max-width: 975px){
+  /* slider */
+  .SlideShowMobile{
+    display: none;
+  }
+   /* Slider Links */
+   #sliderLink {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width:120px;
+    background-color: #414548;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  .rotate-background {
+    position: absolute;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    transform: rotate(45deg);
+    z-index: -12;
+  }
+  /* Sweing Card */
+  .sweing-container {
+    float: left;
+    position: relative;
+    top:10px;
+    left:190px;
+    width: 300px;
+  }
+  .front-label {
+    width: 95px;
+    height: 95px;
+  }
+  .back-label {
+    width: 100px;
+    height: 100px;
+  }
+  .sweing-activity {
+    position: relative;
+    right:27%;
+    bottom: 17%;
+  }
+  .sweing-news {
+    position: relative;
+    left: 4px;
+    top: 62px;
+  }
+  .sweing-register {
+    position: relative;
+    left: 77px;
+    top:27px;
+  }
+  .sweing-representation {
+    position: relative;
+    right: 7px;
+    bottom:128px;
+  }
+  .label-text1 {
+    transform: rotate(-45deg);
+    font-family: "IranNastaliq";
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 18px;
+    padding-top: 0px;
+  }
+  /* motto */
+  .motto-heighr-container{
+    padding-right: 10px;
+    position: relative;
+    top:190px;
+  }
+  .main-motto-border {
+    float: right;
+    width:40%;
+    padding: 5px;
+    height: 130px;
+  }
+  .motto-content {
+    padding: 5px;
+    height: 125px;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 90%;
+  }
+  .motto-picture{
+    height:115px;
+  }
+  .News-teller-container {
+    position: relative;
+    top: 160px;;
+    margin-top: 100px;
+    width: 50%;
+  }
+  .News-black-border {
+    left: 40px;
+    width: 88%;
+  }
+  .News-teller-title{
+    margin-right: 35px;
+  }
+  .News-teller-red-border{
+    margin-right: 35px
+  }
+}
+@media only screen and (min-width: 976px) {
+    /* slider */
+  .SlideShowMobile{
+    display: none;
+  }
   /* Slider Links */
   #sliderLink {
     width: 250px;
@@ -182,49 +689,119 @@
     left: 50px;
     text-decoration: none;
     padding-top: 7px;
+    padding-bottom: 7px;
     border-radius: 30px;
   }
+  .rotate-background {
+    position: absolute;
+    left: -150px;
+    width: 600px;
+    height: 500px;
+    transform: rotate(45deg);
+    z-index: -12;
+  }
+  /* Sweing Card */
+  .sweing-container {
+    float: left;
+    width: 60%;
+  }
+  .front-label {
+    
+    width: 130px;
+    height: 130px;
+  }
+  .back-label {
+    width: 130px;
+    height: 130px;
+  }
+  .sweing-activity {
+    position: relative;
+    left:28px;
+    bottom: 90px;
+  }
+  .sweing-news {
+    position: relative;
+    left: 160px;
+    top: 60px;
+  }
+  .sweing-register {
+    position: relative;
+    left: 257px;
+    top: 49px;
+  }
+  .sweing-representation {
+    position: relative;
+    left: 125px;
+    bottom:100px;
+  }
+  .label-text1 {
+    transform: rotate(-45deg);
+    font-family: "IranNastaliq";
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+  /* motto */
+  .motto-container {
+    float: right;
+    width: 40%;
+    height: 100%;
+    padding-top: 170px;
+    padding-right: 50px;
+  }
+  .main-motto-border {
+    height: 195px;
+    padding: 5px;
+  }
+  .motto-content {
+    height: 180px;
+    margin-top: 20px;
+    margin-right: 5px;
+    width: 90%;
+    padding: 40px 20px 0px 20px;
+  }
+  .News-teller-container {
+    margin-top: 100px;
+    width: 600px;
+  }
+  .News-black-border {
+    left: 40px;
+    width: 580px;
+  }
+  .News-teller-title{
+    margin-right: 35px;
+  }
+  .News-teller-red-border{
+    margin-right: 35px
+  }
+  .News_Letter_btn{
+    width:100px;
+  }
 }
-
-
-
 /* Between part */
 .main-part {
   height: 656px;
 }
-
 .rotate-background {
   background-image: url("../picture/assets/back.svg");
   background-size: cover;
   background-position: center;
   background-size: 1500px 1500px;
   background-repeat: no-repeat;
-  position: absolute;
-  left: -150px;
-  width: 600px;
-  height: 500px;
-  transform: rotate(45deg);
-  z-index: -12;
 }
-
 /* Sweing Card */
-
 .sweing-container {
-  float: left;
-  width: 60%;
   height: 600px;
-  overflow: hidden;
   padding-top: 55px;
 }
-
 .flip-card {
   background-color: transparent;
   display: flex;
   justify-content: center;
   height: 100px;
-  perspective: 1000px;
-  border-radius: 30px;
-  /* position: absolute; */
+  width: 400px !important;
 }
 .flip-card-inner {
   width: 100px;
@@ -232,14 +809,12 @@
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
 }
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
 }
-
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -261,82 +836,25 @@
 .front-label {
   background-color: white;
   transform: rotate(45deg);
-  width: 130px;
-  height: 130px;
   padding-top: 37px;
   border: solid black 3px;
 }
 .back-label {
   background-color: #790000;
   transform: rotate(45deg);
-  width: 130px;
-  height: 130px;
   padding-top: 37px;
   border: solid black 3px;
 }
-
-.label-text1 {
-  transform: rotate(-45deg);
-  font-family: "IranNastaliq";
-  font-size: 45px;
-  font-weight: bold;
-  text-align: center;
-  padding-left: 15px;
-  padding-top: 5px;
-}
-
-.sweing-news {
-  position: relative;
-  left: 160px;
-  top: 60px;
-}
-.sweing-register {
-  position: relative;
-  left: 257px;
-  top: 49px;
-}
-.sweing-activity {
-  position: relative;
-  left: 30px;
-  bottom: 90px;
-}
-.sweing-representation {
-  position: relative;
-  left: 125px;
-  bottom:100px;
-}
-
-/* motto */
-
-.motto-container {
-  float: right;
-  width: 40%;
-  height: 100%;
-  padding-top: 170px;
-  padding-right: 50px;
-}
-
 .main-motto-border {
   border: 3px solid black;
-  height: 195px;
-  padding: 5px;
 }
-
 .motto-content {
-  float: right;
-  height: 180px;
   border: 3px solid #f6a619;
-  margin-top: 20px;
-  margin-right: 5px;
-  width: 90%;
-  padding: 40px 20px 0px 20px;
+  float: right;
 }
-
 /* News-teller */
 .News-teller-container {
   float: right;
-  margin-top: 100px;
-  width: 700px;
 }
 
 .News-black-border {
@@ -344,8 +862,6 @@
   height: 70px;
   position: relative;
   bottom: 45px;
-  left: 40px;
-  width: 660px;
 }
 .News-corner-img {
   transform: rotate(180deg);
@@ -353,96 +869,10 @@
   float: left;
   margin-top: 18px;
   margin-left: 2px;
-}
-
-.main-footer {
-  height: 300px;
-  background-color: black;
-}
-
-.footer-right-container {
-  float: right;
-  width: 400px;
-  height: 100%;
-}
-
-.right-yellow-div {
-  position: relative;
-  right: -250px;
-  background-color: #f6a619;
-  height: 320px;
-  width: 250px;
-  z-index: 1;
-  transform: rotate(45deg);
-}
-.right-yellow-border {
-  position: relative;
-  bottom: 270px;
-  left: 200px !important;
-  border: 3px solid #ce8a11;
-  height: 320px;
-  width: 250px;
-  z-index: 2;
-  transform: rotate(25deg);
-}
-.right-gray-border {
-  position: relative;
-  bottom: 590px;
-  left: 240px;
-  border: 2px solid #333333;
-  height: 240px;
-  width: 250px;
-  z-index: 0;
-}
-.right-paragraph {
-  position: relative;
-  bottom: 725px;
-  z-index: 10;
-  font-size: 30px;
-  font-weight: bold;
-  right: 40px;
-}
-
-.footer-middle-container {
-  float: right;
-  /* width: 500px */
-}
-.footer-middle-ul-list {
-  list-style-type: none;
-}
-
-.footer-left-container {
-  float: left;
-  width: 20%;
-}
-.search-input {
-  text-align: right;
-  background-color: inherit;
-  border: none;
-}
-.search-input:focus {
-  outline: none;
-}
-.social-icons {
-  -webkit-transition: transform 2s; /* Safari prior 6.1 */
-  transition: transform 1s;
-}
-.social-icons:hover {
-  transform: rotate(360deg);
-}
-
-.General_News-teller{
-  margin-top: 40px;
-}
-.General-footer-picture{
-  float: left;  
-  height: 200px;
-  margin-bottom: 30px;
-}
-.News-corner-img{
   position: relative;
   bottom:70px;
 }
+
 .News_Letter_input{
   height: 70px;
   background-color: inherit;
@@ -466,8 +896,8 @@
   cursor: pointer;
   border-radius: 3px;
   font-weight: bold;
-  width: 100px;
 }
+
 /* History Menu */
 
 .History-Main {

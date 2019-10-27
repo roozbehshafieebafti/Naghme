@@ -1,0 +1,8 @@
+{
+    "name": "naghme",
+    "short_name": "naghme-mandegar",
+    "start_url": "/?launcher=true",
+    "display": "standalone",
+    "theme_color": "#FFFFFF",
+    "orientation": "portrait"
+}
