@@ -20,12 +20,11 @@
         transform: rotate(360deg);
     }
     .General_News-teller{
+        background-color: red;
         margin-top: 40px;
     }
     .General-footer-picture{
-        float: left;  
-        height: 200px;
-        margin-bottom: 30px;
+        display: none;
     }
     .footer-left-container{
         margin:0px 10px 0px 30px;
@@ -143,6 +142,8 @@
     }
     .General_News-teller{
         margin-top: 40px;
+        float: right;
+        width:850px
     }
     .General-footer-picture{
         float: left;  

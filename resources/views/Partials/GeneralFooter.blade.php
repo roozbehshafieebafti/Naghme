@@ -1,6 +1,6 @@
 <div class="General_News_teller_container" style="overflow:hidden;height: 230px;">
     <img class="General-footer-picture" src="{{ config('app.url').'picture/assets/footer.svg'}}" alt="">
-    <div class="General_News-teller" style="float: right;width:850px">
+    <div class="General_News-teller" style="">
         <h3 style="margin-right: 100px; color:#790000">
             <b>عضویت در خبرنامه</b>
             <span class="News_Letter_alert"></span>
@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-<div class="Footer" style="overflow-x: hidden;overflow-y: hidden;">
+<div class="General-Footer" style="overflow-x: hidden;overflow-y: hidden;background-color: black;">
     <div style="background-color: #790000; height:20px;"></div>
     <div class="main-footer" >
         <div class="footer-right-container" style="overflow-x: hidden;overflow-y: hidden;">

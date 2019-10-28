@@ -13,7 +13,7 @@ class CreateAuthorities extends Migration
     {
         Schema::create('authorities', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('authorities_title',32);
+            $table->string('authorities_title',64);
             $table->string('authorities_unit_title',32);
             $table->string('authorities_name',32);
             $table->string('authorities_family',32);

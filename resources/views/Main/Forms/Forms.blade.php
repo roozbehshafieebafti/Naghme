@@ -4,7 +4,7 @@
 
 @section('content')
     @include('Partials.GeneralHeader')
-    <div class="container" style="margin-top:280px">
+    <div class="container forms-main-container">
         <div class="m-3">
             <div class="accordion" id="accordionExample">
                 @if (count($Form)>0)
