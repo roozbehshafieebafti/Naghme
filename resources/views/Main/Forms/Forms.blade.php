@@ -16,7 +16,7 @@
                                 </span>
                                 <span style="direction: rtl" class="">                                    
                                     <span style="color:#f6a619;font-size:25px; margin-left:30px">&#9672;</span>
-                                    <b style="font-size:22px"> {{$item->form_title}}</b>
+                                    <b class="form-content-name"> {{$item->form_title}}</b>
                                 </span>
                             </div>
                         
@@ -30,10 +30,9 @@
                                             <div class="form-yello-border"></div>
                                         </a>
                                     </div>
-                                    <div  class="text-white" style="width:70%">
+                                    <div  class="text-white form-content">
                                         {{$item->form_description}}
-                                    </div>
-                                    
+                                    </div> 
                                 </div>
                             </div>
                         </div>
