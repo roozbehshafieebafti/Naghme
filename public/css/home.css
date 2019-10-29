@@ -23,8 +23,8 @@
   .rotate-background {
     position: absolute;
     left: -300px;
-    width: 570px;
-    height: 380px;
+    width: 560px;
+    height: 370px;
     transform: rotate(45deg);
     z-index: -1;
   }
