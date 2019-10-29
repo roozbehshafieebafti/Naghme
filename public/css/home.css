@@ -23,8 +23,8 @@
   .rotate-background {
     position: absolute;
     left: -300px;
-    width: 180%;
-    height: 45%;
+    width: 560px;
+    height: 370px;
     transform: rotate(45deg);
     z-index: -1;
   }
@@ -136,8 +136,8 @@
   .rotate-background {
     position: absolute;
     left: -300px;
-    width: 163%;
-    height: 50%;
+    width: 580px;
+    height: 380px;
     transform: rotate(45deg);
     z-index: -1;
   }
@@ -855,6 +855,7 @@
 /* News-teller */
 .News-teller-container {
   float: right;
+  height: 180px;
 }
 
 .News-black-border {

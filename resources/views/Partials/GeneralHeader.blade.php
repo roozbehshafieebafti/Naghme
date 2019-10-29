@@ -200,7 +200,7 @@
                 <img class="logo-img " src="{{ config('app.url')."picture/assets/logo.png"}}" alt="{{ config('view.alt') }}" title="{{ config('view.title') }}" />
             </a>
         </div>
-        <div class="col-7 ">
+        <div class="col-xl-9 col-lg-9 col-md-10">
             <div class="row">
                 <div class="header-sub-menu  text-center ">
                     <a class="header-link-title text-white text-center" href="{{ route('Home') }}">
@@ -254,6 +254,17 @@
                     </a>
                 </div>
 
+                <div class="header-sub-menu  text-center" >
+                    <a class="header-link-title text-white" href="{{ route("Representaion") }}">
+                        <span><b>نمایندگی‌ها</b></span>
+                    </a>
+                </div>
+    
+                <div class="header-sub-menu  text-center" >
+                    <a class="header-link-title text-white" href="{{ route("Get_Membership") }}">
+                        <span><b>عضویت</b></span>
+                    </a>
+                </div>
                 <div class="header-sub-menu ">
                     <?php 
                         if(!Illuminate\Support\Facades\Auth::check()){

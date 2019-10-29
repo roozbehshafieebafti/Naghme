@@ -170,7 +170,7 @@
                 <div class="motto-heighr-container">
                     <div class="main-motto-border">
                         <div class="motto-content">
-                                <div class="" >تورا به سرزمینی خواهم برد؛</div>
+                                <div class="" >تو را به سرزمینی خواهم برد؛</div>
                                 <div class=" text-right">از جنس عشق، نور، یگانگی</div>                            
                         </div>
                         <div  style="float:left">
