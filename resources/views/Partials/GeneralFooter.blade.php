@@ -1,12 +1,12 @@
-<div class="General_News_teller_container" style="overflow:hidden;height: 230px;">
+<div class="General_News_teller_container" style="overflow:hidden;">
     <img class="General-footer-picture" src="{{ config('app.url').'picture/assets/footer.svg'}}" alt="">
     <div class="General_News-teller" style="">
-        <h3 style="margin-right: 100px; color:#790000">
+        <h3 class="General_News-teller_title">
             <b>عضویت در خبرنامه</b>
             <span class="News_Letter_alert"></span>
         </h3>
-        <div class="red-border" style="height: 70px; border:solid 3px #790000;margin-right: 100px"> </div>
-        <div class="General-News-black-border" style="background-color: black;height: 70px;position: relative;bottom: 45px;left: 40px;width:760px">
+        <div class="red-border"> </div>
+        <div class="General-News-black-border">
             <form autocomplete="off" id="News_Letter_form" method="POST" onsubmit="newsLetterSubmit(event)">
                 <button class="News_Letter_btn">ثبت</button>
                 <input required  type="email" name="email_text" class="News_Letter_input col-8" placeholder="لطفا ایمیل خود را وارد نمایید"/>

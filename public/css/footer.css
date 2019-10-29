@@ -76,6 +76,23 @@
     .General_News-teller{
         margin-top: 40px;
     }
+    .General_News-teller_title{
+        margin-right: 20px;        
+        color:#790000
+    }
+    .red-border{
+        margin-right:20px;
+        margin-left: 5px;
+        height: 70px; 
+        border:solid 3px #790000;
+      }
+      .General-News-black-border{
+        background-color: black;height: 70px;
+        position: relative;
+        bottom: 45px;
+        left: 20px;
+        width: 95%;
+      }
     .General-footer-picture{
         display: none;
     }
@@ -94,6 +111,30 @@
     }
 }
 @media only screen and (min-width: 561px ) and (max-width: 800px){
+    .General_News-teller{
+        margin-top: 40px;
+        overflow: hidden;
+    }
+    .General_News-teller_title{
+        margin-right: 40px;        
+        color:#790000;
+    }
+    .red-border{
+        float: right;
+        margin-right:40px;
+        margin-left: 5px;
+        height: 70px; 
+        border:solid 3px #790000;
+        width: 80%;
+      }
+      .General-News-black-border{
+          float: right;
+        background-color: black;height: 70px;
+        position: relative;
+        bottom: 45px;
+        right: 20px;
+        width: 78%;
+      }
     .Footer{
         margin-top: 330px;
         background-color: black;
@@ -192,6 +233,30 @@
     }
 }
 @media only screen and (min-width: 800px ) and (max-width: 976px){
+    .General_News-teller{
+        margin-top: 40px;
+        overflow: hidden;
+    }
+    .General_News-teller_title{
+        margin-right: 40px;        
+        color:#790000;
+    }
+    .red-border{
+        float: right;
+        margin-right:40px;
+        margin-left: 5px;
+        height: 70px; 
+        border:solid 3px #790000;
+        width: 80%;
+      }
+      .General-News-black-border{
+          float: right;
+        background-color: black;height: 70px;
+        position: relative;
+        bottom: 45px;
+        right: 20px;
+        width: 78%;
+      }
     .Footer{
         background-color: black;
         overflow: hidden;
@@ -289,6 +354,30 @@
     }
 }
 @media only screen and (min-width: 976px) {
+    .General_News-teller{
+        float: right;
+        overflow: hidden;
+    }
+    .General_News-teller_title{
+        margin-right: 40px;        
+        color:#790000;
+    }
+    .red-border{
+        float: right;
+        margin-right:40px;
+        margin-left: 5px;
+        height: 70px; 
+        border:solid 3px #790000;
+        width: 70%;
+      }
+      .General-News-black-border{
+          float: right;
+        background-color: black;height: 70px;
+        position: relative;
+        bottom: 45px;
+        right: 20px;
+        width: 68%;
+      }
     .Footer{
         overflow-x: hidden;
         overflow-y: hidden;        
@@ -420,7 +509,7 @@
     .General_News-teller{
         margin-top: 40px;
         float: right;
-        width:850px
+        width:80%
     }
     .General-footer-picture{
         float: left;  
