@@ -21,17 +21,17 @@
                             </div>
                         
                             <div id="collapse{{$key}}" class="form-content-container collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body d-flex justify-content-between">
-                                    <div class="mt-3 text-white  d-flex justify-content-start ">
-                                        <a href=" {{ config('app.url').'/'.$item->form_file1}}" class="text-white" style="text-decoration: none;font-size: 24px;">
-                                            <img src="{{config('app.url').'picture/assets/pdfIcon.svg'}}" alt="" style="width:40px;">
-                                            <span style="margin-left:40px">دانلود</span>
+                                <div class="card-body">
+                                    <div  class="text-white form-content">
+                                        {{$item->form_description}}
+                                    </div>                                
+                                    <div class="mt-3 text-white  d-flex justify-content-start">
+                                        <a href=" {{ config('app.url').'/'.$item->form_file1}}" class="form-content-link text-white">
+                                            <img src="{{config('app.url').'picture/assets/pdfIcon.svg'}}" alt="" class="form-content-download-image">
+                                            <span class="form-content-download-text">دانلود</span>
                                             <div class="form-black-border"></div>
                                             <div class="form-yello-border"></div>
                                         </a>
-                                    </div>
-                                    <div  class="text-white form-content">
-                                        {{$item->form_description}}
                                     </div> 
                                 </div>
                             </div>

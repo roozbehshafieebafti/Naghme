@@ -3,7 +3,7 @@
     
 @section('content')
     @include('Partials.GeneralHeader')
-    <div class="container" style="margin-top:280px">
+    <div class="container reulation-div-container">
         <div class="m-3">
             <div class="accordion" id="accordionExample">
                 @if (count($Regulation )>0)
@@ -20,17 +20,17 @@
                             </div>
                         
                             <div id="collapse{{$key}}" class="reulation-content-container collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body d-flex justify-content-between">
+                                <div class="card-body">
+                                    <div class="text-white text-left" style="width:100%">
+                                        {{$item->regulations_description}}
+                                    </div>
                                     <div class="mt-3 text-white  d-flex justify-content-start ">
                                         <a href=" {{ config('app.url').'/'.$item->regulations_file_name}}" class="text-white" style="text-decoration: none;font-size: 24px;">
-                                            <img src="{{config('app.url').'picture/assets/pdfIcon.svg'}}" alt="" style="width:40px;">
-                                            <span style="margin-left:40px">دانلود</span>
+                                            <img src="{{config('app.url').'picture/assets/pdfIcon.svg'}}" alt="" style="width:40px;height:40px;">
+                                            <span style="margin-left:40px;font-size:22px;">دانلود</span>
                                             <div class="regulation-black-border"></div>
                                             <div class="regulation-yello-border"></div>
                                         </a>
-                                    </div>
-                                    <div class="text-white" style="width:70%">
-                                        {{$item->regulations_description}}
                                     </div>
                                 </div>
                             </div>
