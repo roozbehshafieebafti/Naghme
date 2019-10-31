@@ -14,16 +14,16 @@
                 <div class="authorities-title-border-black"></div>
             </h4>
 
-            <div class="">
+            <div class="p-0">
                 @if(count($Authorities)>0)
                     @foreach ($Authorities as $key=>$item)
-                        <div class="authorities-row-container row d-flex justify-content-center mb-5">
-                            <div class="col-2">
+                        <div class="authorities-row-container row d-flex p-0 m-0 ustify-content-center  mb-5 border border-primary">
+                            <div class="col-2 div-col-2">
                                 <div class="authorities-image-container">
                                     <img class="authorities-image" src="{{config('app.url').$item['authorities_picture']}}" alt="{{ $item['authorities_name'].' '.$item['authorities_family'] }} " title="{{ $item['authorities_name'].' '.$item['authorities_family'] }} ">
                                 </div>
                             </div>
-                            <div class="col-8">
+                            <div class="col-8 div-col-8">
                                 <div>
                                     <span style="color:#790000;font-size:22px;"><b>سمت:</b></span>
                                     <b><span> {{ $item['authorities_title']}} </span>                                    

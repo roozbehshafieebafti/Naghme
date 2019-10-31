@@ -5,18 +5,18 @@
 @section('content')
     @include('Partials.GeneralHeader')
     <div style="direction: rtl" class="container-fluid">
-        <div class="Statemants container" style="margin-top:250px;">
+        <div class="Statemants container ethics-container-div">
             <div class="">
-                <ul class="">
+                <ul class="p-0">
                     @foreach ($Ethics as $key => $item)
                         <li class="mt-2 ethics-li">
                             {{ $key }}
                         </li>
-                        <ol class="" style="list-style-type: none; margin-top: 20px;margin-bottom: 40px;">
+                        <ol class="ethics-inner-li" style="list-style-type: none; margin-top: 20px;margin-bottom: 40px;">
                             @foreach ($item as $Colection)                                    
                                     <?php 
                                         if($Colection == '') continue;
-                                        echo '<li><span style="color:#f6a619;font-size:20px;">&#9670;</span> '.$Colection.'</li>';
+                                        echo '<li><span style="color:#f6a619;">&#9670;</span> '.$Colection.'</li>';
                                     ?>
                             @endforeach
                         </ol>
