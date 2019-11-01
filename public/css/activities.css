@@ -1,10 +1,45 @@
+@media (min-width:320px) and (max-width:480px){
+    .activities-container{
+        margin-top:170px;
+    }
+    .activities-head-pic{
+        width: 250px
+    }
+    
+}
+@media (min-width:481px) and (max-width:640px){
+    .activities-container{
+        margin-top:170px;
+    }
+    .activities-head-pic{
+        width: 350px
+    }
+  
+}
+@media (min-width:641px) and (max-width:1110px){
+    .activities-container{
+        margin-top:170px;
+    }
+    .activities-head-pic{
+        width: 400px
+    }
+}
+@media (min-width:1111px) {
+    .activities-container{
+        margin-top:270px;
+    }
+    .activities-head-pic{
+        width: 400px
+    }
+}
 .activities_col{
     border: #f6a619 solid 2px;
-    height: 250px;
     display: flex;
     align-items: center;
     padding: 0px;
-    width:19%;
+    height: 85%;
+    width:220px;
+    margin: 15px auto 15px auto;
 }
 .activities-landescape-picture{    
     height:150px;
@@ -41,7 +76,8 @@
 .activities-portrait-picture{
     display: inline-block;
     height:250px;
-    width:95%;
+    min-width:95%;
+    max-width:95%;
     position: relative;
     right: 5px;
     bottom: 10px;
@@ -59,6 +95,7 @@
 .activities-portrait-title{
     position: relative;
     bottom: 140px;
+    right: 10px;
     background-color: black;
     border-radius: 20px;
     color: white;

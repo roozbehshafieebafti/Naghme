@@ -1,5 +1,8 @@
 $(document).ready(function(){
     var container = $('.pagination-container');
+    if(container.length < 1){
+        return;
+    }
     if(Math.floor(paginationCount/paginationLimit) >= 1){
         var content = $('.pagination-number-container');
         var lastPage = Math.ceil(paginationCount/paginationLimit);
