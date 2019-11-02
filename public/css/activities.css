@@ -43,11 +43,11 @@
 }
 .activities-landescape-picture{    
     height:150px;
-    width:220px;
+    width:240px;
     position: relative;
     top:50px;
     z-index: 2;
-    left: 10px;
+    left: 13px;
     /* transition: opacity 0.2s,0.2s; */
 }
 .activities-landescape-picture:hover {
