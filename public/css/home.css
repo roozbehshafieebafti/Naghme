@@ -539,10 +539,14 @@
   }
   .motto-content {
     padding: 5px;
+    padding-top:25px;
     height: 125px;
     margin-top: 5px;
     margin-right: 5px;
     width: 90%;
+  }
+  .motto-content-text{
+    font-size: 20px;;
   }
   .motto-picture{
     height:115px;
@@ -651,10 +655,14 @@
   }
   .motto-content {
     padding: 5px;
+    padding-top:25px;
     height: 125px;
     margin-top: 5px;
     margin-right: 5px;
     width: 90%;
+  }
+  .motto-content-text{
+    font-size: 20px;;
   }
   .motto-picture{
     height:115px;
@@ -761,6 +769,9 @@
     margin-right: 5px;
     width: 90%;
     padding: 40px 20px 0px 20px;
+  }
+  .motto-content-text{
+    font-size: 27px;;
   }
   .News-teller-container {
     margin-top: 100px;

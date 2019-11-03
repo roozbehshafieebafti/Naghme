@@ -40,7 +40,7 @@
 				</div>
 				  <div class="form-group">
 				    <label >رزومه:</label>
-				    <textarea style="resize: none" required="required" name="Authorities_cv" class="form-control text-left" ></textarea>
+				    <textarea id="representaion_cv" style="resize: none" required="required" name="Authorities_cv" class="form-control text-left" ></textarea>
 				  </div>
 				  <div class="form-group">
 				    <label >عکس:</label>

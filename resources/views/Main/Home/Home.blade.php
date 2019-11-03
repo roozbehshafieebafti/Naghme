@@ -170,8 +170,8 @@
                 <div class="motto-heighr-container">
                     <div class="main-motto-border">
                         <div class="motto-content">
-                                <div class="" >تو را به سرزمینی خواهم برد؛</div>
-                                <div class=" text-right">از جنس عشق، نور، یگانگی</div>                            
+                                <div class="motto-content-text" >تو را به سرزمینی خواهم برد؛</div>
+                                <div class="motto-content-text text-right">از جنس عشق، نور، یگانگی</div>                            
                         </div>
                         <div  style="float:left">
                             <img class="motto-picture" src="{{ config('app.url')."picture/assets/patte.svg" }}" alt="نغمه ماندگار">

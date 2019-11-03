@@ -31,3 +31,7 @@ tinymce.init({
 tinymce.init({
 	selector: '#Authorities_cv',plugins: "link",
 });
+
+tinymce.init({
+	selector: '#representaion_cv',plugins: "link",
+});
