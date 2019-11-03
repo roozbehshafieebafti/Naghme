@@ -4,14 +4,14 @@
 
 @section('content')
     @include('Partials.GeneralHeader')
-    <div class="container" style="direction:rtl;margin-top:220px;">
+    <div class="container news-parent-continer" style="direction:rtl">
         <div class="col-12">
             <div style="min-height:300px">
                 @if(count($news) > 0)
                 <div class="row">
                     @foreach ($news as $Value)
-                        <div class="col-xl-6 col-lg-6 mb-5 col-container">
-                            <div class="col-12 " style="overflow:hidden">
+                        <div class="col-xl-6 col-lg-6 col-12 mb-5 col-container">
+                            <div class="col-12 news-image-container" style="overflow:hidden">
                                 <img class="news-cover-image" src="{{ config('app.url').'/'.$Value->news_cover_picture }}" alt="{{ $Value->news_title }}" title="{{ $Value->news_title }}" />
                                 <div class="news-angel">!</div>
                             </div>
