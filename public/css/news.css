@@ -1,6 +1,7 @@
 @media (min-width:320px) and (max-width:480px){
     .news-parent-continer{
         margin-top: 100px;
+        padding: 0px !important;
     }
     .col-container{
         overflow: hidden;
