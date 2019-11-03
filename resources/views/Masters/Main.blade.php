@@ -25,6 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/form.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/authorities.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/news.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/newsReadMore.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/pagination.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/representation.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/membership.css' }}">
