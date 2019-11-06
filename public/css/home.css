@@ -5,6 +5,9 @@
     url("../fonts/Nast/IranNastaliq.ttf") format("truetype"),
     url("../fonts/Nast/IranNastaliq.woff") format("woff");
 }
+html{
+  scroll-behavior: smooth;
+}
 @media only screen and (min-width:320px ) and (max-width: 350px) {
   /* slider */
   .SlideShow{

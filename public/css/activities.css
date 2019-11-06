@@ -5,7 +5,17 @@
     .activities-head-pic{
         width: 250px
     }
-    
+    .activities-flex-row{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .activities_col{
+        margin: 10px;        
+    }
+    .activities_col-1{
+        margin: 10px;
+    }
 }
 @media (min-width:481px) and (max-width:640px){
     .activities-container{
@@ -14,40 +24,70 @@
     .activities-head-pic{
         width: 350px
     }
-  
+    .activities-flex-row{
+        display: flex;
+        justify-content:center;
+    }  
+    .activities_col{
+        margin: 10px;
+    }
+    .activities_col-1{
+        margin: 20px;
+    }
 }
-@media (min-width:641px) and (max-width:1110px){
+@media (min-width:641px) and (max-width:1200px){
     .activities-container{
         margin-top:170px;
     }
     .activities-head-pic{
         width: 400px
     }
+    .activities-flex-row{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .activities_col{
+        margin: 10px;
+    }
+    .activities_col-1{
+        margin: 20px;
+    }
 }
-@media (min-width:1111px) {
+@media (min-width:1201px) {
     .activities-container{
         margin-top:270px;
     }
     .activities-head-pic{
         width: 400px
     }
+    .activities_col-1{
+        margin-top: 30px;
+    }  
 }
 .activities_col{
     border: #f6a619 solid 2px;
     display: flex;
     align-items: center;
     padding: 0px;
+    width: 180px;
     height: 85%;
-    width:220px;
-    margin: 15px auto 15px auto;
+}
+.activities_col-1{
+    border: #f6a619 solid 2px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    width: 220px
 }
 .activities-landescape-picture{    
     height:150px;
-    width:240px;
+    width:250px;
     position: relative;
     top:50px;
     z-index: 2;
-    left: 13px;
+    left: 16px;
+    border: 1px solid black;
     /* transition: opacity 0.2s,0.2s; */
 }
 .activities-landescape-picture:hover {
@@ -75,14 +115,13 @@
 
 .activities-portrait-picture{
     display: inline-block;
-    height:250px;
-    min-width:95%;
-    max-width:95%;
+    height:230px;
+    width:170px;
     position: relative;
-    right: 5px;
-    bottom: 10px;
+    right: 3px;
+    bottom: 5px;
     z-index: 2;
-    /* transition: filter 0.1s,0.1s; */
+    border: 1px solid black;
 }
 .activities-portrait-picture:hover{
     /* opacity: 0.8; */

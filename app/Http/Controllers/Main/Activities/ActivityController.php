@@ -30,8 +30,7 @@ class ActivityController extends Controller
                 activities_pictures.apic_picture_title
             FROM ( activities_posts 
             LEFT JOIN activities_pictures ON activities_posts.id = activities_pictures.apic_activities_posts_id)
-            WHERE activities_posts.id = ".$id
-        );
+            WHERE activities_posts.id = ?",[$id]);
 
         $news= ActivityNewsPicture::where("activities_posts_id",$Activity[0]->id)->get();
         $comments = DB::select(

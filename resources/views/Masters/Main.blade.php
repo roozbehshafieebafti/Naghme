@@ -32,6 +32,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/search.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/activities.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/activity.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/allActivities.css' }}">
 	</head>
 	<body >
 		<div class="No-PreView">

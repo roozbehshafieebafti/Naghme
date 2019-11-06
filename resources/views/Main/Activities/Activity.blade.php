@@ -55,7 +55,7 @@
                             </div>
                         </div>
                         <div class="activity-text">
-                            <p> 
+                            <p style="font-family:Bnazanin !important"> 
                                 {!!html_entity_decode($activity["apst_description"])!!}
                             </p>
                         </div>
