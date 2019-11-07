@@ -13,7 +13,7 @@
                                 <p class="Representaion-title">{{ $item->representation_title }}</p>
                             </div>
                             <div class="col-7" style="position:relative;bottom: 10px;">
-                                <div class="Representaion-info-container bg-dark text-white pl-3 pr-3">
+                                <div class="Representaion-info-container text-white pl-3 pr-3">
                                     <p>
                                         <span style="color:#f6a619">سرپرست نمایندگی:</span>
                                         <span >{{$item->representation_leader}}</span>
@@ -29,7 +29,7 @@
                                         <span  class=" ml-3" >{{$item->representation_telephone}}</span>
                                     </div>
                                 </div>
-                                <div class="Representaion-read-more ">
+                                <div class="Representaion-read-more">
                                     <a class="text-dark" href="{{ route("Representaion_Read_More",$item->representation_title) }}">ادامه مطلب</a>
                                     <i class="fas fa-long-arrow-alt-left pt-1"></i>
                                 </div>

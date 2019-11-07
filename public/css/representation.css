@@ -30,17 +30,22 @@
 }
 .Representaion-read-more{
     position: absolute;
-    bottom: 3px;
-
+    bottom: 4px;
+    background: url('../picture/assets/representation2.svg');
+    width: 120px;
+    height:37px;
+    padding-top:3px;
 }
 .Representaion-info-container{
     position: absolute;
-    bottom: 40px;
+    bottom: 50px;
+    background: url('../picture/assets/representation1.svg');
+    width: 250px
 }
 .Representaion-read-more-container{
     margin-top:180px;
     margin-bottom:100px;
-    direction:rtl;
+    direction:rtl;    
 }
 
 .Representaion-authorities-image{
