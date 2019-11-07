@@ -26,18 +26,26 @@
                                 {{$item->apst_title}}                              
                             </div>
                             <div class="search-read-more d-flex justify-content-end">
-                                <a class="read-more-link" href="#">ادامه مطلب</a>
+                                <a class="read-more-link" href="{{config('app.url').'read-activity/'.$item->id}}">ادامه مطلب</a>
                             </div>
 
-                        @elseif(isset($item->authorities_title))
+                        @elseif(isset($item->authorities_unit_title))
                             <div class="search-content-title">
                                 {{$item->authorities_name}}                                
                                 {{$item->authorities_family}}
                                 -
-                                {{$item->authorities_title}}
+                                {{$item->authorities_unit_title}}
                             </div>
                             <div class="search-read-more d-flex justify-content-end">
-                                <a class="read-more-link" href="{{config('app.url').'authorities/'.$item->authorities_title}}">
+                                <a class="read-more-link" 
+                                href="<?php 
+                                if($item->authorities_city_id>1){
+                                    echo config('app.url').'representaion-continue-reding/'.$item->representation_title.'#co_worker'.$item->id;
+                                }
+                                else{
+                                    echo config('app.url').'authorities/'.$item->authorities_unit_title.'#co_worker'.$item->id;
+                                } 
+                                ?>">
                                     <i class="fas fa-long-arrow-alt-left pt-1 mr-3"></i>
                                     ادامه مطلب
                                 </a>

@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Main\Activities;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-use phpDocumentor\Reflection\Types\Integer;
 
 class ActivitiesController extends Controller
 {
