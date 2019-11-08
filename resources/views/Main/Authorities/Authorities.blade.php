@@ -17,7 +17,7 @@
             <div class="">
                 @if(count($Authorities)>0)
                     @foreach ($Authorities as $key=>$item)
-                        <div class="authorities-row-container row d-flex m-0 ustify-content-center mb-5 flex-wrap">
+                        <div id="co_worker{{$item['id']}}" class="authorities-row-container row d-flex m-0 ustify-content-center mb-5 flex-wrap">
                             <div class="col-xl-2 col-lg-2 col-12 d-flex justify-content-center authorities-div-col-2">
                                 <div class="authorities-image-container">
                                     <img class="authorities-image" src="{{config('app.url').$item['authorities_picture']}}" alt="{{ $item['authorities_name'].' '.$item['authorities_family'] }} " title="{{ $item['authorities_name'].' '.$item['authorities_family'] }} ">

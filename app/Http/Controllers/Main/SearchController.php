@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Model\News;
 use App\Model\Authorities;
 use App\Model\DoActivity;
+use Illuminate\Support\Facades\DB;
 
 class SearchController extends Controller
 {
@@ -23,12 +24,19 @@ class SearchController extends Controller
                 ->where('apst_title','like','%'.$name.'%')
                 ->limit(10)
                 ->get();
-        $authorities= Authorities::select('id','authorities_title','authorities_name','authorities_family')
-                ->where('authorities_name','like','%'.$name.'%')
-                ->orWhere('authorities_family','like','%'.$name.'%')
-                ->orWhere('authorities_title','like','%'.$name.'%')
-                ->limit(10)
-                ->get();
+        $authorities= DB::select('
+            SELECT CONCAT(authorities_name, " " , authorities_family) as fullName,
+            authorities.id,
+            authorities_unit_title,
+            authorities_name,
+            authorities_family,
+            authorities_city_id,
+            representation_title
+            FROM  (authorities INNER JOIN representation ON authorities.authorities_city_id = representation.id)
+            WHERE CONCAT(authorities_name, " " , authorities_family) LIKE ?
+            OR authorities_title LIKE ?
+            LIMIT 10
+        ',['%'.$name.'%','%'.$name.'%']);          
         
         $search = [];
         foreach($news as $item){

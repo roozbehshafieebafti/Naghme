@@ -36,11 +36,11 @@
         <div class="HPP-content Statemants mt-5">
             <img class="Representaion-authorities-image" src="{{config('app.url').'picture/assets/middel_hpp.svg'}}" alt="" >
             <h2 class="Representaion-authorities-title" style="text-align:center"><b>همکاران</b></h2>
-            <div>
+            <div >
                 <div style="margin-top:150px;">
                     @if(count($Authorities)>0)
                         @foreach ($Authorities as $key=>$item)
-                            <div class="authorities-row-container row mb-5">
+                            <div id="co_worker{{$item['id']}}" class="authorities-row-container row mb-5">
                                 <div class="col-2 mr-3">
                                     <div class="authorities-image-container">
                                         <img class="authorities-image" src="{{config('app.url').$item['authorities_picture']}}" alt="{{ $item['authorities_name'].' '.$item['authorities_family'] }} ">

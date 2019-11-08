@@ -260,6 +260,7 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 		Route::get('/activities/{name}/{id?}','ActivitiesController@getAcitivities')->name('Get_Activities');
 		Route::get('/read-activity/{id}/','ActivityController@getActivity')->name('Get_Read_Activity');
 		Route::post('/read-activity/{id}/','ActivityController@setComment')->name('Set_comment');
+		Route::get('/last-activities','LastActivitiesController@getAll')->name('Get_All_Activities');
 	});
 
 	//News

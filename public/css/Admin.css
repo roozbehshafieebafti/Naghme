@@ -5,6 +5,13 @@
 	url('../fonts/Bnazanin/BNazanin.woff'),
 	url('../fonts/Bnazanin/BNazanin.ttf ');
 }
+@font-face
+{
+	font-family:'B Nazanin';
+	src:url('../fonts/Bnazanin/BNazanin.eot'), 
+	url('../fonts/Bnazanin/BNazanin.woff'),
+	url('../fonts/Bnazanin/BNazanin.ttf ');
+}
 body{
 	font-family :Bnazanin;
     font-size: 18px;

@@ -124,7 +124,7 @@
                         <div class="flip-card-front">
                             <div class="front-label">
                                 <div class="label-text1">
-                                    <a href="#" style="text-decoration: none;color: #790000;">
+                                    <a href="{{ route("Get_All_Activities") }}" style="text-decoration: none;color: #790000;">
                                         فعالیت‌ها
                                     </a>
                                 </div>
@@ -133,7 +133,7 @@
                         <div class="flip-card-back">
                             <div class="back-label">
                                 <div class="label-text1">
-                                    <a href="#" style="text-decoration: none;color: white;">
+                                    <a href="{{ route("Get_All_Activities") }}" style="text-decoration: none;color: white;">
                                         فعالیت‌ها
                                     </a>
                                 </div>
@@ -170,8 +170,8 @@
                 <div class="motto-heighr-container">
                     <div class="main-motto-border">
                         <div class="motto-content">
-                                <div class="" >تو را به سرزمینی خواهم برد؛</div>
-                                <div class=" text-right">از جنس عشق، نور، یگانگی</div>                            
+                                <div class="motto-content-text" >تو را به سرزمینی خواهم برد؛</div>
+                                <div class="motto-content-text text-right">از جنس عشق، نور، یگانگی</div>                            
                         </div>
                         <div  style="float:left">
                             <img class="motto-picture" src="{{ config('app.url')."picture/assets/patte.svg" }}" alt="نغمه ماندگار">
