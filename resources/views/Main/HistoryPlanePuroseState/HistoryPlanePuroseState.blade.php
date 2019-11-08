@@ -51,9 +51,11 @@
         </div>
 
         <div class="HPP-content Statemants mt-5">
-            <div class="statement-image-container">
-                <img class="statement-image2" src="{{config('app.url').'picture/assets/middel_hpp.svg'}}" alt="" >    
-                <h2 class="statement-title2" style="text-align:center"><b>بیانیه‌ها</b></h2>
+            <div class="row statement-image-container-row" >
+                <div class="statement-image-container">
+                    <img class="statement-image2" src="{{config('app.url').'picture/assets/middel_hpp.svg'}}" alt="" >    
+                    <h2 class="statement-title2" style="text-align:center"><b>بیانیه‌ها</b></h2>
+                </div>
             </div>
             <img class="statement-image" src="{{config('app.url').'picture/assets/middel_hpp.svg'}}" alt="" >
             <h2 id="statement" class="statement-title" style="text-align:center"><b>بیانیه‌ها</b></h2>

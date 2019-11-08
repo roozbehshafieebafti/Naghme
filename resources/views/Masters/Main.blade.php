@@ -28,6 +28,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/newsReadMore.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/pagination.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/representation.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/readMoreRepresentation.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/membership.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/search.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/activities.css' }}">
