@@ -54,7 +54,9 @@
                     </div>
                 @endforeach
             @else
-                
+                <div class="d-flex justify-content-center align-items-center" style="height:200px;">
+                    <h2 class="text-right">متاسفانه جست‌وجوی شما نتیجه‌ای نداشت.</h2>
+                </div>
             @endif
         </div>
     @include('Partials.GeneralFooter')

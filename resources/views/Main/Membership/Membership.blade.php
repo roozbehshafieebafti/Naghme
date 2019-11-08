@@ -14,8 +14,8 @@
                     @endforeach
                 </ul>
             </div>
-            <div class="row mb-5 mt-5">
-                <div class="Membership-right-div">
+            <div class=" mb-5 mt-5">
+                <div class="Membership-header-div">
                     <div class="Membership-red-boarder d-flex justify-content-end">
                         <h4 class="Membership-eftekhari-title  bg-white"> 
                             <div class="authorities-title">
@@ -26,41 +26,66 @@
                         </h4>
                     </div>
                 </div>
-                <div class="Membership-left-div p-3">
-                    <div class="Membership-header-text d-flex justify-content-between">
-                        <div class="Membership-table-cell text-center"><b>شماره عضویت</b></div>
-                        <div class="Membership-table-cell text-center"><b>نام و نام‌خانوادگی</b></div>
-                        <div class="Membership-table-cell text-center"><b>نوع عضویت</b></div>
+                <div>
+                    <div class="d-flex justify-content-center">
+                        <div class="membership-container">
+                            <div class="membership-img-container">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/1.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                            </div>
+                            <div class="membership-fullname-container ">
+                                <p class="membership-fullname">استاد داریوش برهانی</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="Membership-table-rows d-flex justify-content-between ">
-                        <div class="Membership-table-cell text-center">001</div>
-                        <div class="Membership-table-cell text-center">کریم الدین نظام زاده</div>
-                        <div class="Membership-table-cell text-center">پیوسته 1</div>
+                    <div class="d-flex justify-content-center">
+                        <div class="membership-container">
+                            <div class="membership-img-container">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/2.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                            </div>
+                            <div class="membership-fullname-container ">
+                                <p class="membership-fullname">استاد حمید ایلاقی</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="Membership-table-rows  d-flex justify-content-between">
-                        <div class="Membership-table-cell text-center">001</div>
-                        <div class="Membership-table-cell text-center">کریم الدین نظام زاده</div>
-                        <div class="Membership-table-cell text-center">پیوسته 1</div>
+                    <div class="d-flex justify-content-center">
+                        <div class="membership-container">
+                            <div class="membership-img-container">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/3.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                            </div>
+                            <div class="membership-fullname-container ">
+                                <p class="membership-fullname">استاد سعادت ارجمند</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="Membership-table-rows  d-flex justify-content-between">
-                        <div class="Membership-table-cell text-center">001</div>
-                        <div class="Membership-table-cell text-center">کریم الدین نظام زاده</div>
-                        <div class="Membership-table-cell text-center">پیوسته 1</div>
+                    <div class="d-flex justify-content-center">
+                        <div class="membership-container">
+                            <div class="membership-img-container">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/4.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                            </div>
+                            <div class="membership-fullname-container ">
+                                <p class="membership-fullname">استاد میرزایی</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="Membership-table-rows  d-flex justify-content-between">
-                        <div class="Membership-table-cell text-center">001</div>
-                        <div class="Membership-table-cell text-center">کریم الدین نظام زاده</div>
-                        <div class="Membership-table-cell text-center">پیوسته 1</div>
+                    <div class="d-flex justify-content-center">
+                        <div class="membership-container">
+                            <div class="membership-img-container">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/5.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                            </div>
+                            <div class="membership-fullname-container ">
+                                <p class="membership-fullname" id="Moshref">استاد عطاالله مشرف‌زاده</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="Membership-table-rows  d-flex justify-content-between">
-                        <div class="Membership-table-cell text-center">001</div>
-                        <div class="Membership-table-cell text-center">کریم الدین نظام زاده</div>
-                        <div class="Membership-table-cell text-center">پیوسته 1</div>
-                    </div>
-                    <div class="Membership-table-rows  d-flex justify-content-between">
-                        <div class="Membership-table-cell text-center">001</div>
-                        <div class="Membership-table-cell text-center">کریم الدین نظام زاده</div>
-                        <div class="Membership-table-cell text-center">پیوسته 1</div>
+                    <div class="d-flex justify-content-center">
+                        <div class="membership-container">
+                            <div class="membership-img-container">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/6.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                            </div>
+                            <div class="membership-fullname-container ">
+                                <p class="membership-fullname">استاد داریوش برهانی</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

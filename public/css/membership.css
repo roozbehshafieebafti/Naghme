@@ -1,39 +1,82 @@
 .Membership-left-div{
-    float: left;
-    width: 50%;
+    
     border: solid 2px black;
     border-radius: 5px;
 
 }
-.Membership-right-div{
-    float: left;
-    width: 50%;
+.Membership-header-div{
+    display: flex;
+    justify-content: center;
 }
 .Membership-header-text{
     color: #790000;
 }
-.Membership-table-rows{
-    border: solid 2px #f6a619;
-    border-radius: 5px !important;
-    margin-top: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+.membership-container{
+    border: 3px solid #790000;
+    display: flex;
+    justify-content: space-between;
+    width:400px;
+    padding: 10px;
+    margin-bottom: 20px;
+} 
+.membership-img-container{
+    position: relative;
+    left: 80px;
 }
-.Membership-table-cell{
-    width: 140px;
+.membership-img{
+    width: 160px;
+    height: 160px;
+    border: 2px solid #f6a619
+}
+.membership-fullname-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: IranNastaliq;
+    font-size: 45px;
+    width:250px;
+    padding-top: 30px;
+    position: relative;
+    left: 30px;
+}
+#Moshref{
+    font-size: 35px;
+}
+@media (min-width:320px) and (max-width:480px){
+
+    .membership-container{
+        width: 290px;
+    }
+    .membership-img{
+        width: 140px;
+        height: 140px;
+    }
+    .membership-fullname-container{
+        padding-top: 20px;
+        font-size: 26px;
+        width:150px;
+        left:0px
+    }
+    .membership-img-container{
+        left: 20px;
+    }
+    #Moshref{
+        font-size: 19px;
+    }
 }
 
-.Membership-red-boarder{
-    border: solid #790000 2px;
-    border-left: none;
-    position: relative;
-    top:150px;
-    height: 130px;
-    /* overflow: hidden; */
-}
-.Membership-eftekhari-title{
-    height: 50px;    
-    position: relative;
-    bottom: 20px;
-    width:80%;
+@media (min-width:481px) and (max-width:600px){
+
+    .membership-fullname-container{
+        font-size: 40px;
+        width:230px;
+        padding-top: 20px;
+        left:0px
+    }
+    .membership-img-container{
+        left: 40px;
+    }
+    #Moshref{
+        font-size: 35px;
+    }
 }
