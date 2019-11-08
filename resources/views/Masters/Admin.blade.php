@@ -6,7 +6,11 @@
 		<meta name="description" content="" />
 		<meta name="language" content="fa" />
 		<meta name="csrf-token" content="{{ csrf_token() }}" />
+		<meta name="theme-color" content="#000000"/>
+		<meta name="msapplication-navbutton-color" content="#000000"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000000"/>
 		<title>نغمه ماندگار | @yield('title')</title>
+		<link rel="shortcut icon" type="image/png" href="{{ config('app.url').'picture/logos/64x64.png' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/bootstrap.min.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/Admin.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/all.min.css' }}">

@@ -1,8 +1,31 @@
 {
-    "name": "naghme",
-    "short_name": "naghme-mandegar",
+    "name": "naghme-mandegar",
+    "short_name": "naghme",
+    "background_color": "#FFFFFF",
     "start_url": "/?launcher=true",
     "display": "standalone",
-    "theme_color": "#FFFFFF",
-    "orientation": "portrait"
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "icons": [
+        {
+          "src": "./picture/logos/64x64.png",
+          "sizes": "64x64",
+          "type": "image/png"
+        },
+        {
+          "src": "./picture/logos/128x128.png",
+          "sizes": "128x128",
+          "type": "image/png"
+        },
+        {
+          "src": "./picture/logos/192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "./picture/logos/512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+    ]
 }
