@@ -40,7 +40,7 @@
                     <div class="d-flex justify-content-center">
                         <div class="membership-container">
                             <div class="membership-img-container">
-                                <img class="membership-img" src="{{ config('app.url').'picture/membership/2.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/2.jpg' }}" alt="استاد حمید ایلاقی" title="استاد حمید ایلاقی">
                             </div>
                             <div class="membership-fullname-container ">
                                 <p class="membership-fullname">استاد حمید ایلاقی</p>
@@ -50,7 +50,7 @@
                     <div class="d-flex justify-content-center">
                         <div class="membership-container">
                             <div class="membership-img-container">
-                                <img class="membership-img" src="{{ config('app.url').'picture/membership/3.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/3.jpg' }}" alt="استاد سعادت ارجمند" title="استاد سعادت ارجمند">
                             </div>
                             <div class="membership-fullname-container ">
                                 <p class="membership-fullname">استاد سعادت ارجمند</p>
@@ -60,7 +60,7 @@
                     <div class="d-flex justify-content-center">
                         <div class="membership-container">
                             <div class="membership-img-container">
-                                <img class="membership-img" src="{{ config('app.url').'picture/membership/4.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/4.jpg' }}" alt="استاد میرزایی" title="استاد میرزایی">
                             </div>
                             <div class="membership-fullname-container ">
                                 <p class="membership-fullname">استاد میرزایی</p>
@@ -70,7 +70,7 @@
                     <div class="d-flex justify-content-center">
                         <div class="membership-container">
                             <div class="membership-img-container">
-                                <img class="membership-img" src="{{ config('app.url').'picture/membership/5.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/5.jpg' }}" alt="استاد عطاالله مشرف‌زاده" title="استاد عطاالله مشرف‌زاده">
                             </div>
                             <div class="membership-fullname-container ">
                                 <p class="membership-fullname" id="Moshref">استاد عطاالله مشرف‌زاده</p>

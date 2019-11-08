@@ -3,6 +3,11 @@
 <div class="toggle-button">
     <span onclick="openMenu()" class=""><i class="fas fa-bars h4 toggle-button-key"></i></span>
 </div>
+<div class="NGO-logo-mobile">
+    <a href="{{ config("app.url") }}">
+        <img class="logo-img-mobile" src="{{ config('app.url')."picture/assets/logo.png"}}" alt="{{ config('view.alt') }}" title="{{ config('view.title') }}" />
+    </a>
+</div>
 <div class="Header-with-toggle text-white mt-1">
     <div class="menu-content bg-white pt-2" id="menuContent">
         <div class="" id="accordionExample">
