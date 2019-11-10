@@ -60,10 +60,10 @@
                     <div class="d-flex justify-content-center">
                         <div class="membership-container">
                             <div class="membership-img-container">
-                                <img class="membership-img" src="{{ config('app.url').'picture/membership/4.jpg' }}" alt="استاد میرزایی" title="استاد میرزایی">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/4.jpg' }}" alt="استاد محمد میرزایی" title="استاد محمد میرزایی">
                             </div>
                             <div class="membership-fullname-container ">
-                                <p class="membership-fullname">استاد میرزایی</p>
+                                <p class="membership-fullname">استاد محمد میرزایی</p>
                             </div>
                         </div>
                     </div>
@@ -80,10 +80,10 @@
                     <div class="d-flex justify-content-center">
                         <div class="membership-container">
                             <div class="membership-img-container">
-                                <img class="membership-img" src="{{ config('app.url').'picture/membership/6.jpg' }}" alt="استاد داریوش برهانی" title="استاد داریوش برهانی">
+                                <img class="membership-img" src="{{ config('app.url').'picture/membership/6.jpg' }}" alt="استاد سیروس خاندانی" title="استاد سیروس خاندانی">
                             </div>
                             <div class="membership-fullname-container ">
-                                <p class="membership-fullname">استاد داریوش برهانی</p>
+                                <p class="membership-fullname"  id="Siroos">استاد سیروس خاندانی</p>
                             </div>
                         </div>
                     </div>

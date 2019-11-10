@@ -1,4 +1,23 @@
 @media only screen and (min-width:320px ) and (max-width: 400px){
+    .AllAct-title-container{
+        padding-right: 30px; 
+        height: 120px;;
+    }
+    .AllAct-title-border-yellow{
+        width:200px;
+        height:50px;
+    }
+    .AllAct-title-border-black{
+        width:200px;
+        height:40px;
+    }
+    .AllAct-title{
+        width:130px;
+        background-color: black;
+        left: 30px;
+        top:10px;
+        font-size: 30px;
+    }
     .activity-header-menu{
         background-color: black;
         overflow: hidden;
@@ -10,7 +29,7 @@
     .AllAct-links-container{      
         height: 400px;
         position: relative;
-        top: 100px;
+        /* top: 100px; */
     }
     .AllAct-white-border {
         height: 600px;
@@ -82,6 +101,26 @@
     }
 }
 @media only screen and (min-width:401px ) and (max-width: 1110px){
+    .AllAct-title-container{
+        padding-right: 30px; 
+        height: 120px;
+        padding-top: 30px;;
+    }
+    .AllAct-title-border-yellow{
+        width:200px;
+        height:50px;
+    }
+    .AllAct-title-border-black{
+        width:200px;
+        height:40px;
+    }
+    .AllAct-title{
+        width:130px;
+        background-color: black;
+        left: 30px;
+        top:10px;
+        font-size: 30px;
+    }
     .activity-header-menu{
         background-color: black;
         height: 780px;
@@ -93,7 +132,6 @@
     .AllAct-links-container{      
         height: 500px;
         position: relative;
-        top: 100px;
     }
     .AllAct-white-border {
         height: 700px;
@@ -165,6 +203,29 @@
     }
 }
 @media only screen and (min-width:1111px ){
+    .AllAct-title-container{
+        height: 120px;
+        width: 40%;
+        height: 300px;
+        padding-top: 130px;
+        padding-right: 80px;
+    }
+    .AllAct-title-border-yellow{
+        width:280px;
+        height:50px;
+    }
+    .AllAct-title-border-black{
+        width:280px;
+        height:40px;
+    }
+    .AllAct-title{
+        width:230px;
+        background-color: black;
+        /* left: 30px; */
+        right: 30px;
+        top:10px;
+        font-size: 40px;
+    }
     .allAct-main-posts{
         margin-top: 600px;
     }
@@ -188,6 +249,10 @@
         border: solid 3px white;
         position: relative;
         bottom: 100px;
+    }
+    .All-Act-main-Link-desktop{
+        position: relative;
+        bottom: 300px;
     }
     .AllAct-mobile-row-1{
         padding-top: 30px;
@@ -260,4 +325,29 @@
 .AllAct-mobile-sqr-link:hover{
     text-decoration: none;
     color: white;
+}
+
+.AllAct-title-border-yellow{
+    border: #f6a619 solid 2px;
+    position: relative;
+    bottom: 20px;
+}
+.AllAct-title-border-black{
+    border: white solid 2px;
+    position: relative;
+    bottom: 65px;
+    left:5px;
+}
+.AllAct-title{
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    background-color: black;
+    z-index: 2;
+}
+.AllAct-title-main-container{
+    overflow: hidden;
+}
+.AllAct-title-container{
+    float: right;    
 }

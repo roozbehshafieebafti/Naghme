@@ -42,6 +42,9 @@
 #Moshref{
     font-size: 35px;
 }
+#Siroos{
+    font-size: 43px;
+}
 @media (min-width:320px) and (max-width:480px){
 
     .membership-container{
@@ -62,6 +65,9 @@
     }
     #Moshref{
         font-size: 19px;
+    }
+    #Siroos{
+        font-size: 23px;
     }
 }
 
