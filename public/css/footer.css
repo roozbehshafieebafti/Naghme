@@ -104,7 +104,7 @@
         width: 53px;
     }
     #social-icon2{
-        width: 50px;
+        width: 48px;
     }
     #social-icon3{
         width: 50px;
@@ -196,6 +196,7 @@
         background-color: inherit;
         border: none;
         font-size: 15px;
+        width: 190px;
     }
     .search-input:focus {
         outline: none;
@@ -221,15 +222,16 @@
         float: left;
         margin:0px 10px 0px 30px;
         padding-bottom: 15px;
+        width: 220px;
     }
     #social-icon1{
-        width: 43px;
+        width: 44px;
     }
     #social-icon2{
         width: 40px;
     }
     #social-icon3{
-        width: 40px;
+        width: 41px;
     }
 }
 @media only screen and (min-width: 800px ) and (max-width: 976px){
@@ -342,15 +344,16 @@
         float: left;
         margin:0px 10px 0px 30px;
         padding-bottom: 15px;
+        width:220px
     }
     #social-icon1{
-        width: 43px;
+        width: 45px;
     }
     #social-icon2{
         width: 40px;
     }
     #social-icon3{
-        width: 40px;
+        width: 41px;
     }
 }
 @media only screen and (min-width: 976px) {
@@ -463,29 +466,30 @@
         right: 12px;
     }
     .footer-contact-us-pic1{
-        width: 70px;
+        width: 60px;
         left: 40px;
         position: relative;
         bottom: 25px;        
     }
     .footer-contact-us-pic2{
-        width: 45px;
+        width: 40px;
         position: relative;
-        left: 20px;
+        left: 23px;
         bottom: 15px;
         right: 8px;
     }
     .footer-contact-us-pic3{
         width: 45px;
         position: relative;
-        left: 20px;
+        left: 26px;
         bottom: 5px;
     }
 
     .footer-left-container {
         display: flex;
         align-items: center;
-        margin-left: 10px;
+        margin-left: 30px;        
+
     }
     .follow-us-text{
         border-bottom:solid 2px #f6a619;
@@ -495,6 +499,7 @@
         text-align: right;
         background-color: inherit;
         border: none;
+        width: 250px;
     }
     .search-input:focus {
         outline: none;
@@ -515,6 +520,15 @@
         float: left;  
         height: 200px;
         margin-bottom: 30px;
+    }
+    #social-icon1{
+        width: 55px;
+    }
+    #social-icon2{
+        width: 50px;
+    }
+    #social-icon3{
+        width: 51px;
     }
 }
 

@@ -104,7 +104,7 @@ html{
   }
   /* news teller */
   .News-teller-container {
-    margin-top: 40px;
+    margin-top: 60px;
   }
   .News-black-border {
     height: 70px;
@@ -213,7 +213,7 @@ html{
    /* news teller */
    .News-teller-container {
       width: 100%;
-      margin-top: 50px;
+      margin-top: 70px;
     }
    .News-black-border {
     height: 70px;
@@ -328,7 +328,7 @@ html{
   }
   /* news teller */
   .News-teller-container {
-    margin-top: 50px;
+    margin-top: 70px;
     width: 100%;
   }
   .News-black-border {
@@ -440,7 +440,7 @@ html{
     }
     /* news teller */
     .News-teller-container {
-      margin-top:40px;
+      margin-top:100px;
       width: 100%;
     }
     .News-black-border {
@@ -556,7 +556,7 @@ html{
   }
    /* news teller */
    .News-teller-container {
-    margin-top:40px;
+    margin-top:70px;
     width: 80%;
   }
   .News-black-border {
@@ -673,7 +673,7 @@ html{
   .News-teller-container {
     position: relative;
     top: 160px;;
-    margin-top: 100px;
+    margin-top: 170px;
     width: 50%;
   }
   .News-black-border {
@@ -779,6 +779,7 @@ html{
   .News-teller-container {
     margin-top: 100px;
     width: 600px;
+    margin-top: 120px;;
   }
   .News-black-border {
     left: 40px;
@@ -852,12 +853,14 @@ html{
   transform: rotate(45deg);
   padding-top: 37px;
   border: solid black 3px;
+  box-shadow: 3px 3px 6px gray;
 }
 .back-label {
   background-color: #790000;
   transform: rotate(45deg);
   padding-top: 37px;
   border: solid black 3px;
+  box-shadow: 3px 3px 6px gray;
 }
 .main-motto-border {
   border: 3px solid black;
