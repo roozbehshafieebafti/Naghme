@@ -8,8 +8,12 @@
 		<meta name="language" content="fa" />
 		<meta name="author" content="روزبه شفیعی بافتی" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000"/>
+		<meta name="msapplication-navbutton-color" content="#000000"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000000"/>
 		<title>نغمه ماندگار | @yield('title')</title>
 		<link rel="manifest" href="{{ config('app.url').'manifest.json' }}">
+		<link rel="shortcut icon" type="image/png" href="{{ config('app.url').'picture/logos/64x64.png' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/bootstrap.min.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/Admin.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/all.min.css' }}">
@@ -28,6 +32,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/newsReadMore.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/pagination.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/representation.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/readMoreRepresentation.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/membership.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/search.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/activities.css' }}">

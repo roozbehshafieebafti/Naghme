@@ -25,9 +25,9 @@
     }
     .statement-image-container{
       position: relative;
-      left:13%;
+      right: 10px;
       overflow:hidden;
-      min-width: 120%;
+      min-width: 100%;
     }
     .statement-image2{
       width: 250px;
@@ -74,9 +74,13 @@
   .plane-ul-list{
     padding: 0px;
   }
+  .statement-image-container-row{
+    overflow:hidden;
+    min-height: 400px;;
+  }
   .statement-image-container{
-    position: relative;
-    right:30px;
+    position: absolute;
+    left: 0px;
     overflow:hidden;
     min-width: 100%;
   }
@@ -116,7 +120,7 @@
   } 
   .statement-image{
     position: absolute;
-    top: 1300px;
+    top: 1320px;
     left: 0px;
   }
   .statemants-accordion{
@@ -174,7 +178,7 @@
 
 .statement-title{
     position: absolute;
-    top: 1675px;
+    top: 1695px;
     left: 205px;
 }
 .statemants-accordion-content{

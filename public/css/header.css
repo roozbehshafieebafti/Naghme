@@ -12,6 +12,17 @@
     .No-PreView{
       display: none;
     }
+    .NGO-logo-mobile{
+      position: absolute;
+      top:0px;
+      right: 0px;
+    }
+    .logo-img-mobile{
+      position: relative;
+      bottom: 5px;
+      height: 90px;
+      z-index: 2;
+    }
     .General-header-menu{
       background-color: black;
       height: 160px;
@@ -174,6 +185,9 @@
 }
 
 @media only screen and (min-width: 1111px) {
+    .NGO-logo-mobile{
+      display: none;
+    }
     .General-header-menu{
       display:none;        
     }

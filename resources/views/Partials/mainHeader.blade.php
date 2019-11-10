@@ -3,6 +3,11 @@
 <div class="toggle-button">
     <span onclick="openMenu()" class=""><i class="fas fa-bars h4 toggle-button-key"></i></span>
 </div>
+<div class="NGO-logo-mobile">
+    <a href="{{ config("app.url") }}">
+        <img class="logo-img-mobile" src="{{ config('app.url')."picture/assets/logo.png"}}" alt="{{ config('view.alt') }}" title="{{ config('view.title') }}" />
+    </a>
+</div>
 <div class="Header-with-toggle text-white mt-1">
     <div class="menu-content bg-white pt-2" id="menuContent">
         <div class="" id="accordionExample">
@@ -21,12 +26,12 @@
                         <ul class="header-ul-list bg-white  col-12">
                             <li><a class="mobile-header-sub-title" href="{{ route('Menu_History').'#history' }}">تاریخچه<span class="mobile-empty-diamond">&#9671;</span></a></li>
                             <li><a class="mobile-header-sub-title" href="{{ route('Menu_Purpose').'#purpose' }}">اهداف<span class="mobile-empty-diamond">&#9671;</span></a></li>
-                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Form') }}">فرم‌ها<span class="mobile-empty-diamond">&#9671;</span></a></li>
                             <li><a class="mobile-header-sub-title" href="{{ route('Menu_Plane').'#plane' }}">برنامه ها<span class="mobile-empty-diamond">&#9671;</span></a></li>
                             <li><a class="mobile-header-sub-title" href="{{ route('Menu_Statement').'#statement' }}">بیانیه ها<span class="mobile-empty-diamond">&#9671;</span></a></li>
-                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Regulations') }}">آیین نامه ها<span class="mobile-empty-diamond">&#9671;</span></a></li>
-                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Ethics') }}">منشور اخلاقی<span class="mobile-empty-diamond">&#9671;</span></a></li>
                             <li><a class="mobile-header-sub-title" href="{{ route('Menu_Chart','کرمان') }}">نمودار سازمانی<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Ethics') }}">منشور اخلاقی<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Form') }}">فرم‌ها<span class="mobile-empty-diamond">&#9671;</span></a></li>
+                            <li><a class="mobile-header-sub-title" href="{{ route('Menu_Regulations') }}">آیین نامه ها<span class="mobile-empty-diamond">&#9671;</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -146,12 +151,12 @@
                     <ul class="header-ul-list col-12">
                         <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_History').'#history' }}">تاریخچه</a></li>
                         <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Purpose').'#purpose' }}">اهداف</a></li>
-                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Form') }}">فرم‌ها</a></li>
                         <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Plane').'#plane' }}">برنامه ها</a></li>
                         <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Statement').'#statement' }}">بیانیه ها</a></li>
-                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Regulations') }}">آیین نامه ها</a></li>
-                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Ethics') }}">منشور اخلاقی</a></li>
                         <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Chart','کرمان') }}">نمودار سازمانی</a></li>
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Ethics') }}">منشور اخلاقی</a></li>
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Form') }}">فرم‌ها</a></li>
+                        <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="{{ route('Menu_Regulations') }}">آیین نامه ها</a></li>
                     </ul>
                 </div>
 

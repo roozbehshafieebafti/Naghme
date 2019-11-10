@@ -21,3 +21,29 @@
     z-index: -10;
     right: 10px;
 }
+
+@media (min-width:320px) and (max-width:480px){
+    .chart-title{
+        margin-top: 40px;
+        width: 250px;
+        height: 60px;
+        font-size: 15px;
+    }
+    .chart-sub-border{
+        width: 250px;
+        height: 60px;
+        bottom: 60px;
+    }
+}
+@media (min-width:481px) and (max-width:1110px){
+    .chart-title{
+        margin-top: 40px;
+        width: 400px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .chart-sub-border{
+        width: 400px;
+        height: 40px;
+    }
+}
