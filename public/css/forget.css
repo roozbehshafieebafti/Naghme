@@ -1,0 +1,132 @@
+@media (min-width:320px) and (max-width:340px){
+    .forget-main-div{
+        margin-top:150px;
+        margin-bottom:0px;
+    }
+    .forget-image-right{
+        display: none;
+    }
+    .forget-button-border-black{
+        right:15px;
+        top:-30px; 
+    }
+
+}
+
+@media (min-width:341px) and (max-width:480px){
+    .forget-main-div{
+        margin-top:150px;
+        margin-bottom:0px;
+    }
+    .forget-image-right{
+        display: none;
+    }
+    .forget-button-border-black{
+        right:160px;
+        top:30px; 
+    }
+}
+
+@media (min-width:481px) and (max-width:640px){
+    .forget-main-div{
+        margin-top:150px;
+        margin-bottom:0px;
+    }
+    .forget-button-border-black{
+        right:160px;
+        top:30px; 
+    }
+}
+
+@media (min-width:641px) and (max-width:768px){
+    .forget-main-div{
+        margin-top:150px;
+        margin-bottom:100px;
+    }
+    .forget-button-border-black{
+        right:160px;
+        top:30px; 
+    }
+}
+
+@media (min-width:769px) and (max-width:990px){
+    .forget-main-div{
+        margin-top:150px;
+        margin-bottom:100px;
+    }
+    .forget-button-border-black{
+        right:160px;
+        top:30px; 
+    }
+}
+
+@media (min-width:991px) and (max-width:1110px){
+    .forget-main-div{
+        margin-top:150px;
+        margin-bottom:100px;
+    }
+    .forget-button-border-black{
+        right:160px;
+        top:30px; 
+    }
+}
+
+@media (min-width:1111px) and (max-width:1280px){
+    .forget-main-div{
+        margin-top:250px;
+        margin-bottom:100px;
+    }
+    .forget-button-border-black{
+        right:160px;
+        top:30px; 
+    }
+}
+
+@media (min-width:1281px) {
+    .forget-main-div{
+        margin-top:250px;
+        margin-bottom:100px;
+    }
+    .forget-button-border-black{
+        right:160px;
+        top:30px; 
+    }
+}
+
+.forget-image-right{
+    position:absolute;
+    right:0px;
+}
+
+.forget-capcha-image{
+    display:inline-block; 
+    width:200px; 
+    height:80px;
+}
+
+.forget-button{
+    position:relative;
+    z-index: 10;
+}
+
+.forget-button-border-black{
+    display:inline-block;
+    border:solid 1px black; 
+    width:140px;
+    position:relative;
+    z-index: 2; 
+    border-radius:3px;
+    height:35px;
+}
+
+.forget-buttom-link-one{
+    width: 170px;
+}
+
+.forget-buttom-link-two{
+    width: 170px;
+}
+
+.forget-div-input{
+    direction: rtl;
+}

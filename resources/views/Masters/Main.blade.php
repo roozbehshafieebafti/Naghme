@@ -33,6 +33,9 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/activities.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/activity.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/allActivities.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/login.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/register.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/forget.css' }}">
 	</head>
 	<body >
 		<div class="No-PreView">
