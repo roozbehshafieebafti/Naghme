@@ -48,13 +48,11 @@
       padding: 10px 20px 0 20px;
     }
   
-    .menu-content {
-      width: 0px;
+    .menu-content {      
       position: absolute;
       top: 0px;
       right: 0px;
-      z-index: 20;
-      background-color: aliceblue;
+      z-index: 20;      
       /* height: 400px; */
       display: none;
     }

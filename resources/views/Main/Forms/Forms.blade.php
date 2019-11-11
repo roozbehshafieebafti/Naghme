@@ -10,19 +10,19 @@
                 @if (count($Form)>0)
                     @foreach ($Form as $key=>$item)
                     <div class="">
-                            <div class="form-title-container d-flex align-items-center justify-content-between" id="heading"   data-toggle="collapse" data-target="#collapse{{$key}}" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="form-title-container d-flex align-items-center justify-content-between pl-0 pr-2" id="heading"   data-toggle="collapse" data-target="#collapse{{$key}}" aria-expanded="true" aria-controls="collapseOne">
                                 <span>
                                     <img src="{{config('app.url').'picture/assets/moreicon.svg'}}" alt="" style="width:20px;">    
                                 </span>
-                                <span style="direction: rtl" class="">                                    
-                                    <span style="color:#f6a619;font-size:25px; margin-left:30px">&#9672;</span>
+                                <span style="direction: rtl">                                    
+                                    <span style="color:#f6a619;font-size:25px; position:relative;top:4px;">&#9672;</span>
                                     <b class="form-content-name"> {{$item->form_title}}</b>
                                 </span>
                             </div>
                         
                             <div id="collapse{{$key}}" class="form-content-container collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    <div  class="text-white form-content">
+                                    <div style="direction: rtl" class="text-white form-content">
                                         {{$item->form_description}}
                                     </div>                                
                                     <div class="mt-3 text-white  d-flex justify-content-start">

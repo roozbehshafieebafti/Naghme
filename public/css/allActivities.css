@@ -99,6 +99,60 @@
         position: relative;
         bottom: 220px;
     }
+
+    .AllAct-Link1{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 10px;;
+    }
+    .AllAct-Link2{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 10px;;
+    }
+    .AllAct-Link3{
+        font-size: 13px;
+        display: inline-block;
+        width:90px;
+    }
+    .AllAct-Link4{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 10px;;
+    }
+    .AllAct-Link5{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 20px;;
+    }
+    .AllAct-Link6{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 5px;;
+    }
+    .AllAct-Link7{
+        font-size: 13px;
+        display: inline-block;
+        width:90px;
+        padding-right: 2px;;
+    }
+    .AllAct-Link8{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 12px;
+    }
+    .AllAct-Link9{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 5px;
+    }
 }
 @media only screen and (min-width:401px ) and (max-width: 1110px){
     .AllAct-title-container{
@@ -200,6 +254,61 @@
     .AllAct-mobile-row-6{
         position: relative;
         bottom: 250px;
+    }
+
+    .AllAct-Link1{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 3px;;
+    }
+    .AllAct-Link2{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 3px;;
+    }
+    .AllAct-Link3{
+        font-size: 17px;
+        display: inline-block;
+        width:120px;
+        padding-left:7px;
+    }
+    .AllAct-Link4{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 3px;;
+    }
+    .AllAct-Link5{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 15px;;
+    }
+    .AllAct-Link6{
+        font-size: 20px;
+        display: inline-block;
+        width:120px;
+        padding-right: 5px;;
+    }
+    .AllAct-Link7{
+        font-size: 17px;
+        display: inline-block;
+        width:120px;
+        padding-right: 4px;;
+    }
+    .AllAct-Link8{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 5px;
+    }
+    .AllAct-Link9{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 5px;
     }
 }
 @media only screen and (min-width:1111px ){
@@ -320,7 +429,7 @@
     color: white;
 }
 .AllAct-mobile-sqr-link{
-    color: black;    
+    color: black !important;    
 }
 .AllAct-mobile-sqr-link:hover{
     text-decoration: none;

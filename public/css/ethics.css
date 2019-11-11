@@ -7,10 +7,22 @@
     padding-bottom: 160px;
     font-size:20px;
   }
-
+  .ul-li-container{
+    margin-top: 350px;
+  }
   .ethics-li {
     padding-right: 7px;
     padding-left: 5px;
+    font-size: 18px;
+    direction: rtl;
+    text-align: justify;
+    padding-left: 10px;
+  }
+  .ethics-inner-li-sub{
+    font-size:18px;
+    direction: rtl;
+    text-align: justify;
+    padding-left: 10px;
   }
 
   .ethics-inner-li{
@@ -33,6 +45,17 @@
 
   .ethics-li {
     padding-right: 40px;
+    font-size: 19px;
+    direction: rtl;
+    text-align: justify;
+    padding-left: 10px;
+  }
+
+  .ethics-inner-li-sub{
+    font-size:19px;
+    direction: rtl;
+    text-align: justify;
+    padding-left: 10px;
   }
 
   .ethics-inner-li{
@@ -53,6 +76,16 @@
 
   .ethics-li {
     padding-right: 40px;
+    font-size: 19px;
+    direction: rtl;
+    text-align: justify;
+    padding-left: 10px;
+  }
+  .ethics-inner-li-sub{
+    font-size:19px;
+    direction: rtl;
+    text-align: justify;
+    padding-left: 10px;
   }
 
   .ethics-inner-li{
@@ -73,6 +106,16 @@
 
   .ethics-li {
     padding-right: 50px;
+    font-size: 19px;
+    direction: rtl;
+    text-align: justify;
+    padding-left: 10px;
+  }
+  .ethics-inner-li-sub{
+    font-size:19px;
+    direction: rtl;
+    text-align: justify;
+    padding-left: 10px;
   }
 
   .ethics-inner-li{
@@ -109,8 +152,7 @@
 }
 
 .ethics-li {
-  list-style: none;
-  font-size: 25px;
+  list-style: none;  
   font-weight: bold;
   color:#790000;
 }

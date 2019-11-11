@@ -23,7 +23,7 @@
                 <div class="AllAct-mobile-row-1 " >
                     <div class="AllAct-mobile-sqr mobile-fst-sqr">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link" href="{{ route("Get_All_Activities").'#'.$titles[0]->id }}">{{$titles[0]->at_title}}</a>
+                            <a class="AllAct-mobile-sqr-link AllAct-Link1" href="{{ route("Get_All_Activities").'#'.$titles[0]->id }}">{{$titles[0]->at_title}}</a>
                         </p>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="AllAct-mobile-row-2">
                     <div class="AllAct-mobile-sqr mobile-sec-sqr">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link" href="{{ route("Get_All_Activities").'#'.$titles[1]->id }}">
+                            <a class="AllAct-mobile-sqr-link AllAct-Link2" href="{{ route("Get_All_Activities").'#'.$titles[1]->id }}">
                                 {{ isset($titles[1]) ? $titles[1]->at_title : "-"}}
                             </a>
                         </p>
@@ -43,14 +43,14 @@
                 <div class="AllAct-mobile-row-3">
                     <div class="AllAct-mobile-sqr mobile-thr-sqr">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link" href="{{ route("Get_All_Activities").'#'.$titles[2]->id }}">
+                            <a class="AllAct-mobile-sqr-link AllAct-Link3" href="{{ route("Get_All_Activities").'#'.$titles[2]->id }}">
                                 {{ isset($titles[2]) ? $titles[2]->at_title : "-"}}
                             </a>
                         </p>
                     </div>
                     <div class="AllAct-mobile-sqr mobile-thr-sqr sqr-row3-col2">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link"
+                            <a class="AllAct-mobile-sqr-link AllAct-Link4"
                                  {{-- href="{{ route("Get_All_Activities").'#'.$titles[3]->id }}" --}}
                             >
                                 {{ isset($titles[3]) ? $titles[3]->at_title : "-"}}
@@ -63,7 +63,7 @@
                 <div class="AllAct-mobile-row-4">
                     <div class="AllAct-mobile-sqr mobile-fth-sqr">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link" 
+                            <a class="AllAct-mobile-sqr-link AllAct-Link5" 
                                 {{-- href="{{ route("Get_All_Activities").'#'.$titles[4]->id }}" --}}
                             >
                                 {{ isset($titles[4]) ? $titles[4]->at_title : "-"}}
@@ -72,7 +72,7 @@
                     </div>
                     <div class="AllAct-mobile-sqr mobile-fth-sqr sqr-row4-col2">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link" 
+                            <a class="AllAct-mobile-sqr-link AllAct-Link6" 
                                 {{-- href="{{ route("Get_All_Activities").'#'.$titles[5]->id }}" --}}
                             >
                                 {{ isset($titles[5]) ? $titles[5]->at_title : "-"}}
@@ -85,7 +85,7 @@
                 <div class="AllAct-mobile-row-5">
                     <div class="AllAct-mobile-sqr mobile-fifth-sqr">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link" 
+                            <a class="AllAct-mobile-sqr-link AllAct-Link7" 
                                 {{-- href="{{ route("Get_All_Activities").'#'.$titles[6]->id }}" --}}
                             >
                                 {{ isset($titles[6]) ? $titles[6]->at_title : "-"}}
@@ -94,7 +94,7 @@
                     </div>
                     <div class="AllAct-mobile-sqr mobile-fifth-sqr sqr-row5-col2">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link" href="{{ route("Get_All_Activities").'#'}}">
+                            <a class="AllAct-mobile-sqr-link AllAct-Link8" href="{{ route("Get_All_Activities").'#'}}">
                                 {{ isset($titles[7]) ? $titles[7]->at_title : "-"}}
                             </a>
                         </p>
@@ -105,7 +105,7 @@
                 <div class="AllAct-mobile-row-6">
                     <div class="AllAct-mobile-sqr mobile-sixth-sqr">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link" href="{{ route("Get_All_Activities").'#' }}">
+                            <a class="AllAct-mobile-sqr-link AllAct-Link9" href="{{ route("Get_All_Activities").'#' }}">
                                 {{ isset($titles[8]) ? $titles[8]->at_title : "-"}}
                             </a>
                         </p>

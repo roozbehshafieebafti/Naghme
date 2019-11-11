@@ -1,7 +1,7 @@
 function openMenu() {
   $("#menuContent").css("display", "block");
   $(".not-menu-content").fadeIn("fast");
-  $("#menuContent").animate({ width: "250px" });
+  $("#menuContent").animate({ width: "270px" });
 //   $(".toggle-button-key").css({transform: "rotate(90deg)"});
 }
 

@@ -157,8 +157,11 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h3>ثبت دیدگاه</h3>
+                    <div style="margin-top:100px">
+                        <h3>
+                            <span>ثبت دیدگاه</span>
+                            <span style="color:#f6a619;"> &#9672; </span> 
+                        </h3>
                         @if(session('success'))
                             <div class="text-success" style="">
                                 {{ session('success') }}

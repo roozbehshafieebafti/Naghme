@@ -135,17 +135,17 @@
 
     /* fonts */
   .purpose-li{
-    font-size: 25px;
+    font-size: 20px;
   }
   .plane-li{
-    font-size: 25px;
+    font-size: 20px;
   }
   .statemants-li {
-    font-size: 25px;
+    font-size: 20px;
     width :500px;
   }
   .statemants-accordion-key{
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 .purpose-heder-img-container{
