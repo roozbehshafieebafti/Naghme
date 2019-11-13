@@ -18,6 +18,14 @@
                 <a  class="Naghme-Dashboard-List" href="{{ route('Get_Slides') }}">&nbsp;اسلایدر</a>
             </li>
             <li class="Naghme-Dashboard-List mt-3">
+                <span><i class="fas fa-comments"></i></span>
+                <a  class="Naghme-Dashboard-List" href="{{ route('Get_Comments') }}">&nbsp;نظرات</a>
+            </li>
+            <li class="Naghme-Dashboard-List mt-3">
+                <span><i class="fas fa-ethernet"></i></span>
+                <a  class="Naghme-Dashboard-List" href="{{ route('Home') }}">&nbsp;صفحه اصلی سایت</a>
+            </li>
+            <li class="Naghme-Dashboard-List mt-3">
                 <span><i class="fas fa-door-open"></i></i></span>
                 <a  class="Naghme-Dashboard-List" href="{{ route('Exit') }}">&nbsp;خروج</a>
             </li>

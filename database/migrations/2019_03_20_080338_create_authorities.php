@@ -15,6 +15,7 @@ class CreateAuthorities extends Migration
             $table->increments('id');
             $table->string('authorities_title',64);
             $table->string('authorities_unit_title',32);
+            $table->tinyInteger('authorities_unit_title_primary')->nullable();
             $table->string('authorities_name',32);
             $table->string('authorities_family',32);
             $table->string('authorities_picture',96);

@@ -6,8 +6,8 @@
     @include('Partials.GeneralHeader')
     <div style="direction: rtl" class="container-fluid">
         <div class="Statemants container ethics-container-div">
-            <div class="">
-                <ul class="p-0 ul-li-container">
+            <ul class="p-0 ul-li-container">
+                <div class="ul-div-container">
                     @foreach ($Ethics as $key => $item)
                         <li class="mt-2 ethics-li">
                             {{ $key }}
@@ -21,8 +21,8 @@
                             @endforeach
                         </ol>
                     @endforeach
-                </ul>
-            </div>
+                </div>
+            </ul>
         </div>
     </div>
     @include('Partials.GeneralFooter')

@@ -226,6 +226,15 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::post('/create','SliderController@createSlide')->name('Create_Slide');
 			Route::get('/delete/{id}','SliderController@deleteSlide')->name('Delete_Slide');
 		});
+
+		/* Comments */
+		Route::group(['prefix'=>'/comments'],function(){
+			Route::get('/','CommentsController@getComments')->name('Get_Comments');
+			// Route::post('/','SliderController@updateSlides');
+			// Route::post('/create','SliderController@createSlide')->name('Create_Slide');
+			// Route::get('/delete/{id}','SliderController@deleteSlide')->name('Delete_Slide');
+		});
+
 });
 
 // this Routes belongs to Main Panel

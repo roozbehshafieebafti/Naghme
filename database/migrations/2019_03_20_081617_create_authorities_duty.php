@@ -13,7 +13,7 @@ class CreateAuthoritiesDuty extends Migration
     {
         Schema::create('authorities_duty', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ad_authorities_title',32);
+            $table->string('ad_authorities_title',64);
             $table->text('ad_authorities_duty');
             $table->tinyInteger('ad_authorities_city_id')->default(1);
             $table->timestamps();

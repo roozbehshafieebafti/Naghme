@@ -33,7 +33,7 @@
     justify-content: center;
     align-items: center;
     font-family: IranNastaliq;
-    font-size: 45px;
+    font-size: 40px;
     width:250px;
     padding-top: 30px;
     position: relative;
@@ -42,11 +42,13 @@
 #Moshref{
     font-size: 35px;
 }
-#Siroos{
-    font-size: 43px;
+.membership-main-container{
+    margin-top: 80px;
 }
 @media (min-width:320px) and (max-width:480px){
-
+    .membership-main-container{
+        margin-top: 130px;
+    }
     .membership-container{
         width: 290px;
     }
@@ -56,7 +58,7 @@
     }
     .membership-fullname-container{
         padding-top: 20px;
-        font-size: 26px;
+        font-size: 21px;
         width:150px;
         left:0px
     }
@@ -64,17 +66,14 @@
         left: 20px;
     }
     #Moshref{
-        font-size: 19px;
-    }
-    #Siroos{
-        font-size: 23px;
+        font-size: 20px;
     }
 }
 
 @media (min-width:481px) and (max-width:600px){
 
     .membership-fullname-container{
-        font-size: 40px;
+        font-size: 38px;
         width:230px;
         padding-top: 20px;
         left:0px
@@ -84,5 +83,11 @@
     }
     #Moshref{
         font-size: 35px;
+    }
+}
+
+@media (min-width:1111px) {
+    .membership-main-container{
+        margin-top: 230px;
     }
 }

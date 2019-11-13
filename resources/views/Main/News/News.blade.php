@@ -23,7 +23,7 @@
                             </div>                           
                             <div class="news-text-container" >
                                 <img class="news-text-background-container" src="{{ config('app.url')."/picture/assets/newsBackground.svg"}}" />
-                                <div class="news-text-sumery">
+                                <div class="news-text-sumery" style="font-size:15px;">
                                     {!!html_entity_decode( $Value->news_description)!!}
                                 </div>
                                 <div class="news-read-more-container">

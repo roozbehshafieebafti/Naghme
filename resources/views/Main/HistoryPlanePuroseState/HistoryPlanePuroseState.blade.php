@@ -15,7 +15,7 @@
 
         <div class="HPP-content plane mt-5">
             <div class="text-center purpose-heder-img-container">                 
-                <img class="head-image2" src="{{config('app.url').'picture/assets/head2.PNG'}}" alt="">
+                <img class="head-image2" src="{{config('app.url').'picture/assets/head2.png'}}" alt="">
             </div>
             <div class="purpose-titel text-center">
                 <h2 id="purpose" style="text-align:center"> <b>اهداف</b></h2>
@@ -33,8 +33,8 @@
             </div>  
         </div>
 
-        <div class="HPP-content purpose mt-5">
-            <div class="d-flex justify-content-center mt-5">
+        <div class="HPP-content purpose mt-5 plane-parent-container">
+            <div class="d-flex justify-content-center mt-5 plane-main-container">
                 <img class="plane-image-seprator" src="{{config('app.url').'picture/assets/sec_seprator.svg'}}" alt="">
                 <h2 id="plane" style="text-align:center;margin:0px 20px 0px 20px;"><b>برنامه‌ها</b></h2>
                 <img class="plane-image-seprator" src="{{config('app.url').'picture/assets/sec_seprator.svg'}}" alt="" style="transform: rotate(180deg);">

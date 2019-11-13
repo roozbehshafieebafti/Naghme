@@ -20,7 +20,9 @@ class MenuContent
             $AuthoritiesTitle = DB::select('SELECT authorities_unit_title 
             from authorities 
             WHERE authorities_city_id = 1 
-            group by authorities_unit_title');
+            group by authorities_unit_title
+            ORDER BY authorities_unit_title_primary
+            ');
             $_SESSION['Authorities'] = $AuthoritiesTitle;
         }
         if(!isset($_SESSION['Activities'])){

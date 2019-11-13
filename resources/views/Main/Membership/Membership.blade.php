@@ -4,7 +4,7 @@
 
 @section('content')
     @include('Partials.GeneralHeader')
-        <div class="container" style="direction:rtl;margin-top:220px;">
+        <div class="container membership-main-container" style="direction:rtl;">
             <div class="">
                 <ul class="">
                     @foreach ($score as $item)
@@ -14,7 +14,7 @@
                     @endforeach
                 </ul>
             </div>
-            <div class=" mb-5 mt-5">
+            <div style="padding-top:100px" class="mb-5 mt-5">
                 <div class="Membership-header-div">
                     <div class="Membership-red-boarder d-flex justify-content-end">
                         <h4 class="Membership-eftekhari-title  bg-white"> 

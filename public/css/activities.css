@@ -1,4 +1,7 @@
 @media (min-width:320px) and (max-width:480px){
+    .activities-main-titles{
+        font-size: 25px;
+    }
     .activities-container{
         margin-top:170px;
     }

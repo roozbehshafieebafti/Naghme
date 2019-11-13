@@ -12,7 +12,7 @@
                         <img class="activities-head-pic" src="{{config('app.url').'picture/assets/head2.png'}}" alt="">
                     </div>
                     <div class="purpose-titel text-center mt-4">
-                        <h2 id="purpose" style="text-align:center"> <b>{{ $titleIds[$key] }}</b></h2>
+                        <h2 id="purpose" class="activities-main-titles"  style="text-align:center"> <b>{{ $titleIds[$key] }}</b></h2>
                         <img class="seprator-image" src="{{config('app.url').'picture/assets/seprator.svg'}}"/>
                     </div>
                 </div>

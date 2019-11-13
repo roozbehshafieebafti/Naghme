@@ -63,7 +63,7 @@
                 </div>
                 @if (count($gallery)>0)
                     <div class="activity-img-gallery-container">
-                        <div class="d-flex justify-content-center mt-5">
+                        <div class="d-flex justify-content-center mt-5 plane-main-container">
                             <img class="plane-image-seprator" src="{{config('app.url').'picture/assets/sec_seprator.svg'}}" alt="" style="transform: rotate(180deg);">
                             <h2 id="plane" style="text-align:center;margin:0px 20px 0px 20px;"><b>آرشیو تصاویر</b></h2>
                             <img class="plane-image-seprator" src="{{config('app.url').'picture/assets/sec_seprator.svg'}}" alt="">
