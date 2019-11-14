@@ -238,8 +238,8 @@
         margin-right: 20px;
         color: black;
     }
-    .header-link-title:hover{text-decoration: none;}
-    .header-link-title{cursor: pointer;display:inline-block;width:100%; font-weight:bold}
+    .header-link-title{cursor: pointer;display:inline-block;width:100%; font-weight:bold;}
+    .header-link-title:hover{text-decoration: none;color: #f6a619 !important;}
     .header-text-link:hover{text-decoration: none;color: black;}
     .header-text-dimond-shape{color:#790000;font-size:20px;position: relative; top: 3px;}
     .header-sub-menu:hover .header-ul-list {display: block;}
