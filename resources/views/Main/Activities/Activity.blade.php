@@ -119,9 +119,8 @@
                         </div>
                     </div>
                 @endif
-                <div class="container">
-                    <div class="row mt-5">
-                        <div class="col-3"></div>
+                <div class="activity-main-comments">
+                    <div class="row mt-5">                        
                         <div class="col-xl-9 col-lg-9 col-12 activity-comment-container">
                             <div>
                                 <h3 class="comment-h3-header">
@@ -156,8 +155,11 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="col-xl-3 col-lg-3 activity-comment-shapes">
+                            <img class="activity-comment-shapes-img" src="{{config('app.url').'picture/assets/shape1.svg'}}"/>
+                        </div>
                     </div>
-                    <div style="margin-top:100px">
+                    <div class="activity-main-comments-contents" style="margin-top:100px">
                         <h3>
                             <span>ثبت دیدگاه</span>
                             <span style="color:#f6a619;"> &#9672; </span> 

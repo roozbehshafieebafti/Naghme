@@ -2,12 +2,15 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="csrf-token" content="{{ csrf_token() }}" />
-		<meta name="keywords" content="" />
-		<meta name="description" content="" />
+		<meta name="csrf-token" content="{{ csrf_token() }}" />		
 		<meta name="language" content="fa" />
-		<meta name="author" content="روزبه شفیعی بافتی" />
+		<meta name="keywords" content="نغمه ماندگار، کرمان، موسیقی، هنری، سمن، جوانان، انجمن، انجمن نغمه ماندگار، ایران، عکاسی، تئاتر، نمایش، سینما، نقاشی، معماری، تجسمی" />
+		<meta name="description" content="انجمن مردم نهاد نغمه ماندگار با محوریت هنری- ادبی (موسیقی، عکس و...) با مرکزیت استان کرمان از سال 1387 آغاز به فعالیت نموده است."/>
+		<meta name="author" content="roozbe shafiee bafti: roozbehp.shafiee@gmail.com" />
+		<meta name="copyright"content="کليه حقوق مادي و معنوي اين سايت محفوظ و متعلق به انجمن نغمه ماندگار مي باشد.">
+		<meta name="owner" content="انجمن نغمه ماندگار">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="url" content="http://naghmehmandegar.org">
 		<meta name="theme-color" content="#000000"/>
 		<meta name="msapplication-navbutton-color" content="#000000"/>
 		<meta name="apple-mobile-web-app-status-bar-style" content="#000000"/>
