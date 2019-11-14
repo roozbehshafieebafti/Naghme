@@ -56,6 +56,7 @@ class NewsController extends Controller
              'news_picture' => $Picture,
              'news_cover_picture' => $CoverPicture,
              'news_file' => $File,
+             'news_text_sumery' => $request->News_text_sumery,
              'news_date' => $date,
              "created_at" => date("Y-m-d H:i:s"),
              "updated_at" => date("Y-m-d H:i:s"),
@@ -131,6 +132,7 @@ class NewsController extends Controller
         }
         $editedRecord->news_title =$request->News_title;
         $editedRecord->news_description =$request->News_text;
+        $editedRecord->news_text_sumery =$request->News_text_sumery;
         $editedRecord->news_date =$date;
 
 

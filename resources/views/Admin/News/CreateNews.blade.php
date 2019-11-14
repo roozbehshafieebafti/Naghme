@@ -18,6 +18,10 @@
                         </div>
                     </div>
                       <div class="form-group">
+                        <label >خلاصه خبر</label>
+                        <input id="News_text_sumery" class="form-control" type="text" name="News_text_sumery" maxlength="120"/>
+                      </div>
+                      <div class="form-group">
                         <label >توضیحات:</label>
                         <textarea id="News_text" class="form-control" type="text" name="News_text" style="height:350px" ></textarea>
                       </div>

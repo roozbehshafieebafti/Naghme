@@ -12,7 +12,7 @@ class MainNewsController extends Controller
         }
         $id = $id<1 ? 1 : $id;
         $Limit = 10;
-        $news =News::select("id","news_title","news_cover_picture","news_description","news_date")
+        $news =News::select("id","news_title","news_cover_picture","news_text_sumery","news_date")
                 ->orderBy('news_date','desc')
                 ->offset($id-1)
                 ->limit($Limit)
