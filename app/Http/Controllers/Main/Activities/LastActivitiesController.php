@@ -13,7 +13,7 @@ class LastActivitiesController extends Controller
                                 SELECT DISTINCT apst_activities_title_id
                                 FROM activities_posts
                                 ORDER BY id DESC
-                                LIMIT 9) tbl
+                                LIMIT 10) tbl
                                 ON a.id =  tbl.apst_activities_title_id');            
 
         $posts = DB::select('SELECT t.* FROM 
@@ -27,11 +27,14 @@ class LastActivitiesController extends Controller
                                 (SELECT distinct ap.apst_activities_title_id
                                 FROM activities_posts ap
                                 order by ap.apst_accure_date DESC
-                                limit 9) tbl        
+                                limit 10) tbl        
                             on t.apst_activities_title_id = tbl.apst_activities_title_id
                             WHERE t.row_number<=4
                             ORDER BY apst_activities_title_id ASC
-                            ');                            
+                            ');
+                                      
+
+
         $titleIds=[];
         $Posts=[];
         foreach($titles as $val){
@@ -40,7 +43,7 @@ class LastActivitiesController extends Controller
         foreach ($posts as $value) {
             $Posts[$value->apst_activities_title_id][]=$value;
         }
-        // dd($titles,$Posts);
+        // dd($titles,$Posts,$titleIds);
         return view("Main/Activities/AllActivities",compact("titles","Posts","titleIds"));
     }
 }

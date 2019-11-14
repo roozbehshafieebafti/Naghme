@@ -151,7 +151,10 @@
         font-size: 15px;
         display: inline-block;
         width:90px;
-        padding-right: 5px;
+        padding-right: 16px;
+    }
+    .all-activities-read-more-link{
+        padding-left: 10px;
     }
 }
 @media only screen and (min-width:401px ) and (max-width: 1110px){
@@ -308,7 +311,10 @@
         font-size: 20px;
         display: inline-block;
         width:110px;
-        padding-right: 5px;
+        padding-right: 10px;
+    }
+    .all-activities-read-more-link{
+        padding-left: 10px;
     }
 }
 @media only screen and (min-width:1111px ){
@@ -410,6 +416,9 @@
         width:100%;
         text-align: center;
     }
+    .all-activities-read-more-link{
+        padding-left: 100px;
+    }
 }
 
 .all-activity-container{
@@ -459,4 +468,39 @@
 }
 .AllAct-title-container{
     float: right;    
+}
+.deige-divooneh-sodam{
+    border-bottom: 1px solid black;
+}
+.all-activities-logo-black-sqr{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+.all-activities-logo-yellow-sqr{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color:  #f6a619;
+    transform: rotate(45deg);
+    position: relative;
+    left: 18px;
+    top:2px;
+}
+.all-activities-yellow-border-link{
+    display: inline-block;
+    width: 130px;
+    border: 1px solid #f6a619;
+    position: relative;
+    right: 18px;
+    bottom: 13px;;
+}
+.all-activities-link-read-more{
+    color: black;
+}
+.all-activities-link-read-more:hover{
+    text-decoration: none;
+    color: black;
 }

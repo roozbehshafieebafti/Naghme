@@ -94,7 +94,7 @@
                     </div>
                     <div class="AllAct-mobile-sqr mobile-fifth-sqr sqr-row5-col2">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link AllAct-Link8" href="{{ route("Get_All_Activities").'#'}}">
+                            <a class="AllAct-mobile-sqr-link AllAct-Link8" href="{{ route("Get_All_Activities").'#'.$titles[7]->id}}">
                                 {{ isset($titles[7]) ? $titles[7]->at_title : "-"}}
                             </a>
                         </p>
@@ -105,7 +105,7 @@
                 <div class="AllAct-mobile-row-6">
                     <div class="AllAct-mobile-sqr mobile-sixth-sqr">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link AllAct-Link9" href="{{ route("Get_All_Activities").'#' }}">
+                            <a class="AllAct-mobile-sqr-link AllAct-Link9" href="{{ route("Get_All_Activities").'#'.$titles[8]->id }}">
                                 {{ isset($titles[8]) ? $titles[8]->at_title : "-"}}
                             </a>
                         </p>
@@ -400,14 +400,14 @@
                     </div>
                     <div class="AllAct-mobile-sqr mobile-sec-sqr">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link" href="{{ route("Get_All_Activities").'#' }}">
+                            <a class="AllAct-mobile-sqr-link" href="{{ route("Get_All_Activities").'#'.$titles[7]->id  }}">
                                 {{ isset($titles[7]) ? $titles[7]->at_title : "-"}}
                             </a>
                         </p>
                     </div>
                     <div class="AllAct-mobile-sqr mobile-thr-sqr sqr-row3-col2">                    
                         <p class="AllAct-mobile-sqr-content">
-                            <a class="AllAct-mobile-sqr-link" href="{{ route("Get_All_Activities").'#'}}">
+                            <a class="AllAct-mobile-sqr-link" href="{{ route("Get_All_Activities").'#'.$titles[8]->id }}">
                                 {{ isset($titles[8]) ? $titles[8]->at_title : "-"}}
                             </a>
                         </p>

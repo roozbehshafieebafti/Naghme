@@ -41,7 +41,28 @@
                                 @endif
                             @endforeach
                         </div>
-                    </div>                      
+                    </div> 
+                    <div style="direction:rtl" class="d-flex justify-content-end all-activities-read-more-link">
+                         <div style="width:150px">
+                             <div class="d-flex justify-content-between">
+                                 <div class="deige-divooneh-sodam d-flex justify-content-between">
+                                    <div class="all-activities-logo-container">
+                                        <span class="all-activities-logo-black-sqr"></span>
+                                        <span class="all-activities-logo-yellow-sqr"></span>
+                                    </div>
+                                    <div class="all-activities-link-container">
+                                        <a class="all-activities-link-read-more" href="{{route('Get_Activities', $titleIds[$key])}}">ادامه مطلب</a>
+                                    </div>
+                                </div>
+                                 <div class="all-activities-element-container pt-1">
+                                    <i class="fas fa-hand-point-left"></i>
+                                </div>                                 
+                             </div>
+                             <div>
+                                 <span class="all-activities-yellow-border-link"></span>
+                             </div>
+                         </div>
+                    </div>                    
                 @endif
             </div>
         </div>
