@@ -24,6 +24,9 @@
     margin: 10px auto 0px auto;
 }
 @media (min-width:320px) and (max-width:480px){
+    .Representaion-read-more-img-container-hi{
+        display: none;
+    }
     .Representaion-read-more-container{
         margin-top: 130px;
     }
@@ -39,6 +42,9 @@
     }
 }
 @media (min-width:481px) and (max-width:1110px){
+    .Representaion-read-more-img-container-hi{
+        display: none;
+    }
     .Representaion-read-more-container{
         margin-top: 130px;
     }
@@ -52,10 +58,23 @@
 }
 @media (min-width:1111px) {
     .Representaion-read-more-authorities{
-        margin-top: 150px;
+        margin-top: 300px;
     }
-    .Representaion-read-more-img-container{
-        height: 100px;
-        overflow: hidden;
+    .Representaion-read-more-img-container-hi{        
+        height: 300px;
+        position: absolute;
+        right: 0px;
+        left: 0px;        
+    }
+    .Representaion-read-more-img-bold-shit{
+        width: 400px;
+        z-index: 2;
+        float: left;
+    }
+    .Representaion-read-more-title-bold-shit{
+        float: left;
+        position: relative;
+        top: 287px;
+        right: 250px;
     }
 }

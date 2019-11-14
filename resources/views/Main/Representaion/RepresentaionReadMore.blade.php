@@ -40,9 +40,9 @@
                     <h2 class="statement-title2" style="text-align:center"><b>همکاران</b></h2>
                 </div>
             </div>
-            <div class="Representaion-read-more-img-container">
-                <img class="statement-image" src="{{config('app.url').'picture/assets/middel_hpp.svg'}}" alt="" >
-                <h2 id="statement" class="statement-title" style="text-align:center"><b>همکاران</b></h2>
+            <div class="Representaion-read-more-img-container-hi">
+                <img class="Representaion-read-more-img-bold-shit" src="{{config('app.url').'picture/assets/middel_hpp.svg'}}" alt="" >
+                <h2 class="Representaion-read-more-title-bold-shit" style="text-align:center"><b>همکاران</b></h2>
             </div>
             <div >
                 <div class="Representaion-read-more-authorities">
