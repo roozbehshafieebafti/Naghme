@@ -367,6 +367,7 @@
         padding-right: 30px;;
         display: flex;
         justify-content: flex-end;
+        margin-right: 80px;
     }
     .selection-news-gallery-container{
         float: right;
