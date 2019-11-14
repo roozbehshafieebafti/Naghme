@@ -7,6 +7,7 @@
 		<meta name="keywords" content="نغمه ماندگار، کرمان، موسیقی، هنری، سمن، جوانان، انجمن، انجمن نغمه ماندگار، ایران، عکاسی، تئاتر، نمایش، سینما، نقاشی، معماری، تجسمی" />
 		<meta name="description" content="انجمن مردم نهاد نغمه ماندگار با محوریت هنری- ادبی (موسیقی، عکس و...) با مرکزیت استان کرمان از سال 1387 آغاز به فعالیت نموده است."/>
 		<meta name="author" content="roozbe shafiee bafti: roozbehp.shafiee@gmail.com" />
+		<meta name="designer" content="rezvan fahimi: rezvan.fhm@gmail.com" />
 		<meta name="copyright" content="کليه حقوق مادي و معنوي اين سايت محفوظ و متعلق به انجمن نغمه ماندگار مي باشد.">
 		<meta name="owner" content="انجمن نغمه ماندگار">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,8 +18,8 @@
 		<title>نغمه ماندگار | @yield('title')</title>
 		<link rel="manifest" href="{{ config('app.url').'manifest.json' }}">
 		<link rel="shortcut icon" type="image/png" href="{{ config('app.url').'picture/logos/64x64.png' }}">
-		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/bootstrap.min.css' }}">
-		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/Admin.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/app.css' }}">
+		{{-- <link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/Admin.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/all.min.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/jquery-ui.min.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/templatemo-style.css' }}">
@@ -43,7 +44,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/allActivities.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/login.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/register.css' }}">
-		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/forget.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/forget.css' }}"> --}}
 	</head>
 	<body >
 		<div class="No-PreView">

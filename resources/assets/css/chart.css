@@ -1,0 +1,49 @@
+.chart-title{
+    border: #790000 solid 3px;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    margin-top: 60px;
+    z-index: 10;
+    background-color: white;
+    position: relative;
+    left: 10px;
+}
+.chart-sub-border{
+    border: #000 solid 3px;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    position: relative;
+    bottom: 50px;
+    z-index: -10;
+    right: 10px;
+}
+
+@media (min-width:320px) and (max-width:480px){
+    .chart-title{
+        margin-top: 40px;
+        width: 250px;
+        height: 60px;
+        font-size: 15px;
+    }
+    .chart-sub-border{
+        width: 250px;
+        height: 60px;
+        bottom: 60px;
+    }
+}
+@media (min-width:481px) and (max-width:1110px){
+    .chart-title{
+        margin-top: 40px;
+        width: 400px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .chart-sub-border{
+        width: 400px;
+        height: 40px;
+    }
+}

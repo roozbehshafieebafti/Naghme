@@ -14,7 +14,12 @@
                     @endforeach
                 </ul>
             </div>
-            <div style="padding-top:100px" class="mb-5 mt-5">
+            <h4 style="padding-top:40px;padding-right:40px">
+                جهت عضویت در انجمن نغمه ماندگار
+                <a target="_blanck" href="https://docs.google.com/forms/d/e/1FAIpQLSfawmCCj5JpKAWVl3zOacbaHscwll9n0_RCfFqt7kwDK8oX9Q/viewform?usp=sf_link">اینجا</a>
+                کلیک نمایید
+            </h4>
+            <div style="padding-top:60px" class="mb-5 mt-5">
                 <div class="Membership-header-div">
                     <div class="Membership-red-boarder d-flex justify-content-end">
                         <h4 class="Membership-eftekhari-title  bg-white"> 

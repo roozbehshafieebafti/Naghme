@@ -1,0 +1,506 @@
+@media only screen and (min-width:320px ) and (max-width: 400px){
+    .AllAct-title-container{
+        padding-right: 30px; 
+        height: 120px;;
+    }
+    .AllAct-title-border-yellow{
+        width:200px;
+        height:50px;
+    }
+    .AllAct-title-border-black{
+        width:200px;
+        height:40px;
+    }
+    .AllAct-title{
+        width:130px;
+        background-color: black;
+        left: 30px;
+        top:10px;
+        font-size: 30px;
+    }
+    .activity-header-menu{
+        background-color: black;
+        overflow: hidden;
+        height: 670px;
+    }
+    .activity-Header-without-toggle{
+        display: none;
+    }
+    .AllAct-links-container{      
+        height: 400px;
+        position: relative;
+        /* top: 100px; */
+    }
+    .AllAct-white-border {
+        height: 600px;
+        border: solid 3px white;
+        position: relative;
+        bottom: 70px;
+        margin-right: 5px;
+        margin-left: 5px;
+        z-index: 0;
+    }
+    .AllAct-mobile-sqr{
+        background-color: white;
+        border:3px solid #f6a619;
+        font-family: IranNastaliq;
+        width: 80px;
+        height: 80px;
+        transform: rotate(45deg);
+        z-index: 2;
+    }
+    .AllAct-mobile-sqr-content{
+        position: relative;
+        top:35px;
+        right: 3px;
+    }
+
+    .mobile-fst-sqr{
+        margin-left: 20px;
+    }
+    .AllAct-mobile-row-2{
+        position: relative;
+        bottom: 20px;
+    }
+    .mobile-sec-sqr ,.mobile-sixth-sqr{
+        margin-left: 80px;
+    }
+    .AllAct-mobile-row-3{
+        overflow:hidden;
+        height: 120px;
+        padding-top: 20px;
+        padding-left: 20px;
+        position: relative;
+        bottom: 60px;
+    }
+    .mobile-thr-sqr, .mobile-fth-sqr,.mobile-fifth-sqr{
+        float: left;
+    }
+    .sqr-row3-col2 , .sqr-row4-col2,  .sqr-row5-col2{
+        margin-left: 40px;
+    }
+    .AllAct-mobile-row-4{
+        overflow:hidden;
+        height: 120px;
+        padding-top: 20px;
+        padding-left: 80px;
+        position: relative;
+        bottom: 120px;
+    }
+    .AllAct-mobile-row-5{
+        overflow:hidden;
+        height: 120px;
+        padding-top: 20px;
+        padding-left: 20px;
+        position: relative;
+        bottom: 180px;
+    }
+    .AllAct-mobile-row-6{
+        position: relative;
+        bottom: 220px;
+    }
+
+    .AllAct-Link1{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 10px;;
+    }
+    .AllAct-Link2{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 10px;;
+    }
+    .AllAct-Link3{
+        font-size: 13px;
+        display: inline-block;
+        width:90px;
+    }
+    .AllAct-Link4{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 10px;;
+    }
+    .AllAct-Link5{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 20px;;
+    }
+    .AllAct-Link6{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 5px;;
+    }
+    .AllAct-Link7{
+        font-size: 13px;
+        display: inline-block;
+        width:90px;
+        padding-right: 2px;;
+    }
+    .AllAct-Link8{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 12px;
+    }
+    .AllAct-Link9{
+        font-size: 15px;
+        display: inline-block;
+        width:90px;
+        padding-right: 16px;
+    }
+    .all-activities-read-more-link{
+        padding-left: 10px;
+    }
+}
+@media only screen and (min-width:401px ) and (max-width: 1110px){
+    .AllAct-title-container{
+        padding-right: 30px; 
+        height: 120px;
+        padding-top: 30px;;
+    }
+    .AllAct-title-border-yellow{
+        width:200px;
+        height:50px;
+    }
+    .AllAct-title-border-black{
+        width:200px;
+        height:40px;
+    }
+    .AllAct-title{
+        width:130px;
+        background-color: black;
+        left: 30px;
+        top:10px;
+        font-size: 30px;
+    }
+    .activity-header-menu{
+        background-color: black;
+        height: 780px;
+        overflow: hidden;
+    }
+    .activity-Header-without-toggle{
+        display: none;
+    }
+    .AllAct-links-container{      
+        height: 500px;
+        position: relative;
+    }
+    .AllAct-white-border {
+        height: 700px;
+        border: solid 3px white;
+        position: relative;
+        bottom: 70px;
+        margin-right: 5px;
+        margin-left: 5px;
+        z-index: 0;
+    }
+    .AllAct-mobile-sqr{
+        background-color: white;
+        border:3px solid #f6a619;
+        font-family: IranNastaliq;
+        width: 100px;
+        height: 100px;
+        transform: rotate(45deg);
+        z-index: 2;
+    }
+    .AllAct-mobile-sqr-content{
+        transform: rotate(-45deg);
+        position: relative;
+        top:50px;
+        right: 10px;
+    }
+    .mobile-fst-sqr{
+        margin-left: 30px;
+    }
+    .AllAct-mobile-row-2{
+        position: relative;
+        bottom: 25px;
+    }
+    .mobile-sec-sqr ,.mobile-sixth-sqr{
+        margin-left: 105px;
+    }
+    .AllAct-mobile-row-3{
+        overflow:hidden;
+        height: 145px;
+        padding-top: 20px;
+        padding-left: 30px;
+        position: relative;
+        bottom: 70px;
+    }
+    .mobile-thr-sqr, .mobile-fth-sqr,.mobile-fifth-sqr{
+        float: left;
+    }
+    .sqr-row3-col2 , .sqr-row4-col2,  .sqr-row5-col2{
+        margin-left: 50px;
+    }
+    .AllAct-mobile-row-4{
+        overflow:hidden;
+        height: 140px;
+        padding-top: 20px;
+        padding-left: 105px;
+        position: relative;
+        bottom: 140px;
+    }
+    .AllAct-mobile-row-5{
+        overflow:hidden;
+        height: 140px;
+        padding-top: 20px;
+        padding-left: 30px;
+        position: relative;
+        bottom: 205px;
+    }
+    .AllAct-mobile-row-6{
+        position: relative;
+        bottom: 250px;
+    }
+
+    .AllAct-Link1{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 3px;;
+    }
+    .AllAct-Link2{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 3px;;
+    }
+    .AllAct-Link3{
+        font-size: 17px;
+        display: inline-block;
+        width:120px;
+        padding-left:7px;
+    }
+    .AllAct-Link4{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 3px;;
+    }
+    .AllAct-Link5{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 15px;;
+    }
+    .AllAct-Link6{
+        font-size: 20px;
+        display: inline-block;
+        width:120px;
+        padding-right: 5px;;
+    }
+    .AllAct-Link7{
+        font-size: 17px;
+        display: inline-block;
+        width:120px;
+        padding-right: 4px;;
+    }
+    .AllAct-Link8{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 5px;
+    }
+    .AllAct-Link9{
+        font-size: 20px;
+        display: inline-block;
+        width:110px;
+        padding-right: 10px;
+    }
+    .all-activities-read-more-link{
+        padding-left: 10px;
+    }
+}
+@media only screen and (min-width:1111px ){
+    .AllAct-title-container{
+        height: 120px;
+        width: 40%;
+        height: 300px;
+        padding-top: 130px;
+        padding-right: 80px;
+    }
+    .AllAct-title-border-yellow{
+        width:280px;
+        height:50px;
+    }
+    .AllAct-title-border-black{
+        width:280px;
+        height:40px;
+    }
+    .AllAct-title{
+        width:230px;
+        background-color: black;
+        /* left: 30px; */
+        right: 30px;
+        top:10px;
+        font-size: 40px;
+    }
+    .allAct-main-posts{
+        margin-top: 600px;
+    }
+    .activity-header-menu{
+        display: none;
+    }
+    .activity-Header-without-toggle{
+        height: 550px;
+        overflow: hidden;
+        background-color: black;
+        padding: 20px;
+        direction: rtl;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 20;
+    }
+    .AllAct-white-border {
+        height: 470px;
+        border: solid 3px white;
+        position: relative;
+        bottom: 100px;
+    }
+    .All-Act-main-Link-desktop{
+        position: relative;
+        bottom: 300px;
+    }
+    .AllAct-mobile-row-1{
+        padding-top: 30px;
+        overflow: hidden;
+        height: 190px;
+    }
+    .AllAct-mobile-row-2{
+        position: relative;
+        bottom: 90px;
+        padding-top: 30px;
+        padding-left: 95px;
+        overflow: hidden;
+        height: 190px;
+    }
+    .AllAct-mobile-row-3{
+        position: relative;
+        bottom: 180px;
+        padding-top: 30px;
+        overflow: hidden;
+        height: 190px;
+    }
+    .AllAct-mobile-sqr{
+        float: left;
+        background-color: white;
+        border:3px solid #f6a619;
+        font-family: IranNastaliq;
+        width: 130px;
+        height: 130px;
+        transform: rotate(45deg);
+        z-index: 2;
+    }
+    .mobile-fst-sqr{
+        margin-left: 30px;
+    }
+    .mobile-sec-sqr, .mobile-thr-sqr{
+        margin-left: 60px;
+    }
+    .AllAct-mobile-sqr-content{
+        position: relative;
+        top:55px;
+        right: 0px;
+    }
+    .AllAct-mobile-sqr-link{
+        /* background-color: red; */
+        display: inline-block;
+        width:100%;
+        text-align: center;
+    }
+    .all-activities-read-more-link{
+        padding-left: 100px;
+    }
+}
+
+.all-activity-container{
+    scroll-behavior: smooth;
+}
+
+.AllAct-mobile-sqr:hover{
+    background-color: #f6a619;
+    border:3px solid white;        
+    cursor: pointer;
+    color: white;
+}
+.AllAct-mobile-sqr-content{
+    transform: rotate(-45deg);
+}
+.AllAct-mobile-sqr:hover  .AllAct-mobile-sqr-link{
+    color: white;
+}
+.AllAct-mobile-sqr-link{
+    color: black !important;    
+}
+.AllAct-mobile-sqr-link:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.AllAct-title-border-yellow{
+    border: #f6a619 solid 2px;
+    position: relative;
+    bottom: 20px;
+}
+.AllAct-title-border-black{
+    border: white solid 2px;
+    position: relative;
+    bottom: 65px;
+    left:5px;
+}
+.AllAct-title{
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    background-color: black;
+    z-index: 2;
+}
+.AllAct-title-main-container{
+    overflow: hidden;
+}
+.AllAct-title-container{
+    float: right;    
+}
+.deige-divooneh-sodam{
+    border-bottom: 1px solid black;
+}
+.all-activities-logo-black-sqr{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+.all-activities-logo-yellow-sqr{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color:  #f6a619;
+    transform: rotate(45deg);
+    position: relative;
+    left: 18px;
+    top:2px;
+}
+.all-activities-yellow-border-link{
+    display: inline-block;
+    width: 130px;
+    border: 1px solid #f6a619;
+    position: relative;
+    right: 18px;
+    bottom: 13px;;
+}
+.all-activities-link-read-more{
+    color: black;
+}
+.all-activities-link-read-more:hover{
+    text-decoration: none;
+    color: black;
+}

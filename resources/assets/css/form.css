@@ -1,0 +1,101 @@
+@media (min-width:320px) and (max-width:480px){
+
+    .forms-main-container{
+        margin-top: 170px;
+        margin-bottom: 80px;
+    }
+    .form-content-name{
+        font-size:19px;
+    }
+    .form-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+@media (min-width:481px) and (max-width:640px){
+
+    .forms-main-container{
+        margin-top: 170px;
+        margin-bottom: 80px;
+    }
+    .form-content-name{
+        font-size:22px;
+    }
+  
+}
+
+@media (min-width:641px) and (max-width:1110px){
+
+    .forms-main-container{
+        margin-top: 160px;
+        margin-bottom: 80px;
+    }
+    .form-content-name{
+        font-size:22px;
+    }
+
+}
+
+@media (min-width:1111px) and (max-width:1280px){
+    .forms-main-container{
+        margin-top: 350px;
+        margin-bottom: 120px;
+    }
+    .form-content-name{
+        font-size:22px;
+    }
+}
+
+@media (min-width:1281px) {
+
+    .forms-main-container{
+        margin-top: 350px;
+        margin-bottom: 120px;
+    }
+    .form-content-name{
+        font-size:22px;
+    }
+    
+}
+
+.form-title-container{
+    border: #790000 solid 3px;
+    height: 60px;
+    margin-top: 30px;
+    padding: 0px 30px 0px 30px;
+}
+.form-content-container{
+    /* background-color: #790000;  */
+    background-image: url('../picture/assets/bachground.svg')
+}
+.form-yello-border{
+    border: #f6a619 solid 1px;
+    width:100px;
+    position: relative;
+    top: 2px;
+}
+.form-black-border{
+    border: #000 solid 1px;
+    width:120px;
+    position: relative;
+    left: 40px;
+}
+
+.form-content-download-text{
+    margin-left:40px;
+    width:35px;
+    font-size:22px;
+}
+
+.form-content-download-image{
+    width:35px;
+    height:35px;
+}
+
+.form-content-link{
+    text-decoration: none !important;
+    font-size: 24px;
+}

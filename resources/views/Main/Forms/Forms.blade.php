@@ -23,7 +23,7 @@
                             <div id="collapse{{$key}}" class="form-content-container collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <div style="direction: rtl" class="text-white form-content">
-                                        {{$item->form_description}}
+                                        {!!html_entity_decode($item->form_description)!!}
                                     </div>                                
                                     <div class="mt-3 text-white  d-flex justify-content-start">
                                         <a href=" {{ config('app.url').'/'.$item->form_file1}}" class="form-content-link text-white">

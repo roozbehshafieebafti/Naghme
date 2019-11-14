@@ -1,0 +1,93 @@
+.Membership-left-div{
+    
+    border: solid 2px black;
+    border-radius: 5px;
+
+}
+.Membership-header-div{
+    display: flex;
+    justify-content: center;
+}
+.Membership-header-text{
+    color: #790000;
+}
+.membership-container{
+    border: 3px solid #790000;
+    display: flex;
+    justify-content: space-between;
+    width:400px;
+    padding: 10px;
+    margin-bottom: 20px;
+} 
+.membership-img-container{
+    position: relative;
+    left: 80px;
+}
+.membership-img{
+    width: 160px;
+    height: 160px;
+    border: 2px solid #f6a619
+}
+.membership-fullname-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: IranNastaliq;
+    font-size: 40px;
+    width:250px;
+    padding-top: 30px;
+    position: relative;
+    left: 30px;
+}
+#Moshref{
+    font-size: 35px;
+}
+.membership-main-container{
+    margin-top: 80px;
+}
+@media (min-width:320px) and (max-width:480px){
+    .membership-main-container{
+        margin-top: 130px;
+    }
+    .membership-container{
+        width: 290px;
+    }
+    .membership-img{
+        width: 140px;
+        height: 140px;
+    }
+    .membership-fullname-container{
+        padding-top: 20px;
+        font-size: 21px;
+        width:150px;
+        left:0px
+    }
+    .membership-img-container{
+        left: 20px;
+    }
+    #Moshref{
+        font-size: 20px;
+    }
+}
+
+@media (min-width:481px) and (max-width:600px){
+
+    .membership-fullname-container{
+        font-size: 38px;
+        width:230px;
+        padding-top: 20px;
+        left:0px
+    }
+    .membership-img-container{
+        left: 40px;
+    }
+    #Moshref{
+        font-size: 35px;
+    }
+}
+
+@media (min-width:1111px) {
+    .membership-main-container{
+        margin-top: 230px;
+    }
+}

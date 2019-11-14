@@ -1,0 +1,292 @@
+@media only screen and (max-width:320px ) {
+  .Body-Heigh-level{
+    display: none;
+  }
+  .No-PreView{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width:320px ) and (max-width: 1110px) {
+    .No-PreView{
+      display: none;
+    }
+    .NGO-logo-mobile{
+      position: absolute;
+      top:0px;
+      right: 0px;
+    }
+    .logo-img-mobile{
+      position: relative;
+      bottom: 5px;
+      height: 90px;
+      z-index: 2;
+    }
+    .General-header-menu{
+      background-color: black;
+      height: 160px;
+    }
+    .general-Header-without-toggle{
+      display: none;
+    }
+    .Header-with-toggle{
+      position: absolute;
+      top:0px;
+      right: 0px;
+      z-index: 20;
+    }
+    /* menu drop */
+    .Header-without-toggle {
+      display: none;
+    }
+    .toggle-button {
+      position: absolute;
+      left: 0px;
+      z-index: 15;
+      color: white;
+      padding: 10px 20px 0 20px;
+    }
+  
+    .menu-content {      
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 20;      
+      /* height: 400px; */
+      display: none;
+    }
+  
+    .not-menu-content {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      background-color: gray;
+      z-index: 5;
+      opacity: 0.5;
+      display: none;
+    }
+  
+    .toggle-button-key {
+      cursor: pointer;
+    }
+  
+    .header-ul-list {
+      list-style: outside none none;
+    }
+
+    /* titles */
+    .mobile-header-title{
+      display: inline-block;
+      width: 100%;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      text-align: right;
+      color: black;  
+      padding: 0px;
+      padding-right: 20px;
+      margin-top: 15px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .mobile-header-title:focus{
+      outline: none;
+    }
+    .mobile-header-title:hover{
+      text-decoration: none;
+      color: black;
+
+    }
+    .mobile-fill-diamond{
+      color: #f6a619;
+    }
+    .mobile-empty-diamond{
+      display: inline-block;
+      color: #f6a619;
+      padding-left: 5px;
+      margin-top: 3px;
+    }
+    .mobile-header-sub-title{
+      display: inline-block;
+      padding-right:30px ;
+      color: black;
+      width: 100%;
+      /* margin-top: 5px;
+      margin-bottom: 5px; */
+      font-weight: bold;
+    }
+    .mobile-header-sub-title:hover{
+      color: #f6a619;
+      background-color: #0a1214;
+      text-decoration: none;
+    }
+    .mobile-img-container{
+      float: left;
+     margin-top:30px ;
+    }
+    .mobile-corner-img {
+      transform: rotate(180deg);
+      height: 50px;
+      position: relative;
+      bottom: 10px;
+      left: 10px;
+    }
+    .logo-img{
+      position: relative;
+      height: 120px;
+      z-index: 2;
+    }
+    .span-dark-background {
+      display: inline-block;
+      height: 40px;
+      width: 180px;
+      margin-right: 10px;
+      position: relative;
+      bottom: 10px;
+    }
+    .general-white-border {
+        height: 80px;
+        border: solid 3px white;
+        position: relative;
+        bottom: 70px;
+        margin-right: 5px;
+        margin-left: 5px;
+        z-index: 0;
+    }
+    .general-header-title {
+      position: absolute;
+      top: 98px;
+      left: 30px;
+      transform: rotate(45deg);
+      z-index: 1;
+  }
+  .general-header-title-text {
+      width: 120px;
+      height: 120px;
+      box-shadow: 8px 8px 6px gray;
+      background-color: #790000;
+      
+  }
+  .general-header-title-text-final {
+      position: absolute;
+      top: 140px;
+      left: 30px;
+      width: 130px;
+      text-align: center;
+      font-family: "IranNastaliq";
+      font-size: 37px;
+      z-index: 3 !important;
+  }
+}
+
+@media only screen and (min-width: 1111px) {
+    .NGO-logo-mobile{
+      display: none;
+    }
+    .General-header-menu{
+      display:none;        
+    }
+    .toggle-button {
+      display:none;
+    }
+    .No-PreView{
+      display: none;
+    }
+    .Header-with-toggle {
+        display: none;
+    }
+    .Header-without-toggle {
+        padding: 20px;
+        height: 70px;
+        direction: rtl;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 20;
+        background-color: initial;
+    }
+    .logo-img {
+        position: relative;
+        bottom: 20px;
+        height: 140px;
+        z-index: 2;
+    }
+    .header-sub-menu {
+        height: 55px;
+        float: right;
+        width: 100px;
+        /* background-color: red; */
+        margin-left:2px;
+    }
+    .header-ul-list {
+        list-style: outside none none;
+        position: absolute;
+        top: 35px;
+        display: none;
+        z-index: 12;
+        width: 250px;
+        background-color:#f6a619;
+    }
+    .header-text-link{
+        display: inline-block;
+        font-weight: bold;
+        font-size: 18px;
+        margin-right: 20px;
+        color: black;
+    }
+    .header-link-title{cursor: pointer;display:inline-block;width:100%; font-weight:bold;}
+    .header-link-title:hover{text-decoration: none;color: #f6a619 !important;}
+    .header-text-link:hover{text-decoration: none;color: black;}
+    .header-text-dimond-shape{color:#790000;font-size:20px;position: relative; top: 3px;}
+    .header-sub-menu:hover .header-ul-list {display: block;}
+
+    .general-Header-without-toggle {
+        padding: 20px;
+        height: 160px;
+        direction: rtl;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 20;
+    }
+    .general-white-border {
+        height: 70px;
+        border: solid 3px white;
+        position: relative;
+        bottom: 100px;
+    }
+    .span-dark-background {
+        display: inline-block;
+        height: 40px;
+        width: 220px;
+        margin-right: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+    .general-header-title {
+        position: absolute;
+        top: 98px;
+        left: 60px;
+        transform: rotate(45deg);
+    }
+    .general-header-title-text {
+        width: 120px;
+        height: 120px;
+        box-shadow: 8px 8px 6px gray;
+        background-color: #790000;
+    }
+    .general-header-title-text-final {
+        position: absolute;
+        top: 140px;
+        left: 55px;
+        width: 130px;
+        text-align: center;
+        font-family: "IranNastaliq";
+        font-size: 37px;
+    }
+}
