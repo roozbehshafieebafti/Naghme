@@ -49,7 +49,7 @@
                     <div class="">
                         <ul class="header-ul-list bg-white  col-12">
                             @foreach ($_SESSION['Authorities'] as $item)
-                                <li><a class="mobile-header-sub-title" href=" {{config('app.url').'authorities/'.$item->authorities_unit_title}} ">{{ $item->authorities_unit_title }}<span class="mobile-empty-diamond">&#9671;</span></a></li>                                
+                                <li><a class="mobile-header-sub-title" href=" {{config('app.url').'authorities/'.$item}} ">{{ $item}}<span class="mobile-empty-diamond">&#9671;</span></a></li>                                
                             @endforeach
                         </ul>
                     </div>
@@ -166,7 +166,7 @@
                     </a>
                     <ul class="header-ul-list  col-12">
                         @foreach ($_SESSION['Authorities'] as $item)
-                            <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href=" {{config('app.url').'authorities/'.$item->authorities_unit_title}} ">{{ $item->authorities_unit_title }}</a></li>                                
+                            <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href=" {{config('app.url').'authorities/'.$item}} ">{{ $item }}</a></li>                                
                         @endforeach
                     </ul>
                 </div>

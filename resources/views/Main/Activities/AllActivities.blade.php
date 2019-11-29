@@ -19,6 +19,7 @@
                 @if(count($item) > 0)
                     <div class="container">
                         <div class="activities-flex-row row" style="direction: rtl">
+                            <?php $index=1; ?>
                             @foreach ($item as $k => $Value)
                             @if ($Value->apst_is_cover_picture_landscape > 0)
                                 <div class="offset-xl-1 ">
@@ -30,7 +31,7 @@
                                     </div>
                                 </div>    
                                 @else
-                                    <div class="offset-xl-1 {{'order-'.((-1*$k)+5)}}">
+                                    <div class="offset-xl-1 {{'order-'.(($index))}}">
                                         <div class="activities_col">
                                             <a  href=" {{route('Get_Read_Activity',$Value->id)}} " style="text-decoration:none;height:250px;">
                                                 <img class="activities-portrait-picture" src={{ config('app.url').$Value->apst_picture_of_cover }} />
@@ -38,7 +39,9 @@
                                             </a>                                     
                                         </div> 
                                     </div>
+                                    <?php $index++; ?>
                                 @endif
+                                
                             @endforeach
                         </div>
                     </div> 

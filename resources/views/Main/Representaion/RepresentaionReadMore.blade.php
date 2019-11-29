@@ -18,7 +18,7 @@
                 <img class="Representaion-read-more-head-image" src="{{config('app.url').'picture/assets/head2.png'}}" alt="">
             </div>
             <div class="Representaion-read-more-titel text-center">
-                <h2 id="purpose" style="text-align:center"> <b>ساختار سازمانی</b></h2>
+                <h2 id="purpose" style="text-align:center"> <b>نمودار سازمانی</b></h2>
                 <img class="seprator-image" src="{{config('app.url').'picture/assets/seprator.svg'}}" alt="">
             </div>
             <div class="col-12">

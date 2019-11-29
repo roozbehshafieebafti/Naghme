@@ -12,7 +12,7 @@ class LastActivitiesController extends Controller
                                 JOIN (
                                 SELECT DISTINCT apst_activities_title_id
                                 FROM activities_posts
-                                ORDER BY id DESC
+                                ORDER BY id ASC
                                 LIMIT 10) tbl
                                 ON a.id =  tbl.apst_activities_title_id');            
 
@@ -26,7 +26,7 @@ class LastActivitiesController extends Controller
                             JOIN         
                                 (SELECT distinct ap.apst_activities_title_id
                                 FROM activities_posts ap
-                                order by ap.apst_accure_date DESC
+                                order by ap.apst_accure_date ASC
                                 limit 10) tbl        
                             on t.apst_activities_title_id = tbl.apst_activities_title_id
                             WHERE t.row_number<=4

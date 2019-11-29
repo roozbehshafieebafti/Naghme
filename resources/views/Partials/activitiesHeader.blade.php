@@ -73,6 +73,7 @@
                     <div class="AllAct-mobile-sqr mobile-fth-sqr sqr-row4-col2">                    
                         <p class="AllAct-mobile-sqr-content">
                             <a class="AllAct-mobile-sqr-link AllAct-Link6" 
+                                style= "font-size:13px"
                                 href="{{ route("Get_All_Activities").'#'.$titles[5]->id }}"
                             >
                                 {{ isset($titles[5]) ? $titles[5]->at_title : "-"}}
@@ -157,7 +158,7 @@
                     <div class="">
                         <ul class="header-ul-list bg-white  col-12">
                             @foreach ($_SESSION['Authorities'] as $item)
-                                <li><a class="mobile-header-sub-title" href=" {{config('app.url').'authorities/'.$item->authorities_unit_title}} ">{{ $item->authorities_unit_title }}<span class="mobile-empty-diamond">&#9671;</span></a></li>                                
+                                <li><a class="mobile-header-sub-title" href=" {{config('app.url').'authorities/'.$item}} ">{{ $item }}<span class="mobile-empty-diamond">&#9671;</span></a></li>                                
                             @endforeach
                         </ul>
                     </div>
@@ -273,7 +274,7 @@
                     </a>
                     <ul class="header-ul-list col-12">
                         @foreach ($_SESSION['Authorities'] as $item)
-                            <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href=" {{config('app.url').'authorities/'.$item->authorities_unit_title}} ">{{ $item->authorities_unit_title }}</a></li>
+                            <li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href=" {{config('app.url').'authorities/'.$item}} ">{{ $item }}</a></li>
                         @endforeach
                     </ul>
                 </div>

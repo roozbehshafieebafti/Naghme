@@ -17,13 +17,15 @@ class MenuContent
     public function handle($request, Closure $next)
     {
         if(!isset($_SESSION['Authorities'])){
-            $AuthoritiesTitle = DB::select('SELECT authorities_unit_title 
-            from authorities 
-            WHERE authorities_city_id = 1 
-            group by authorities_unit_title
-            ORDER BY authorities_unit_title_primary
-            ');
-            $_SESSION['Authorities'] = $AuthoritiesTitle;
+            // $AuthoritiesTitle = DB::select('SELECT authorities_unit_title 
+            // from authorities 
+            // WHERE authorities_city_id = 1 
+            // group by authorities_unit_title
+            
+            // ');
+            $Ath= ["شورای مرکزی","دبیر","روابط عمومی و تشریفات","برنامه ریزی راهبردی","گروه های تخصصی","مشاوران"];
+            $_SESSION['Authorities'] = $Ath;
+            // ORDER BY authorities_unit_title_primary
         }
         if(!isset($_SESSION['Activities'])){
             $RawActivities = DB::select('SELECT at_title , sat_title 
