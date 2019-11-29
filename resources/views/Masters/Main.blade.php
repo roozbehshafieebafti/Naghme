@@ -53,15 +53,16 @@
 		<div class="Body-Heigh-level">
     		@yield('content')
 			<script type="text/javascript" src="{{ config('app.url').'js/jquery.min.js' }}"></script>
-			<script type="text/javascript" src="{{ config('app.url').'js/jquery-ui.min.js' }}"></script>
-			<script type="text/javascript" src="{{ config('app.url').'js/popper.min.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/bootstrap.min.js' }}"></script>
+			<script type="text/javascript" src="{{ config('app.url').'js/main.js' }}"></script>
+			{{-- <script type="text/javascript" src="{{ config('app.url').'js/jquery-ui.min.js' }}"></script>
+			<script type="text/javascript" src="{{ config('app.url').'js/popper.min.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/all.min.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/sweetalert.min.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/Main/home.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/Main/register.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/Main/pagination.js' }}"></script>
-			<script type="text/javascript" src="{{ config('app.url').'js/Main/activity.js' }}"></script>
+			<script type="text/javascript" src="{{ config('app.url').'js/Main/activity.js' }}"></script> --}}
 			<script type="text/javascript">
 				$(function () {
 					$('[data-toggle="tooltip"]').tooltip()
