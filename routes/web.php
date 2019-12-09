@@ -196,6 +196,10 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::get('/delete/{id}' , 'UserScoreController@deleteScore')->name('Delete_Score');
 		});
 
+		Route::group(['prefix'=>'/membership'],function(){
+			Route::get('/' ,'Membership@getMembers')->name('Get_All_Members');
+		});
+
 		/* Representation */
 		Route::group(['prefix'=>'/representation', 'namespace'=>'Representation'] , function (){
 			Route::get('/' , 'RepresentationController@getRepresentation')->name('Get_Representation');

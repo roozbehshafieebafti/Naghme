@@ -26,7 +26,7 @@
                         <span >:ایمیل</span>
                         <span style="color:#f6a619">&#9672;</span>
                     </div>
-                    <input type="email" name="email_ng" class="form-control mt-2 col-sm-9 col-12" placeholder="Enter email">
+                    <input type="email" name="email_ng" class="form-control mt-2 col-sm-9 col-11" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted text-left col-sm-9 col-12 form-text-email">آدرس ایمیل شما پیش ما محفوظ است و تحت هیچ شرایطی منتشر نمی‌شود</small>
                 </div>
                 <div class="d-flex flex-row-reverse row text-right mt-4 ml-0 ml-md-4">
@@ -34,12 +34,12 @@
                         <span >:گذرواژه</span>
                         <span style="color:#f6a619">&#9672;</span>
                     </div>
-                    <input type="password" name="password_ng" class="form-control mt-2 col-sm-9 col-12"  placeholder="Password">
+                    <input type="password" name="password_ng" class="form-control mt-2 col-sm-9 col-11"  placeholder="Password">
                 </div>
-                <div class="row text-right mt-5 mr-5">
-                    <div class="text-center col-9">
+                <div class="row text-right mt-5 ">
+                    <div class="col-md-9 col-12 captcha-container">
                         <span id="Captcha_Image" class="login-captcha-image">{!! captcha_img() !!}</span>
-                        <button type="button" class="btn btn-success"  onclick="captchaRefresh()"><i class="fas fa-redo-alt"></i></button>
+                        <button type="button" class="btn btn-success Captcha-refresh-key"  onclick="captchaRefresh()"><i class="fas fa-redo-alt"></i></button>
                     </div>
                     <div class="text-left col-xl-2 col-lg-2 col-md-2 pt-3 mr-4 d-none d-md-block">
                         <span >:کد امنیتی</span>

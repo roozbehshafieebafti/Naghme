@@ -13,6 +13,9 @@
 }
 
 @media (min-width:481px) and (max-width:640px){
+    .register-image-right{
+        display: none;
+    }
     .register-main-div{
         margin-top:150px;
         margin-bottom:0px;
@@ -24,6 +27,9 @@
 }
 
 @media (min-width:641px) and (max-width:768px){
+    .register-image-right{
+        display: none;
+    }
     .register-main-div{
         margin-top:150px;
         margin-bottom:100px;
@@ -35,6 +41,9 @@
 }
 
 @media (min-width:769px) and (max-width:990px){
+    .register-image-right{
+        display: none;
+    }
     .register-main-div{
         margin-top:150px;
         margin-bottom:100px;

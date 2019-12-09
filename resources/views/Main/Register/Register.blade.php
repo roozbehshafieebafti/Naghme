@@ -19,66 +19,68 @@
                 <img src="{{config('app.url').'picture/assets/shape1.svg'}}" class="register-image-right" />
             </div>
             <div class="d-flex justify-content-center align-items-center">
-                <form autocomplete="off" onsubmit="form_registration(event)" class="col-lg-7 col-md-10 col-sm-12 text-center" method="POST">
+                <form autocomplete="off" onsubmit="form_registration(event)" class="col-lg-7 col-md-10 col-sm-10 col-12 text-center" method="POST">
                     {{ csrf_field() }}
                     <div class="register-div-input row text-right" >
                         <div class="text-left col-md-3 col-sm-4 col-5 pt-3">
-                            <div class="border-bottom border-dark" style="width:80%">
+                            <div class="border-bottom border-dark" >
                                 <span style="color:#f6a619">&#9672;</span>
                                 <span >نام :</span>
                             </div>
                         </div>
-                        <input type="text" name="regiser_name" id="regiser_name" class="form-control mt-2 col-md-9 col-sm-12 text-left" placeholder="نام">
+                        <input type="text" name="regiser_name" id="regiser_name" class="form-control mt-2 col-md-8 col-11 ml-2 text-left" placeholder="نام">
                     </div>
                     <div class="register-div-input row text-right" >
                         <div class="text-left col-md-3 col-sm-4 col-5 pt-3">
-                            <div class="border-bottom border-dark" style="width:80%">
+                            <div class="border-bottom border-dark" >
                                 <span style="color:#f6a619">&#9672;</span>
                                 <span >نام‌خانوادگی :</span>
                             </div>
                         </div>
-                        <input type="text" name="regiser_family" id="regiser_family" class="form-control mt-2 col-md-9 col-sm-12 text-left"  placeholder="نام‌خانوادگی">                        
+                        <input type="text" name="regiser_family" id="regiser_family" class="form-control mt-2 col-md-8 col-11  ml-2 text-left"  placeholder="نام‌خانوادگی">                        
                     </div>
                     <div class="register-div-input row text-right" >
                         <div class="text-left col-md-3 col-sm-4 col-5 pt-3">
-                            <div class="border-bottom border-dark" style="width:80%">
+                            <div class="border-bottom border-dark" >
                                 <span style="color:#f6a619">&#9672;</span>
                                 <span >ایمیل :</span>
                             </div>
                         </div>                        
-                        <input autocomplete="off" type="email" name="regiser_email" id="regiser_email" class="form-control mt-2 col-md-9 col-sm-12 text-right" placeholder="example@example.com">
-                        {{-- <small id="emailHelp" class="form-text text-muted text-left  col-9">آدرس ایمیل شما پیش ما محفوظ است و تحت هیچ شرایطی منتشر نمی‌شود</small> --}}
+                        <input autocomplete="off" type="email" name="regiser_email" id="regiser_email" class="form-control mt-2 col-md-8 col-11  ml-2 text-right" placeholder="example@example.com">                        
                     </div>
                     <div class="register-div-input row text-right ">
                         <div class="text-left col-md-3 col-sm-4 col-5 pt-3">
-                            <div class="border-bottom border-dark" style="width:80%">
+                            <div class="border-bottom border-dark" >
                                 <span style="color:#f6a619">&#9672;</span>
                                 <span >گذروازه :</span>
                             </div>
                         </div>
-                        <input type="password" name="regiser_password" id="regiser_password" class="form-control mt-2 col-md-9 col-sm-12 text-left" >
+                        <input type="password" name="regiser_password" id="regiser_password" class="form-control mt-2 col-md-8 col-11  ml-2 text-left" >
                     </div>
                     <div class="register-div-input row text-right">
                         <div class="text-left col-md-3 col-sm-4 col-5 pt-3">
-                            <div class="border-bottom border-dark" style="width:80%">
+                            <div class="border-bottom border-dark" >
                                 <span style="color:#f6a619">&#9672;</span>
                                 <span >تکرار گذروازه :</span>
                             </div>
                         </div>
-                        <input type="password" name="regiser_password_re" id="regiser_password_re" class="form-control mt-2 col-md-9 col-sm-12 text-left" >
+                        <input type="password" name="regiser_password_re" id="regiser_password_re" class="form-control mt-2 col-md-8 col-11  ml-2 text-left" >
                     </div>
                     <div class="row text-right mt-4">
-                        <div class="text-center col-9">
+                        <div class="col-md-9 col-12 captcha-container">
                             <span id="Captcha_Image" class="register-capcha-image">{!! captcha_img() !!}</span>
-                            <button type="button" class="btn btn-success"  onclick="captchaRefresh()"><i class="fas fa-redo-alt"></i></button>
+                            <button type="button" class="btn btn-success Captcha-refresh-key"  onclick="captchaRefresh()"><i class="fas fa-redo-alt"></i></button>
                         </div>
-                        <div class="d-none d-sm-block text-left col-3 pt-3">
+                        <div class="d-none d-sm-none d-md-block text-left col-3 pt-3">
                             <span >:کد امنیتی</span>
                             <span style="color:#f6a619">&#9672;</span>
                         </div>
                     </div>
-                    <div class="col-sm-12 row text-right mt-2 p-0">
-                        <input type="text" name="regiser_captcha" id="regiser_captcha" class="form-control mt-2 col-xl-10 col-md-9 text-left"  placeholder="لطفا کد امنیتی فوق را اینجا وارد کنید">
+                    <div class="register-div-input row text-right">
+                        <div class="text-left col-md-3 col-sm-4 col-5 pt-3">
+                            <div></div>
+                        </div>
+                        <input type="text" name="regiser_captcha" id="regiser_captcha" class="form-control mt-2 col-md-8 col-11  ml-2 text-left"  placeholder="لطفا کد امنیتی فوق را اینجا وارد کنید">
                     </div>
                     <button type="submit" class="btn btn-success mr-2 mr-sm-2 mr-md-0 mt-5 pr-5 pl-5 register-button">ثبت‌ نام</button>
                     <span class="register-button-border-black d-none d-sm-inline-block">!</span>

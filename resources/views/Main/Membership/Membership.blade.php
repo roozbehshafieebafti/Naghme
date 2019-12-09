@@ -6,6 +6,7 @@
     @include('Partials.GeneralHeader')
         <div class="container membership-main-container" style="direction:rtl;">
             <div class="">
+                <p class="Membership-title">مزایای عضویت</p>
                 <ul class="">
                     @foreach ($score as $item)
                         <li class="HPP-li">

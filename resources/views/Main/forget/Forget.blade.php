@@ -2,49 +2,55 @@
 @section('title','ورود')
 @section('content')
     @include('Partials.GeneralHeader')
-    <div class="forget-main-div">        
-        @if(session('danger'))
-			<div class="alert alert-danger" style="margin-top: 30px">
-				{{ session('danger') }}
-			</div>
-        @endif
+    <div class="register-main-div">
         @if(count($errors)>0)
-            <div class="alert alert-danger" style="margin-top: 20px">
+            <div class="alert alert-danger container" style="margin-top: 20px">
                 @foreach($errors->all() as $val)
                     {{ $val }}
                 @endforeach
             </div>
         @endif
+        @if(session('danger'))
+            <div class="alert alert-danger container" style="margin-top: 30px">
+                {{ session('danger') }}
+            </div>
+        @endif
         <div>
-            <img src="{{config('app.url').'picture/assets/shape1.svg'}}" class="forget-image-right" />
+            <img src="{{config('app.url').'picture/assets/shape1.svg'}}" class="register-image-right" />
         </div>
-        <div class="d-flex justify-content-center align-items-center">            
-            <form class="col-xl-7 col-lg-8 col-md-9 col-sm-11 text-center" method="POST">
+        <div class="d-flex justify-content-center align-items-center">
+            <form autocomplete="off" onsubmit="" class="col-lg-7 col-md-10 col-sm-10 col-12 text-center" method="POST">
                 {{ csrf_field() }}
-                <div class="forget-div-input row text-right" >
-                    <div class="text-left col-md-2 col-sm-3 col-4 pt-3">
-                        <div class="border-bottom border-dark" style="width:80%">
+
+                <div class="register-div-input row text-right" >
+                    <div class="text-left col-md-3 col-sm-4 col-5 pt-3">
+                        <div class="border-bottom border-dark" >
                             <span style="color:#f6a619">&#9672;</span>
-                            <span>ایمیل :</span>
+                            <span >ایمیل :</span>
                         </div>
-                    </div>
-                    <input type="email" name="email_ng" class="form-control mt-2 col-md-10 col-sm-12 text-left" placeholder="ایمیل خود را وارد کنید">    
+                    </div>                        
+                    <input autocomplete="off" type="email" name="regiser_email" id="regiser_email" class="form-control mt-2 col-md-8 col-11  ml-2 text-right" placeholder="example@example.com">                        
                 </div>
-                <div class="row text-right mt-5">
-                    <div class="text-center col-9">
-                        <span id="Captcha_Image" class="forget-capcha-image">{!! captcha_img() !!}</span>
-                        <button type="button" class="btn btn-success"  onclick="captchaRefresh()"><i class="fas fa-redo-alt"></i></button>
+                
+                
+                <div class="row text-right mt-4">
+                    <div class="col-md-9 col-12 captcha-container">
+                        <span id="Captcha_Image" class="register-capcha-image">{!! captcha_img() !!}</span>
+                        <button type="button" class="btn btn-success Captcha-refresh-key"  onclick="captchaRefresh()"><i class="fas fa-redo-alt"></i></button>
                     </div>
                     <div class="d-none d-sm-none d-md-block text-left col-3 pt-3">
-                        <span>:کد امنیتی</span>
+                        <span >:کد امنیتی</span>
                         <span style="color:#f6a619">&#9672;</span>
                     </div>
                 </div>
-                <div class="row text-right mt-2">
-                    <input type="text" name="captcha_ng" class="form-control mt-2 col-md-10 col-sm-12 text-left"  placeholder="لطفا کد امنیتی فوق را اینجا وارد کنید">
+                <div class="register-div-input row text-right">
+                    <div class="text-left col-md-3 col-sm-4 col-5 pt-3">
+                        <div></div>
+                    </div>
+                    <input type="text" name="regiser_captcha" id="regiser_captcha" class="form-control mt-2 col-md-8 col-11  ml-2 text-left"  placeholder="لطفا کد امنیتی فوق را اینجا وارد کنید">
                 </div>
-                <button disabled type="submit" class="btn btn-success mt-5 pr-5 pl-5 forget-button">ارسال رمز</button>
-                <span class="forget-button-border-black d-none d-sm-inline-block">!</span>
+                <button type="submit" class="btn btn-success mr-2 mr-sm-2 mr-md-0 mt-5 pr-5 pl-5 register-button">ارسال</button>
+                <span class="register-button-border-black d-none d-sm-inline-block">!</span>
             </form>            
         </div>
         <div class="d-flex justify-content-center align-items-center mt-5">

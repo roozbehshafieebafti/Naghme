@@ -13,7 +13,6 @@
                  alt="{{$activity["apst_title"]}}" 
                  title="{{$activity["apst_title"]}}" 
                  class="activity-portrate-pictuer">
-
             <div class="">
                 <div class="activity-mobile-header">
                     <div class="text-center mt-4">                       
@@ -72,7 +71,7 @@
                             <div class="activity_picture-container d-flex justify-content-center mt-5">
                                 <span class="gallery_picture_border">
                                     <span class="gallery-picture-border-content">
-                                        <span id="gallery_picture_title" >{{$gallery[0]["picture_title"]}}</span>                      
+                                        {{-- <span id="gallery_picture_title" >{{$gallery[0]["picture_title"]}}</span>                       --}}
                                         <img class="gallery_picture_preview" id="gallery_picture" src="{{ config('app.url').'/'.$gallery[0]["picture"]}}" alt="">
                                     </span>
                                 </span>
@@ -100,12 +99,12 @@
                             <div class="activity-news-gallery-container">
                                 <span class="gallery_picture_border">
                                     <span class="gallery-picture-border-content">
-                                        <span id="news_gallery_picture_title" >{{$news[0]["attributes"]["picture_title"]}}</span>                      
+                                        {{-- <span id="news_gallery_picture_title" >{{$news[0]["attributes"]["picture_title"]}}</span>                       --}}
                                         <img class="gallery_picture_preview" id="news_gallery_picture" src="{{ config('app.url').'/'.$news[0]["attributes"]["picture_name"]}}" alt="">
                                     </span>
                                 </span>
                             </div>
-                            <div style="overflow:hidden">
+                            <div style="overflow:hidden"  class="selection-news-gallery-container-over">
                                 <div class="selection-news-gallery-container" style="direction:rtl">
                                     @foreach ($news as $item)
                                         <img 
@@ -196,7 +195,7 @@
                             </button>
                         </form>
                     </div>
-            </div>
+                </div>
             </div>
         </div>
     @include('Partials.GeneralFooter')

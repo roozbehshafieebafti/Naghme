@@ -44,9 +44,10 @@
           <i class="fas fa-sort-down"></i> 
           <span>عضویت<span>
         </a>
-        <ul class="bg-white Naghmeh-dropdown-menu text-left" \>
+        <ul class="bg-white Naghmeh-dropdown-menu text-left">
           <li><a class="text-muted" href="{{ route('Get_User') }}">اعضا</a></li>
-        <li><a class="text-muted"  href="{{ route('Get_Score') }}" > مزایا و امتیازات</a></li>
+          <li><a class="text-muted"  href="{{ route('Get_Score') }}" > مزایا و امتیازات</a></li>
+          <li><a class="text-muted"  href="{{ route('Get_All_Members') }}" > اعضای افتخاری</a></li>
       </ul>
     </div>
     |

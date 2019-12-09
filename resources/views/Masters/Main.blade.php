@@ -19,7 +19,8 @@
 		<link rel="manifest" href="{{ config('app.url').'manifest.json' }}">
 		<link rel="shortcut icon" type="image/png" href="{{ config('app.url').'picture/logos/64x64.png' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/app.css' }}">
-		{{-- <link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/Admin.css' }}">
+		{{-- <link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/bootstrap.min.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/Admin.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/all.min.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/jquery-ui.min.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/templatemo-style.css' }}">

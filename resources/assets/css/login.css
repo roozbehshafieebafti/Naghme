@@ -171,7 +171,7 @@
 
 .login-captcha-image{
     display:inline-block; 
-    width:200px; 
+    width:180px; 
     height:80px;
 }
 
@@ -199,4 +199,16 @@
 .form-bottom-link-two{
     width: 180px;
     text-align: left;
+}
+.captcha-container{
+    display: flex;
+    justify-content: center;
+}
+.Captcha-refresh-key{
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-right: 10px;
 }
