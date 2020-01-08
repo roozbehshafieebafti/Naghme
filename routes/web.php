@@ -237,6 +237,26 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::post('/check-comment','CommentsController@checkComment')->name('Check_Comment-Page');
 		});
 
+		/* Reports */
+		Route::group(['prefix'=>'/reports' , "namespace" => "Reports"],function(){
+			Route::get('/{id?}','ReportsController@getAllReports')->name('Get_All_Reports');
+			Route::get('/new-report/create','ReportsController@createNewReports')->name('Create_New_Reports');
+			Route::post('/new-report/create','ReportsController@doCreateNewReports');
+			Route::get('/new-report/edit/{id}','ReportsController@editReports')->name('Edit_Reports');
+			Route::post('/new-report/edit/{id}','ReportsController@doEditReports');
+			Route::get('/new-report/delete/{id}','ReportsController@deleteReports')->name('Delete_Report');
+			Route::get('/new-report/activation/{id}/{activeStatus}','ReportsController@reportActivation')->name('Report_Activation');
+		});
+
+		Route::group(['prefix' => '/questions', "namespace" => "Reports"], function () {
+			Route::get('/{id}','QuestionsController@getAllQuestions')->name('Get_All_Questions');
+			Route::get('/{id}/create','QuestionsController@createNewQuestions')->name('Create_New_Questions');
+			Route::post('/{id}/create','QuestionsController@doCreateQuestions');
+			Route::get('/{question_id}/delete/{id}','QuestionsController@deleteQuestion')->name('Delete_Questions');
+			Route::get('/{question_id}/edit/{id}','QuestionsController@editQuestion')->name('Edit_Questions');
+			Route::POST('/{question_id}/edit/{id}','QuestionsController@doEditQuestion');
+		});
+
 });
 
 // this Routes belongs to Main Panel

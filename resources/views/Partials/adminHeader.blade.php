@@ -33,9 +33,10 @@
           <i class="fas fa-sort-down"></i> 
           <span>فعالیت ها<span>
         </a>
-        <ul class="bg-white Naghmeh-dropdown-menu text-left" \>
+        <ul class="bg-white Naghmeh-dropdown-menu text-left">
             <li><a class="text-muted" href="{{ route('Get_Activity') }}">عنوان فعالیت ها</a></li>
-          <li><a class="text-muted" href="{{ route('Get_Posts') }}">فعالیت های اجرایی</a></li>
+            <li><a class="text-muted" href="{{ route('Get_Posts') }}">فعالیت های اجرایی</a></li>
+            <li><a class="text-muted" href="{{ route('Get_All_Reports') }}">گزارشات</a></li>
         </ul>
     </div>
     |
