@@ -137,6 +137,9 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::post('/gallery/{id}/{postName}' , 'DoActionController@insertPostGallery')->name('Insert_Post_Gallery');
 			Route::get('/gallery/action/delete/{id}' , 'DoActionController@deletePostPicture')->name('Delete_Post_Picture');
 			// 
+			Route::get('/video/{id}/{postName}' , 'DoActionController@getPostVideo')->name('Get_Post_Video');
+			Route::post('/video/{id}/{postName}' , 'DoActionController@uploadVideo');
+			// 
 			Route::get('/news-gallery/{id}/{postName}' , 'DoActionController@getPostNewsGallery')->name('Get_News_Post_Gallery');
 			Route::post('/news-gallery/{id}/{postName}' , 'DoActionController@insertPostNewsGallery')->name('Insert_News_Post_Gallery');
 			Route::get('/news-gallery/action/delete/{id}' , 'DoActionController@deletePostNewsPicture')->name('Delete_News_Post_Picture');

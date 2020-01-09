@@ -177,6 +177,18 @@ class DoActionController extends Controller
         }
     }
 
+    public function getPostVideo($id,$postName){
+        $Video =  DoActivity::select('apst_video')->where('id',$id)->get();
+        return view('Admin.Activities.Posts.Video',compact('id','postName','Video'));
+    }
+
+    public function uploadVideo(Request $request, $id,$postName){
+        $Video =  DoActivity::find($id);
+        $Video->apst_video = $request->video_script;
+        $Video->save();
+        return redirect()->back();
+    }
+
     public function deletePost($id){
         $DeletedRecord  = DoActivity::find($id);
         $DeletePicture =  PostGallery::where('apic_activities_posts_id',$id)->get();

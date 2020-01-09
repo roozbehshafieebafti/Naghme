@@ -54,7 +54,7 @@
                                 <a href="{{ route('Get_Post_Gallery',['id' =>$val->id , 'postName'=>$val->apst_title]) }}" ><i class="fas fa-camera-retro"></i></a>
                             </td>
                             <td class="text-center">
-                                <a href=""  ><i class="fas fa-video"></i></a>
+                                <a href=" {{ route('Get_Post_Video',['id' =>$val->id , 'postName'=>$val->apst_title]) }} "  ><i class="fas fa-video"></i></a>
                             </td>
                             <td class="text-center">
                                 <a href="{{route('Get_News_Post_Gallery',['id' =>$val->id , 'postName'=>$val->apst_title])}}"  ><i class="fas fa-newspaper"></i></i></a>

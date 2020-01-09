@@ -22,7 +22,7 @@ class CreateActivitiesPosts extends Migration
             $table->string('apst_picture_of_title_mobile',96);
             $table->string('apst_picture_of_cover',96);
             $table->boolean('apst_is_cover_picture_landscape');
-            $table->string('apst_video')->nullable();
+            $table->text('apst_video')->nullable();
             $table->string('apst_accure_date');
             $table->timestamps();
         });
