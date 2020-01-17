@@ -144,7 +144,10 @@ $(function()
 
 tinymce.init({
     selector: '#PostTextArea',plugins: "link",
-  });
+});
+tinymce.init({
+    selector: '#CompletePostTextArea',plugins: "link",
+});
 
 
   function DateValidation(event){

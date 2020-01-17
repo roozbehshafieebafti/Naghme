@@ -14,11 +14,14 @@ class LoginController extends Controller
     }
 
     // validation for login
-    public function doLogin(Request $request){   
+    public function doLogin(Request $request){ 
         $this->validate($request,[
             'email_ng' => 'required|email',
             'password_ng' => 'required',
             'captcha_ng' => 'required|captcha'
+        ],[
+            "captcha_ng.captcha"=>"کد امنیتی صحیح نمی‌باشد",
+            "captcha_ng.required"=>"ورود کد امنیتی الزامی است",
         ]);
 
         $auth = Auth::attempt(
@@ -31,16 +34,28 @@ class LoginController extends Controller
         if($auth){
             // get user Information
             $User = Auth::user();
-            // admin 
-            if($User->role == 1){
-                return redirect()->route('Admin_Dashboard');
+            // if the request comes form login page
+            if(!isset($request->AJAX)){
+                // admin 
+                if($User->role == 1){
+                    return redirect()->route('Admin_Dashboard');
+                }
+                // general user
+                return redirect()->route('Home');
             }
-            // general user
-            return redirect()->route('Home');
+            else{
+                return response()->json(["data"=>"true"],200,['Content-Type'=>'application/json']);
+            }              
         }
         else{
-            // not Auth
-            return(redirect()->back()->with('danger','نام کاربری یا گذرواژه اشتباه است'));
+            // if the request comes form login page
+            if(!isset($request->AJAX)){
+                // not Auth
+                return(redirect()->back()->with('danger','نام کاربری یا گذرواژه اشتباه است'));
+            }
+            else{
+                return response()->json(["data"=>"نام کاربری یا کلمه عبور اشتباه است"],400,['Content-Type'=>'application/json']);
+            }
         } 
     }
 

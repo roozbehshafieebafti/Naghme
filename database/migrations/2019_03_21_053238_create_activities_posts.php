@@ -18,6 +18,7 @@ class CreateActivitiesPosts extends Migration
             $table->integer('apst_sub_activities_title_id')->nullable();
             $table->string('apst_title',64);
             $table->text('apst_description');
+            $table->text('apst_second_description')->nullable();
             $table->string('apst_picture_of_title',96);
             $table->string('apst_picture_of_title_mobile',96);
             $table->string('apst_picture_of_cover',96);

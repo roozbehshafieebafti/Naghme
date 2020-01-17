@@ -96,6 +96,10 @@
 				    <label >متن پست :</label>
 				    <textarea id="PostTextArea" style="resize:none;height:300px" type="text" name="Post_Description" class="form-control" required="required">{{ $Post['attributes']['apst_description'] }}</textarea>
                 </div>
+                <div class="form-group mt-5">
+                    <label >متن تکمیلی</label>
+				    <textarea id="CompletePostTextArea" style="resize:none;height:300px" type="text" name="Post_Second_Description" class="form-control">{{ $Post['attributes']['apst_second_description'] }}</textarea>
+                </div>
                 
 				<button id="PostSubmit" class="btn btn-success">پست فعالیت</button>
 				<a href="{{ route('Get_Posts') }}" class="btn btn-danger text-light" style="margin-right: 20px;">&nbsp;بازگشت &nbsp;<i class="fas fa-arrow-circle-left"></i></a>

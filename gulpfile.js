@@ -34,9 +34,9 @@ elixir(function(mix){
 
     // mix.scripts([
     //     // './resources/assets/js/jquery.min.js',
+    //     // './resources/assets/js/bootstrap.min.js',
     //     './resources/assets/js/jquery-ui.min.js',
     //     './resources/assets/js/popper.min.js',
-    //     // './resources/assets/js/bootstrap.min.js',
     //     './resources/assets/js/all.min.js',
     //     './resources/assets/js/sweetalert.min.js',
     //     './resources/assets/js/Main/home.js',

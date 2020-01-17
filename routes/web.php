@@ -305,13 +305,13 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 
 	//Login
 	Route::get('/login','LoginController@loginPage')->name('Login');
-	Route::post('/login','LoginController@doLogin');
+	Route::post('/login','LoginController@doLogin')->name('Do_Login');
 	Route::get('/exit','LoginController@logOut')->name('Exit');
-	Route::get('/refreshcaptcha', 'LoginController@refreshCaptcha');
+	Route::get('/refreshcaptcha', 'LoginController@refreshCaptcha')->name("Refresh_Capthca_Route");
 
 	// Register
 	Route::get('/register','RegisterController@registerPage')->name('Register');
-	Route::post('/register','RegisterController@doRegister');
+	Route::post('/register','RegisterController@doRegister')->name('Do_register');
 
 	// Forget
 	Route::get('/forget','ForgetController@forgetPage')->name('Forget');

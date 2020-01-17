@@ -32,7 +32,12 @@ class RegisterController extends Controller
         $userExist = User::where("email",$request->regiser_email)->exists();
 
         if($userExist){
-            return(redirect()->back()->with('danger','این نام کاربری قبلا در سیستم ثبت شده است'));
+            if(!isset($request->AJAX)){
+                return(redirect()->back()->with('danger','این نام کاربری قبلا در سیستم ثبت شده است'));
+            }
+            else{
+                return response()->json(["data"=>"این نام کاربری قبلا در سیستم ثبت شده است"], 403, ['Content-Type'=>'application/json']);
+            }
         }
         
         $user = new User();
@@ -56,15 +61,30 @@ class RegisterController extends Controller
                 // get user Information
                 $User = Auth::user();
                 // general user
-                return redirect()->route('Home');
+                if(!isset($request->AJAX)){
+                    return redirect()->route('Home');
+                }
+                else{
+                    return response()->json(["data"=>"true"], 200, ['Content-Type'=>'application/json']);
+                }
             }
             else{
-                // not Auth
-                return(redirect()->route('Login')->with('danger','نام کاربری یا گذرواژه اشتباه است'));
+                // not Auth                
+                if(!isset($request->AJAX)){
+                    return(redirect()->route('Login')->with('danger','نام کاربری یا گذرواژه اشتباه است'));
+                }
+                else{
+                    return response()->json(["data"=>"نام کاربری یا گذرواژه اشتباه است"], 400, ['Content-Type'=>'application/json']);
+                }
             }
         }
         else{
-            return(redirect()->back()->with('danger','خطای سیستمی لطفا با مدیر سیستم تماس برقرار نمایید'));
+            if(!isset($request->AJAX)){
+                return(redirect()->back()->with('danger','خطای سیستمی لطفا با مدیر سیستم تماس برقرار نمایید'));
+            }
+            else{
+                return response()->json(["data"=>"خطای سیستمی لطفا با مدیر سیستم تماس برقرار نمایید"], 500, ['Content-Type'=>'application/json']);
+            }
         }
     }
 }

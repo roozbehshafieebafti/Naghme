@@ -71,6 +71,7 @@ class DoActionController extends Controller
             $DoAct->apst_sub_activities_title_id = $request->Sub_Catigory;
             $DoAct->apst_title = $request->Post_tite;
             $DoAct->apst_description = $request->Post_Description;
+            $DoAct->apst_second_description = isset($request->Post_Second_Description) ? $request->Post_Second_Description : null;
             $DoAct->apst_picture_of_title = $titlePicture;
             $DoAct->apst_picture_of_title_mobile = $mobilePicture;
             $DoAct->apst_picture_of_cover = $coverPicture;
@@ -131,6 +132,7 @@ class DoActionController extends Controller
         $DoAct->apst_sub_activities_title_id = $request->Sub_Catigory;
         $DoAct->apst_title = $request->Post_tite;
         $DoAct->apst_description = $request->Post_Description;
+        $DoAct->apst_second_description = isset($request->Post_Second_Description) ? $request->Post_Second_Description : null;
         $DoAct->apst_accure_date = $date;
         $DoAct->apst_is_cover_picture_landscape = isset($request->isLandescape) ? 1 : 0;
         if($DoAct->save()) {
