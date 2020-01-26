@@ -29,6 +29,8 @@ function captchaRefresh (){
 
 function handleSubmit(){
     $("#login_btn_activity").html("<div class='spinner-border spinner-border-sm' role='status'><span class='sr-only'>Loading...</span></div>");
+    $("#login_btn_activity").attr("disabled","disabled");
+    $("#Modal_Alert").css({"display":"none"});
     var form = document.getElementById('loginFormContent');
     var values = {};
     for(var i=0; i<form.elements.length; i++){
@@ -52,10 +54,29 @@ function handleSubmit(){
        },
        error : function(data){
            console.log("error",data);
+           captchaRefresh()
            $("#login_btn_activity").html("ورود");
+           $("#login_btn_activity").removeAttr("disabled");
            $("#Modal_Alert").css({"display":"block"});
-           if(data.status === 422){
-               $("#Modal_Alert").html("لطفا تمامی مقادیر را صحیح پر کنید");
+           if(data.status === 422){               
+                if("email_ng" in data.responseJSON){
+                    $("#Modal_Alert").html("ایمیل به درستی وارد نشده است");
+                }
+                else if("password_ng" in data.responseJSON){
+                    $("#Modal_Alert").html("لطفا  پسورد را  پر کنید");
+                }
+                else if("captcha_ng" in data.responseJSON){
+                    $("#Modal_Alert").html("لطفا کد امنیتی را صحیح پر کنید");
+                }
+                else{
+                    $("#Modal_Alert").html("مقادیر کامل پر نشده‌اند");
+                }
+           }
+           if(data.status === 500){
+                $("#Modal_Alert").html("خطای سیستمی لطفا با مدیر سیستم تماس برقرار نمایید");
+            }
+            if(data.responseJSON && ("data" in data.responseJSON)){
+                $("#Modal_Alert").html(data.responseJSON.data);
            }
        }
     });
@@ -70,7 +91,9 @@ function showLoginPage(){
 }
 
 function handleRegister(){
-    $("#register_button").html("<div class='spinner-border spinner-border-sm' role='status'><span class='sr-only'>Loading...</span></div>");
+    $("#register_button").html("<div class='spinner-border spinner-border-sm' role='status'><span class='sr-only'>Loading...</span></div>");    
+    $("#register_button").attr("disabled","disabled");
+    $("#Modal_Alert").css({"display":"none"});
     var form = document.getElementById('activity_registration_form');
     var values = {};
     for(var i=0; i<form.elements.length; i++){
@@ -78,6 +101,12 @@ function handleRegister(){
             values[form.elements[i].name] = form.elements[i].value;
         }
     }
+    if(values.regiser_password_re !== values.regiser_password){
+        $("#Modal_Alert").css({"display":"block"});
+        $("#Modal_Alert").html("گذر واژه‌ها با هم برابر نیستند");
+        $("#register_button").html("ثبت‌نام");
+        return;
+    }
     values.AJAX = true;
     $.ajax({
         headers:{
@@ -95,9 +124,32 @@ function handleRegister(){
        error : function(data){
            console.log("error",data);
            $("#register_button").html("ثبت‌نام");
+           $("#register_button").removeAttr("disabled");
+           captchaRefresh();
            $("#Modal_Alert").css({"display":"block"});
            if(data.status === 422){
-               $("#Modal_Alert").html("لطفا تمامی مقادیر را صحیح پر کنید");
+               if("regiser_captcha" in data.responseJSON){
+                   $("#Modal_Alert").html("لطفا کد امنیتی را صحیح پر کنید");
+               }
+               else if("regiser_name" in data.responseJSON){
+                   $("#Modal_Alert").html("لطفا  نام را صحیح پر کنید");
+               }
+               else if("regiser_family" in data.responseJSON){
+                   $("#Modal_Alert").html("لطفا نام خانوادگی را صحیح پر کنید");
+               }
+               else if("regiser_email" in data.responseJSON){
+                   $("#Modal_Alert").html("ایمیل وارد شده صحیح نیست");
+               }
+               else if("regiser_email" in data.responseJSON){
+                   $("#Modal_Alert").html("ایمیل وارد شده صحیح نیست");
+               }
+               else if("regiser_password" in data.responseJSON){
+                   $("#Modal_Alert").html("پسورد را کامل پر کنید");
+               }
+               else{
+                    $("#Modal_Alert").html("مقادیر کامل پر نشده‌اند");
+               }
+               
            }
            if(data.status === 403){
                 $("#Modal_Alert").html("این نام کاربری قبلا در سیستم ثبت شده است");
@@ -107,7 +159,7 @@ function handleRegister(){
            }
            if(data.status === 500){
                 $("#Modal_Alert").html("خطای سیستمی لطفا با مدیر سیستم تماس برقرار نمایید");
-           }
+           }           
        }
     });
 }

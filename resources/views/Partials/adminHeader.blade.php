@@ -36,6 +36,7 @@
         <ul class="bg-white Naghmeh-dropdown-menu text-left">
             <li><a class="text-muted" href="{{ route('Get_Activity') }}">عنوان فعالیت ها</a></li>
             <li><a class="text-muted" href="{{ route('Get_Posts') }}">فعالیت های اجرایی</a></li>
+            <li><a class="text-muted" href="{{ route('Get_Recalls') }}">فراخوان عکس</a></li>
             <li><a class="text-muted" href="{{ route('Get_All_Reports') }}">گزارشات</a></li>
         </ul>
     </div>

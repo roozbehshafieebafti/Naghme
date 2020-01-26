@@ -67,6 +67,9 @@
                 case isset($forget):
                     echo "فراموشی رمز";
                     break;
+                case isset($recall):
+                    echo "فراخوان";
+                    break;
             }
         ?>
     </div> 
@@ -272,7 +275,7 @@
                         }
                         else{
                             $User = Auth::user();
-                            echo '<a class="header-link-title text-white" href=""><span><b>'.$User->name.' خوش آمدید'.'</b></span></a>';
+                            echo '<a style="" class="header-link-title text-white text-center" role="button">کاربر</a><ul class="header-ul-list col-12"><li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " style="color: black"><b>'.$User->name.' خوش آمدید'.'</b></a></li><li><span class="header-text-dimond-shape">&#9670;</span><a class="header-text-link " href="'.route('Exit').'">خروج</a></li></ul>';
                         }
                     ?>  
                 </div>
@@ -336,6 +339,9 @@
                     break;
                 case isset($forget):
                     echo "فراموشی رمز";
+                    break;
+                case isset($recall):
+                    echo "فراخوان";
                     break;
             }    
         ?>

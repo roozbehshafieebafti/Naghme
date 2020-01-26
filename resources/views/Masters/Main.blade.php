@@ -18,8 +18,8 @@
 		<title>نغمه ماندگار | @yield('title')</title>
 		<link rel="manifest" href="{{ config('app.url').'manifest.json' }}">
 		<link rel="shortcut icon" type="image/png" href="{{ config('app.url').'picture/logos/64x64.png' }}">
-		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/app.css' }}">
-		{{-- <link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/bootstrap.min.css' }}">
+		{{-- <link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/app.css' }}"> --}}
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/bootstrap.min.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/Admin.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/all.min.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/jquery-ui.min.css' }}">
@@ -45,7 +45,8 @@
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/allActivities.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/login.css' }}">
 		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/register.css' }}">
-		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/forget.css' }}"> --}}
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/forget.css' }}">
+		<link rel="stylesheet" type="text/css" href="{{ config('app.url').'css/recalls.css' }}">
 	</head>
 	<body >
 		<div class="No-PreView">
@@ -55,15 +56,16 @@
     		@yield('content')
 			<script type="text/javascript" src="{{ config('app.url').'js/jquery.min.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/bootstrap.min.js' }}"></script>
-			<script type="text/javascript" src="{{ config('app.url').'js/main.js' }}"></script>
-			{{-- <script type="text/javascript" src="{{ config('app.url').'js/jquery-ui.min.js' }}"></script>
+			{{-- <script type="text/javascript" src="{{ config('app.url').'js/main.js' }}"></script> --}}
+			<script type="text/javascript" src="{{ config('app.url').'js/jquery-ui.min.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/popper.min.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/all.min.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/sweetalert.min.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/Main/home.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/Main/register.js' }}"></script>
 			<script type="text/javascript" src="{{ config('app.url').'js/Main/pagination.js' }}"></script>
-			<script type="text/javascript" src="{{ config('app.url').'js/Main/activity.js' }}"></script> --}}
+			<script type="text/javascript" src="{{ config('app.url').'js/Main/activity.js' }}"></script>
+			<script type="text/javascript" src="{{ config('app.url').'js/Main/recalls.js' }}"></script>
 			<script type="text/javascript">
 				$(function () {
 					$('[data-toggle="tooltip"]').tooltip()

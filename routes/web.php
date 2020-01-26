@@ -260,6 +260,25 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::POST('/{question_id}/edit/{id}','QuestionsController@doEditQuestion');
 		});
 
+		// Recalls
+		Route::group(['prefix' => '/recalls', "namespace" => "Recalls"], function () {
+			Route::get('/{id?}', 'RecallsController@getRecalls')->name('Get_Recalls');
+			Route::get('/new-recall/create','RecallsController@createRecall')->name('Create_Recall_page');
+			Route::post('/new-recall/create','RecallsController@doCreateRecall');
+			Route::get('/new-recall/edit/{id}','RecallsController@editRecall')->name('Edit_Recalls');
+			Route::post('/new-recall/edit/{id}','RecallsController@doEditRecall');
+			Route::get('/new-recall/delete/{id}','RecallsController@deleteRecall')->name('Delete_Recall');
+			Route::get('/new-recall/activation/{id}/{activeStatus}','RecallsController@recallActivation')->name('Recall_Activation');
+		});
+
+		// WHO registerd in recall
+		Route::group(['prefix' => '/who-registered' , "namespace" => "Recalls"], function () {
+			Route::get('{recalId}/{recallName}/{page?}','WhoRegisterdInRecallController@getWhoRegisterd')->name('Get_All_Bodys');			
+		});
+		Route::group(['prefix' => 'recall/picture', "namespace" => "Recalls"], function () {
+			Route::get('/user-works/{recallId}/{userId}/{name}/{family}','WhoRegisterdInRecallController@getUserWorks')->name('Get_All_Works');			
+		});
+
 });
 
 // this Routes belongs to Main Panel
@@ -324,5 +343,13 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 	Route::get('/membership','MembershipController@getMembers')->name('Get_Membership');
 
 	// Search
-	Route::get('/search/{name}','SearchController@getSearch')->name('Get_Search');	
+	Route::get('/search/{name}','SearchController@getSearch')->name('Get_Search');
+	
+	// Recalls
+	Route::get('/recall/{id}/{name}','RecallController@getRecalls')->name('Get_Reacll');
+	Route::post('/recall/{userId}/{recallId}','RecallController@finallSubmition');
+	Route::post('/recall/create-user-information','RecallController@doCreateUserInformation')->name('Do_Create_User_information');
+	Route::post('/recall/create-user-work','RecallController@doCreateUserWorks')->name('Do_create_User_Work');
+	Route::get('/recall/get-user-works/{userId}/{recallId}','RecallController@getAllUsersPicture')->name('Get_User_Works');
+	Route::delete('recall/delete-work/{workId}','RecallController@deleteUserWork')->name('Delete_User_work');
 });
