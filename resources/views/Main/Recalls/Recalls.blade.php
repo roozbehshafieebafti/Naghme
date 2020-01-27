@@ -10,38 +10,48 @@
             @if($isAuth)
                 {{-- تایید نهایی را انجام نداده --}}
                 @if (!$isSubmited)
+                    {{-- آموزش نحوه استفاده  --}}
+                    <div id="RecallLearningPart" class="container recall-main-content">
+                        <div class="pt-3 pb-3 pr-2 pl-2">
+                            <h4>به {{$Recalls[0]->name}} خوش آمدید</h4>
+                            <ul class="mt-3">
+                                <li>
+                                    <h6 style="text-align:justify">در این بخش تمامی مراحل بارگزاری عکس‌ها برای شما توضیح داده شده است، لطفا قبل از شروع بارگزاری <b>فیلم آموزشی</b> زیر را مشاهده کنید.</h6>
+                                </li>
+                                <li>
+                                    <h6 style="text-align:justify">لطفا جهت اجرای بهتر سایت در طول مراحل بارگذاری، فیلترشکن خود را <b>خاموش</b> کنید.</h6>
+                                </li>
+                                <li>
+                                    <h6 style="text-align:justify">در صورتی که از نحوه شرکت در فراخوان آگاهی دارید با کلیک به روی دکمه <b>«شروع فراخوان»</b> در انتهای صفحه، می‌توانید مراحل بارگذاری را آغاز کنید.</h6>
+                                </li>
+                            </ul>                            
+                            <div class="p-5">
+                                {{-- بارگذاری ویدئو --}}
+                                <div id="20876753606"><script type="text/JavaScript" src="https://www.aparat.com/embed/blcF1?data[rnddiv]=20876753606&data[responsive]=yes"></script></div>
+                            </div>
+                            <div class="row p-3"> 
+                                <div class="col-12 text-center">
+                                    <button onclick="startRecall()" type="button" class="btn btn-primary" style="width:200px"><b>شروع فراخوان</b></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     {{-- محتوای فراخوان --}}
-                    <div class="container recall-main-content">
+                    <div id="mainRecallContent" class="container recall-main-content" style="display:none">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="recall-tabs nav-link active "onclick="tabsClick(this)" id="learn-tab" data-toggle="tab" href="#learn" role="tab" aria-controls="learn" aria-selected="false">آموزش</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="recall-tabs nav-link " onclick="tabsClick(this)" id="information_tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">مشخصات</a>
+                                <a class="recall-tabs nav-link active" onclick="tabsClick(this)" id="information_tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">مشخصات</a>
                             </li>
                             <li class="nav-item" onchange="">
                                 <a class="recall-tabs nav-link" onclick="tabsClick(this);selectUploadTab()" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">بارگذاری</a>
                             </li>
                             <li class="nav-item">
-                                <a class="recall-tabs nav-link  "onclick="tabsClick(this);getArchiveWorks({{$User['attributes']['id']}} , {{$Recalls[0]->id}})" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">آرشیو</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="recall-tabs nav-link  "onclick="tabsClick(this)" id="submit-tab" data-toggle="tab" href="#submit" role="tab" aria-controls="submit" aria-selected="false">ثبت نهایی</a>
+                                <a class="recall-tabs nav-link  "onclick="tabsClick(this);selectRegisterTab()" id="submit-tab" data-toggle="tab" href="#submit" role="tab" aria-controls="submit" aria-selected="false">ثبت نهایی</a>
                             </li>
                         </ul>
-                        <div class="tab-content" id="myTabContent">
-                            {{-- تب آموزش --}}
-                            <div class="tab-pane fade show active" id="learn" role="tabpanel" aria-labelledby="learn-tab">
-                                <div class="pt-3 pb-3 pr-2 pl-2">
-                                    <h5>در این بخش تمامی مراحل بارگزاری عکس‌ها برای شما توضیح داده شده است، لطفا قبل از شروع بارگزاری آموزش زیر را مشاهده کنید.</h5>
-                                    <div class="p-5">
-                                        {{-- بارگذاری ویدئو --}}
-                                        <div id="20876753606"><script type="text/JavaScript" src="https://www.aparat.com/embed/blcF1?data[rnddiv]=20876753606&data[responsive]=yes"></script></div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="tab-content" id="myTabContent">                            
                             {{-- تب اطلاعات --}}
-                            <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <div class="pt-3">
                                     <div class="mt-3 row">
                                         <div class="col-xl-4 col-lg-6 col-md-6 col-12 pr-4 pl-4">
@@ -253,11 +263,22 @@
                                             </div>
                                         </form>
                                     </div>
+                                    <div id="NextStepUpload">
+                                        @if($UserData)
+                                            <div class="row pt-3 pr-2 pl-2 pb-5 d-flex justify-content-center">
+                                                <div class="col-10 text-right">
+                                                    <span onclick="backwardToLearnPage()" class="btn btn-danger mr-1 ml-1" style="font-weight:bold"><i class="fas fa-arrow-circle-right" style="position:relative;top:3px;"></i> مرحله قبل </i></span>
+                                                    <span onclick="activeUploadTab()" class="btn btn-success" style="font-weight:bold">مرحله بعد <i class="fas fa-arrow-circle-left" style="position:relative;top:3px;" ></i></span>
+                                                </div>
+                                            </div> 
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                             {{-- تب بارگذاری آثار --}}
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div id="uploadingTabContent">
+                                    {{-- اخطارهای زمان آپلود --}}
                                     <div class="pr-2 pl-2 pt-2"> 
                                         <ul class="alert alert-warning">
                                             <li>حداکثر تعداد عکس‌ها: 12عدد</li>
@@ -265,6 +286,7 @@
                                             <li>فرمت‌های قابل قبول : <span style="font-size:16px"> png , jpg , gif </span></li>
                                         </ul>
                                     </div>
+                                    {{-- فرم بارگذاری --}}
                                     <form action="" id="sendingWorkForm"  enctype="multipart/form-data">
                                         <div class="row pt-2">
                                             <div class="col-xl-8 col-md-6 col-12">
@@ -359,64 +381,75 @@
                                             </div>
                                         </div>
                                     </form>
-                                </div>
-                                <div id="uploadingTabAlert" class="pr-2 pl-2 pt-4" style="display: none">
-                                    <div id="uploadingTabAlertElement" class="alert alert-warning"></div>
-                                </div>
-                            </div>
-                            {{-- تب آرشیو --}}
-                            <div class="tab-pane fade " id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                <div id="ArchiveContainer" class="container">                                                                                                
-                                    <div id="ArchiveConterntId" class="row pt-3 pr-2 pl-2">
-                                        @if(count($UserWorks)>0)
-                                            @foreach ($UserWorks as $item)
-                                                <div class="col-xl-4 col-md-6 col-12">
-                                                    <div class="card mt-1 mb-2" >
-                                                        <img src="{{ config('app.url').$item->picture }}" class="card-img-top" alt="...">
-                                                        <div class="card-body">                                    
-                                                            <div style="list-style: none">
-                                                                <div class="d-flex justify-content-start">
-                                                                    <span class="recall-Archive-title">عنوان:</span>
-                                                                    <span>{{$item->title}}</span>
-                                                                </div>
-                                                                <div class="d-flex justify-content-start">
-                                                                    <span class="recall-Archive-title">سال تولید:</span>
-                                                                    <span>{{$item->production_date}}</span>
-                                                                </div>
-                                                                <div class="d-flex justify-content-start">
-                                                                    <span class="recall-Archive-title">اندازه اثر:</span>
-                                                                    <span>{{$item->size}}</span>
-                                                                </div>
-                                                                <div class="d-flex justify-content-start">
-                                                                    <span class="recall-Archive-title">تکنیک:</span>
-                                                                    <span>{{$item->technique}}</span>
-                                                                </div>
-                                                                <div class="d-flex justify-content-start">
-                                                                    <span class="recall-Archive-title">بیانیه:</span>
-                                                                    <span style="display:inline-block;width:200px"> {{$item->statements}}</span>
-                                                                </div>
-                                                                <div class="d-flex justify-content-end">
-                                                                    <span class="recall-Archive-title text-danger" style="cursor:pointer" onclick="deleteUserWorks({{$item->id}},this,{{$User['attributes']['id']}} , {{$Recalls[0]->id}})">حذف</span>
+                                    {{-- اخطار ثبت با موفقیت یا خطا --}}
+                                    <div id="uploadingAlert" class="pr-2 pl-2 pt-4 d-flex align-items-center justify-content-center" style="display: none">
+                                        <div id="uploadingAlertElement"></div>
+                                    </div>
+                                    <hr>
+                                    {{-- آرشیو عکس‌های کاربر --}}
+                                    <div id="ArchiveContainer" class="container">                                                                                                
+                                        <div id="ArchiveConterntId" class="row pt-3 pr-2 pl-2">
+                                            @if(count($UserWorks)>0)
+                                                @foreach ($UserWorks as $item)
+                                                    <div class="col-xl-4 col-md-6 col-12">
+                                                        <div class="card mt-1 mb-2" >
+                                                            <img src="{{ config('app.url').$item->picture }}" class="card-img-top" alt="...">
+                                                            <div class="card-body">                                    
+                                                                <div style="list-style: none">
+                                                                    <div class="d-flex justify-content-start">
+                                                                        <span class="recall-Archive-title">عنوان:</span>
+                                                                        <span>{{$item->title}}</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-content-start">
+                                                                        <span class="recall-Archive-title">سال تولید:</span>
+                                                                        <span>{{$item->production_date}}</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-content-start">
+                                                                        <span class="recall-Archive-title">اندازه اثر:</span>
+                                                                        <span>{{$item->size}}</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-content-start">
+                                                                        <span class="recall-Archive-title">تکنیک:</span>
+                                                                        <span>{{$item->technique}}</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-content-start">
+                                                                        <span class="recall-Archive-title">بیانیه:</span>
+                                                                        <span style="display:inline-block;width:200px"> {{$item->statements}}</span>
+                                                                    </div>
+                                                                    <div class="d-flex justify-content-end">
+                                                                        <span class="recall-Archive-title text-danger" style="cursor:pointer" onclick="deleteUserWorks({{$item->id}},this,{{$User['attributes']['id']}} , {{$Recalls[0]->id}})">حذف</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>                                        
-                                            @endforeach
-                                        @endif  
+                                                    </div>                                        
+                                                @endforeach
+                                            @endif                                            
+                                        </div>                                       
+                                    </div>
+                                    <div id="NextStepRegister">
+                                        @if(count($UserWorks)>0)
+                                            <div class="row pt-3 pr-2 pl-2 d-flex justify-content-center">
+                                                <div class="col-10 text-center">
+                                                    <span onclick="activeRegisterTab()" class="btn btn-info" style="width:200px;font-weight:bold">مرحله بعد</span>
+                                                </div>
+                                            </div> 
+                                        @endif
+                                    </div>
+                                    <div class="pr-2 pl-2 pt-2">
+                                        @if(count($UserWorks)<=0)
+                                            <div id="ArchiveAlertDiv" class="alert alert-warning text-center">
+                                                تاکنون تصویری ثبت نشده است
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="pr-2 pl-2 pt-2">
-                                    @if(count($UserWorks)<=0)
-                                        <div id="ArchiveAlertDiv" class="alert alert-warning text-center">
-                                            تاکنون تصویری ثبت نشده است
-                                        </div>
-                                    @endif
-                                </div>
+                                {{-- اخطار عدم ثبت اطلاعات --}}
+                                <div id="uploadingTabAlert" class="pr-2 pl-2 pt-4 d-flex align-items-center justify-content-center" style="display: none;min-height:500px"></div>
                             </div>
                             {{-- تب ثبت نهایی --}}
                             <div class="tab-pane fade " id="submit" role="tabpanel" aria-labelledby="submit-tab">
-                                <div  class="container pt-4">
+                                <div id="registerTabContent" class="container pt-4">
                                     <div class="alert alert-info">
                                         <ul >
                                             <li>قوانین</li>
@@ -445,6 +478,8 @@
                                         </form>
                                     </div>
                                 </div>
+                                {{-- اخطار عدم ثبت اطلاعات --}}
+                                <div id="RegisterTabAlert" class="pr-2 pl-2 pt-4 d-flex align-items-center justify-content-center" style="display: none;min-height:500px"></div>
                             </div>
                         </div>
                     </div>                    
@@ -554,6 +589,7 @@
         const createUserInformationUrl = "<?php echo route('Do_Create_User_information') ?>";
         var   hasUserInformation = "<?php echo  $UserData ? true : false ?>";
         const uploadWorksUrl = "<?php echo route('Do_create_User_Work') ?>";
-        const baseUrl = "<?php echo config('app.url'); ?>"
+        const baseUrl = "<?php echo config('app.url'); ?>";
+        const noImageSrc = "<?php echo config('app.url').'picture/assets/no-image.png'; ?>"
     </script>
 @endsection

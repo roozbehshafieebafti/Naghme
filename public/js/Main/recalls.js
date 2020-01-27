@@ -1,3 +1,15 @@
+// از صفحه آموزش به صفحه تکمیل اطلاعات
+function startRecall(){
+    $('#RecallLearningPart').fadeOut('fast');
+    $('#mainRecallContent').fadeIn('slow');
+    window.scrollTo({top:0 , behavior: "smooth"});
+}
+// برگشت از صفحه تکمیل اطلاعات به صفحه آموزش
+function backwardToLearnPage(){
+    $('#mainRecallContent').fadeOut('fast');
+    $('#RecallLearningPart').fadeIn('slow');
+}
+
 // مربوط به تغییر تب ها  و نمایش برجسته عنوان تب ها
 function tabsClick(element){
     $(".recall-tabs").css({color: "#000000" , fontWeight: "normal"});
@@ -142,6 +154,7 @@ function recallInformationSubmit(e){
                 setTimeout(function(){
                     $('#recallSendingResultAlert').fadeOut('fasts');
                 },3000);
+                $('#NextStepUpload').html('<div class="row pt-3 pr-2 pl-2 pb-5 d-flex justify-content-center"><div class="col-10 text-right"><span onclick="backwardToLearnPage()" class="btn btn-danger mr-1 ml-1" style="font-weight:bold"><i class="fas fa-arrow-circle-right" style="position:relative;top:3px;"></i> مرحله قبل </i></span><span onclick="activeUploadTab()" class="btn btn-success" style="font-weight:bold">مرحله بعد <i class="fas fa-arrow-circle-left" style="position:relative;top:3px;" ></i></span></div></div>');
                 
             },
             error: function(error){
@@ -173,6 +186,10 @@ function recallInformationSubmit(e){
         return;
     }
 }
+function activeUploadTab(){
+    $('#profile-tab').click();
+    window.scrollTo({  top: 0,behavior: 'smooth'});
+}
 
 
 
@@ -185,21 +202,21 @@ function selectUploadTab(){
     if(hasUserInformation){
         // نمایش فرم بار گذاری
         $("#uploadingTabContent").css({display: "block"});
-        $("#uploadingTabAlert").css({display: "none"});
+        $("#uploadingTabAlert").css({display: "none",minHeight: 0});
+        $("#uploadingTabAlert").html('<div id="uploadingTabAlertElement"></div>');
     }
     else{
         // نمایش اخطار آپلود
         $("#uploadingTabContent").css({display: "none"});
         $("#uploadingTabAlert").css({display: "block"});
-        $("#uploadingTabAlertElement").html("برای بارگذاری آثار، اطلاعات خود را در تب مشخصات کامل کنید");
+        $("#uploadingTabAlert").html('<div id="uploadingTabAlertElement" class="alert alert-warning col-10 text-center">برای بارگذاری آثار، اطلاعات خود را در تب مشخصات کامل کنید</div>');
+        
     }
 }
-
 // کیلک بر روی اینپوت دریافت عکس
 function selectFileClick(){
     document.getElementById("pictureFile").click();
 }
-
 // ارور در هنگام انتخاب عکس
 var errorOnSendFile = false;
 // آیا کاربر عکس جدید بارگذاری کرده است
@@ -284,28 +301,35 @@ $(function()
         },
         success:function(response){ 
             hasUserWorks = 1; //یعنی کار در آرشیو وجود دارد
-            $('#uploadingTabAlert').fadeIn('fast');
-            $('#uploadingTabAlertElement').attr('class','alert alert-success');
-            $('#uploadingTabAlertElement').html('عکس با موفقیت بارگذاری شد');
+            $('#uploadingAlert').fadeIn('fast');
+            $('#uploadingAlertElement').fadeIn('fast');
+            $('#uploadingAlertElement').attr('class','alert alert-success col-10 text-center');
+            $('#uploadingAlertElement').html('عکس با موفقیت بارگذاری شد');
             $('#progressBarDiv').css({"display":"none"});
             $('#sendingWorkBtn').css("display", "none");
             $('#sendingWorkBtn').html('بارگذاری');
-            $('#newPictureUploading').fadeIn('fast');            
-
+            $('#newPictureUploading').fadeIn('fast');
+            getArchiveWorks(data.uploadUserId, data.recallId);
+            $('#NextStepRegister').html('<div class="row pt-3 pr-2 pl-2 d-flex justify-content-center"><div class="col-10 text-center"><span onclick="activeRegisterTab()" class="btn btn-info" style="width:200px;font-weight:bold">مرحله بعد</span></div></div>');
+            setTimeout(function(){
+                $('#uploadingAlertElement').fadeOut();
+            },3000); 
+                
         },
         error:function(error){ 
             console.log("error",error);
-            $('#uploadingTabAlert').fadeIn('fast');
-            $('#uploadingTabAlertElement').attr('class','alert alert-danger');
+            $('#uploadingAlert').fadeIn('fast');
+            $('#uploadingAlertElement').attr('class','alert alert-danger col-10 text-center');
             $('#progressBarDiv').css({"display":"none"});
             if(error.responseJSON && "data" in error.responseJSON){
-                $('#uploadingTabAlertElement').html(error.responseJSON.data);
+                $('#uploadingAlertElement').html(error.responseJSON.data);
             }
             else{
                 $('#uploadingTabAlertElement').html('خطای سیستمی لطفا با مدیر سیستم تماس حاصل نمایید');
             }
             $('#sendingWorkBtn').html('بارگذاری');
             $('#sendingWorkBtn').removeAttr("disabled");
+            $('#NextStepRegister').html('<div class="row pt-3 pr-2 pl-2 d-flex justify-content-center"><div class="col-10 text-center"><span onclick="activeRegisterTab()" class="btn btn-info" style="width:200px;font-weight:bold">مرحله بعد</span></div></div>');
         },
 
         // Tell jQuery "Hey! don't worry about content-type and don't process the data"
@@ -383,18 +407,16 @@ function uploadingFormReset(){
     $('#newPictureUploading').css("display", "none");
     $('#uploadingTabAlert').fadeOut('fast');
     var filedId = ['title' , 'productionData' , 'workSize' , 'workTechniuqe', 'workStatments', 'pictureFile'];
-    // filedId.forEach(element => {
-    //     $('#'+element).val('');
-    // });
     filedId.forEach(function(element){
         $('#'+element).val('');
     });
+    $('#sendingImagePreview').attr({src : noImageSrc});
 }
 
 
 
 /**
- * مربوط به تب آرشیو
+ * مربوط به بخش آرشیو
  */
 // دریافت عکس های آرشیو
 function getArchiveWorks(userId,recalId){
@@ -410,9 +432,6 @@ function getArchiveWorks(userId,recalId){
             type:'GET',
             success: function(response){
                 var ShowenText = '<div id="ArchiveConterntId" class="row pt-3 pr-2 pl-2">';
-                // response.forEach(element => {
-                //     ShowenText = ShowenText + '<div class="col-xl-4 col-md-6 col-12"><div class="card mt-1 mb-2" ><img src="'+baseUrl+'/'+element.picture+'" class="card-img-top" alt="..."><div class="card-body"><div style="list-style: none"><div class="d-flex justify-content-start"><span class="recall-Archive-title">عنوان:</span><span>'+element.title+'</span></div><div class="d-flex justify-content-start"><span class="recall-Archive-title">سال تولید:</span><span>'+element.production_date+'</span></div><div class="d-flex justify-content-start"><span class="recall-Archive-title">اندازه اثر:</span><span>'+element.size+'</span></div><div class="d-flex justify-content-start"><span class="recall-Archive-title">تکنیک:</span><span>'+element.technique+'</span></div><div class="d-flex justify-content-start"><span class="recall-Archive-title">بیانیه:</span><span style="display:inline-block;width:200px">'+element.statements+'</span></div><div class="d-flex justify-content-end"><span class="recall-Archive-title text-danger" style="cursor:pointer" onclick="deleteUserWorks('+element.id+',this,'+userId+','+recalId+')">حذف</span></div></div></div></div></div>';
-                // });
                 response.forEach(function(element){
                     ShowenText = ShowenText + '<div class="col-xl-4 col-md-6 col-12"><div class="card mt-1 mb-2" ><img src="'+baseUrl+'/'+element.picture+'" class="card-img-top" alt="..."><div class="card-body"><div style="list-style: none"><div class="d-flex justify-content-start"><span class="recall-Archive-title">عنوان:</span><span>'+element.title+'</span></div><div class="d-flex justify-content-start"><span class="recall-Archive-title">سال تولید:</span><span>'+element.production_date+'</span></div><div class="d-flex justify-content-start"><span class="recall-Archive-title">اندازه اثر:</span><span>'+element.size+'</span></div><div class="d-flex justify-content-start"><span class="recall-Archive-title">تکنیک:</span><span>'+element.technique+'</span></div><div class="d-flex justify-content-start"><span class="recall-Archive-title">بیانیه:</span><span style="display:inline-block;width:200px">'+element.statements+'</span></div><div class="d-flex justify-content-end"><span class="recall-Archive-title text-danger" style="cursor:pointer" onclick="deleteUserWorks('+element.id+',this,'+userId+','+recalId+')">حذف</span></div></div></div></div></div>';
                 });
@@ -452,10 +471,35 @@ function deleteUserWorks(wrokId,elements,userId,recalId){
         })
     }
 }
+// 
+function activeRegisterTab(){
+    $('#submit-tab').click();
+    window.scrollTo({  top: 0,behavior: 'smooth'});
+}
+
+
+
 
 /**
  * مربوط به تب ثبت نهایی
  */
+// انتخاب تب ثبت نهایی
+function selectRegisterTab(){
+     // آیا کاربر اطلاعات خودش را بارگذاری کرده است
+     if(hasUserInformation){
+        // نمایش فرم بار گذاری
+        $("#registerTabContent").css({display: "block"});
+        $("#RegisterTabAlert").css({display: "none",minHeight: 0});
+        $("#RegisterTabAlert").html('');
+    }
+    else{
+        // نمایش اخطار آپلود
+        $("#registerTabContent").css({display: "none"});
+        $("#RegisterTabAlert").css({display: "block"});
+        $("#RegisterTabAlert").html('<div id="RegisterTabAlertElement" class="alert alert-warning col-10 text-center">ابتدا مشخصات خود را کامل کنید</div>');
+        
+    }
+}
 // 
 function changeSubmitBtn(element){
     console.log(element.checked)
@@ -484,7 +528,7 @@ function finalFormSubmition(e,userId,recallId){
             $('#submiAlertDiv').html('<div class="alert alert-success">فرهیخته گرامی، آثار شما با موفقیت ثبت نهایی شدند.</div>')
             setTimeout(function(){
                 window.location.reload();
-            },3000);
+            },2000);
 
         },
         error: function(error){
