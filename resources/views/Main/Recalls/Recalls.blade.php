@@ -16,7 +16,7 @@
                             <h4>به {{$Recalls[0]->name}} خوش آمدید</h4>
                             <ul class="mt-3">
                                 <li>
-                                    <h6 style="text-align:justify">در این بخش تمامی مراحل بارگزاری عکس‌ها برای شما توضیح داده شده است، لطفا قبل از شروع بارگزاری <b>فیلم آموزشی</b> زیر را مشاهده کنید.</h6>
+                                    <h6 style="text-align:justify">در این بخش تمامی مراحل بارگذاری عکس‌ها برای شما توضیح داده شده است، لطفا قبل از شروع بارگذاری <b>فیلم آموزشی</b> زیر را مشاهده کنید.</h6>
                                 </li>
                                 <li>
                                     <h6 style="text-align:justify">لطفا جهت اجرای بهتر سایت در طول مراحل بارگذاری، فیلترشکن خود را <b>خاموش</b> کنید.</h6>
@@ -122,7 +122,7 @@
                                                             </div>
                                                         </label>
                                                         <div class="col-8">
-                                                            <input id="birthDate" name="birthDate" class="form-control" type="text" placeholder="1350/01/01" maxlength="10" value="{{ $UserData ? $UserData[0]->birth_date : ""}}" <?php echo $UserData ? "disabled" : "" ?>>
+                                                            <input id="birthDate" name="birthDate" class="form-control" type="text" placeholder="**/**/****" maxlength="10" value="{{ $UserData ? $UserData[0]->birth_date : ""}}" <?php echo $UserData ? "disabled" : "" ?>>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -312,18 +312,19 @@
                                                         </div>
                                                     </label>
                                                     <div class="col-xl-6 col-8">
-                                                        <input id="productionData" name="productionData" class="form-control" type="text" placeholder="1360/01/01" maxlength="10">
+                                                        <input id="productionData" name="productionData" class="form-control" type="text"  maxlength="10">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row  pr-2 pl-2">
                                                     <label for="inputEmail3" class="col-xl-3 col-4 col-form-label">
                                                         <div class="recall-label-content border-bottom border-dark">
                                                             <span class="element-near-label" style="color:#f6a619">&#9672;</span>
-                                                            <span class="info-text-label" >اندازه اثر:</span>
+                                                            <span class="info-text-label" >اندازه:</span>
                                                         </div>
                                                     </label>
                                                     <div class="col-xl-6 col-8">
                                                         <input id="workSize" name="workSize" class="form-control" type="text" placeholder="100x100" maxlength="100">
+                                                        <small>واحد سانتی‌متر</small>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row  pr-2 pl-2">
@@ -450,7 +451,7 @@
                             {{-- تب ثبت نهایی --}}
                             <div class="tab-pane fade " id="submit" role="tabpanel" aria-labelledby="submit-tab">
                                 <div id="registerTabContent" class="container pt-4">
-                                    <div class="alert alert-info">
+                                    <div class="alert alert-warning">
                                         <ul >
                                             <li>قوانین</li>
                                             <li>قوانین</li>
