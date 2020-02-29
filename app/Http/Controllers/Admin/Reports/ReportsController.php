@@ -74,4 +74,36 @@ class ReportsController extends Controller
             return redirect()->back()->with("error","خطا در انجام عملیات لطفا دوباره سعی کنید");
         }
     }
+
+    public function getQuestionerResult($id){
+        $COUNT = DB::select('SELECT DISTINCT person_id from answers where questionnaire_id = ?', [$id]);
+        $data = DB::select('SELECT * from answers where questionnaire_id = ?', [$id]);
+        $rawQuestion = DB::select('SELECT * FROM questions WHERE questionnaire_id = ?', [$id]);
+        $textAnswer = DB::select('SELECT * FROM answers_text WHERE questionnaire_id = ?  ORDER BY question_id', [$id]);
+        $result=[];
+        $questions = [];
+        foreach($data as $value){
+            if(array_key_exists($value->question_id,$result) ){
+                $sum = $result[$value->question_id]["sum"] + $value->answer;
+                $count = $result[$value->question_id]["count"]+1;
+
+                $result[$value->question_id]= [
+                    "sum" => $sum,
+                    "count" => $count
+                ];
+            }
+            else{
+                $result[$value->question_id]= [
+                    "sum" => $value->answer,
+                    "count" => 1
+                ];
+            }
+        };
+
+        foreach($rawQuestion as $val){
+            $questions[$val->id] =[ $val->name, $val->kind];
+        }
+        // dd($result,$questions,$textAnswer);
+        return view('Admin/Reports/Result',compact('COUNT','textAnswer','result','questions'));
+    }
 }

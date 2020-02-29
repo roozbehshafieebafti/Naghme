@@ -3,7 +3,7 @@
 
 @section('content')
 	<div class="container" style="overflow: hidden;padding: 20px 0">
-		<h2>سوال‌های جدید</h2>
+		<h2>ویرایش سوال</h2>
 		@if(session('success'))
 			<div class="alert alert-success" style="margin-top: 30px">
 				{{ session('success') }}
@@ -22,7 +22,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">سوال:</label>
                             <div class="col-sm-10">
-                                <input name="question" type="text" value={{$editableQuestion[0]->name}} class="form-control" maxlength="120">
+                                <input name="question" type="text" value="<?php echo $editableQuestion[0]->name ;?>" class="form-control" maxlength="120">
                             </div>
                         </div>
                     </div>

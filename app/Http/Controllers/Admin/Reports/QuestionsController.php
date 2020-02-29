@@ -13,7 +13,7 @@ class QuestionsController extends Controller
         $questions = DB::select('SELECT questions.id, questions.name AS Qname, questions.kind, questionnaire.name AS Rname, questions.questionnaire_id
                     FROM (questions INNER JOIN questionnaire ON questions.questionnaire_id = questionnaire.id) 
                     WHERE questionnaire.id = ? 
-                    ORDER BY questions.kind 
+                    ORDER BY questions.kind , questions.id ASC
                     ', [$id]);
         
         return view('Admin/Reports/questions/GetAllQuestions', compact('questions','id'));

@@ -70,6 +70,9 @@
                 case isset($recall):
                     echo "فراخوان";
                     break;
+                case isset($questionnaireId):
+                    echo "پرسشنامه";
+                    break;
             }
         ?>
     </div> 
@@ -342,6 +345,9 @@
                     break;
                 case isset($recall):
                     echo "فراخوان";
+                    break;
+                case isset($questionnaireId):
+                    echo "پرسشنامه";
                     break;
             }    
         ?>

@@ -1,18 +1,23 @@
 @extends('Masters.Main')
-@section('title','ورود')
+@section('title','فراموشی رمز عبور')
 @section('content')
     @include('Partials.GeneralHeader')
     <div class="register-main-div">
         @if(count($errors)>0)
-            <div class="alert alert-danger container" style="margin-top: 20px">
+            <ul class="alert alert-danger container" style="margin-top: 20px; direction:rtl">
                 @foreach($errors->all() as $val)
-                    {{ $val }}
+                    <li>{{ $val }}</li>
                 @endforeach
-            </div>
+            </ul>
         @endif
         @if(session('danger'))
             <div class="alert alert-danger container" style="margin-top: 30px">
                 {{ session('danger') }}
+            </div>
+        @endif
+        @if(session('success'))
+            <div class="alert alert-info container" style="margin-top: 30px">
+                {{ session('success') }}
             </div>
         @endif
         <div>
@@ -29,7 +34,7 @@
                             <span >ایمیل :</span>
                         </div>
                     </div>                        
-                    <input autocomplete="off" type="email" name="regiser_email" id="regiser_email" class="form-control mt-2 col-md-8 col-11  ml-2 text-right" placeholder="example@example.com">                        
+                    <input autocomplete="off" type="email" name="forget_email" id="forget_email" class="form-control mt-2 col-md-8 col-11  ml-2 text-right" placeholder="example@example.com">                        
                 </div>
                 
                 
@@ -47,7 +52,7 @@
                     <div class="text-left col-md-3 col-sm-4 col-5 pt-3">
                         <div></div>
                     </div>
-                    <input type="text" name="regiser_captcha" id="regiser_captcha" class="form-control mt-2 col-md-8 col-11  ml-2 text-left"  placeholder="لطفا کد امنیتی فوق را اینجا وارد کنید">
+                    <input type="text" name="captcha_ng" id="captcha_ng" class="form-control mt-2 col-md-8 col-11  ml-2 text-left"  placeholder="لطفا کد امنیتی فوق را اینجا وارد کنید">
                 </div>
                 <button type="submit" class="btn btn-success mr-2 mr-sm-2 mr-md-0 mt-5 pr-5 pl-5 register-button">ارسال</button>
                 <span class="register-button-border-black d-none d-sm-inline-block">!</span>

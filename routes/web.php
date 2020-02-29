@@ -249,8 +249,9 @@ Route::group(['prefix'=>'/admin' , 'namespace'=>'Admin' , 'middleware'=>['adminA
 			Route::post('/new-report/edit/{id}','ReportsController@doEditReports');
 			Route::get('/new-report/delete/{id}','ReportsController@deleteReports')->name('Delete_Report');
 			Route::get('/new-report/activation/{id}/{activeStatus}','ReportsController@reportActivation')->name('Report_Activation');
+			Route::get('/new-report/result/{id}','ReportsController@getQuestionerResult')->name('Get_The_Questioner_Result');
 		});
-
+		// Questions
 		Route::group(['prefix' => '/questions', "namespace" => "Reports"], function () {
 			Route::get('/{id}','QuestionsController@getAllQuestions')->name('Get_All_Questions');
 			Route::get('/{id}/create','QuestionsController@createNewQuestions')->name('Create_New_Questions');
@@ -334,6 +335,7 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 
 	// Forget
 	Route::get('/forget','ForgetController@forgetPage')->name('Forget');
+	Route::post('/forget','ForgetController@sendInformationToEmail');
 
 	// Representaion
 	Route::get('/representaion', 'RepresentaionController@getRepresentation')->name('Representaion');
@@ -352,4 +354,8 @@ Route::group(['namespace'=>'Main' , 'middleware'=>['menuContent']],function(){
 	Route::post('/recall/create-user-work','RecallController@doCreateUserWorks')->name('Do_create_User_Work');
 	Route::get('/recall/get-user-works/{userId}/{recallId}','RecallController@getAllUsersPicture')->name('Get_User_Works');
 	Route::delete('recall/delete-work/{workId}','RecallController@deleteUserWork')->name('Delete_User_work');
+
+	// Reports
+	Route::get('/questionnaire/{questionnaireId}/{name}','ReportsController@getQuestionnaire')->name('Get_Specefic_Questionnaire');
+	Route::post('/questionnaire/submition','ReportsController@submitQuestionsForm')->name('Questionnaire_Submition');
 });

@@ -38,7 +38,7 @@
                 <div class="mt-5 ">
                     <p class="text-white follow-us-text" style="">ما را در شبکه‌های اجتماعی دنبال کنید</p>
                     <div class="d-flex justify-content-center">
-                        <a href="https://www.instagram.com/naghme_mandegar" target="_blank">
+                        <a href="https://www.instagram.com/naghmeh_mandegar" target="_blank">
                             <img class="social-icons"  id="social-icon1" src="{{ config("app.url")."picture/assets/insta.svg" }}" alt="instagram" width="50px" style="margin-right: 10px">
                         </a>
                         <a href="https://www.twitter.com/naghmehmandegar" target="_blank">

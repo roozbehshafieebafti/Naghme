@@ -1,9 +1,9 @@
 @extends('Masters.Admin')
-@section('title','گزارشات')
+@section('title','پرسشنامه‌ها')
 
 @section('content')
 	<div class="container" style="overflow: hidden;padding: 20px 0">
-		<h2>گزارشات</h2>
+		<h2>پرسشنامه‌ها</h2>
 		@if(session('success'))
 			<div class="alert alert-success" style="margin-top: 30px">
 				{{ session('success') }}
@@ -18,7 +18,7 @@
 
         </div>
             <div class="d-flex justify-content-end">
-                <a class="btn btn-success text-white mr-4" href="{{route("Create_New_Reports")}}">گزارش جدید</a>
+                <a class="btn btn-success text-white mr-4" href="{{route("Create_New_Reports")}}">پرسشنامه‌ جدید</a>
             </div>
         @if (isset($Count) && $Count[0]->total>0)
             <div class="mt-5">
@@ -28,6 +28,7 @@
                         <th class="text-center">نام</th>
                         <th class="text-center" style="width:100px">سوالات</th>
                         <th class="text-center" style="width:100px">فعال</th>
+                        <th class="text-center" style="width:100px">مشاهده</th>
                         <th class="text-center" style="width:100px">نتیجه</th>
                         <th class="text-center" style="width:100px">عملیات</th>
                     </thead>
@@ -49,7 +50,10 @@
                                         <?php echo $item->activation == 0 ? '<i class="far fa-square"></i>' : '<i class="fas fa-check-square"></i>' ; ?>
                                     </a>
                                 </td>
-                                <td class="text-center" > <a href="{{ route('Edit_Post',$item->id) }}" data-toggle="tooltip" data-placement="top" title="نتیجه" ><i class="fab fa-algolia" style="font-size: 25px"></i></a></td>
+                                <td class="text-center">
+                                    <a href="{{route('Get_Specefic_Questionnaire',[$item->id , $item->name])}}" target="_blank"> <i class="far fa-eye"></i> </a>
+                                </td>
+                                <td class="text-center" > <a href="{{ route('Get_The_Questioner_Result',$item->id) }}" data-toggle="tooltip" data-placement="top" title="نتیجه" ><i class="fab fa-algolia" style="font-size: 25px"></i></a></td>
                                 <td class="text-center" >
                                     <span>
                                         <a href="{{ route('Edit_Reports',$item->id) }}" data-toggle="tooltip" data-placement="top" title="ویرایش" ><i class="far fa-edit"></i></a>
