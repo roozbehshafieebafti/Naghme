@@ -4,6 +4,31 @@
 @section('content')
     <div class="container" style="overflow: hidden;padding: 20px 0">
         <h2>آثار {{ $name.' '.$family }}</h2>
+        <div class="mt-4 ml-4">
+            <div class="row" >
+                <div class="col-6">کدملی : {{$userInfo[0]->national_code}}</div>              
+                <div class="col-6">تاریخ تولد : {{$userInfo[0]->birth_date}}</div>              
+            </div>
+            <div class="row">
+                <div class="col-6">محل تولد : {{$userInfo[0]->birth_location}}</div>
+                <div class="col-6">شماره تلفن : {{$userInfo[0]->phone_number}}</div>                              
+            </div>
+            <div class="row" >
+                <div class="col-6">شماره ثابت : {{$userInfo[0]->constant_number}}</div>              
+                <div class="col-6">رشته تحصیلی: {{$userInfo[0]->major}}</div>                            
+            </div>
+            <div class="row" >
+                <div class="col-6">مقطع تحصیلی: {{$userInfo[0]->education_level}}</div>              
+                <div class="col-6">دانشگاه : {{$userInfo[0]->univercity}}</div>              
+            </div>
+            <div class="row">
+                <div class="col-12">خلاصه سوابق هنری: {{$userInfo[0]->brife_art_expirences}}</div>
+            </div>
+            <div class="row">
+                <div class="col-12">آدرس : {{$userInfo[0]->address}}</div>  
+            </div>
+        </div>
+        <hr />
         <ul class="mt-5">
             <li  class="d-flex justify-content-between mt-2" style="width:180px">
                 <span>عکس ثبت نهایی شده</span>

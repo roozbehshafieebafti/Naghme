@@ -37,7 +37,8 @@ class WhoRegisterdInRecallController extends Controller
     public function getUserWorks($recallId,$userId, $name, $family){
         $Works = DB::select('SELECT * FROM reacll_pictures_data WHERE recall_id = ? AND user_id = ? ORDER BY is_deleted ASC',[$recallId, $userId]);
         $IsSubmited = DB::select('SELECT * FROM reacll_pictures_submit WHERE recall_id = ? AND user_id = ?',[$recallId, $userId]);
-        
-        return view('Admin.Recalls.WhoRegisterd.GetUserWorks', compact('recallId','userId','Works','IsSubmited','name','family'));
+        $userInfo = DB::select('SELECT * FROM user_information where user_id = ?', [$userId]);
+        dd($userInfo);
+        return view('Admin.Recalls.WhoRegisterd.GetUserWorks', compact('recallId','userId','Works','IsSubmited','name','family','userInfo'));
     }
 }
